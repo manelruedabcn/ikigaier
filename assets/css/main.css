@@ -1,0 +1,899 @@
+/* ============================================
+   IKIGAIER · Main Stylesheet
+   ============================================ */
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --negro:       #272727;
+  --gris-medio:  #6E6E6E;
+  --gris-claro:  #A8A8A8;
+  --blanco-pag:  #FDFBF7;
+  --terracota:   #C2866B;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--negro);
+  background-color: var(--blanco-pag);
+  letter-spacing: 0.04em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4 {
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+}
+h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+h2 { font-size: clamp(1.5rem, 3.2vw, 2rem); color: var(--gris-medio); }
+h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 400; letter-spacing: 0.08em; }
+
+p { margin-bottom: 1.1rem; }
+p.lead { font-size: 1.1rem; color: var(--gris-medio); }
+
+.accent { color: var(--terracota); font-weight: 400; }
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.container { max-width: 840px; margin: 0 auto; padding: 0 2rem; }
+
+section { padding: 6rem 0; }
+
+.section-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gris-claro);
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--gris-claro);
+  opacity: 0.3;
+  margin: 2rem 0;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(253, 251, 247, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(168, 168, 168, 0.2);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0;
+}
+
+.nav-logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0.5px 1px rgba(39, 39, 39, 0.08));
+}
+
+@media (max-width: 700px) {
+  .nav-logo-img { height: 24px; }
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--gris-medio);
+  transition: color 0.25s;
+}
+.nav-links a:hover { color: var(--negro); }
+
+/* Menú hamburguesa (oculto en desktop) */
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.4rem; flex-shrink: 0; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--negro); margin: 5px 0; transition: all 0.3s; }
+.nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+.nav-overlay { display: none; position: fixed; inset: 0; background: rgba(39,39,39,0.5); z-index: 98; }
+.nav-overlay.visible { display: block; }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  padding: 10rem 0 5rem;
+  text-align: center;
+}
+
+.hero h1 { margin-bottom: 0.7rem; }
+.hero .subtitle {
+  font-size: 1.05rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--gris-medio);
+  margin-bottom: 0.4rem;
+}
+.hero .author {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--gris-medio);
+  margin-bottom: 2rem;
+}
+.hero .lead {
+  max-width: 560px;
+  margin: 0 auto 2.2rem;
+  font-size: 1.05rem;
+}
+
+/* ============================================
+   HERO PORTADAS
+   ============================================ */
+.hero-portadas {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.2rem;
+  flex-wrap: wrap;
+}
+
+.hero-portada {
+  width: 140px;
+  aspect-ratio: 2/3;
+  border: 1px solid rgba(39,39,39,0.12);
+  border-radius: 2px;
+}
+
+@media (max-width: 700px) {
+  .hero-portadas { gap: 1.2rem; }
+  .hero-portada { width: 110px; }
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2.4rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1.5px solid var(--negro);
+  color: var(--negro);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover { background: var(--negro); color: var(--blanco-pag); }
+
+.btn-primary { background: var(--negro); color: var(--blanco-pag); }
+.btn-primary:hover { background: transparent; color: var(--negro); }
+
+.btn-amazon {
+  border-color: var(--gris-medio);
+  color: var(--gris-medio);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-amazon:hover { background: var(--gris-medio); color: var(--blanco-pag); }
+
+/* ============================================
+   EL LIBRO
+   ============================================ */
+.libro-flex {
+  display: flex;
+  gap: 3.5rem;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+}
+
+.libro-portada {
+  flex-shrink: 0;
+  width: 200px;
+  aspect-ratio: 2/3;
+  background: var(--negro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.libro-portada .titulo-libro {
+  color: var(--blanco-pag);
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+.libro-portada .autor-libro {
+  color: var(--gris-claro);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.libro-portada .simbolo-portada {
+  width: 60px;
+  opacity: 0.5;
+}
+
+.libro-info { flex: 1; }
+
+.libro-info .estructura {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem 1.5rem;
+}
+
+.estructura-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.estructura-item .acto {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gris-medio);
+  min-width: 4.5rem;
+}
+
+.estructura-item span:last-child {
+  font-size: 0.88rem;
+  color: var(--gris-medio);
+}
+
+/* Portada placeholder */
+.portada-placeholder {
+  flex-shrink: 0;
+  width: 200px;
+  aspect-ratio: 2/3;
+  background: var(--blanco-pag);
+  border: 1px solid rgba(39,39,39,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portada-placeholder span {
+  font-size: 0.72rem;
+  color: var(--gris-claro);
+  letter-spacing: 0.08em;
+  font-weight: 300;
+}
+
+/* ============================================
+   EL MÉTODO: DOS IKIGAIS
+   ============================================ */
+.dos-ikigais {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.ikigai-card {
+  padding: 2rem;
+  border: 1px solid rgba(168, 168, 168, 0.3);
+}
+
+.ikigai-card .ikigai-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gris-medio);
+  margin-bottom: 0.4rem;
+}
+
+.ikigai-card h3 { margin-bottom: 0.8rem; }
+
+.ikigai-card .preguntas {
+  list-style: none;
+  margin-top: 1rem;
+}
+.ikigai-card .preguntas li {
+  font-size: 0.88rem;
+  color: var(--gris-medio);
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+.ikigai-card .preguntas li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gris-claro);
+}
+
+/* ============================================
+   CINCO GESTOS
+   ============================================ */
+.etapas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.etapa-card {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.etapa-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+}
+
+.etapa-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.etapa-num {
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gris-medio);
+  margin-bottom: 0.3rem;
+}
+
+.etapa-card h3 { margin-bottom: 0.4rem; }
+.etapa-card p { font-size: 0.9rem; color: var(--gris-medio); margin-bottom: 0; }
+
+/* ============================================
+   PRODUCTOS
+   ============================================ */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.producto-card {
+  text-align: center;
+  padding: 2rem 1.2rem;
+  border: 1px solid rgba(168, 168, 168, 0.25);
+  transition: border-color 0.3s;
+}
+.producto-card:hover { border-color: rgba(39,39,39,0.35); }
+
+.producto-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 1rem;
+  opacity: 0.7;
+}
+
+.producto-card h3 { margin-bottom: 0.5rem; font-size: 1.05rem; }
+.producto-card p { font-size: 0.85rem; color: var(--gris-medio); margin-bottom: 1.2rem; }
+.producto-card .estado {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terracota);
+}
+
+/* ============================================
+   TALLERES
+   ============================================ */
+.talleres-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.taller-card {
+  padding: 2rem;
+  border: 1px solid rgba(168, 168, 168, 0.3);
+}
+
+.taller-card .modalidad {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gris-medio);
+  margin-bottom: 0.4rem;
+}
+
+.taller-card h3 { margin-bottom: 0.5rem; }
+.taller-card p { font-size: 0.9rem; color: var(--gris-medio); }
+
+/* ============================================
+   AUTOR
+   ============================================ */
+.autor-flex {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.autor-texto { flex: 1; }
+
+.autor-simbolo {
+  flex-shrink: 0;
+  width: 140px;
+  opacity: 0.4;
+}
+
+/* ============================================
+   CTA / NEWSLETTER
+   ============================================ */
+.cta-section {
+  text-align: center;
+  background: var(--negro);
+  color: var(--blanco-pag);
+}
+.cta-section h2 { color: var(--blanco-pag); }
+.cta-section .lead { color: var(--gris-claro); }
+
+.newsletter-form {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 0.85rem 1.2rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  border: 1.5px solid var(--gris-medio);
+  background: transparent;
+  color: var(--blanco-pag);
+  min-width: 280px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.newsletter-form input[type="email"]::placeholder {
+  color: var(--gris-claro);
+  font-weight: 300;
+}
+.newsletter-form input[type="email"]:focus { border-color: var(--blanco-pag); }
+
+.btn-light { border-color: var(--blanco-pag); color: var(--blanco-pag); }
+.btn-light:hover { background: var(--blanco-pag); color: var(--negro); }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  text-align: center;
+  padding: 3rem 0;
+  border-top: 1px solid rgba(168, 168, 168, 0.25);
+}
+
+footer p {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--gris-claro);
+  margin-bottom: 0.4rem;
+}
+footer a {
+  color: var(--gris-medio);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+footer a:hover { color: var(--negro); }
+
+.footer-firma {
+  margin-top: 1.8rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+.footer-firma a {
+  color: var(--gris-claro);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.footer-firma a:hover { color: var(--terracota); }
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+/* Portada con imagen real (cuando exista el archivo) */
+.portada-img {
+  flex-shrink: 0;
+  width: 200px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border: 1px solid rgba(39,39,39,0.12);
+}
+
+@media (max-width: 700px) {
+  section { padding: 4.5rem 0; }
+  .hero { padding: 7rem 0 3.5rem; }
+
+  /* Menú móvil hamburguesa */
+  .nav-toggle { display: block; z-index: 101; }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 100vh;
+    flex-direction: column;
+    background: var(--blanco-pag);
+    padding: 5rem 2rem 2rem;
+    gap: 1.5rem;
+    z-index: 99;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.08);
+    overflow-y: auto;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { font-size: 0.8rem; letter-spacing: 0.08em; }
+
+  .libro-flex { flex-direction: column; align-items: center; text-align: center; }
+  .libro-portada, .portada-placeholder { width: 160px; }
+  .estructura { grid-template-columns: 1fr; }
+
+  .dos-ikigais { grid-template-columns: 1fr; }
+  .etapas-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+  .productos-grid { grid-template-columns: 1fr; }
+  .talleres-grid { grid-template-columns: 1fr; }
+  .autor-flex { flex-direction: column-reverse; text-align: center; }
+  .newsletter-form { flex-direction: column; align-items: center; }
+  .newsletter-form input[type="email"] { min-width: 100%; }
+  .portada-img { width: 160px; }
+}
+
+/* ============================================
+   TALLER LANDING
+   ============================================ */
+
+/* Hero del taller */
+.taller-hero-subtitle {
+  max-width: 500px;
+  margin: 0 auto 2.2rem;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--gris-claro);
+  line-height: 1.6;
+}
+
+.taller-hero-ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Manifiesto */
+.taller-manifiesto {
+  margin-top: 2rem;
+}
+
+.taller-manifiesto p {
+  font-size: 1.15rem;
+  color: var(--gris-medio);
+  margin-bottom: 0.4rem;
+  font-weight: 300;
+}
+
+.taller-manifiesto-cierre {
+  margin-top: 1.8rem !important;
+  font-size: 1.3rem !important;
+  color: var(--negro) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em;
+}
+
+/* Fases del recorrido */
+.taller-fase {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid rgba(168, 168, 168, 0.2);
+}
+
+.taller-fase-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.taller-fase-etiqueta {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gris-medio);
+}
+
+.taller-fase-sub {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--gris-claro);
+  font-style: italic;
+}
+
+.taller-fase-desc {
+  font-size: 0.95rem;
+  color: var(--gris-medio);
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+/* Conector entre fases */
+.taller-conector {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--gris-claro);
+  margin: 1.2rem 0;
+  letter-spacing: 0.1em;
+  user-select: none;
+}
+
+/* Lista de gestos */
+.taller-gestos-lista {
+  margin-top: 1.2rem;
+}
+
+.taller-gesto-item {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(168, 168, 168, 0.15);
+  align-items: flex-start;
+}
+
+.taller-gesto-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--terracota);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--terracota);
+  letter-spacing: 0;
+  margin-top: 0.15rem;
+}
+
+.taller-gesto-item h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+  color: var(--negro);
+}
+
+.taller-gesto-item p {
+  font-size: 0.88rem;
+  color: var(--gris-medio);
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* Bullets */
+.taller-bullets {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.taller-bullets li {
+  font-size: 0.95rem;
+  color: var(--gris-medio);
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.taller-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gris-claro);
+}
+
+/* Qué te llevas — grid */
+.taller-llevas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.taller-llevas-item {
+  padding: 1.5rem;
+  border: 1px solid rgba(168, 168, 168, 0.2);
+}
+
+.taller-llevas-item h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--negro);
+}
+
+.taller-llevas-item p {
+  font-size: 0.82rem;
+  color: var(--gris-medio);
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* Frase de cierre */
+.taller-frase {
+  background: var(--negro);
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.taller-frase blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.taller-frase blockquote p {
+  font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--blanco-pag);
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* CTA Final */
+.taller-cta-final {
+  text-align: center;
+}
+
+.taller-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.taller-contacto-item h3 {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: var(--negro);
+}
+
+.taller-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.taller-form input[type="email"] {
+  padding: 0.85rem 1.2rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  border: 1.5px solid var(--gris-claro);
+  background: transparent;
+  color: var(--negro);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.taller-form input[type="email"]::placeholder {
+  color: var(--gris-claro);
+  font-weight: 300;
+}
+
+.taller-form input[type="email"]:focus {
+  border-color: var(--negro);
+}
+
+/* --- Taller Responsive --- */
+@media (max-width: 700px) {
+  .taller-manifiesto p {
+    font-size: 1.05rem;
+  }
+
+  .taller-manifiesto-cierre {
+    font-size: 1.15rem !important;
+  }
+
+  .taller-fase {
+    padding: 1.5rem;
+  }
+
+  .taller-gesto-item {
+    gap: 0.8rem;
+  }
+
+  .taller-gesto-num {
+    width: 30px;
+    height: 30px;
+    font-size: 0.7rem;
+  }
+
+  .taller-gesto-item h3 {
+    font-size: 0.95rem;
+  }
+
+  .taller-gesto-item p {
+    font-size: 0.82rem;
+  }
+
+  .taller-bullets li {
+    font-size: 0.9rem;
+  }
+
+  .taller-llevas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .taller-contacto {
+    grid-template-columns: 1fr;
+  }
+
+  .taller-frase {
+    padding: 3.5rem 0;
+  }
+}
