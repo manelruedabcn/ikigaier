@@ -17,6 +17,15 @@
   --cream:       #F5F2ED;
   --blanco:      #FCFAF7;
   --coral:       #C2866B;
+
+  /* Nuevo sistema cromático premium */
+  --olive:       #3F4A34;
+  --olive-light: #58624B;
+  --gold:        #A8794B;
+  --beige:       #D8C9B8;
+  --charcoal:    #4B443E;
+  --bg-cream:    #F7F4EF;
+
   --max-width: 860px;
 }
 
@@ -33,7 +42,7 @@ body {
   line-height: 1.65;
   letter-spacing: 0;
   color: var(--negro);
-  background-color: var(--cream);
+  background-color: var(--bg-cream);
 }
 
 /* --- TITULARES — Cormorant Garamond --- */
@@ -128,7 +137,7 @@ img {
 
 /* --- HEADER — editorial, dos niveles (kanji + logo + nav) --- */
 .site-header {
-  background: var(--cream);
+  background: var(--bg-cream);
   border-bottom: 1px solid rgba(168, 168, 168, 0.12);
   position: relative;
 }
@@ -224,201 +233,370 @@ img {
 }
 
 /* ============================================
-   HERO DOORS — "dos puertas" editorial
+   DOORS — Sección premium editorial (3 columnas)
    ============================================ */
-/* ============================================
-   HERO DOORS — 3 columnas limpias
-   ============================================ */
-.hero-doors {
-  max-width: 980px;
-  margin: 3.2rem auto 2.4rem;
-  padding: 2.8rem 2rem 0;
-  border: 1.5px solid rgba(194, 134, 107, 0.3);
-  border-radius: 18px;
-  box-shadow: 0 1px 20px rgba(194, 134, 107, 0.05);
+.doors {
+  max-width: 1040px;
+  margin: 3.6rem auto 2.4rem;
+  padding: 3rem 2.4rem 0;
+  border: 1px solid var(--beige);
+  border-radius: 20px;
+  background: var(--bg-cream);
 }
 
-.hero-doors-kicker {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.74rem;
-  font-weight: 400;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--coral);
+/* Top header */
+.doors-header {
   text-align: center;
-  display: block;
-  margin: 0 auto 0.4rem;
+  margin-bottom: 2.6rem;
 }
 
-.hero-doors-subtitle {
+.doors-logo {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+.doors-brand {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--olive);
+  margin: 0 0 0.6rem;
+  line-height: 1.1;
+}
+
+.doors-kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 auto 0.5rem;
+}
+
+.doors-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
   font-style: italic;
-  color: var(--gris-medio);
-  text-align: center;
-  margin: 0 auto 2.4rem;
+  color: var(--charcoal);
+  margin: 0 auto;
 }
 
-/* Grid de 3 columnas */
-.hero-doors-cards {
+.doors-subtitle em {
+  font-style: italic;
+  color: var(--olive);
+}
+
+/* Grid */
+.doors-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr 1fr;
+  grid-template-columns: 1fr 1.05fr 1fr;
   align-items: start;
+  gap: 0;
 }
 
-.hero-door-card {
-  text-align: center;
+/* Left & Right cards */
+.doors-card {
+  border: 1px solid var(--beige);
+  border-radius: 12px;
+  padding: 1.6rem 1.4rem;
+  background: var(--bg-cream);
+}
+
+.doors-card-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center column */
+.doors-card-center {
+  padding: 0.4rem 1.6rem;
+}
+
+.doors-card-center-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.hero-door-card--center {
-  border-left: 1px solid rgba(194, 134, 107, 0.18);
-  border-right: 1px solid rgba(194, 134, 107, 0.18);
-  padding: 0 1.4rem;
-}
-
-.hero-door-card-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--gris-claro);
-  display: block;
-  margin-bottom: 0.15rem;
-}
-
-.hero-door-card-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--negro);
-  margin: 0 0 0.3rem;
-}
-
-.hero-door-card-sub {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 300;
-  color: var(--gris-medio);
-  line-height: 1.4;
-  margin: 0 0 1rem;
-}
-
-.hero-door-card-sub strong {
-  font-weight: 500;
-  color: var(--negro);
-}
-
-.hero-door-card-img {
-  margin-bottom: 0.8rem;
-}
-
-.hero-door-card-img img {
-  width: 100px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 2px 12px rgba(39, 39, 39, 0.08);
-  border-radius: 1px;
-}
-
-.hero-door-taller-svg {
-  display: block;
-  margin: 0 auto;
-  width: 105px;
-  height: auto;
-}
-
-.hero-door-card-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
-  line-height: 1.65;
-  color: var(--gris-medio);
-  margin: 0 1rem 0.8rem;
-}
-
-.hero-door-card-btn {
-  font-size: 0.76rem;
-  padding: 0.6rem 1.2rem;
-  margin-bottom: 0.8rem;
-}
-
-.hero-door-card-bullets {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.hero-door-card-bullets li {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.74rem;
-  color: var(--gris-claro);
-  line-height: 1.6;
-  margin-bottom: 0.1rem;
-}
-
-/* Flujo de aire entre puertas */
-.hero-doors-airflow {
-  display: flex;
-  justify-content: center;
-  margin: 0.6rem 0 0;
-  overflow: hidden;
-}
-
-.hero-doors-airflow-svg {
-  width: min(520px, 85%);
-  height: 36px;
-  display: block;
-}
-
-/* Breeze */
-.hero-doors-breeze {
-  border-top: 1px solid rgba(194, 134, 107, 0.16);
-  margin: 0 -2rem;
-  padding: 1.6rem 2rem 1.2rem;
   text-align: center;
 }
 
-.hero-doors-breeze-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--coral);
-  margin: 0 0 0.3rem;
+/* Meta area (badge, label, title, sub) */
+.doors-card-meta {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-.hero-doors-breeze p:not(.hero-doors-breeze-title) {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
-  line-height: 1.65;
-  color: var(--gris-medio);
-  margin: 0;
-}
-
-/* Tags — iconos con frases */
-.hero-doors-tags {
-  display: flex;
-  justify-content: center;
-  gap: 1.6rem;
-  flex-wrap: wrap;
-  margin: 1rem -2rem 0;
-  padding: 1.2rem 2rem 1.6rem;
-  border-top: 1px solid rgba(194, 134, 107, 0.12);
-}
-
-.hero-doors-tag-item {
-  display: flex;
+.doors-badge {
+  display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
 }
 
-.hero-doors-tag-item span {
+.doors-center-icon {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.doors-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.6;
+  margin-bottom: 0.1rem;
+}
+
+.doors-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--olive);
+  margin: 0 0 0.3rem;
+  line-height: 1.15;
+}
+
+.doors-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.45;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.doors-sub strong {
+  font-weight: 500;
+  color: var(--olive);
+  opacity: 1;
+}
+
+/* Card body - book/text side by side */
+.doors-card-body {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.doors-card-media {
+  flex-shrink: 0;
+}
+
+.doors-book-cover,
+.doors-workbook-cover {
+  width: 110px;
+  height: auto;
+  display: block;
+}
+
+.doors-card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.doors-card-text p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--charcoal);
+  margin: 0 0 0.8rem;
+  opacity: 0.8;
+}
+
+/* Buttons */
+.doors-btn {
+  display: inline-block;
   font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--bg-cream);
+  background: var(--olive);
+  padding: 0.55rem 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  border: none;
+}
+
+.doors-btn:hover {
+  opacity: 0.85;
+}
+
+.doors-btn-outline {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  background: transparent;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  transition: opacity 0.2s;
+}
+
+.doors-btn-outline:hover {
+  opacity: 0.7;
+}
+
+/* Features list */
+.doors-card-features {
+  margin-top: 0.4rem;
+}
+
+.doors-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.doors-feature svg {
+  flex-shrink: 0;
+}
+
+.doors-feature span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  color: var(--charcoal);
+  opacity: 0.5;
+  line-height: 1.5;
+}
+
+/* Center illustration */
+.doors-center-illustration {
+  margin-bottom: 0.8rem;
+}
+
+.doors-center-illustration svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.doors-center-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--charcoal);
+  text-align: center;
+  margin: 0 0 1rem;
+  opacity: 0.75;
+}
+
+/* Airflow */
+.doors-air {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 0;
+  overflow: hidden;
+}
+
+.doors-air-svg {
+  width: min(580px, 88%);
+  height: auto;
+  display: block;
+}
+
+/* Breeze section */
+.doors-breeze {
+  border-top: 1px solid var(--beige);
+  margin: 0 -2.4rem;
+  padding: 1.8rem 2.4rem 1.4rem;
+  text-align: center;
+}
+
+.doors-breeze-icon {
+  margin-bottom: 0.6rem;
+  display: inline-block;
+}
+
+.doors-breeze-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--olive);
+  margin: 0 0 0.4rem;
+  line-height: 1.3;
+}
+
+.doors-breeze-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: var(--charcoal);
+  margin: 0;
+  opacity: 0.65;
+}
+
+/* Features strip */
+.doors-features-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  margin: 0 -2.4rem;
+  padding: 1.2rem 2.4rem 1.4rem;
+  border-top: 1px solid var(--beige);
+}
+
+.doors-feature-block {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.doors-feature-block span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  white-space: nowrap;
+  opacity: 0.6;
+}
+
+.doors-feature-divider {
+  width: 1px;
+  height: 18px;
+  background: var(--beige);
+  opacity: 0.5;
+}
+
+/* Final sentence */
+.doors-final {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 -2.4rem;
+  padding: 1.2rem 2.4rem 1.8rem;
+  border-top: 1px solid var(--beige);
+  line-height: 1.7;
+  opacity: 0.7;
+}
   color: var(--gris-medio);
   white-space: nowrap;
 }
@@ -549,8 +727,8 @@ img {
 .site-footer {
   text-align: center;
   padding: 4rem 2rem 3rem;
-  background: var(--cream);
-  border-top: 1px solid rgba(168, 168, 168, 0.15);
+  background: var(--bg-cream);
+  border-top: 1px solid var(--beige);
 }
 
 .site-footer-kanji {
@@ -595,70 +773,101 @@ img {
     text-align: center;
   }
 
-  .hero-doors {
-    margin: 2.5rem auto 2rem;
+  /* Doors responsive */
+  .doors {
+    margin: 2.4rem auto 2rem;
     border-radius: 14px;
     padding: 2rem 1.2rem 0;
   }
 
-  .hero-doors-kicker {
+  .doors-kicker {
+    font-size: 0.6rem;
     white-space: normal;
-    font-size: 0.68rem;
   }
 
-  .hero-doors-subtitle {
-    font-size: 0.95rem;
+  .doors-subtitle {
+    font-size: 0.9rem;
     margin-bottom: 1.6rem;
   }
 
-  .hero-doors-cards {
+  .doors-grid {
     grid-template-columns: 1fr;
-    gap: 1.6rem;
+    gap: 1.4rem;
   }
 
-  .hero-door-card {
-    padding: 0;
+  .doors-card {
+    padding: 1.2rem 1rem;
   }
 
-  .hero-door-card-title {
+  .doors-card-center {
+    padding: 0.4rem 0.8rem;
+    border-top: 1px solid var(--beige);
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .doors-title {
     font-size: 1.1rem;
   }
 
-  .hero-door-card-img img,
-  .hero-door-taller-svg {
-    width: 85px;
+  .doors-card-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .hero-door-card--center {
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid rgba(194, 134, 107, 0.16);
-    border-bottom: 1px solid rgba(194, 134, 107, 0.16);
-    padding: 1.2rem 0;
+  .doors-book-cover,
+  .doors-workbook-cover {
+    width: 90px;
   }
 
-  .hero-doors-airflow-svg {
-    width: 75%;
-    height: 28px;
+  .doors-card-text p {
+    font-size: 0.78rem;
   }
 
-  .hero-doors-breeze {
+  .doors-center-illustration svg {
+    max-width: 140px;
+  }
+
+  .doors-air-svg {
+    width: 80%;
+  }
+
+  .doors-breeze {
     margin: 0.6rem -1.2rem 0;
     padding: 1.2rem 1.2rem 1rem;
   }
 
-  .hero-doors-breeze-title {
+  .doors-breeze-title {
     font-size: 1.15rem;
   }
 
-  .hero-doors-tags {
-    margin: 0.6rem -1.2rem 0;
-    padding: 1rem 1.2rem 1.2rem;
-    gap: 0.6rem;
+  .doors-breeze-text {
+    font-size: 0.72rem;
   }
 
-  .hero-doors-tag-item span {
-    font-size: 0.62rem;
+  .doors-features-strip {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding: 1rem 1.2rem;
+    margin: 0 -1.2rem;
+  }
+
+  .doors-feature-block {
+    padding: 0.2rem 0.5rem;
+  }
+
+  .doors-feature-block span {
+    font-size: 0.58rem;
+  }
+
+  .doors-feature-divider {
+    display: none;
+  }
+
+  .doors-final {
+    font-size: 0.55rem;
+    margin: 0 -1.2rem;
+    padding: 1rem 1.2rem 1.4rem;
   }
 
   .libro-flex {
