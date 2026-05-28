@@ -491,7 +491,7 @@ img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  width: 140px;
+  width: 100px;
   height: auto;
 }
 
@@ -503,20 +503,6 @@ img {
   text-align: center;
   margin: 0 0 1rem;
   opacity: 0.75;
-}
-
-/* Airflow */
-.doors-air {
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0 0;
-  overflow: hidden;
-}
-
-.doors-air-svg {
-  width: min(580px, 88%);
-  height: auto;
-  display: block;
 }
 
 /* Breeze section */
@@ -830,10 +816,6 @@ img {
 
   .doors-center-illustration svg {
     max-width: 140px;
-  }
-
-  .doors-air-svg {
-    width: 80%;
   }
 
   .doors-breeze {
