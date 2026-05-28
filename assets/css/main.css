@@ -294,7 +294,21 @@ img {
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--negro);
-  margin: 0 0 1.2rem;
+  margin: 0 0 0.3rem;
+}
+
+.hero-door-card-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 300;
+  color: var(--gris-medio);
+  line-height: 1.4;
+  margin: 0 0 1rem;
+}
+
+.hero-door-card-sub strong {
+  font-weight: 500;
+  color: var(--negro);
 }
 
 .hero-door-card-img {
