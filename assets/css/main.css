@@ -226,13 +226,15 @@ img {
 /* ============================================
    HERO DOORS — "dos puertas" editorial
    ============================================ */
+/* ============================================
+   HERO DOORS — nuevo diseño 3 columnas
+   ============================================ */
 .hero-doors {
   max-width: 980px;
   margin: 3.2rem auto 2.4rem;
-  padding: 0;
-  border: 1.5px solid rgba(194, 134, 107, 0.4);
+  padding: 2.8rem 2.6rem 0;
+  border: 1.5px solid rgba(194, 134, 107, 0.35);
   border-radius: 18px;
-  position: relative;
   box-shadow: 0 1px 24px rgba(194, 134, 107, 0.06);
 }
 
@@ -244,138 +246,149 @@ img {
   text-transform: uppercase;
   color: var(--coral);
   text-align: center;
-  background: var(--cream);
-  display: table;
-  width: fit-content;
-  padding: 0 1.4rem;
-  margin: -0.55rem auto 2.4rem;
-  white-space: nowrap;
-}
-
-/* Artículo con puerta visible + texto */
-.hero-door {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  padding: 0 2.6rem 2.6rem;
-}
-
-.hero-door-book {
-  border-bottom: 1px solid rgba(194, 134, 107, 0.2);
-  padding-bottom: 2.6rem;
-  margin-bottom: 1.8rem;
-}
-
-/* Columna visual: la puerta SVG */
-.hero-door-visual {
-  flex-shrink: 0;
-  padding-top: 0.4rem;
-}
-
-.hero-door-svg {
   display: block;
-  width: 56px;
-  height: auto;
+  margin: 0 auto 0.5rem;
 }
 
-/* Columna de texto */
-.hero-door-text {
-  flex: 1;
-  min-width: 0;
-}
-
-.hero-door-eyebrow {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gris-medio);
-  margin: 0 0 0.4rem;
-}
-
-.hero-door-text h3 {
+.hero-doors-subtitle {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--gris-medio);
+  text-align: center;
+  margin: 0 auto 2.4rem;
+}
+
+/* Grid de 3 columnas */
+.hero-doors-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.hero-door-card {
+  text-align: center;
+  padding: 0 0.8rem;
+}
+
+.hero-door-card-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gris-claro);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.hero-door-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
   font-weight: 400;
-  line-height: 1.15;
   color: var(--negro);
   margin: 0 0 1.2rem;
 }
 
-.hero-door-content {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 1.5rem;
-  align-items: start;
+.hero-door-card-img {
+  margin-bottom: 1rem;
 }
 
-.hero-door-cover img {
-  width: 120px;
+.hero-door-card-img img {
+  width: 110px;
   height: auto;
   display: block;
+  margin: 0 auto;
   box-shadow: 0 2px 12px rgba(39, 39, 39, 0.08);
   border-radius: 1px;
 }
 
-.hero-door-copy p {
+.hero-door-taller-svg {
+  display: block;
+  margin: 0 auto;
+  width: 110px;
+  height: auto;
+}
+
+.hero-door-card-desc {
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   line-height: 1.7;
   color: var(--gris-medio);
   margin: 0 0 1rem;
 }
 
-.hero-door-copy a,
-.hero-doors-workshop a {
+.hero-door-card-btn {
+  font-size: 0.78rem;
+  padding: 0.7rem 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.hero-door-card-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-door-card-bullets li {
   font-family: 'Inter', sans-serif;
-  font-size: 0.84rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--coral);
-  text-decoration: none;
+  font-size: 0.78rem;
+  color: var(--gris-claro);
+  line-height: 1.6;
+  margin-bottom: 0.15rem;
 }
 
-.hero-door-copy a:hover,
-.hero-doors-workshop a:hover {
-  color: var(--negro);
+.hero-door-card-center {
+  border-left: 1px solid rgba(194, 134, 107, 0.2);
+  border-right: 1px solid rgba(194, 134, 107, 0.2);
+  padding: 0 1.4rem;
 }
 
+/* Breeze */
 .hero-doors-breeze {
-  border-top: 1px solid rgba(194, 134, 107, 0.25);
-  margin: 0 2.6rem;
-  padding: 2rem 2rem 1.6rem;
+  border-top: 1px solid rgba(194, 134, 107, 0.2);
+  margin: 2rem -2.6rem 0;
+  padding: 2rem 2.6rem 1.6rem;
   text-align: center;
 }
 
 .hero-doors-breeze-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: var(--coral);
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.4rem;
 }
 
 .hero-doors-breeze p:not(.hero-doors-breeze-title) {
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   line-height: 1.7;
   color: var(--gris-medio);
   margin: 0;
 }
 
-.hero-doors-workshop {
-  border-top: 1px solid rgba(194, 134, 107, 0.22);
-  margin: 0 2.6rem;
-  padding: 1.6rem 2rem 2rem;
-  text-align: center;
+/* Tags */
+.hero-doors-tags {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin: 1.4rem -2.6rem 0;
+  padding: 0 2.6rem 2rem;
+  border-top: 1px solid rgba(194, 134, 107, 0.15);
 }
 
-.hero-doors-workshop p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.55rem;
-  line-height: 1.25;
-  color: var(--negro);
-  margin: 0 0 0.8rem;
+.hero-doors-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gris-claro);
+  padding: 0.35rem 0.8rem;
+  border: 1px solid rgba(194, 134, 107, 0.2);
+  border-radius: 20px;
 }
 
 /* --- EL LIBRO --- */
@@ -553,50 +566,62 @@ img {
   .hero-doors {
     margin: 2.5rem auto 2rem;
     border-radius: 14px;
+    padding: 2rem 1.2rem 0;
   }
 
   .hero-doors-kicker {
     white-space: normal;
-    white-space: normal;
   }
 
-  .hero-door {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 1.4rem 2rem;
+  .hero-doors-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
   }
 
-  .hero-door-book {
-    padding-bottom: 2rem;
-    margin-bottom: 1.4rem;
-  }
-
-  .hero-door-visual {
-    padding-top: 0;
-    margin-bottom: 0.2rem;
-  }
-
-  .hero-door-svg {
-    width: 44px;
-  }
-
-  .hero-door-content {
+  .hero-doors-cards {
     grid-template-columns: 1fr;
-    gap: 1rem;
-    text-align: center;
+    gap: 2rem;
   }
 
-  .hero-door-cover img {
+  .hero-door-card {
+    padding: 0;
+  }
+
+  .hero-door-card-title {
+    font-size: 1.2rem;
+  }
+
+  .hero-door-card-img img,
+  .hero-door-taller-svg {
     width: 100px;
-    margin: 0 auto;
   }
 
-  .hero-doors-breeze,
-  .hero-doors-workshop {
-    margin: 0 1.4rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+  .hero-door-card-center {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid rgba(194, 134, 107, 0.18);
+    border-bottom: 1px solid rgba(194, 134, 107, 0.18);
+    padding: 1.6rem 0;
+  }
+
+  .hero-doors-breeze {
+    margin: 1.4rem -1.2rem 0;
+    padding: 1.4rem 1.2rem 1.2rem;
+  }
+
+  .hero-doors-breeze-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-doors-tags {
+    margin: 1rem -1.2rem 0;
+    padding: 1.2rem 1.2rem 1.6rem;
+    gap: 0.5rem;
+  }
+
+  .hero-doors-tag {
+    font-size: 0.55rem;
+    padding: 0.25rem 0.6rem;
   }
 
   .libro-flex {
