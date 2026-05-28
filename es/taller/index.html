@@ -8,6 +8,7 @@
   <link rel="canonical" href="https://www.ikigaier.com/es/taller/">
 
   <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="any" href="/assets/favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
@@ -19,15 +20,20 @@
   <meta property="og:url" content="https://www.ikigaier.com/es/taller/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/logo-ikigaier-bicolor.png">
+  <meta property="og:image:width" content="2500">
+  <meta property="og:image:height" content="781">
+  <meta property="og:image:alt" content="IKIGAIER · El Ikigai que no te contaron">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Taller IKIGAIER | Camina sin separarte de ti">
   <meta name="twitter:description" content="Un taller experiencial para practicar los cinco gestos del método IKIGAIER. Por Manel Rueda.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/logo-ikigaier-bicolor.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/taller/">
   <link rel="alternate" hreflang="ca" href="https://www.ikigaier.com/ca/taller/">
@@ -59,15 +65,26 @@
 <body>
 
   <!-- ============================================
-  HEADER
+  HEADER — Editorial, dos niveles: kanji + logo + nav
   ============================================ -->
-  <header>
-    <div class="nav-inner">
-      <a href="/es/" class="nav-logo" aria-label="IKIGAIER · Inicio">
-        <img class="nav-logo-img" src="/assets/logo-ikigaier-bicolor.png" alt="IKIGAIER" width="2500" height="781">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <img class="site-header-kanji"
+           src="/assets/images/isotipo-kanji.png"
+           alt=""
+           width="28" height="28"
+           aria-hidden="true">
+      <a href="/es/" class="site-header-logo" aria-label="IKIGAIER · Inicio">
+        <img src="/assets/images/logo-ikigaier-cream.png"
+             alt="IKIGAIER"
+             width="293" height="92">
       </a>
-      <nav class="nav-links" aria-label="Navegación">
-        <a href="/es/">← IKIGAIER</a>
+      <nav class="site-header-nav" aria-label="Navegación principal">
+        <a href="/es/#inicio">Inicio</a>
+        <a href="/es/#el-libro">El libro</a>
+        <a href="/es/#la-mirada">La mirada</a>
+        <a href="/es/taller/">Taller</a>
+        <a href="/es/#autor">Autor</a>
       </nav>
     </div>
   </header>
@@ -121,12 +138,10 @@
         <p class="taller-fase-desc">Antes de empezar, abrimos un espacio para bajar el ritmo, volver al cuerpo y dejar fuera aquello que no necesita entrar en la experiencia. No se trata de hacer nada especial. Se trata de llegar de verdad.</p>
       </div>
 
-      <div class="taller-conector" aria-hidden="true">↓</div>
-
-      <!-- Los 5 gestos -->
+      <!-- Los gestos del recorrido -->
       <div class="taller-fase">
         <div class="taller-fase-header">
-          <span class="taller-fase-etiqueta">Los 5 gestos IKIGAIER</span>
+          <span class="taller-fase-etiqueta">Los gestos del recorrido</span>
         </div>
         <div class="taller-gestos-lista">
           <div class="taller-gesto-item">
@@ -166,8 +181,6 @@
           </div>
         </div>
       </div>
-
-      <div class="taller-conector" aria-hidden="true">↓</div>
 
       <!-- Cierre -->
       <div class="taller-fase">
@@ -298,20 +311,16 @@
   </section>
 
   <!-- ============================================
-  FOOTER
+  FOOTER — con kanji como sello de cierre
   ============================================ -->
-  <footer>
-    <div class="container">
-      <p>IKIGAIER © 2026 · Manel Rueda</p>
-      <ul class="footer-links">
-        <li><a href="/es/">Inicio</a></li>
-        <li><a href="/es/#el-libro">El libro</a></li>
-        <li><a href="/es/#newsletter">Newsletter</a></li>
-      </ul>
-      <p class="footer-firma">
-        <a href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
-      </p>
-    </div>
+  <footer class="site-footer">
+    <img class="site-footer-kanji"
+         src="/assets/images/isotipo-kanji.png"
+         alt=""
+         width="36" height="36"
+         aria-hidden="true">
+    <p>IKIGAIER · Manel Rueda · 2026</p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
   </footer>
 
   <script src="/assets/js/main.js" defer></script>

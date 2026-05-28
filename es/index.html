@@ -7,6 +7,7 @@
   <title>IKIGAIER · El Ikigai que no te contaron · Manel Rueda</title>
   <link rel="canonical" href="https://www.ikigaier.com/es/">
   <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="any" href="/assets/favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
@@ -18,15 +19,20 @@
   <meta property="og:url" content="https://www.ikigaier.com/es/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/logo-ikigaier-bicolor.png">
+  <meta property="og:image:width" content="2500">
+  <meta property="og:image:height" content="781">
+  <meta property="og:image:alt" content="IKIGAIER · El Ikigai que no te contaron">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="IKIGAIER · El Ikigai que no te contaron">
   <meta name="twitter:description" content="Un método para unir el hacer y el ser. El libro, el cuaderno y el taller.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/logo-ikigaier-bicolor.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/">
   <link rel="alternate" hreflang="ca" href="https://www.ikigaier.com/ca/">
@@ -61,75 +67,126 @@
 <body>
 
   <!-- ============================================
-  HEADER
+  HEADER — Editorial, dos niveles: kanji + logo + nav
   ============================================ -->
-  <header>
-    <div class="nav-inner">
-      <a href="#inicio" class="nav-logo">
-        <img class="nav-logo-img" src="/assets/logo-ikigaier-bicolor.png" alt="IKIGAIER" width="2500" height="781">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <img class="site-header-kanji"
+           src="/assets/images/isotipo-kanji.png"
+           alt=""
+           width="28" height="28"
+           aria-hidden="true">
+      <a href="/es/" class="site-header-logo" aria-label="IKIGAIER · Inicio">
+        <img src="/assets/images/logo-ikigaier-cream.png"
+             alt="IKIGAIER"
+             width="293" height="92">
       </a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="nav-links" class="nav-links" aria-label="Navegación principal">
+      <nav class="site-header-nav" aria-label="Navegación principal">
         <a href="#inicio">Inicio</a>
         <a href="#el-libro">El libro</a>
-        <a href="#el-metodo">El método</a>
-        <a href="#los-cinco-gestos">Los cinco gestos</a>
-        <a href="#productos">Productos</a>
-        <a href="#talleres">Talleres</a>
+        <a href="#la-mirada">La mirada</a>
+        <a href="/es/taller/">Taller</a>
         <a href="#autor">Autor</a>
-        <a href="#newsletter">Newsletter</a>
       </nav>
     </div>
   </header>
-  <div class="nav-overlay" id="nav-overlay"></div>
 
   <!-- ============================================
   HERO
   ============================================ -->
-  <section id="inicio" class="hero" aria-label="Presentación de IKIGAIER">
+  <section id="inicio" class="hero" aria-label="Presentación">
     <div class="container">
-      <h1>El Ikigai<br>que no te contaron</h1>
-      <p class="subtitle">IKIGAIER</p>
-      <p class="author">Manel Rueda</p>
+      <h1>El Ikigai que no te contaron</h1>
 
-      <!-- Portadas -->
-      <div class="hero-portadas">
-        <div class="hero-portada" style="background: var(--negro); display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 1.2rem 1rem; text-align: center;">
-          <span style="color: var(--blanco-pag); font-size: 0.8rem; font-weight: 300; letter-spacing: 0.04em; line-height: 1.3; margin-bottom: 0.5rem;">El Ikigai que no te contaron</span>
-          <span style="color: var(--gris-claro); font-size: 0.55rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1rem;">Manel Rueda</span>
-          <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity: 0.4;">
-            <circle cx="50" cy="50" r="46" stroke="#FDFBF7" stroke-width="2"/>
-            <circle cx="50" cy="50" r="28" stroke="#FDFBF7" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6"/>
-            <line x1="50" y1="4" x2="50" y2="22" stroke="#FDFBF7" stroke-width="2"/>
-            <line x1="50" y1="78" x2="50" y2="96" stroke="#FDFBF7" stroke-width="2"/>
-            <line x1="4" y1="50" x2="22" y2="50" stroke="#FDFBF7" stroke-width="2"/>
-            <line x1="78" y1="50" x2="96" y2="50" stroke="#FDFBF7" stroke-width="2"/>
-          </svg>
-        </div>
-        <div class="hero-portada" style="background: var(--negro); display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 1.2rem 1rem; text-align: center;">
-          <span style="color: var(--blanco-pag); font-size: 0.72rem; font-weight: 300; letter-spacing: 0.06em; line-height: 1.3; margin-bottom: 0.5rem;">IKIGAIER</span>
-          <span style="color: var(--gris-claro); font-size: 0.55rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1rem;">Cuaderno</span>
-          <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity: 0.4;">
-            <circle cx="50" cy="50" r="46" stroke="#FDFBF7" stroke-width="1.5"/>
-            <circle cx="50" cy="50" r="36" stroke="#FDFBF7" stroke-width="1" stroke-dasharray="5 5" opacity="0.5"/>
-            <line x1="50" y1="4" x2="50" y2="14" stroke="#FDFBF7" stroke-width="1.5"/>
-            <line x1="50" y1="86" x2="50" y2="96" stroke="#FDFBF7" stroke-width="1.5"/>
-            <line x1="4" y1="50" x2="14" y2="50" stroke="#FDFBF7" stroke-width="1.5"/>
-            <line x1="86" y1="50" x2="96" y2="50" stroke="#FDFBF7" stroke-width="1.5"/>
-            <circle cx="50" cy="50" r="6" fill="#FDFBF7" opacity="0.6"/>
-          </svg>
-        </div>
+      <div class="hero-editorial">
+        <p>Durante años, el ikigai se convirtió en una fórmula. Una mezcla de productividad, propósito y optimización personal.</p>
+        <p>Pero quizá la pregunta nunca fue cómo encontrar una vida perfecta, sino cómo dejar de vivir separado de uno mismo.</p>
+        <p>IKIGAIER nace de esa distancia. De la sensación de avanzar por fuera mientras algo importante se queda atrás por dentro.</p>
+        <p>No como método. No como promesa. Sino como una forma más consciente de caminar.</p>
       </div>
 
-      <p class="lead">
-        Un ecosistema para unir el hacer y el ser.<br>
-        Sin fórmulas, sin promesas fáciles, sin atajos.
-      </p>
+      <section class="hero-doors" aria-labelledby="hero-doors-title">
+        <h2 id="hero-doors-title" class="hero-doors-kicker">EL CAMINO IKIGAIER TIENE DOS PUERTAS</h2>
 
-      <a href="#el-libro" class="btn btn-primary">Descubrir el libro</a>
-      <span style="display: block; margin-top: 1.5rem; font-size: 0.72rem; color: var(--gris-claro); letter-spacing: 0.12em; text-transform: uppercase;">Ya disponible en Amazon</span>
+        <!-- Puerta izquierda (libro) -->
+        <article class="hero-door hero-door-book">
+          <div class="hero-door-visual">
+            <svg class="hero-door-svg" viewBox="0 0 80 120" width="56" height="84" fill="none" aria-hidden="true">
+              <!-- Marco de la puerta -->
+              <rect x="4" y="2" width="72" height="116" rx="4" stroke="#C2866B" stroke-width="1.8" fill="#F5F2ED"/>
+              <!-- Puerta entreabierta (perspectiva) -->
+              <path d="M12 10 L28 6 L28 116 L12 116 Z" fill="#C2866B" opacity="0.12"/>
+              <path d="M12 10 L28 6 L28 116 L12 116 Z" stroke="#C2866B" stroke-width="1.2" opacity="0.3"/>
+              <!-- Panel superior -->
+              <rect x="12" y="14" width="56" height="32" rx="2" stroke="#C2866B" stroke-width="1" opacity="0.2"/>
+              <!-- Panel inferior -->
+              <rect x="12" y="52" width="56" height="56" rx="2" stroke="#C2866B" stroke-width="1" opacity="0.2"/>
+              <!-- Tirador -->
+              <rect x="58" y="56" width="4" height="10" rx="2" fill="#C2866B" opacity="0.4"/>
+              <!-- Línea de separación entre puertas (jamba central) -->
+              <line x1="40" y1="10" x2="40" y2="116" stroke="#C2866B" stroke-width="0.6" opacity="0.15"/>
+            </svg>
+          </div>
+          <div class="hero-door-text">
+            <p class="hero-door-eyebrow">SI QUIERES SABER MÁS</p>
+            <h3>sobre ser un IKIGAIER</h3>
+            <div class="hero-door-content">
+              <a href="https://amzn.eu/d/06oPPZZk" class="hero-door-cover" target="_blank" rel="noopener noreferrer" aria-label="Ver El Ikigai que no te contaron en Amazon">
+                <img src="/assets/images/portada-libro.png" alt="Portada del libro El Ikigai que no te contaron">
+              </a>
+              <div class="hero-door-copy">
+                <p>El libro que abre la mirada. Una forma clara y honesta de comprender el ikigai real, la distancia entre lo que haces y lo que eres, y por qué no se resuelve con fórmulas.</p>
+                <a href="https://amzn.eu/d/06oPPZZk" target="_blank" rel="noopener noreferrer">Ver el libro →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Puerta derecha (cuaderno) -->
+        <article class="hero-door hero-door-workbook">
+          <div class="hero-door-visual">
+            <svg class="hero-door-svg" viewBox="0 0 80 120" width="56" height="84" fill="none" aria-hidden="true">
+              <!-- Marco de la puerta -->
+              <rect x="4" y="2" width="72" height="116" rx="4" stroke="#C2866B" stroke-width="1.8" fill="#F5F2ED"/>
+              <!-- Puerta entreabierta hacia el otro lado -->
+              <path d="M68 10 L52 6 L52 116 L68 116 Z" fill="#C2866B" opacity="0.12"/>
+              <path d="M68 10 L52 6 L52 116 L68 116 Z" stroke="#C2866B" stroke-width="1.2" opacity="0.3"/>
+              <!-- Panel superior -->
+              <rect x="12" y="14" width="56" height="32" rx="2" stroke="#C2866B" stroke-width="1" opacity="0.2"/>
+              <!-- Panel inferior -->
+              <rect x="12" y="52" width="56" height="56" rx="2" stroke="#C2866B" stroke-width="1" opacity="0.2"/>
+              <!-- Tirador (a la izquierda, puerta que se abre hacia la derecha) -->
+              <rect x="18" y="56" width="4" height="10" rx="2" fill="#C2866B" opacity="0.4"/>
+              <!-- Línea de separación -->
+              <line x1="40" y1="10" x2="40" y2="116" stroke="#C2866B" stroke-width="0.6" opacity="0.15"/>
+            </svg>
+          </div>
+          <div class="hero-door-text">
+            <p class="hero-door-eyebrow">PARA AQUELLOS QUE QUIEREN</p>
+            <h3>experimentar y practicar</h3>
+            <div class="hero-door-content">
+              <a href="https://amzn.eu/d/078eIuXs" class="hero-door-cover" target="_blank" rel="noopener noreferrer" aria-label="Ver Camina sin separarte de ti en Amazon">
+                <img src="/assets/images/portada-cuaderno.png" alt="Portada del cuaderno Camina sin separarte de ti">
+              </a>
+              <div class="hero-door-copy">
+                <p>Un cuaderno de trabajo para explorar, reflexionar y aplicar la mirada IKIGAIER en tu día a día. Menos teoría. Más evidencia personal.</p>
+                <a href="https://amzn.eu/d/078eIuXs" target="_blank" rel="noopener noreferrer">Ver el cuaderno →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="hero-doors-breeze">
+          <p class="hero-doors-breeze-title">Si abres las dos, pasará el aire fresco.</p>
+          <p>El conocimiento se entiende. La práctica lo convierte en cambio. Las dos puertas juntas te ayudan a caminar sin separarte de ti.</p>
+        </div>
+        <div class="hero-doors-workshop">
+          <p>Y si quieres vivirlo con otros,<br>puedes hacerlo en un taller presencial u online, en tu ciudad.</p>
+          <a href="/es/taller/">Ver el taller →</a>
+        </div>
+      </section>
+
+      <p class="lead">Un libro, un cuaderno, un taller. Para unir el hacer y el ser.</p>
+      <a href="#el-libro" class="btn">Entrar en IKIGAIER →</a>
     </div>
   </section>
 
@@ -138,257 +195,44 @@
   ============================================ -->
   <section id="el-libro" aria-label="El libro">
     <div class="container">
-      <span class="section-label">El libro</span>
       <h2>El Ikigai que no te contaron</h2>
 
       <div class="libro-flex">
-        <!-- Portada del libro (placeholder hasta tener la imagen real) -->
-        <div class="libro-portada">
-          <span class="titulo-libro">El Ikigai<br>que no te contaron</span>
-          <span class="autor-libro">Manel Rueda</span>
-          <svg class="simbolo-portada" width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="46" stroke="#FDFBF7" stroke-width="1.5"/>
-            <circle cx="50" cy="50" r="28" stroke="#FDFBF7" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
-          </svg>
+        <div class="libro-portada-wrapper">
+          <img class="libro-portada-img"
+               src="/assets/images/portada-libro.png"
+               alt="Portada del libro El Ikigai que no te contaron"
+               width="200" loading="lazy">
         </div>
-
         <div class="libro-info">
-          <p>Un libro que no te promete transformar nada en cinco pasos.</p>
-          <p>Una propuesta para integrar lo que haces y lo que eres a través del método IKIGAIER: un camino sencillo, humano y honesto que distingue entre el <span class="accent">ikigai activo</span> (impulso, dirección, construcción) y el <span class="accent">ikigai consciente</span> (presencia, profundidad, atención plena).</p>
-          <p>No es un libro de fórmulas. Es un libro de gestos.</p>
+          <p><strong>Ikigai</strong>. Una palabra que lleva años prometiendo propósito en fórmulas de cuatro círculos. Pero el ikigai real no es una receta: es una forma de habitar lo que haces.</p>
+          <p>Este libro rompe con el ikigai de las listas y los diagramas fáciles. Propone un método más honesto: unir el hacer y el ser sin separarlos en casillas. Sin postureo. Sin atajos.</p>
+          <p>Aquí dentro encontrarás una forma de caminar con más dirección y más presencia. Sin fórmulas. Sin promesas fáciles. Sin postureo.</p>
 
-          <div class="estructura">
-            <div><div class="estructura-item"><span class="acto">Acto 1</span><span>El ikigai sin postureo: qué es ser ikigai realmente</span></div></div>
-            <div><div class="estructura-item"><span class="acto">Acto 2</span><span>Los dos ikigais: activo y consciente, impulso y presencia</span></div></div>
-            <div><div class="estructura-item"><span class="acto">Acto 3</span><span>El mapa interior: lo que amas, el mundo, el sustento y el vacío fértil</span></div></div>
-            <div><div class="estructura-item"><span class="acto">Acto 4</span><span>Los cinco gestos del IKIGAIER</span></div></div>
-            <div><div class="estructura-item"><span class="acto">Acto 5</span><span>Unir el hacer y el ser: práctica diaria</span></div></div>
-            <div><div class="estructura-item"><span class="acto">Acto 6</span><span>Mapas, constelaciones y cuaderno de trabajo</span></div></div>
-          </div>
-
-          <div style="margin-top: 2rem;">
-            <a href="https://amzn.to/4jTyNsh" class="btn btn-amazon" target="_blank" rel="noopener noreferrer">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 10.9 13 11.5 13 13h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
-              Comprar en Amazon
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-  EL MÉTODO: DOS IKIGAIS
-  ============================================ -->
-  <section id="el-metodo" aria-label="El método: dos ikigais">
-    <div class="container">
-      <span class="section-label">El método</span>
-      <h2>Dos ikigais,<br>no uno solo</h2>
-      <p>El método IKIGAIER distingue dos movimientos complementarios. No se trata de elegir uno, sino de aprender a habitarlos juntos.</p>
-
-      <div class="dos-ikigais">
-        <div class="ikigai-card">
-          <span class="ikigai-label">Ikigai activo</span>
-          <h3>Hacer</h3>
-          <p>Dirección, propósito en acción, construir, contribuir, dejar huella. Lo que te levanta por la mañana con sentido de avance.</p>
-          <ul class="preguntas">
-            <li>¿Qué me impulsa?</li>
-            <li>¿Qué quiero construir?</li>
-            <li>¿Qué necesita el mundo de mí?</li>
-            <li>¿Qué estoy dispuesto a sostener?</li>
+          <ul class="estructura">
+            <li><strong>Primera parte:</strong> El mito del ikigai de cuatro círculos y por qué necesita una revisión a fondo.</li>
+            <li><strong>Segunda parte:</strong> IKIGAIER, un método de dos movimientos: Ikigai Activo e Ikigai Consciente.</li>
+            <li><strong>Tercera parte:</strong> Cinco gestos para practicar el método en lo cotidiano.</li>
+            <li><strong>Cierre:</strong> Una invitación a caminar sin separarte de ti.</li>
           </ul>
-        </div>
-        <div class="ikigai-card">
-          <span class="ikigai-label">Ikigai consciente</span>
-          <h3>Ser</h3>
-          <p>Presencia, atención plena, habitar el momento, cultivar lo esencial. Lo que te arraiga mientras avanzas.</p>
-          <ul class="preguntas">
-            <li>¿Qué me ancla al presente?</li>
-            <li>¿Qué me nutre sin producir?</li>
-            <li>¿Qué belleza reconozco en lo sencillo?</li>
-            <li>¿Dónde estoy cuando no corro?</li>
-          </ul>
+
+          <a href="https://www.amazon.es/dp/B0F4KNS4CN" class="btn" target="_blank" rel="noopener noreferrer">Comprar en Amazon</a>
+          <p class="amazon-disclaimer">Disponible en tapa blanda y Kindle · También en librerías</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-  LOS CINCO GESTOS
+  LA MIRADA (placeholder hasta que exista la sección)
   ============================================ -->
-  <section id="los-cinco-gestos" aria-label="Los cinco gestos">
-    <div class="container">
-      <span class="section-label">Los cinco gestos</span>
-      <h2>Cinco gestos<br>para caminar sin separarte de ti</h2>
-      <p>El método se encarna en cinco prácticas concretas. No son pasos lineales: son gestos que se repiten, se solapan y se profundizan con el tiempo.</p>
-
-      <div class="etapas-grid">
-        <div class="etapa-card">
-          <div class="etapa-icon">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="46" stroke="var(--gris-claro)" stroke-width="1.5"/>
-              <circle cx="50" cy="50" r="20" stroke="var(--terracota)" stroke-width="1.5" stroke-dasharray="4 4"/>
-              <circle cx="50" cy="50" r="6" fill="var(--negro)"/>
-            </svg>
-          </div>
-          <div>
-            <span class="etapa-num">Gesto 1</span>
-            <h3>Parar</h3>
-            <p>Detenerse sin culpa. Hacer silencio. Escuchar sin prisa lo que ya está ahí.</p>
-          </div>
-        </div>
-
-        <div class="etapa-card">
-          <div class="etapa-icon">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="46" stroke="var(--gris-claro)" stroke-width="1.5"/>
-              <path d="M30 55 Q50 20 70 55" stroke="var(--terracota)" stroke-width="1.5" fill="none"/>
-              <circle cx="50" cy="50" r="6" fill="var(--negro)"/>
-            </svg>
-          </div>
-          <div>
-            <span class="etapa-num">Gesto 2</span>
-            <h3>Preguntar(te)</h3>
-            <p>Plantear las preguntas que importan. Sin buscar respuestas inmediatas.</p>
-          </div>
-        </div>
-
-        <div class="etapa-card">
-          <div class="etapa-icon">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="46" stroke="var(--gris-claro)" stroke-width="1.5"/>
-              <line x1="20" y1="65" x2="50" y2="25" stroke="var(--terracota)" stroke-width="1.5"/>
-              <line x1="50" y1="25" x2="80" y2="65" stroke="var(--terracota)" stroke-width="1.5"/>
-              <circle cx="50" cy="50" r="6" fill="var(--negro)"/>
-            </svg>
-          </div>
-          <div>
-            <span class="etapa-num">Gesto 3</span>
-            <h3>Traducir</h3>
-            <p>Nombrar lo que hay. Poner palabras a la experiencia. Dibujar el mapa interior.</p>
-          </div>
-        </div>
-
-        <div class="etapa-card">
-          <div class="etapa-icon">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="46" stroke="var(--gris-claro)" stroke-width="1.5"/>
-              <rect x="25" y="30" width="22" height="40" stroke="var(--terracota)" stroke-width="1.5"/>
-              <rect x="53" y="20" width="22" height="50" stroke="var(--terracota)" stroke-width="1.5"/>
-              <circle cx="50" cy="50" r="6" fill="var(--negro)"/>
-            </svg>
-          </div>
-          <div>
-            <span class="etapa-num">Gesto 4</span>
-            <h3>Elegir</h3>
-            <p>Tomar decisiones alineadas. Priorizar desde lo esencial, no desde la urgencia.</p>
-          </div>
-        </div>
-
-        <div class="etapa-card">
-          <div class="etapa-icon">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="46" stroke="var(--gris-claro)" stroke-width="1.5"/>
-              <path d="M25 55 Q50 30 75 55" stroke="var(--terracota)" stroke-width="1.5" fill="none"/>
-              <path d="M25 65 Q50 40 75 65" stroke="var(--terracota)" stroke-width="1.5" fill="none"/>
-              <circle cx="50" cy="50" r="6" fill="var(--negro)"/>
-            </svg>
-          </div>
-          <div>
-            <span class="etapa-num">Gesto 5</span>
-            <h3>Caminar</h3>
-            <p>Avanzar sin separarse de uno mismo. Integrar el hacer y el ser en lo cotidiano.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-  PRODUCTOS
-  ============================================ -->
-  <section id="productos" aria-label="Productos IKIGAIER">
-    <div class="container">
-      <span class="section-label">Productos</span>
-      <h2>El ecosistema<br>IKIGAIER</h2>
-      <p>Tres piezas que se sostienen entre sí. Puedes empezar por la que más te llame.</p>
-
-      <div class="productos-grid">
-        <div class="producto-card">
-          <div class="producto-icon">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="15" y="20" width="30" height="60" stroke="var(--negro)" stroke-width="1.5" rx="2"/>
-              <line x1="25" y1="30" x2="35" y2="30" stroke="var(--gris-claro)" stroke-width="1"/>
-              <line x1="25" y1="38" x2="35" y2="38" stroke="var(--gris-claro)" stroke-width="1"/>
-              <rect x="55" y="35" width="30" height="40" stroke="var(--terracota)" stroke-width="1.5" rx="2"/>
-              <line x1="62" y1="45" x2="78" y2="45" stroke="var(--gris-claro)" stroke-width="1"/>
-            </svg>
-          </div>
-          <h3>El libro</h3>
-          <p>Una guía para entender los dos ikigais y empezar a caminar.</p>
-          <span class="estado">Disponible</span>
-        </div>
-        <div class="producto-card">
-          <div class="producto-icon">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="20" y="15" width="60" height="70" stroke="var(--negro)" stroke-width="1.5" rx="3"/>
-              <circle cx="50" cy="40" r="16" stroke="var(--gris-claro)" stroke-width="1.5"/>
-              <line x1="50" y1="60" x2="50" y2="75" stroke="var(--gris-claro)" stroke-width="1"/>
-              <line x1="35" y1="68" x2="65" y2="68" stroke="var(--gris-claro)" stroke-width="1"/>
-            </svg>
-          </div>
-          <h3>El cuaderno</h3>
-          <p>Un espacio propio para traducir, dibujar mapas y registrar tus gestos.</p>
-          <span class="estado">Próximamente</span>
-        </div>
-        <div class="producto-card">
-          <div class="producto-icon">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="40" stroke="var(--negro)" stroke-width="1.5"/>
-              <circle cx="35" cy="42" r="11" stroke="var(--terracota)" stroke-width="1.2"/>
-              <circle cx="65" cy="42" r="11" stroke="var(--terracota)" stroke-width="1.2"/>
-              <path d="M40 55 Q50 70 60 55" stroke="var(--gris-claro)" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <h3>El taller</h3>
-          <p>Una experiencia guiada para practicar los cinco gestos en grupo.</p>
-          <span class="estado">Próximamente</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-  TALLERES
-  ============================================ -->
-  <section id="talleres" aria-label="Talleres IKIGAIER">
-    <div class="container">
-      <span class="section-label">Talleres</span>
-      <h2>Vivir los gestos<br>en grupo</h2>
-      <p>El método IKIGAIER se aprende practicándolo. Los talleres son espacios para experimentar los cinco gestos con otros, en un entorno cuidado y guiado.</p>
-
-      <div class="talleres-grid">
-        <div class="taller-card">
-          <span class="modalidad">Presencial</span>
-          <h3>Taller de un día</h3>
-          <p>Seis horas para recorrer los cinco gestos con profundidad. En Barcelona y alrededores. Grupos de máximo 12 personas.</p>
-        </div>
-        <div class="taller-card">
-          <span class="modalidad">Online</span>
-          <h3>Taller de cinco sesiones</h3>
-          <p>Un gesto por semana, en directo, con ejercicios entre sesiones. Grupos reducidos para cuidar el acompañamiento.</p>
-        </div>
-      </div>
-      <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--gris-medio);">Próximamente abriremos inscripciones. <a href="/es/taller/" style="color: var(--terracota); text-decoration: none; font-weight: 400;">Más información sobre el taller</a>.</p>
-    </div>
-  </section>
+  <div id="la-mirada" style="position:absolute;visibility:hidden;" aria-hidden="true"></div>
 
   <!-- ============================================
   AUTOR
   ============================================ -->
   <section id="autor" aria-label="Sobre el autor">
     <div class="container">
-      <span class="section-label">Autor</span>
       <h2>Manel Rueda</h2>
 
       <div class="autor-flex">
@@ -397,57 +241,27 @@
           <p>No soy coach ni gurú. Soy alguien que camina sus propias preguntas y comparte lo que va encontrando.</p>
           <p>Vivo entre el hacer y la pausa, entre la construcción y la presencia. Escribí este libro porque creo que el ikigai merece un relato más honesto, menos fórmula y más vida.</p>
         </div>
-        <div class="autor-simbolo">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" width="140" height="140">
-            <circle cx="50" cy="50" r="48" stroke="var(--negro)" stroke-width="1"/>
-            <circle cx="50" cy="50" r="32" stroke="var(--gris-medio)" stroke-width="0.8" stroke-dasharray="3 5"/>
-            <line x1="50" y1="2" x2="50" y2="18" stroke="var(--negro)" stroke-width="1.5"/>
-            <line x1="50" y1="82" x2="50" y2="98" stroke="var(--negro)" stroke-width="1.5"/>
-            <line x1="2" y1="50" x2="18" y2="50" stroke="var(--negro)" stroke-width="1.5"/>
-            <line x1="82" y1="50" x2="98" y2="50" stroke="var(--negro)" stroke-width="1.5"/>
-            <line x1="16" y1="16" x2="28" y2="28" stroke="var(--gris-medio)" stroke-width="0.8"/>
-            <line x1="72" y1="72" x2="84" y2="84" stroke="var(--gris-medio)" stroke-width="0.8"/>
-            <line x1="84" y1="16" x2="72" y2="28" stroke="var(--gris-medio)" stroke-width="0.8"/>
-            <line x1="28" y1="72" x2="16" y2="84" stroke="var(--gris-medio)" stroke-width="0.8"/>
-            <circle cx="50" cy="50" r="5" fill="var(--negro)"/>
-          </svg>
+        <div class="autor-foto-wrapper">
+          <img class="autor-foto"
+               src="/assets/images/manel-rueda.jpg"
+               alt="Manel Rueda"
+               width="260" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-  CTA / NEWSLETTER
+  FOOTER — con kanji como sello de cierre
   ============================================ -->
-  <section id="newsletter" class="cta-section" aria-label="Newsletter">
-    <div class="container">
-      <h2>Mantente cerca</h2>
-      <p class="lead">Sin spam. Solo te escribiré cuando tenga algo que merezca la pena: novedades del libro, apertura de talleres, reflexiones del camino.</p>
-
-      <form class="newsletter-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
-        <input type="hidden" name="_next" value="https://www.ikigaier.com/es/?success=1">
-        <input type="email" name="email" placeholder="tu@email.com" required aria-label="Tu correo electrónico">
-        <button type="submit" class="btn btn-light">Me apunto</button>
-      </form>
-      <p id="newsletter-msg" style="margin-top: 1.2rem; font-size: 0.85rem; font-weight: 300; display: none;"></p>
-    </div>
-  </section>
-
-  <!-- ============================================
-  FOOTER
-  ============================================ -->
-  <footer>
-    <div class="container">
-      <p>IKIGAIER © 2026 · Manel Rueda</p>
-      <ul class="footer-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#el-libro">El libro</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
-      </ul>
-      <p class="footer-firma">
-        <a href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
-      </p>
-    </div>
+  <footer class="site-footer">
+    <img class="site-footer-kanji"
+         src="/assets/images/isotipo-kanji.png"
+         alt=""
+         width="36" height="36"
+         aria-hidden="true">
+    <p>IKIGAIER · Manel Rueda · 2026</p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
   </footer>
 
   <script src="/assets/js/main.js" defer></script>
