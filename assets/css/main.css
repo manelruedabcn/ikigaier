@@ -152,11 +152,17 @@ img {
   gap: 0.45rem;
 }
 
+.site-header-logo {
+  display: inline-block;
+  line-height: 0;
+}
+
 .site-header-logo img {
   height: 92px;
   width: auto;
   display: block;
   mix-blend-mode: multiply;
+  background: var(--bg-cream);
 }
 
 .site-header-nav {
