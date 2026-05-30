@@ -155,12 +155,15 @@ img {
 .site-header-logo {
   display: inline-block;
   line-height: 0;
+  background: var(--bg-cream);
+  border-radius: 2px;
 }
 
 .site-header-logo img {
   height: 92px;
   width: auto;
   display: block;
+  mix-blend-mode: multiply;
 }
 
 .site-header-nav {
