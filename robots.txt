@@ -1,4 +1,54 @@
+# robots.txt para ikigaier.com
+# Política: acceso abierto a todos los bots, incluidos modelos de IA.
+
+# Bots estándar (Google, Bing, etc.)
 User-agent: *
 Allow: /
+Disallow:
 
+# Bots de IA — respuesta en tiempo real (citación)
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Bots de IA — entrenamiento de modelos
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Sitemap
 Sitemap: https://www.ikigaier.com/sitemap.xml
