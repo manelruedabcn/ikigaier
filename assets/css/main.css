@@ -161,8 +161,6 @@ img {
   height: 92px;
   width: auto;
   display: block;
-  mix-blend-mode: multiply;
-  background: var(--bg-cream);
 }
 
 .site-header-nav {
