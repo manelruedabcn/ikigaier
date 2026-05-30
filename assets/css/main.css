@@ -1100,7 +1100,7 @@ img {
 .taller-gesto-item {
   display: flex;
   gap: 1.4rem;
-  padding: 1.4rem 0;
+  padding: 2.2rem 0;
   border-bottom: 1px solid rgba(168, 168, 168, 0.12);
   align-items: flex-start;
 }
@@ -1163,7 +1163,7 @@ img {
 .taller-llevas-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2.5rem 2rem;
+  gap: 3rem 2.5rem;
   margin-top: 2.5rem;
 }
 
@@ -1211,6 +1211,7 @@ img {
 /* CTA Final */
 .taller-cta-final {
   text-align: center;
+  margin-top: 6rem;
 }
 
 .taller-contacto {
@@ -1253,6 +1254,56 @@ img {
 
 .taller-form input[type="email"]:focus {
   border-color: var(--negro);
+}
+
+.section-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gris-claro);
+  margin-top: 5rem;
+  margin-bottom: 0.6rem;
+}
+
+/* --- Material (taller) --- */
+.material-flex {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.material-portada-wrapper {
+  flex-shrink: 0;
+}
+
+.material-portada-img {
+  width: 200px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  box-shadow:
+    0 2px 18px rgba(39, 39, 39, 0.10),
+    0 8px 44px rgba(39, 39, 39, 0.06);
+  border-radius: 2px;
+}
+
+.material-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.material-info p {
+  font-size: 0.95rem;
+  color: var(--gris-medio);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.material-info .btn {
+  margin-top: 0.5rem;
 }
 
 /* --- Taller Responsive --- */
@@ -1302,5 +1353,15 @@ img {
 
   .taller-frase {
     padding: 3.5rem 0;
+  }
+
+  .material-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .material-portada-img {
+    width: 160px;
   }
 }
