@@ -862,7 +862,7 @@ img {
 
 .section-divider img {
   display: inline-block;
-  width: 60px;
+  width: 150px;
   height: auto;
   opacity: 0.25;
 }
