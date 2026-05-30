@@ -41,26 +41,94 @@
 
   <link rel="stylesheet" href="/assets/css/main.css?v=2">
 
-  <!-- Schema Markup JSON-LD para el libro -->
+  <!-- Schema Markup JSON-LD — Person (Manel Rueda) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Manel Rueda",
+    "url": "https://www.ikigaier.com",
+    "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+    "jobTitle": "Autor",
+    "description": "Autor de El Ikigai que no te contaron y Camina sin separarte de ti. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+    "sameAs": [
+      "https://ikigaier.substack.com"
+    ]
+  }
+  </script>
+
+  <!-- Schema Markup JSON-LD — Organization (IKIGAIER) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "IKIGAIER",
+    "url": "https://www.ikigaier.com",
+    "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Manel Rueda"
+    },
+    "description": "Proyecto editorial sobre el ikigai consciente. Libro, cuaderno y taller para unir el hacer y el ser."
+  }
+  </script>
+
+  <!-- Schema Markup JSON-LD — Book (El Ikigai que no te contaron) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Book",
     "name": "El Ikigai que no te contaron",
-    "alternateName": "El Ikigai que no te contaron: método IKIGAIER",
     "author": {
       "@type": "Person",
       "name": "Manel Rueda"
     },
+    "description": "Una mirada profunda, clara y honesta sobre el ikigai real y la distancia entre lo que haces y lo que eres. Sin postureo. Sin atajos.",
+    "image": "https://www.ikigaier.com/assets/images/portada-libro.png",
+    "url": "https://www.amazon.es/dp/B0F4KNS4CN",
     "inLanguage": "es",
     "bookFormat": "https://schema.org/Paperback",
     "publisher": {
       "@type": "Organization",
-      "name": "Publicación independiente"
+      "name": "IKIGAIER"
+    }
+  }
+  </script>
+
+  <!-- Schema Markup JSON-LD — Book (Camina sin separarte de ti) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Camina sin separarte de ti",
+    "author": {
+      "@type": "Person",
+      "name": "Manel Rueda"
     },
-    "datePublished": "2026-04",
-    "description": "El Ikigai que no te contaron es un libro de Manel Rueda que propone el método IKIGAIER para unir el hacer y el ser, la dirección y la presencia.",
-    "url": "https://www.ikigaier.com/es/"
+    "description": "Cuaderno de trabajo. Una invitación a parar, mirar hacia dentro y poner por escrito lo que normalmente no te atreves a decirte. Cinco secciones, tres ejercicios y un diario de integración.",
+    "image": "https://www.ikigaier.com/assets/images/portada-cuaderno.png",
+    "url": "https://amzn.eu/d/078eIuXs",
+    "inLanguage": "es",
+    "bookFormat": "https://schema.org/Paperback",
+    "publisher": {
+      "@type": "Organization",
+      "name": "IKIGAIER"
+    }
+  }
+  </script>
+
+  <!-- Schema Markup JSON-LD — WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "IKIGAIER",
+    "url": "https://www.ikigaier.com",
+    "inLanguage": "es",
+    "publisher": {
+      "@type": "Organization",
+      "name": "IKIGAIER"
+    }
   }
   </script>
 </head>
