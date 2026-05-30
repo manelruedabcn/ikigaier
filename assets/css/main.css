@@ -857,14 +857,14 @@ img {
 /* --- Section divider con kanji --- */
 .section-divider {
   text-align: center;
-  padding: 2.5rem 0;
-  opacity: 0.3;
+  padding: 0.75rem 0;
 }
 
 .section-divider img {
   display: inline-block;
-  width: 18px;
+  width: 60px;
   height: auto;
+  opacity: 0.25;
 }
 
 /* ============================================
@@ -1211,7 +1211,7 @@ img {
 /* CTA Final */
 .taller-cta-final {
   text-align: center;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 .taller-contacto {
@@ -1264,7 +1264,7 @@ img {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gris-claro);
-  margin-top: 5rem;
+  margin-top: 1.5rem;
   margin-bottom: 0.6rem;
 }
 
