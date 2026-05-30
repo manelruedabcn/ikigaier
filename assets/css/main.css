@@ -796,6 +796,14 @@ img {
   color: var(--negro);
 }
 
+/* --- SELLO IKIGAIER (isotipo iR) --- */
+.sello-ikigaier {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: 3rem auto;
+}
+
 /* --- LEGAL / Privacidad --- */
 .legal-section {
   padding: 5rem 0;
