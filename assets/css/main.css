@@ -227,7 +227,7 @@ img {
 .hero-editorial p {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.05rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.75;
   color: var(--gris-medio);
   margin-bottom: 0.5rem;
@@ -372,7 +372,7 @@ img {
 .doors-sub {
   font-family: 'Inter', sans-serif;
   font-size: 0.65rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--charcoal);
   line-height: 1.45;
   margin: 0;
@@ -871,6 +871,8 @@ img {
    RESPONSIVE
    ============================================ */
 @media (max-width: 700px) {
+  body { line-height: 1.75; }
+
   .site-header-inner { padding: 1.8rem 1rem 1.2rem; }
 
   .site-header-logo img { height: 60px; }
@@ -1034,7 +1036,7 @@ img {
   font-size: 1.15rem;
   color: var(--gris-medio);
   margin-bottom: 0.4rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .taller-manifiesto-cierre {
@@ -1201,7 +1203,7 @@ img {
 
 .taller-frase blockquote p {
   font-size: clamp(1.4rem, 3.5vw, 1.9rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.08em;
   color: var(--blanco);
   margin-bottom: 0;
