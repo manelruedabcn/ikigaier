@@ -1413,33 +1413,41 @@ img {
 }
 
 /* ============================================
-   HERO PUERTAS — Hero fullscreen con presencia
+   HERO PUERTAS — Grid, escala grande
    ============================================ */
-.hero-puertas {
-  position: relative;
-  min-height: 100vh;
+.hero {
+  min-height: calc(100vh - 120px);
   background: #f5f2ed;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 80px;
+  padding: 40px 4vw 60px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Aire — cruza horizontalmente todo el hero */
-.hero-aire {
+.hero-inner {
+  width: min(1600px, 96vw);
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(360px, 0.9fr) minmax(260px, 1fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 72px);
+  position: relative;
+}
+
+/* Aire de fondo */
+.hero-air {
   position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: auto;
-  transform: translateY(-50%);
+  left: 8%;
+  right: 8%;
+  top: 46%;
+  width: 84%;
+  z-index: 1;
   pointer-events: none;
-  z-index: 0;
 }
 
-.hero-aire img,
-.hero-aire picture {
+.hero-air img,
+.hero-air picture {
   width: 100%;
   height: auto;
   display: block;
@@ -1452,64 +1460,49 @@ img {
   100% { transform: translateX(1%); }
 }
 
-/* Contenedor principal — ancho generoso */
-.hero-doors {
+/* Puertas */
+.hero-door {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
   position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: min(1500px, 92vw);
-  margin: 0 auto;
-  gap: 1vw;
 }
 
-/* Cada puerta — domina la escena */
-.puerta {
-  flex: 1 1 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
-}
-
-.puerta picture {
+.hero-door picture {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
-.puerta img {
-  height: 65vh;
+.hero-door img {
+  height: clamp(520px, 68vh, 760px);
   width: auto;
-  display: block;
   max-width: 100%;
-  max-height: 75vh;
   object-fit: contain;
+  display: block;
 }
 
-/* Centro — texto protagonista */
-.hero-centro {
-  flex: 0 0 auto;
-  width: clamp(280px, 26vw, 480px);
+/* Centro */
+.hero-center {
   text-align: center;
-  padding: 2rem 1.5rem;
+  position: relative;
+  z-index: 3;
 }
 
-.hero-centro h1 {
+.hero-center h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.8rem, 5vw, 5.5rem);
+  font-size: clamp(48px, 5vw, 84px);
   font-weight: 400;
+  line-height: 1.05;
   color: #4B563D;
-  margin: 0 0 1.5rem;
-  line-height: 1.15;
-  letter-spacing: 0.01em;
+  margin: 0 0 1.2rem;
 }
 
-.hero-centro p {
+.hero-center p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+  font-size: clamp(17px, 1.35vw, 22px);
   color: #4a4a4a;
   line-height: 1.8;
   margin: 0;
@@ -1541,66 +1534,64 @@ img {
    HERO PUERTAS — Móvil
    ============================================ */
 @media (max-width: 768px) {
-  .hero-puertas {
+  .hero {
     min-height: auto;
     padding: 6rem 1.2rem 2.5rem;
   }
 
-  .hero-doors {
+  .hero-inner {
+    display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 100%;
   }
 
-  .hero-aire {
+  .hero-air {
     position: relative;
-    top: auto;
     left: auto;
+    right: auto;
+    top: auto;
     width: 50vw;
-    transform: none;
     margin: 0 auto;
     order: 1;
   }
 
-  .hero-aire img,
-  .hero-aire picture {
+  .hero-air img,
+  .hero-air picture {
     transform: rotate(90deg);
     width: 100%;
     opacity: 0.3;
     animation: none;
   }
 
-  .puerta-izq {
+  .hero-door--left {
     order: 2;
   }
 
-  .hero-centro {
-    flex: none;
+  .hero-center {
     order: 3;
-    width: 100%;
-    padding: 0.5rem 0;
   }
 
-  .hero-centro h1 {
-    font-size: clamp(2rem, 8vw, 2.8rem);
+  .hero-center h1 {
+    font-size: clamp(32px, 8vw, 48px);
   }
 
-  .hero-centro p {
+  .hero-center p {
     font-size: 1rem;
   }
 
-  .puerta-der {
+  .hero-door--right {
     order: 4;
   }
 
-  .puerta {
-    max-width: 75%;
+  .hero-door {
+    width: 100%;
   }
 
-  .puerta img {
+  .hero-door img {
     height: auto;
+    width: min(78vw, 340px);
     max-height: 50vh;
-    width: 100%;
   }
 
   .btn-puerta {
