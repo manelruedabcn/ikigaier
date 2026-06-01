@@ -137,10 +137,16 @@ img {
 
 /* --- HEADER — editorial, dos niveles (kanji + logo + nav) --- */
 .site-header {
-  background: var(--bg-cream);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
   border-bottom: 1px solid rgba(168, 168, 168, 0.12);
-  position: relative;
 }
+
+
 
 .site-header-inner {
   max-width: 1080px;
@@ -1417,6 +1423,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 130px;
 }
 
 /* Aire — cruza horizontalmente detrás del contenido */
@@ -1534,7 +1541,7 @@ img {
 @media (max-width: 768px) {
   .hero-puertas {
     min-height: auto;
-    padding: 4rem 1.5rem 3rem;
+    padding: 7rem 1.5rem 3rem;
   }
 
   .hero-doors {
