@@ -1543,6 +1543,14 @@ img {
     padding: 1.5rem 1.2rem 2rem;
   }
 
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+  }
+
   .hero-air {
     position: relative;
     left: auto;
@@ -1550,7 +1558,8 @@ img {
     width: auto;
     max-width: none;
     transform: none;
-    margin: 0 auto;
+    margin: 0.3rem 0;
+    z-index: 2;
   }
 
   .hero-air img,
@@ -1562,19 +1571,11 @@ img {
     animation: none;
   }
 
-  .hero-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    width: 100%;
-  }
-
   /* Orden visual del camino vertical */
   .hero-center {
     order: 1;
     margin-top: 0;
-    padding: 0.5rem 0 0.2rem;
+    padding: 0.5rem 0 1rem;
     width: 100%;
   }
 
@@ -1603,10 +1604,8 @@ img {
     height: auto;
   }
 
-  /* Aire vertical conectando las dos puertas */
   .hero-air {
     order: 3;
-    margin: -12px 0;
   }
 
   .hero-door--right {
