@@ -1543,7 +1543,8 @@ img {
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding: 1.5rem 1.2rem 2rem;
+    padding: 1rem 0 2rem;
+    overflow: visible;
   }
 
   .hero-inner {
@@ -1563,28 +1564,28 @@ img {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 24px auto 20px;
+    margin: 20px auto 10px;
     padding: 0;
+    overflow: visible;
   }
 
   .hero-mobile-composition img {
-    width: min(118vw, 520px);
+    width: min(140vw, 620px);
     max-width: none;
     height: auto;
     display: block;
-    transform: translateX(0);
   }
 
   @media (max-width: 390px) {
     .hero-mobile-composition img {
-      width: min(125vw, 520px);
+      width: min(150vw, 620px);
     }
   }
 
   .hero-center {
     order: unset;
     margin-top: 0;
-    padding: 0.5rem 0 1rem;
+    padding: 0.5rem 1.2rem 1rem;
     width: 100%;
   }
 
