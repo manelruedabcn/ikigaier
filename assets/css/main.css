@@ -1422,9 +1422,11 @@ img {
 
 .hero-inner {
   position: relative;
-  z-index: 2;
   width: min(1600px, 96vw);
   margin: 0 auto;
+}
+
+.hero-desktop-composition {
   display: grid;
   grid-template-columns: minmax(300px, 1fr) minmax(420px, 0.9fr) minmax(300px, 1fr);
   align-items: center;
@@ -1530,12 +1532,13 @@ img {
 }
 
 /* Oculto en desktop · visible solo en móvil */
+.hero-mobile-composition,
 .hero-mobile-cta {
   display: none;
 }
 
 /* ============================================
-   HERO PUERTAS — Móvil (camino vertical)
+   HERO PUERTAS — Móvil (asset único)
    ============================================ */
 @media (max-width: 768px) {
   .hero {
@@ -1544,7 +1547,6 @@ img {
   }
 
   .hero-inner {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1552,31 +1554,27 @@ img {
     width: 100%;
   }
 
-  /* Aire absoluto — una sola corriente conectando ambas puertas */
-  .hero-air {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
-    z-index: 4;
-    pointer-events: none;
+  .hero-desktop-composition {
+    display: none;
+  }
+
+  .hero-mobile-composition {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 0 12px;
   }
 
-  .hero-air img,
-  .hero-air-img {
-    width: 420px;
-    max-width: none;
+  .hero-mobile-composition img {
+    width: min(88vw, 420px);
     height: auto;
-    opacity: 0.95;
-    animation: none;
+    display: block;
   }
 
-  /* Orden visual del camino vertical */
   .hero-center {
-    order: 1;
+    order: unset;
     margin-top: 0;
     padding: 0.5rem 0 1rem;
     width: 100%;
@@ -1589,55 +1587,16 @@ img {
   }
 
   .hero-sub-desktop {
-    display: none;
+    display: block;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
-  /* Ocultar CTA de hero-center en móvil (se muestra abajo) */
   .hero-center .btn-puerta {
-    display: none;
+    display: inline-block;
   }
 
-  /* Puerta libro — deja espacio para el aire debajo */
-  .hero-door--left {
-    order: 2;
-    width: 100%;
-    position: relative;
-    z-index: 3;
-    margin-bottom: 220px;
-  }
-
-  .hero-door--left img {
-    width: min(62vw, 280px);
-    height: auto;
-  }
-
-  /* Puerta cuaderno */
-  .hero-door--right {
-    order: 4;
-    width: 100%;
-    position: relative;
-    z-index: 3;
-  }
-
-  .hero-door--right img {
-    width: min(62vw, 280px);
-    height: auto;
-  }
-
-  /* CTA inferior */
   .hero-mobile-cta {
-    order: 5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem 0 0.5rem;
-    width: 100%;
-  }
-
-  .hero-mobile-cta .btn-puerta {
-    font-size: 0.7rem;
-    padding: 0.65rem 1.8rem;
-    margin-top: 0;
+    display: none;
   }
 }
