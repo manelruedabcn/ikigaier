@@ -1530,7 +1530,6 @@ img {
 }
 
 /* Oculto en desktop · visible solo en móvil */
-.hero-sub-mobile,
 .hero-mobile-cta {
   display: none;
 }
@@ -1557,9 +1556,9 @@ img {
   .hero-air img,
   .hero-air-img {
     transform: rotate(90deg);
-    width: 140px;
+    width: 220px;
     height: auto;
-    opacity: 0.4;
+    opacity: 0.5;
     animation: none;
   }
 
@@ -1567,7 +1566,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.2rem;
+    gap: 0;
     width: 100%;
   }
 
@@ -1575,27 +1574,18 @@ img {
   .hero-center {
     order: 1;
     margin-top: 0;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0.2rem;
     width: 100%;
   }
 
   .hero-center h1 {
     font-size: 1.6rem;
     line-height: 1.2;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
   }
 
   .hero-sub-desktop {
     display: none;
-  }
-
-  .hero-sub-mobile {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.95rem;
-    color: #6b6b6b;
-    line-height: 1.6;
-    margin: 0 0 1rem;
   }
 
   /* Ocultar CTA de hero-center en móvil (se muestra abajo) */
@@ -1606,7 +1596,6 @@ img {
   .hero-door--left {
     order: 2;
     width: 100%;
-    margin: 0.8rem 0 0.2rem;
   }
 
   .hero-door--left img {
@@ -1614,16 +1603,15 @@ img {
     height: auto;
   }
 
-  /* Aire vertical entre puertas */
+  /* Aire vertical conectando las dos puertas */
   .hero-air {
     order: 3;
-    margin: -4px 0;
+    margin: -12px 0;
   }
 
   .hero-door--right {
     order: 4;
     width: 100%;
-    margin: 0.2rem 0 0.8rem;
   }
 
   .hero-door--right img {
@@ -1638,16 +1626,8 @@ img {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1rem 0 0.5rem;
+    padding: 1.2rem 0 0.5rem;
     width: 100%;
-  }
-
-  .hero-cta-prompt {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
-    color: #4B563D;
-    margin: 0 0 1rem;
-    font-style: italic;
   }
 
   .hero-mobile-cta .btn-puerta {
