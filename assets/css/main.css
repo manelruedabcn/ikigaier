@@ -412,11 +412,12 @@ img {
 
 .doors-card-text p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 0.82rem;
+  font-size: 1.125rem;
   line-height: 1.6;
-  color: var(--charcoal);
+  color: #2d2d2d;
+  text-align: left;
   margin: 0 0 0.8rem;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Buttons */
@@ -476,9 +477,9 @@ img {
 
 .doors-feature span {
   font-family: 'Inter', sans-serif;
-  font-size: 0.68rem;
-  color: var(--charcoal);
-  opacity: 0.5;
+  font-size: 0.9375rem;
+  color: #4a4a4a;
+  opacity: 1;
   line-height: 1.5;
 }
 
@@ -497,12 +498,12 @@ img {
 
 .doors-center-desc {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 0.82rem;
+  font-size: 1.125rem;
   line-height: 1.55;
-  color: var(--charcoal);
+  color: #2d2d2d;
   text-align: center;
   margin: 0 0 1rem;
-  opacity: 0.75;
+  opacity: 1;
 }
 
 /* Breeze section */
