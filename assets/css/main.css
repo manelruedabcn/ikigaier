@@ -1431,14 +1431,14 @@ img {
   gap: clamp(32px, 4vw, 80px);
 }
 
-/* Aire de fondo */
+/* Aire de fondo — cruza todo el ancho, detrás del texto */
 .hero-air {
   position: absolute;
-  z-index: 1;
-  left: 4%;
-  right: 4%;
-  top: 46%;
-  width: 92%;
+  left: 0;
+  right: 0;
+  top: 43%;
+  width: 100%;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -1447,7 +1447,7 @@ img {
   width: 100%;
   height: auto;
   display: block;
-  opacity: 0.4;
+  opacity: 0.75;
   animation: hero-aire-drift 14s ease-in-out infinite alternate;
 }
 
