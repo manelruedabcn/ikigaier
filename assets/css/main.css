@@ -293,7 +293,7 @@ img {
 .doors-grid {
   display: grid;
   grid-template-columns: 1fr 1.05fr 1fr;
-  align-items: start;
+  align-items: stretch;
   gap: 0;
 }
 
@@ -303,11 +303,13 @@ img {
   border-radius: 12px;
   padding: 1.6rem 1.4rem;
   background: var(--bg-cream);
+  height: 100%;
 }
 
 .doors-card-inner {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 /* Center column */
@@ -385,29 +387,31 @@ img {
   opacity: 1;
 }
 
-/* Card body - book/text side by side */
+/* Card body - stacked vertically (image → text → button → features) */
 .doors-card-body {
-  display: flex;
-  gap: 1.2rem;
-  align-items: flex-start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 1rem !important;
   margin-bottom: 0.8rem;
 }
 
 .doors-card-media {
-  flex-shrink: 0;
+  width: 100% !important;
+  order: 0;
 }
 
 .doors-cover-img {
-  width: 100px;
-  height: 150px;
+  width: 100% !important;
+  height: auto !important;
   display: block;
-  object-fit: cover;
   border-radius: 1px;
 }
 
 .doors-card-text {
-  flex: 1;
-  min-width: 0;
+  width: 100% !important;
+  text-align: center !important;
+  order: 1;
 }
 
 .doors-card-text p {
@@ -415,7 +419,7 @@ img {
   font-size: 1.125rem;
   line-height: 1.6;
   color: #2d2d2d;
-  text-align: left;
+  text-align: center;
   margin: 0 0 0.8rem;
   opacity: 1;
 }
@@ -434,6 +438,7 @@ img {
   text-decoration: none;
   transition: opacity 0.2s;
   border: none;
+  margin-top: 0.5rem;
 }
 
 .doors-btn:hover {
@@ -453,6 +458,7 @@ img {
   text-decoration: none;
   border: 1px solid var(--gold);
   transition: opacity 0.2s;
+  margin-top: 0.5rem;
 }
 
 .doors-btn-outline:hover {
@@ -588,8 +594,39 @@ img {
   line-height: 1.7;
   opacity: 0.7;
 }
-  color: var(--gris-medio);
-  white-space: nowrap;
+
+/* ============================================
+   DOORS OVERRIDES — !important forced styles
+   ============================================ */
+
+/* 1. Descriptive paragraphs inside left/right cards */
+.doors-card-text p {
+  color: #2d2d2d !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  margin-bottom: 0.6rem !important;
+}
+
+/* 2. Center card description */
+.doors-center-desc {
+  color: #2d2d2d !important;
+  font-size: 16px !important;
+}
+
+/* 3. Feature list items ("Para comprender", "Para escribir", etc.) */
+.doors-feature span {
+  color: #3a3a3a !important;
+  font-size: 16px !important;
+}
+
+/* 4. All SVG icons in the doors section */
+.doors svg,
+.doors svg * {
+  stroke: #5a5a5a !important;
+  opacity: 1 !important;
+}
+.doors svg [fill]:not([fill="none"]) {
+  fill: #5a5a5a !important;
 }
 
 /* --- EL LIBRO --- */

@@ -65,7 +65,7 @@
     "@type": "Organization",
     "name": "IKIGAIER",
     "url": "https://www.ikigaier.com",
-    "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png",
+    "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.webp",
     "founder": {
       "@type": "Person",
       "name": "Manel Rueda"
@@ -85,7 +85,7 @@
       "name": "Manel Rueda"
     },
     "description": "Una mirada profunda, clara y honesta sobre el ikigai real y la distancia entre lo que haces y lo que eres. Sin postureo. Sin atajos.",
-    "image": "https://www.ikigaier.com/assets/images/portada-libro.png",
+    "image": "https://www.ikigaier.com/assets/images/portada-libro.webp",
     "url": "https://www.amazon.es/dp/B0F4KNS4CN",
     "inLanguage": "es",
     "bookFormat": "https://schema.org/Paperback",
@@ -107,7 +107,7 @@
       "name": "Manel Rueda"
     },
     "description": "Cuaderno de trabajo. Una invitación a parar, mirar hacia dentro y poner por escrito lo que normalmente no te atreves a decirte. Cinco secciones, tres ejercicios y un diario de integración.",
-    "image": "https://www.ikigaier.com/assets/images/portada-cuaderno.png",
+    "image": "https://www.ikigaier.com/assets/images/portada-cuaderno.webp",
     "url": "https://amzn.eu/d/078eIuXs",
     "inLanguage": "es",
     "bookFormat": "https://schema.org/Paperback",
@@ -141,9 +141,12 @@
   <header class="site-header">
     <div class="site-header-inner">
       <a href="/es/" class="site-header-logo" aria-label="IKIGAIER · Inicio">
-        <img src="/assets/images/logo-ikigaier-bicolor.png"
-             alt="IKIGAIER"
-             width="293" height="92">
+        <picture>
+          <source srcset="/assets/images/logo-ikigaier-bicolor.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor.png"
+               alt="IKIGAIER"
+               width="293" height="92">
+        </picture>
       </a>
       <nav class="site-header-nav" aria-label="Navegación principal">
         <a href="#inicio">Inicio</a>
@@ -187,21 +190,24 @@
           <!-- LEFT CARD — BOOK -->
           <article class="doors-card doors-card--left">
             <div class="doors-card-inner">
-              <div class="doors-card-meta">
-                <span class="doors-badge">1</span>
-                <span class="doors-label">PUERTA 1</span>
-                <h3 class="doors-title">EL LIBRO</h3>
-                <p class="doors-sub">si quieres saber más sobre<br><strong>SER UN IKIGAIER</strong></p>
-              </div>
-
               <div class="doors-card-body">
                 <div class="doors-card-media">
-                  <img src="/assets/images/portada-libro.png" alt="Portada del libro El Ikigai que no te contaron" width="100" height="150" class="doors-cover-img">
+                  <picture>
+                    <source srcset="/assets/images/portada-libro.webp" type="image/webp">
+                    <img src="/assets/images/portada-libro.png" alt="Portada del libro El Ikigai que no te contaron" width="100" height="150" class="doors-cover-img">
+                  </picture>
                 </div>
                 <div class="doors-card-text">
                   <p>Una mirada honesta sobre el ikigai real. No la fórmula. La distancia entre lo que haces y lo que eres.</p>
                   <a href="https://amzn.eu/d/06oPPZZk" class="doors-btn" target="_blank" rel="noopener noreferrer">Ver el libro →</a>
                 </div>
+              </div>
+
+              <div class="doors-card-meta">
+                <span class="doors-badge">1</span>
+                <span class="doors-label">PUERTA 1</span>
+                <h3 class="doors-title">EL LIBRO</h3>
+                <p class="doors-sub">si quieres saber más sobre<br><strong>SER UN IKIGAIER</strong></p>
               </div>
 
               <div class="doors-card-features">
@@ -291,21 +297,24 @@
           <!-- RIGHT CARD — WORKBOOK -->
           <article class="doors-card doors-card--right">
             <div class="doors-card-inner">
-              <div class="doors-card-meta">
-                <span class="doors-badge">2</span>
-                <span class="doors-label">PUERTA 2</span>
-                <h3 class="doors-title">EL CUADERNO</h3>
-                <p class="doors-sub">para aquellos que quieren<br><strong>EXPERIMENTAR Y PRACTICAR</strong></p>
-              </div>
-
               <div class="doors-card-body">
                 <div class="doors-card-media">
-                  <img src="/assets/images/portada-cuaderno.png" alt="Portada del cuaderno Camina sin separarte de ti" width="100" height="150" class="doors-cover-img">
+                  <picture>
+                    <source srcset="/assets/images/portada-cuaderno.webp" type="image/webp">
+                    <img src="/assets/images/portada-cuaderno.png" alt="Portada del cuaderno Camina sin separarte de ti" width="100" height="150" class="doors-cover-img">
+                  </picture>
                 </div>
                 <div class="doors-card-text">
                   <p>Un cuaderno de trabajo para bajar el método a tu vida. Menos teoría, más evidencia personal.</p>
                   <a href="https://amzn.eu/d/078eIuXs" class="doors-btn" target="_blank" rel="noopener noreferrer">Ver el cuaderno →</a>
                 </div>
+              </div>
+
+              <div class="doors-card-meta">
+                <span class="doors-badge">2</span>
+                <span class="doors-label">PUERTA 2</span>
+                <h3 class="doors-title">EL CUADERNO</h3>
+                <p class="doors-sub">para aquellos que quieren<br><strong>EXPERIMENTAR Y PRACTICAR</strong></p>
               </div>
 
               <div class="doors-card-features">
@@ -357,10 +366,13 @@
 
       </section><!-- /doors -->
 
-      <img class="sello-ikigaier"
-           src="/assets/images/isotipo-cuadrado-transparente.png"
-           alt="Sello IKIGAIER"
-           width="100" height="100">
+      <picture>
+        <source srcset="/assets/images/isotipo-cuadrado-transparente.webp" type="image/webp">
+        <img class="sello-ikigaier"
+             src="/assets/images/isotipo-cuadrado-transparente.png"
+             alt="Sello IKIGAIER"
+             width="100" height="100">
+      </picture>
     </div>
   </section>
 
@@ -373,10 +385,13 @@
 
       <div class="libro-flex">
         <div class="libro-portada-wrapper">
-          <img class="libro-portada-img"
-               src="/assets/images/portada-libro.png"
-               alt="Portada del libro El Ikigai que no te contaron"
-               width="200" loading="lazy">
+          <picture>
+            <source srcset="/assets/images/portada-libro.webp" type="image/webp">
+            <img class="libro-portada-img"
+                 src="/assets/images/portada-libro.png"
+                 alt="Portada del libro El Ikigai que no te contaron"
+                 width="200" loading="lazy">
+          </picture>
         </div>
         <div class="libro-info">
           <p><strong>Ikigai</strong>. Una palabra que lleva años prometiendo propósito en fórmulas de cuatro círculos. Pero el ikigai real no es una receta: es una forma de habitar lo que haces.</p>
@@ -398,7 +413,10 @@
   </section>
 
   <div class="section-divider" aria-hidden="true">
-    <img src="/assets/images/ikionda-separador-transparente.png" alt="">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
+      <img src="/assets/images/ikionda-separador-transparente.png" alt="">
+    </picture>
   </div>
 
   <!-- ============================================
@@ -410,10 +428,13 @@
 
       <div class="libro-flex">
         <div class="libro-portada-wrapper">
-          <img class="libro-portada-img"
-               src="/assets/images/portada-cuaderno.png"
-               alt="Portada del cuaderno Camina sin separarte de ti"
-               width="200" loading="lazy">
+          <picture>
+            <source srcset="/assets/images/portada-cuaderno.webp" type="image/webp">
+            <img class="libro-portada-img"
+                 src="/assets/images/portada-cuaderno.png"
+                 alt="Portada del cuaderno Camina sin separarte de ti"
+                 width="200" loading="lazy">
+          </picture>
         </div>
         <div class="libro-info">
           <p><strong>Comprender es solo la mitad del camino.</strong> Hay cosas que solo cambian cuando bajan al cuerpo, a la página en blanco, a la pregunta que te haces a solas. Este cuaderno está hecho para ese trabajo.</p>
@@ -440,7 +461,10 @@
   </section>
 
   <div class="section-divider" aria-hidden="true">
-    <img src="/assets/images/ikionda-separador-transparente.png" alt="">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
+      <img src="/assets/images/ikionda-separador-transparente.png" alt="">
+    </picture>
   </div>
 
   <!-- ============================================
@@ -487,10 +511,13 @@
   FOOTER
   ============================================ -->
   <footer class="site-footer">
-    <img class="footer-ikionda"
-         src="/assets/images/ikionda-separador-transparente.png"
-         alt=""
-         aria-hidden="true">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
+      <img class="footer-ikionda"
+           src="/assets/images/ikionda-separador-transparente.png"
+           alt=""
+           aria-hidden="true">
+    </picture>
     <p>IKIGAIER · Manel Rueda · 2026</p>
     <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
   </footer>
