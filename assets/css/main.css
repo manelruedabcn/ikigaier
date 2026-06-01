@@ -1434,20 +1434,22 @@ img {
 /* Aire de fondo — cruza todo el ancho, detrás del texto */
 .hero-air {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 43%;
-  width: 100%;
   z-index: 2;
+  left: 50%;
+  top: 52%;
+  width: 115vw;
+  max-width: none;
+  transform: translate(-50%, -50%);
   pointer-events: none;
 }
 
 .hero-air img,
-.hero-air picture {
+.hero-air-img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  opacity: 0.75;
+  max-width: none;
+  opacity: 0.95;
   animation: hero-aire-drift 14s ease-in-out infinite alternate;
 }
 
@@ -1459,7 +1461,7 @@ img {
 /* Puertas */
 .hero-door {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1546,17 +1548,19 @@ img {
   .hero-air {
     position: relative;
     left: auto;
-    right: auto;
     top: auto;
     width: 50vw;
+    max-width: none;
+    transform: none;
     margin: 0 auto;
     order: 1;
   }
 
   .hero-air img,
-  .hero-air picture {
+  .hero-air-img {
     transform: rotate(90deg);
     width: 100%;
+    height: auto;
     opacity: 0.3;
     animation: none;
   }
