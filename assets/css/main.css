@@ -1544,22 +1544,23 @@ img {
   }
 
   .hero-inner {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0;
     width: 100%;
+    padding: 180px 0;
   }
 
+  /* Aire absoluto — una sola corriente continua entre puertas */
   .hero-air {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: auto;
-    max-width: none;
-    transform: none;
-    margin: -40px 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
     z-index: 2;
+    pointer-events: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1567,12 +1568,11 @@ img {
 
   .hero-air img,
   .hero-air-img {
-    transform: rotate(90deg);
-    width: 260px;
+    width: 420px;
+    max-width: none;
     height: auto;
     opacity: 0.95;
     animation: none;
-    transform-origin: center center;
   }
 
   /* Orden visual del camino vertical */
@@ -1603,7 +1603,6 @@ img {
     width: 100%;
     position: relative;
     z-index: 3;
-    margin-bottom: -30px;
   }
 
   .hero-door--left img {
@@ -1611,16 +1610,11 @@ img {
     height: auto;
   }
 
-  .hero-air {
-    order: 3;
-  }
-
   .hero-door--right {
     order: 4;
     width: 100%;
     position: relative;
     z-index: 3;
-    margin-top: -30px;
   }
 
   .hero-door--right img {
