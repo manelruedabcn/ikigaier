@@ -1529,75 +1529,130 @@ img {
   color: #fff;
 }
 
+/* Oculto en desktop · visible solo en móvil */
+.hero-sub-mobile,
+.hero-mobile-cta {
+  display: none;
+}
+
 /* ============================================
-   HERO PUERTAS — Móvil
+   HERO PUERTAS — Móvil (camino vertical)
    ============================================ */
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding: 3rem 1.2rem 2.5rem;
-  }
-
-  .hero-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+    padding: 1.5rem 1.2rem 2rem;
   }
 
   .hero-air {
     position: relative;
     left: auto;
     top: auto;
-    width: 50vw;
+    width: auto;
     max-width: none;
     transform: none;
     margin: 0 auto;
-    order: 1;
   }
 
   .hero-air img,
   .hero-air-img {
     transform: rotate(90deg);
-    width: 100%;
+    width: 140px;
     height: auto;
-    opacity: 0.3;
+    opacity: 0.4;
     animation: none;
+  }
+
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    width: 100%;
+  }
+
+  /* Orden visual del camino vertical */
+  .hero-center {
+    order: 1;
+    margin-top: 0;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+
+  .hero-center h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-sub-desktop {
+    display: none;
+  }
+
+  .hero-sub-mobile {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    color: #6b6b6b;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+
+  /* Ocultar CTA de hero-center en móvil (se muestra abajo) */
+  .hero-center .btn-puerta {
+    display: none;
   }
 
   .hero-door--left {
     order: 2;
+    width: 100%;
+    margin: 0.8rem 0 0.2rem;
   }
 
-  .hero-center {
+  .hero-door--left img {
+    width: min(62vw, 280px);
+    height: auto;
+  }
+
+  /* Aire vertical entre puertas */
+  .hero-air {
     order: 3;
-    margin-top: 0;
-  }
-
-  .hero-center h1 {
-    font-size: clamp(32px, 8vw, 48px);
-  }
-
-  .hero-center p {
-    font-size: 1rem;
+    margin: -4px 0;
   }
 
   .hero-door--right {
     order: 4;
+    width: 100%;
+    margin: 0.2rem 0 0.8rem;
   }
 
-  .hero-door {
+  .hero-door--right img {
+    width: min(62vw, 280px);
+    height: auto;
+  }
+
+  /* CTA inferior */
+  .hero-mobile-cta {
+    order: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0 0.5rem;
     width: 100%;
   }
 
-  .hero-door img {
-    height: auto;
-    width: min(78vw, 340px);
-    max-height: 50vh;
+  .hero-cta-prompt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: #4B563D;
+    margin: 0 0 1rem;
+    font-style: italic;
   }
 
-  .btn-puerta {
+  .hero-mobile-cta .btn-puerta {
     font-size: 0.7rem;
     padding: 0.65rem 1.8rem;
+    margin-top: 0;
   }
 }
