@@ -1410,117 +1410,63 @@ img {
 }
 
 /* ============================================
-   HERO PUERTAS — Grid, tras header relativo
+   HERO PUERTAS — Nueva estructura
    ============================================ */
-.hero {
-  position: relative;
-  min-height: calc(100vh - 150px);
-  padding: 20px 0 60px;
-  overflow: hidden;
-  background: #f5f2ed;
-}
-
-.hero-inner {
-  position: relative;
-  width: min(1600px, 96vw);
-  margin: 0 auto;
-}
-
-.hero-desktop-composition {
-  display: grid;
-  grid-template-columns: minmax(300px, 1fr) minmax(420px, 0.9fr) minmax(300px, 1fr);
+.hero-puertas {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 150px);
+  padding: 40px 4vw 60px;
+  background: #f5f2ed;
   gap: clamp(32px, 4vw, 80px);
 }
 
-/* Aire de fondo — cruza todo el ancho, detrás del texto */
-.hero-air {
-  position: absolute;
-  z-index: 2;
-  left: 50%;
-  top: 52%;
-  width: 115vw;
-  max-width: none;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.hero-air img,
-.hero-air-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: none;
-  opacity: 0.95;
-  animation: hero-aire-drift 14s ease-in-out infinite alternate;
-}
-
-@keyframes hero-aire-drift {
-  0%   { transform: translateX(-1%); }
-  100% { transform: translateX(1%); }
-}
-
-/* Puertas */
-.hero-door {
-  position: relative;
-  z-index: 4;
+.puerta {
+  flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  max-width: 380px;
 }
 
-.hero-door picture {
+.puerta picture {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
-.hero-door img {
-  height: clamp(520px, 66vh, 780px);
+.puerta img {
+  height: clamp(480px, 60vh, 680px);
   width: auto;
   max-width: 100%;
   object-fit: contain;
   display: block;
 }
 
-/* Centro */
-.hero-center {
-  position: relative;
-  z-index: 5;
+.puerta-subtitulo {
+  color: #5a5a4a;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
   text-align: center;
-  margin-top: 40px;
+  margin: 1rem 0 0.5rem;
+  line-height: 1.6;
+  max-width: 200px;
 }
 
-.hero-center h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(56px, 5.2vw, 88px);
-  font-weight: 400;
-  line-height: 1.05;
-  color: #4B563D;
-  margin: 0 0 1.2rem;
-}
-
-.hero-center p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(17px, 1.5vw, 24px);
-  color: #4a4a4a;
-  line-height: 1.8;
-  margin: 0;
-}
-
-/* Botón */
 .btn-puerta {
   display: inline-block;
-  margin-top: 2.2rem;
-  padding: 0.75rem 2.4rem;
+  padding: 0.6rem 1.4rem;
   border: 1px solid #A8794B;
   border-radius: 50px;
   color: #A8794B;
   font-family: 'Inter', sans-serif;
-  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+  font-size: 0.7rem;
   font-weight: 400;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
@@ -1531,83 +1477,77 @@ img {
   color: #fff;
 }
 
-/* Oculto en desktop · visible solo en móvil */
-.hero-mobile-composition,
-.hero-mobile-cta {
-  display: none;
+/* Centro */
+.hero-centro {
+  flex: 0 0 400px;
+  text-align: center;
+  padding: 1rem;
 }
 
-/* ============================================
-   HERO PUERTAS — Móvil (asset único)
-   ============================================ */
+.hero-hook {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  font-style: italic;
+  color: #8a7a6a;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.hero-centro h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  font-weight: 400;
+  color: #4B563D;
+  margin: 0 0 1.2rem;
+  line-height: 1.1;
+}
+
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  color: #6b6b6b;
+  line-height: 1.8;
+  margin: 0 0 1.5rem;
+}
+
+.hero-vuelta {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  font-style: italic;
+  color: #A8794B;
+  margin: 0;
+}
 @media (max-width: 768px) {
-  .hero {
-    min-height: auto;
-    padding: 1rem 0 2rem;
-    overflow: visible;
-  }
-
-  .hero-inner {
-    display: flex;
+  .hero-puertas {
     flex-direction: column;
-    align-items: center;
-    gap: 0;
-    width: 100%;
+    min-height: auto;
+    padding: 2rem 1.2rem;
+    gap: 1rem;
   }
 
-  .hero-desktop-composition {
-    display: none;
+  .puerta {
+    max-width: 75%;
+    padding-bottom: 0.5rem;
   }
 
-  .hero-mobile-composition {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 20px auto 10px;
-    padding: 0;
-    overflow: visible;
-  }
-
-  .hero-mobile-composition img {
-    width: min(140vw, 620px);
-    max-width: none;
+  .puerta img {
     height: auto;
-    display: block;
+    width: min(70vw, 300px);
+    max-height: 50vh;
   }
 
-  @media (max-width: 390px) {
-    .hero-mobile-composition img {
-      width: min(150vw, 620px);
-    }
-  }
-
-  .hero-center {
-    order: unset;
-    margin-top: 0;
-    padding: 0.5rem 1.2rem 1rem;
+  .hero-centro {
+    flex: none;
     width: 100%;
+    padding: 0.5rem 0;
   }
 
-  .hero-center h1 {
+  .hero-centro h1 {
     font-size: 1.6rem;
-    line-height: 1.2;
-    margin-bottom: 0.4rem;
   }
 
-  .hero-sub-desktop {
-    display: block;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .hero-center .btn-puerta {
-    display: inline-block;
-  }
-
-  .hero-mobile-cta {
-    display: none;
+  .hero-hook {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
   }
 }
-
-.puerta{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:2rem}.puerta-subtitulo{color:#5a5a4a;font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;text-align:center;margin:1rem 0 0.5rem 0;line-height:1.6;max-width:200px}
