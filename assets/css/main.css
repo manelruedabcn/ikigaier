@@ -1545,14 +1545,36 @@ img {
     gap: 0;
   }
 
+  /* Reorden para móvil: título, puerta, aire, puerta */
+  .hero-center {
+    order: 1;
+    flex: none;
+    width: 100%;
+    padding: 0 0 1.5rem;
+  }
+
+  .hero-center h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-hook {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .puerta-izq {
+    order: 2;
+  }
+
   .hero-air {
+    order: 3;
     position: relative;
     left: auto;
     top: auto;
     width: auto;
     max-width: none;
     transform: none;
-    margin: -20px 0;
+    margin: -30px 0;
     opacity: 0.7;
     z-index: 2;
     pointer-events: none;
@@ -1560,10 +1582,14 @@ img {
 
   .hero-air img {
     transform: rotate(90deg);
-    width: 280px;
+    width: 320px;
     height: auto;
     display: block;
     margin: 0 auto;
+  }
+
+  .puerta-der {
+    order: 4;
   }
 
   .puerta {
