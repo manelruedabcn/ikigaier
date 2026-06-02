@@ -1581,8 +1581,8 @@ img {
   }
 
   .hero-air img {
-    transform: rotate(90deg);
-    width: 600px;
+    transform: rotate(100deg) translateX(25px);
+    width: 750px;
     height: auto;
     display: block;
     margin: 0 auto;
