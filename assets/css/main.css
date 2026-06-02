@@ -1542,12 +1542,35 @@ img {
     flex-direction: column;
     min-height: auto;
     padding: 2rem 1.2rem;
-    gap: 1rem;
+    gap: 0;
+  }
+
+  .hero-air {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    max-width: none;
+    transform: none;
+    margin: -20px 0;
+    opacity: 0.7;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .hero-air img {
+    transform: rotate(90deg);
+    width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .puerta {
     max-width: 75%;
     padding-bottom: 0.5rem;
+    position: relative;
+    z-index: 3;
   }
 
   .puerta img {
