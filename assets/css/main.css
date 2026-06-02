@@ -641,6 +641,10 @@ img {
   padding: 5rem 0;
 }
 
+#cuaderno h2 {
+  margin-bottom: 2.5rem;
+}
+
 #el-libro h2 {
   margin-bottom: 2.5rem;
 }
