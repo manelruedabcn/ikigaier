@@ -295,7 +295,7 @@ img {
 /* Grid */
 .doors-grid {
   display: grid;
-  grid-template-columns: 1fr 1.05fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: stretch;
   gap: 0;
 }
@@ -1419,8 +1419,9 @@ img {
   min-height: calc(100vh - 150px);
   padding: 40px 4vw 60px;
   background: #f5f2ed;
-  gap: clamp(32px, 4vw, 80px);
+  gap: clamp(20px, 2vw, 40px);
   overflow: visible;
+  position: relative;
 }
 
 .puerta {
@@ -1429,8 +1430,10 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 2rem;
+  padding-bottom: 0.3rem;
   max-width: 380px;
+  position: relative;
+  z-index: 2;
 }
 
 .puerta picture {
@@ -1485,15 +1488,21 @@ img {
   text-align: center;
   padding: 1rem;
   margin: auto;
+  transform: translateY(-30px);
+  position: relative;
+  z-index: 3;
 }
 
 .hero-hook {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  font-size: clamp(1.7rem, 2.3vw, 2rem);
   font-style: italic;
   color: #8a7a6a;
-  margin: 0 0 4.5rem;
+  margin: 0 0 3.5rem;
   line-height: 1.5;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-center h1 {
@@ -1501,8 +1510,9 @@ img {
   font-size: clamp(2.4rem, 4vw, 4.2rem);
   font-weight: 400;
   color: #4B563D;
-  margin: 0 0 1.2rem;
-  line-height: 1.1;
+  margin: 0 0 1.5rem;
+  line-height: 1.35;
+  letter-spacing: 0.03em;
 }
 
 .hero-sub {
@@ -1515,11 +1525,11 @@ img {
 
 .hero-vuelta {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+  font-size: clamp(1.4rem, 1.8vw, 1.7rem);
   font-style: italic;
   font-weight: 500;
   color: #A8794B;
-  margin: 4rem 0 0 0;
+  margin: 1.5rem 0 0 0;
 }
 @media (max-width: 768px) {
   .hero-puertas {
