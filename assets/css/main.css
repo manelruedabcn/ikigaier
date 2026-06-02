@@ -1574,15 +1574,15 @@ img {
     width: auto;
     max-width: none;
     transform: none;
-    margin: -30px 0;
-    opacity: 0.6;
+    margin: -50px 0;
+    opacity: 0.5;
     z-index: 4;
     pointer-events: none;
   }
 
   .hero-air img {
     transform: rotate(90deg);
-    width: 480px;
+    width: 600px;
     height: auto;
     display: block;
     margin: 0 auto;
