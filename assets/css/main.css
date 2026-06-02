@@ -1575,8 +1575,8 @@ img {
     max-width: none;
     transform: none;
     margin: -30px 0;
-    opacity: 0.7;
-    z-index: 2;
+    opacity: 0.6;
+    z-index: 4;
     pointer-events: none;
   }
 
