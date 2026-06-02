@@ -634,11 +634,11 @@ img {
 
 /* --- EL LIBRO --- */
 #el-libro {
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
 }
 
 #cuaderno {
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
 }
 
 #cuaderno h2 {
@@ -903,7 +903,7 @@ img {
 /* --- Section divider con kanji --- */
 .section-divider {
   text-align: center;
-  margin: 24px auto;
+  margin: 12px auto;
 }
 
 .section-divider img {
