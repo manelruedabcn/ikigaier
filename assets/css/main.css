@@ -635,7 +635,10 @@ img {
 /* --- EL LIBRO --- */
 #el-libro {
   padding: 5rem 0;
-  border-top: 1px solid rgba(168, 168, 168, 0.15);
+}
+
+#cuaderno {
+  padding: 5rem 0;
 }
 
 #el-libro h2 {
@@ -759,7 +762,6 @@ img {
   text-align: center;
   padding: 4rem 2rem 3rem;
   background: var(--bg-cream);
-  border-top: 1px solid var(--beige);
 }
 
 .footer-ikionda {
@@ -790,7 +792,6 @@ img {
 /* --- NEWSLETTER / Cartas IKIGAIER --- */
 .newsletter-section {
   padding: 5rem 0;
-  border-top: 1px solid rgba(168, 168, 168, 0.15);
   text-align: center;
 }
 
@@ -898,7 +899,7 @@ img {
 /* --- Section divider con kanji --- */
 .section-divider {
   text-align: center;
-  padding: 0.75rem 0;
+  margin: 120px auto;
 }
 
 .section-divider img {
