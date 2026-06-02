@@ -795,7 +795,7 @@ img {
 
 /* --- NEWSLETTER / Cartas IKIGAIER --- */
 .newsletter-section {
-  padding: 5rem 0;
+  padding: 0.5rem 0;
   text-align: center;
 }
 
@@ -1576,7 +1576,7 @@ img {
 /* Taller section */
 .taller-section {
   text-align: center;
-  padding: 4rem 1.5rem 5rem;
+  padding: 0.5rem 1.5rem;
   max-width: 600px;
   margin: 0 auto;
 }
