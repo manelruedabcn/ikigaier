@@ -1610,4 +1610,4 @@ img {
   }
 }
 
-.puerta-subtitulo{color:#d4c9b8;font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;text-align:center;margin:1rem 0 0.5rem 0;line-height:1.6}
+.puerta{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:2rem}.puerta-subtitulo{color:#5a5a4a;font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;text-align:center;margin:1rem 0 0.5rem 0;line-height:1.6;max-width:200px}
