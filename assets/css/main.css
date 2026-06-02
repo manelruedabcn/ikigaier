@@ -843,6 +843,55 @@ img {
   color: var(--negro);
 }
 
+/* --- FIRMA EDITORIAL — Sobre Manel Rueda --- */
+.firma-section {
+  padding: 6rem 0 4rem;
+}
+
+.firma-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.firma-body {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.firma-body p {
+  font-size: 0.95rem;
+  color: var(--gris-medio);
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+  max-width: 100%;
+}
+
+.firma-body a {
+  color: var(--negro);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: opacity 0.2s;
+}
+
+.firma-body a:hover {
+  opacity: 0.6;
+}
+
+.firma-pregunta {
+  margin-top: 2rem !important;
+  font-style: italic;
+  color: var(--gris-medio);
+}
+
+.firma-email {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem !important;
+  color: var(--negro) !important;
+  letter-spacing: 0.02em;
+  margin-top: 0.5rem !important;
+}
+
 /* --- SELLO IKIGAIER (isotipo iR) --- */
 .sello-ikigaier {
   display: block;
@@ -1048,6 +1097,14 @@ img {
 
   .autor-foto {
     width: 200px;
+  }
+
+  .firma-section {
+    padding: 4rem 0 3rem;
+  }
+
+  .firma-email {
+    font-size: 1.05rem !important;
   }
 }
 
