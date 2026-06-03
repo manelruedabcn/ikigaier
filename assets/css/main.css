@@ -794,17 +794,23 @@ img {
 
 .footer-link-back:hover { color: var(--gris-medio); }
 
-.firma-instagram {
-  display: inline-block;
+.firma-sigue-linea {
+  font-size: 1.05rem;
+  color: var(--negro);
   margin-top: 0.6rem;
-  color: var(--gris-claro);
-  opacity: 0.4;
+}
+
+.firma-instagram {
+  color: var(--coral);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid var(--coral);
+  padding-bottom: 1px;
   transition: opacity 0.3s ease;
-  line-height: 0;
 }
 
 .firma-instagram:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 /* --- NEWSLETTER / Cartas IKIGAIER --- */
