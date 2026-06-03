@@ -794,6 +794,19 @@ img {
 
 .footer-link-back:hover { color: var(--gris-medio); }
 
+.footer-instagram {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--gris-claro);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-instagram:hover {
+  color: var(--gris-medio);
+}
+
 /* --- NEWSLETTER / Cartas IKIGAIER --- */
 .newsletter-section {
   padding: 0.5rem 0;
