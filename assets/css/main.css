@@ -794,16 +794,16 @@ img {
 
 .footer-link-back:hover { color: var(--gris-medio); }
 
-.footer-instagram {
+.firma-instagram {
   display: inline-block;
-  margin-top: 0.8rem;
-  color: var(--gris-medio);
-  opacity: 0.35;
+  margin-top: 0.6rem;
+  color: var(--gris-claro);
+  opacity: 0.4;
   transition: opacity 0.3s ease;
   line-height: 0;
 }
 
-.footer-instagram:hover {
+.firma-instagram:hover {
   opacity: 0.8;
 }
 
