@@ -797,14 +797,14 @@ img {
 .footer-instagram {
   display: inline-block;
   margin-top: 0.8rem;
-  color: var(--gris-claro);
-  opacity: 0.25;
+  color: var(--gris-medio);
+  opacity: 0.35;
   transition: opacity 0.3s ease;
   line-height: 0;
 }
 
 .footer-instagram:hover {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 /* --- NEWSLETTER / Cartas IKIGAIER --- */
