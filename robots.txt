@@ -38,8 +38,6 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-Sitemap: https://www.ikigaier.com/sitemap.xml
-
 User-agent: Bytespider
 Allow: /
 
