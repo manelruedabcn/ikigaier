@@ -794,6 +794,21 @@ img {
 
 .footer-link-back:hover { color: var(--gris-medio); }
 
+.footer-legal {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--gris-claro);
+  margin: 0.4rem 0 0.9rem;
+}
+
+.footer-legal a {
+  color: var(--gris-claro);
+  text-decoration: none;
+}
+
+.footer-legal a:hover { color: var(--gris-medio); }
+
 .firma-sigue-linea {
   font-size: 1.05rem;
   color: var(--negro);
