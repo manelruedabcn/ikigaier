@@ -61,7 +61,12 @@
                width="293" height="92">
         </picture>
       </a>
-      <nav class="site-header-nav" aria-label="Navegación principal">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
         <a href="/es/#inicio">Inicio</a>
         <a href="/es/#el-libro">El libro</a>
         <a href="/es/#la-mirada">La mirada</a>
@@ -70,6 +75,7 @@
       </nav>
     </div>
   </header>
+  <div class="nav-overlay" id="nav-overlay"></div>
 
   <!-- ============================================
   POLÍTICA DE PRIVACIDAD
