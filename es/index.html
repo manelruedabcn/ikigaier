@@ -157,7 +157,12 @@
                width="293" height="92">
         </picture>
       </a>
-      <nav class="site-header-nav" aria-label="Navegación principal">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
         <a href="#inicio-nuevo">Inicio</a>
         <a href="#el-libro">El libro</a>
         <a href="#cuaderno">El cuaderno</a>
@@ -168,6 +173,7 @@
       </nav>
     </div>
   </header>
+  <div class="nav-overlay" id="nav-overlay"></div>
 
   <section id="inicio-nuevo" class="hero-puertas">
     <div class="puerta puerta-izq">
