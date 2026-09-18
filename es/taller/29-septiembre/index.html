@@ -79,11 +79,7 @@
       <div class="landing-taller-form-card" id="reserva">
         <h2>Reserva tu plaza</h2>
         <p>Te confirmaremos la inscripción por el medio que indiques.</p>
-        <form class="landing-taller-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
-          <input type="hidden" name="_next" value="https://www.ikigaier.com/es/taller/29-septiembre/?success=1#reserva">
-          <input type="hidden" name="_subject" value="Nueva inscripción · Taller IKIGAIER · 29 septiembre">
-          <input type="hidden" name="taller" value="29 de septiembre · 19:00 h · Carrer de la Mercè, 4 · Vilanova i la Geltrú">
-
+        <form class="landing-taller-form" id="taller-registro-form">
           <label for="nombre">Nombre</label>
           <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="given-name" required>
 
@@ -91,13 +87,17 @@
           <input id="contacto" type="text" name="contacto" placeholder="Como prefieras que te contactemos" required>
 
           <label class="landing-taller-check">
-            <input type="checkbox" name="privacidad_leida" value="sí" required>
+            <input type="checkbox" name="privacidad" value="sí" required>
             <span>He leído la <a href="/es/privacidad/" target="_blank" rel="noopener">información básica de privacidad</a>.</span>
+          </label>
+
+          <label class="landing-taller-honeypot" aria-hidden="true">Web
+            <input type="text" name="website" tabindex="-1" autocomplete="off">
           </label>
 
           <p class="landing-taller-privacidad"><strong>Responsable:</strong> Manel Rueda. <strong>Finalidad:</strong> gestionar tu inscripción y comunicarte la información necesaria del taller. No te suscribiremos a comunicaciones comerciales. Derechos: <a href="mailto:hola@ikigaier.com">hola@ikigaier.com</a>.</p>
 
-          <button type="submit" class="btn btn-primary">Quiero mi plaza</button>
+          <button type="submit" class="btn btn-primary" id="taller-submit">Quiero mi plaza</button>
         </form>
         <p id="taller-msg" class="landing-taller-msg" aria-live="polite"></p>
         <p class="landing-taller-sin-spam">Sin suscripciones automáticas.</p>
@@ -111,18 +111,45 @@
   </footer>
 
   <script>
-    (function() {
-      var params = new URLSearchParams(window.location.search);
-      if (params.get('success') === '1') {
-        var msg = document.getElementById('taller-msg');
-        if (msg) {
+    (function () {
+      var form = document.getElementById('taller-registro-form');
+      var button = document.getElementById('taller-submit');
+      var msg = document.getElementById('taller-msg');
+      if (!form || !button || !msg) return;
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        button.disabled = true;
+        button.textContent = 'Enviando…';
+        msg.style.display = 'none';
+
+        var data = new FormData(form);
+        try {
+          var response = await fetch('https://app.ikigaier.com/api/taller/registro', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              nombre: data.get('nombre'),
+              contacto: data.get('contacto'),
+              privacidad: data.get('privacidad') === 'sí',
+              website: data.get('website') || ''
+            })
+          });
+          if (!response.ok) throw new Error('request failed');
+          form.reset();
           msg.textContent = 'Solicitud recibida. Te confirmaremos la plaza por el medio que nos has indicado.';
+          msg.style.color = '#3F4A34';
           msg.style.display = 'block';
+          button.textContent = 'Solicitud enviada';
+        } catch (error) {
+          msg.innerHTML = 'No hemos podido registrar la solicitud. Escríbenos a <a href="mailto:hola@ikigaier.com">hola@ikigaier.com</a>.';
+          msg.style.color = '#9A5841';
+          msg.style.display = 'block';
+          button.disabled = false;
+          button.textContent = 'Volver a intentarlo';
         }
-        var url = new URL(window.location.href);
-        url.searchParams.delete('success');
-        window.history.replaceState({}, document.title, url.pathname + url.search + url.hash);
-      }
+      });
     })();
   </script>
 </body>

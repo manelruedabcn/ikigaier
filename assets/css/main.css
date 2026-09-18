@@ -162,11 +162,14 @@ img {
 .landing-taller-form input[type="text"] { padding: 0.9rem 1rem; border: 1.5px solid #C5BFB8; background: transparent; color: var(--negro); font: 300 0.88rem 'Inter', sans-serif; outline: none; }
 .landing-taller-form input[type="text"]:focus { border-color: var(--negro); }
 .landing-taller-form .btn { width: 100%; margin-top: 0.3rem; }
+.landing-taller-form .btn:disabled { cursor: wait; opacity: 0.72; }
+.landing-taller-honeypot { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
 .landing-taller-check { display: grid; grid-template-columns: 18px 1fr; gap: 0.6rem; align-items: start; margin-top: 0.2rem; font-size: 0.7rem; line-height: 1.45; }
 .landing-taller-check input { margin-top: 0.15rem; }
 .landing-taller-check a, .landing-taller-privacidad a { text-decoration: underline; text-underline-offset: 0.15em; }
 .landing-taller-privacidad { color: var(--gris-medio); font-size: 0.64rem; line-height: 1.5; }
 .landing-taller-msg { display: none; margin-top: 1rem; color: var(--olive); font-size: 0.82rem; }
+.landing-taller-msg a { text-decoration: underline; text-underline-offset: 0.15em; }
 .landing-taller-sin-spam { margin: 0.8rem 0 0 !important; color: var(--gris-claro) !important; font-size: 0.68rem !important; }
 .landing-taller-footer { padding: 1.8rem; border-top: 1px solid rgba(247,244,239,0.13); text-align: center; }
 .landing-taller-footer p { margin-bottom: 0.25rem; color: var(--gris-claro); font-size: 0.7rem; }
