@@ -97,6 +97,81 @@ img {
   height: auto;
 }
 
+/* --- Campaña puntual · Taller 29 de septiembre --- */
+.taller-anuncio-barra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--coral);
+  color: var(--negro);
+  font-size: 0.78rem;
+  letter-spacing: 0.025em;
+  text-align: center;
+}
+.taller-anuncio-cta { font-weight: 500; text-decoration: underline; text-underline-offset: 0.2em; }
+
+.landing-taller-body { background: #2A2724; color: var(--cream); }
+.landing-taller-header {
+  width: min(1180px, calc(100% - 3rem));
+  margin: 0 auto;
+  padding: 2rem 0 0;
+}
+.landing-taller-logo { color: var(--cream); font: 500 3.2rem/1 'Cormorant Garamond', serif; letter-spacing: -0.045em; }
+.landing-taller-logo span { color: var(--coral); }
+.landing-taller-main { padding: 3.5rem 1.5rem 4.5rem; }
+.landing-taller-grid {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(350px, 0.88fr);
+  gap: 5rem;
+  align-items: center;
+}
+.landing-taller-kicker {
+  color: #BA9960;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+.landing-taller-copy h1 {
+  max-width: 690px;
+  color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.45rem);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+.landing-taller-sub { max-width: 620px; margin-top: 1.4rem; color: var(--cream); font-size: 1.15rem; font-weight: 300; }
+.landing-taller-datos { margin-top: 2.2rem; }
+.landing-taller-datos p { margin-bottom: 0.2rem; color: var(--cream); font-size: 0.93rem; line-height: 1.6; }
+.landing-taller-datos strong { color: var(--coral); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+.landing-taller-limite { margin-top: 1.2rem; color: #BA9960; font-size: 0.82rem; font-weight: 500; }
+.landing-taller-que-haremos { max-width: 630px; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(247,244,239,0.2); }
+.landing-taller-que-haremos p { color: var(--cream); font-size: 0.9rem; font-weight: 300; }
+.landing-taller-que-haremos a { color: var(--cream); font-size: 0.8rem; text-decoration: underline; text-underline-offset: 0.25em; }
+.landing-taller-form-card { padding: 2.5rem; border-radius: 28px; background: var(--bg-cream); color: var(--negro); box-shadow: 0 20px 70px rgba(0,0,0,0.22); }
+.landing-taller-form-card h2 { font-size: 2.25rem; }
+.landing-taller-form-card > p { margin-top: 0.25rem; color: var(--gris-medio); font-size: 0.84rem; }
+.landing-taller-form { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; }
+.landing-taller-form > label:not(.landing-taller-check) { margin-bottom: -0.38rem; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; }
+.landing-taller-form input[type="text"] { padding: 0.9rem 1rem; border: 1.5px solid #C5BFB8; background: transparent; color: var(--negro); font: 300 0.88rem 'Inter', sans-serif; outline: none; }
+.landing-taller-form input[type="text"]:focus { border-color: var(--negro); }
+.landing-taller-form .btn { width: 100%; margin-top: 0.3rem; }
+.landing-taller-check { display: grid; grid-template-columns: 18px 1fr; gap: 0.6rem; align-items: start; margin-top: 0.2rem; font-size: 0.7rem; line-height: 1.45; }
+.landing-taller-check input { margin-top: 0.15rem; }
+.landing-taller-check a, .landing-taller-privacidad a { text-decoration: underline; text-underline-offset: 0.15em; }
+.landing-taller-privacidad { color: var(--gris-medio); font-size: 0.64rem; line-height: 1.5; }
+.landing-taller-msg { display: none; margin-top: 1rem; color: var(--olive); font-size: 0.82rem; }
+.landing-taller-sin-spam { margin: 0.8rem 0 0 !important; color: var(--gris-claro) !important; font-size: 0.68rem !important; }
+.landing-taller-footer { padding: 1.8rem; border-top: 1px solid rgba(247,244,239,0.13); text-align: center; }
+.landing-taller-footer p { margin-bottom: 0.25rem; color: var(--gris-claro); font-size: 0.7rem; }
+.landing-taller-footer a { text-decoration: underline; text-underline-offset: 0.2em; }
+
 /* --- CONTAINER --- */
 .container {
   width: 100%;
@@ -610,6 +685,16 @@ img {
    RESPONSIVE
    ============================================ */
 @media (max-width: 700px) {
+  .taller-anuncio-barra { flex-direction: column; gap: 0.1rem; padding: 0.65rem 1rem; line-height: 1.45; }
+  .landing-taller-header { width: calc(100% - 2rem); padding-top: 1.4rem; }
+  .landing-taller-logo { font-size: 2.6rem; }
+  .landing-taller-main { padding: 2.5rem 1rem 3rem; }
+  .landing-taller-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .landing-taller-copy { text-align: center; }
+  .landing-taller-copy h1 { font-size: clamp(2.25rem, 11vw, 3.2rem); }
+  .landing-taller-sub { font-size: 1rem; }
+  .landing-taller-que-haremos { text-align: left; }
+  .landing-taller-form-card { padding: 1.7rem 1.35rem; border-radius: 22px; }
   body { line-height: 1.75; }
 
   .site-header-inner { padding: 1.8rem 1rem 1.2rem; }
@@ -749,6 +834,18 @@ img {
   .firma-email {
     font-size: 1.05rem !important;
   }
+}
+
+/* Refuerzo de la maqueta móvil de la landing puntual. */
+@media (max-width: 700px) {
+  .landing-taller-grid,
+  .landing-taller-copy,
+  .landing-taller-form-card,
+  .landing-taller-copy h1,
+  .landing-taller-sub,
+  .landing-taller-que-haremos { min-width: 0; width: 100%; max-width: 100%; }
+  .landing-taller-copy h1 { font-size: 2.35rem; overflow-wrap: normal; }
+  .landing-taller-sub { padding: 0 0.2rem; }
 }
 
 /* ============================================
