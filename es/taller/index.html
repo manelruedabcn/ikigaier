@@ -45,22 +45,40 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Taller IKIGAIER · Camina sin separarte de ti",
-    "description": "Taller experiencial para parar el ruido, mirar con honestidad dónde te estás alejando de ti y llevarte herramientas sencillas para volver a caminar con más presencia. Se trabajan los cinco gestos del método IKIGAIER.",
-    "provider": {
-      "@type": "Person",
-      "name": "Manel Rueda",
-      "url": "https://www.ikigaier.com"
-    },
-    "serviceType": "Taller experiencial",
-    "areaServed": {
-      "@type": "Country",
-      "name": "España"
-    },
-    "url": "https://www.ikigaier.com/es/taller/",
-    "image": "https://www.ikigaier.com/assets/images/og-image.png",
-    "inLanguage": "es"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.ikigaier.com/#organization",
+        "name": "IKIGAIER",
+        "url": "https://www.ikigaier.com/",
+        "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png",
+        "founder": { "@id": "https://www.ikigaier.com/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.ikigaier.com/#person",
+        "name": "Manel Rueda",
+        "url": "https://www.ikigaier.com/",
+        "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+        "jobTitle": "Autor",
+        "sameAs": [
+          "https://manelrueda.com",
+          "https://ikigaier.substack.com",
+          "https://www.instagram.com/ikigaier.me/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": "Taller IKIGAIER · Camina sin separarte de ti",
+        "description": "Taller experiencial para parar el ruido, mirar con honestidad dónde te estás alejando de ti y llevarte herramientas sencillas para volver a caminar con más presencia. Se trabajan los cinco gestos del método IKIGAIER.",
+        "provider": { "@id": "https://www.ikigaier.com/#organization" },
+        "serviceType": "Taller experiencial",
+        "areaServed": { "@type": "Country", "name": "España" },
+        "url": "https://www.ikigaier.com/es/taller/",
+        "image": "https://www.ikigaier.com/assets/images/og-image.png",
+        "inLanguage": "es"
+      }
+    ]
   }
   </script>
 
