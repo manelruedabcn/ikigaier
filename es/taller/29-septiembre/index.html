@@ -31,25 +31,59 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "Taller gratuito IKIGAIER · El camino hacia tu propósito",
-    "startDate": "2026-09-29T19:00:00+02:00",
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "isAccessibleForFree": true,
-    "location": {
-      "@type": "Place",
-      "name": "BalanceaTe Experience",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Carrer de la Mercè, 4",
-        "postalCode": "08800",
-        "addressLocality": "Vilanova i la Geltrú",
-        "addressCountry": "ES"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.ikigaier.com/#organization",
+        "name": "IKIGAIER",
+        "url": "https://www.ikigaier.com/",
+        "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png",
+        "founder": { "@id": "https://www.ikigaier.com/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.ikigaier.com/#person",
+        "name": "Manel Rueda",
+        "url": "https://www.ikigaier.com/",
+        "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+        "jobTitle": "Autor",
+        "sameAs": [
+          "https://manelrueda.com",
+          "https://ikigaier.substack.com",
+          "https://www.instagram.com/ikigaier.me/",
+          "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+        ]
+      },
+      {
+        "@type": "Event",
+        "name": "Taller gratuito IKIGAIER · El camino hacia tu propósito",
+        "startDate": "2026-09-29T19:00:00+02:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "isAccessibleForFree": true,
+        "location": {
+          "@type": "Place",
+          "name": "BalanceaTe Experience",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Carrer de la Mercè, 4",
+            "postalCode": "08800",
+            "addressLocality": "Vilanova i la Geltrú",
+            "addressCountry": "ES"
+          }
+        },
+        "organizer": { "@id": "https://www.ikigaier.com/#organization" },
+        "performer": { "@id": "https://www.ikigaier.com/#person" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.ikigaier.com/es/taller/29-septiembre/"
+        },
+        "url": "https://www.ikigaier.com/es/taller/29-septiembre/"
       }
-    },
-    "organizer": {"@type": "Person", "name": "Manel Rueda", "url": "https://www.ikigaier.com"},
-    "url": "https://www.ikigaier.com/es/taller/29-septiembre/"
+    ]
   }
   </script>
 </head>

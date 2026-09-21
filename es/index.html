@@ -42,94 +42,73 @@
 
   <link rel="stylesheet" href="/assets/css/main.css?v=10">
 
-  <!-- Schema Markup JSON-LD — Person (Manel Rueda) -->
+  <!-- ============================================
+       DATOS ESTRUCTURADOS — @graph con @id persistentes.
+       Un único nodo Person (Manel) y un único Organization,
+       referenciados por @id desde el resto de nodos y del sitio.
+       Los mismos @id se usan en /es/ikigai/ y en las páginas de taller.
+       ============================================ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Manel Rueda",
-    "url": "https://www.ikigaier.com",
-    "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
-    "jobTitle": "Autor",
-    "description": "Autor de El Ikigai que no te contaron y Camina sin separarte de ti. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
-    "sameAs": [
-      "https://ikigaier.substack.com"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.ikigaier.com/#website",
+        "url": "https://www.ikigaier.com/",
+        "name": "IKIGAIER",
+        "inLanguage": "es",
+        "publisher": { "@id": "https://www.ikigaier.com/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.ikigaier.com/#organization",
+        "name": "IKIGAIER",
+        "url": "https://www.ikigaier.com/",
+        "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png",
+        "description": "Proyecto editorial sobre el ikigai consciente. Libro, cuaderno y taller para unir el hacer y el ser.",
+        "founder": { "@id": "https://www.ikigaier.com/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.ikigaier.com/#person",
+        "name": "Manel Rueda",
+        "url": "https://www.ikigaier.com/",
+        "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+        "jobTitle": "Autor",
+        "description": "Autor y creador de IKIGAIER. Escribe sobre el ikigai consciente y la unión del hacer y el ser. Autor de El Ikigai que no te contaron y Camina sin separarte de ti.",
+        "sameAs": [
+          "https://manelrueda.com",
+          "https://ikigaier.substack.com",
+          "https://www.instagram.com/ikigaier.me/",
+          "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+        ]
+      },
+      {
+        "@type": "Book",
+        "@id": "https://www.ikigaier.com/#book-ikigai",
+        "name": "El Ikigai que no te contaron",
+        "author": { "@id": "https://www.ikigaier.com/#person" },
+        "description": "Una mirada profunda, clara y honesta sobre el ikigai real y la distancia entre lo que haces y lo que eres. Sin postureo. Sin atajos.",
+        "image": "https://www.ikigaier.com/assets/images/portada-libro.webp",
+        "url": "https://amzn.eu/d/0bUk5t8J",
+        "inLanguage": "es",
+        "bookFormat": "https://schema.org/Paperback",
+        "publisher": { "@id": "https://www.ikigaier.com/#organization" }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://www.ikigaier.com/#book-camina",
+        "name": "Camina sin separarte de ti",
+        "author": { "@id": "https://www.ikigaier.com/#person" },
+        "description": "Cuaderno de trabajo. Una invitación a parar, mirar hacia dentro y poner por escrito lo que normalmente no te atreves a decirte. Cinco secciones, tres ejercicios y un diario de integración.",
+        "image": "https://www.ikigaier.com/assets/images/portada-cuaderno.webp",
+        "url": "https://amzn.eu/d/078eIuXs",
+        "inLanguage": "es",
+        "bookFormat": "https://schema.org/Paperback",
+        "publisher": { "@id": "https://www.ikigaier.com/#organization" }
+      }
     ]
-  }
-  </script>
-
-  <!-- Schema Markup JSON-LD — Organization (IKIGAIER) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "IKIGAIER",
-    "url": "https://www.ikigaier.com",
-    "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.webp",
-    "founder": {
-      "@type": "Person",
-      "name": "Manel Rueda"
-    },
-    "description": "Proyecto editorial sobre el ikigai consciente. Libro, cuaderno y taller para unir el hacer y el ser."
-  }
-  </script>
-
-  <!-- Schema Markup JSON-LD — Book (El Ikigai que no te contaron) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Book",
-    "name": "El Ikigai que no te contaron",
-    "author": {
-      "@type": "Person",
-      "name": "Manel Rueda"
-    },
-    "description": "Una mirada profunda, clara y honesta sobre el ikigai real y la distancia entre lo que haces y lo que eres. Sin postureo. Sin atajos.",
-    "image": "https://www.ikigaier.com/assets/images/portada-libro.webp",
-    "url": "https://amzn.eu/d/0bUk5t8J",
-    "inLanguage": "es",
-    "bookFormat": "https://schema.org/Paperback",
-    "publisher": {
-      "@type": "Organization",
-      "name": "IKIGAIER"
-    }
-  }
-  </script>
-
-  <!-- Schema Markup JSON-LD — Book (Camina sin separarte de ti) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Book",
-    "name": "Camina sin separarte de ti",
-    "author": {
-      "@type": "Person",
-      "name": "Manel Rueda"
-    },
-    "description": "Cuaderno de trabajo. Una invitación a parar, mirar hacia dentro y poner por escrito lo que normalmente no te atreves a decirte. Cinco secciones, tres ejercicios y un diario de integración.",
-    "image": "https://www.ikigaier.com/assets/images/portada-cuaderno.webp",
-    "url": "https://amzn.eu/d/078eIuXs",
-    "inLanguage": "es",
-    "bookFormat": "https://schema.org/Paperback",
-    "publisher": {
-      "@type": "Organization",
-      "name": "IKIGAIER"
-    }
-  }
-  </script>
-
-  <!-- Schema Markup JSON-LD — WebSite -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "IKIGAIER",
-    "url": "https://www.ikigaier.com",
-    "inLanguage": "es",
-    "publisher": {
-      "@type": "Organization",
-      "name": "IKIGAIER"
-    }
   }
   </script>
 
@@ -182,12 +161,18 @@
 
   <section id="inicio-nuevo" class="hero-puertas">
     <div class="puerta puerta-izq">
-      <img src="/assets/images/puerta-libro.png" alt="El Ikigai que no te contaron">
+      <picture>
+        <source srcset="/assets/images/puerta-libro.webp" type="image/webp">
+        <img src="/assets/images/puerta-libro.png" alt="El Ikigai que no te contaron" fetchpriority="high">
+      </picture>
       <p class="puerta-subtitulo">Para comprender el ikigai que no te contaron</p>
       <a href="#el-libro">El libro →</a>
     </div>
     <div class="hero-air">
-      <img src="/assets/images/aire-puertas.png" alt="">
+      <picture>
+        <source srcset="/assets/images/aire-puertas.webp" type="image/webp">
+        <img src="/assets/images/aire-puertas.png" alt="">
+      </picture>
     </div>
     <div class="hero-center">
       <p class="hero-hook">No lo sabes, pero llevas tiempo caminando lejos de ti.</p>
@@ -196,7 +181,10 @@
       <a href="https://app.ikigaier.com/es/paso" class="btn btn-primary" style="margin-top:1.8rem;">Descubre cómo caminas · Test gratis</a>
     </div>
     <div class="puerta puerta-der">
-      <img src="/assets/images/puerta-cuaderno.png" alt="Camina sin separarte de ti">
+      <picture>
+        <source srcset="/assets/images/puerta-cuaderno.webp" type="image/webp">
+        <img src="/assets/images/puerta-cuaderno.png" alt="Camina sin separarte de ti" fetchpriority="high">
+      </picture>
       <p class="puerta-subtitulo">Para caminar sin separarte de ti</p>
       <a href="#cuaderno">El cuaderno →</a>
     </div>
