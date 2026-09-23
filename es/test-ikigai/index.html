@@ -115,17 +115,21 @@
     .q:first-of-type { border-top:none; }
     .q-text { font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--negro); line-height:1.4; margin-bottom:0.9rem; }
     .q-num { font-family:'Inter',sans-serif; font-size:0.7rem; color:var(--gold); letter-spacing:0.08em; margin-right:0.5rem; }
-    .scale { display:flex; gap:0.5rem; align-items:stretch; flex-wrap:wrap; }
-    .scale label { flex:1; min-width:54px; text-align:center; cursor:pointer; }
+    .scale { display:flex; gap:0.7rem; align-items:center; flex-wrap:wrap; }
+    .scale label { cursor:pointer; line-height:0; }
     .scale input { position:absolute; opacity:0; width:0; height:0; }
     .scale .dot {
-      display:block; padding:0.7rem 0.2rem; border:1.5px solid #d8cfc4; border-radius:6px;
-      font-family:'Inter',sans-serif; font-size:0.95rem; color:var(--gris-medio);
-      transition:all 0.15s; background:transparent;
+      display:flex; align-items:center; justify-content:center;
+      width:48px; height:48px; border-radius:50%;
+      border:2px solid #cdbfb0; background:transparent;
+      font-family:'Inter',sans-serif; font-size:1.05rem; color:var(--gris-medio);
+      transition:transform 0.12s, background 0.12s, border-color 0.12s, color 0.12s;
     }
-    .scale label:hover .dot { border-color:var(--gold); }
-    .scale input:checked + .dot { background:var(--olive); border-color:var(--olive); color:var(--cream); }
-    .scale-ends { display:flex; justify-content:space-between; font-family:'Inter',sans-serif; font-size:0.7rem; color:var(--gris-claro); margin-top:0.35rem; text-transform:uppercase; letter-spacing:0.06em; }
+    .scale label:hover .dot { border-color:var(--gold); background:rgba(168,121,75,0.08); }
+    .scale input:checked + .dot { background:var(--olive); border-color:var(--olive); color:var(--cream); transform:scale(1.08); }
+    .scale input:focus-visible + .dot { outline:2px solid var(--gold); outline-offset:2px; }
+    .scale-ends { display:flex; justify-content:space-between; max-width:320px; font-family:'Inter',sans-serif; font-size:0.72rem; color:var(--gris-claro); margin-top:0.4rem; text-transform:uppercase; letter-spacing:0.06em; }
+    @media (max-width:420px){ .scale{gap:0.5rem;} .scale .dot{width:42px;height:42px;font-size:0.95rem;} }
 
     .test-progress { position:sticky; top:0; z-index:5; background:var(--bg-cream); padding:0.7rem 0; margin-bottom:0.5rem; border-bottom:1px solid rgba(168,168,168,0.2); }
     .test-progress .bar { height:4px; background:rgba(168,168,168,0.25); border-radius:2px; overflow:hidden; }
