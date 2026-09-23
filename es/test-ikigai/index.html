@@ -148,6 +148,12 @@
     .res-card .k { font-family:'Inter',sans-serif; font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--gris-claro); }
     .res-card h3 { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:1.6rem; color:var(--olive); margin:0.2rem 0 0.3rem; }
     .res-card p { font-family:'Inter',sans-serif; font-size:0.9rem; color:var(--gris-medio); margin:0; line-height:1.5; }
+    .res-card .brief { margin:0 0 0.8rem; color:#35322e; }
+    .res-card .feat { font-size:0.82rem; color:var(--gris-medio); margin:0.35rem 0; line-height:1.55; }
+    .res-card .feat strong, .res-cruce .feat strong { color:var(--olive); font-weight:600; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; }
+    .res-card .ref-mini { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:0.94rem; color:var(--gris-claro); margin:0.8rem 0 0; line-height:1.4; }
+    .cruce-intro { font-family:'Inter',sans-serif; font-size:0.9rem; color:var(--gris-medio); margin:0.4rem 0 0.2rem; }
+    .res-cruce .feat { font-family:'Inter',sans-serif; font-size:0.85rem; color:var(--gris-medio); margin:0.8rem 0 0; line-height:1.55; }
     .res-cruce { margin:1.4rem 0; padding:1.6rem 1.8rem; border:1.5px solid var(--olive); border-radius:6px; }
     .res-cruce h2 { font-size:1.9rem; margin:0.3rem 0 0.5rem; }
     .res-cruce .ref { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1rem; color:var(--gris-medio); }
@@ -222,21 +228,29 @@
         <p class="res-lead">Según cómo eres y qué se te da bien, tu dirección apunta hacia aquí:</p>
         <div class="res-perfiles">
           <div class="res-card">
-            <span class="k">Tu estilo</span>
+            <span class="k">Tu estilo · cómo eres</span>
             <h3 id="r-estrella-name">—</h3>
-            <p id="r-estrella-brief"></p>
+            <p class="brief" id="r-estrella-brief"></p>
+            <p class="feat"><strong>Fortalezas</strong> · <span id="r-estrella-fort"></span></p>
+            <p class="feat"><strong>A vigilar</strong> · <span id="r-estrella-desaf"></span></p>
+            <p class="ref-mini" id="r-estrella-ref"></p>
           </div>
           <div class="res-card">
-            <span class="k">Tu orientación</span>
+            <span class="k">Tus capacidades · qué se te da bien</span>
             <h3 id="r-camino-name">—</h3>
-            <p id="r-camino-brief"></p>
+            <p class="brief" id="r-camino-brief"></p>
+            <p class="feat"><strong>Fortalezas</strong> · <span id="r-camino-fort"></span></p>
+            <p class="feat"><strong>A vigilar</strong> · <span id="r-camino-desaf"></span></p>
+            <p class="ref-mini" id="r-camino-ref"></p>
           </div>
         </div>
 
         <div class="res-cruce">
-          <span class="res-eyebrow">El cruce</span>
+          <span class="res-eyebrow">El cruce · tu dirección</span>
+          <p class="cruce-intro">Donde tu estilo y tus capacidades se encuentran, tu ikigai activo apunta hacia:</p>
           <h2 id="r-cruce-orient">—</h2>
           <p class="ref" id="r-cruce-ref"></p>
+          <p class="feat"><strong>Territorios donde suele encajar</strong> · <span id="r-cruce-prof"></span></p>
           <p class="res-note">Una foto del momento, no el final del camino. Si repites el test dentro de un año, habrá cambiado. Eso significa que sigues vivo y en movimiento.</p>
         </div>
 
@@ -318,18 +332,18 @@
     ];
 
     var STARS = {
-      explorador:{name:'Explorador', brief:'curioso, aventurero, amante de lo desconocido'},
-      comunicador:{name:'Comunicador',brief:'extrovertido, carismático, conector de personas'},
-      protector:{name:'Protector',   brief:'solidario, confiable, orientado al bienestar de los demás'},
-      visionario:{name:'Visionario', brief:'innovador, estratégico, pensador a largo plazo'}
+      explorador:{name:'Explorador', brief:'curioso, aventurero, amante de lo desconocido', fort:'Adaptación al cambio, aprender sobre la marcha, enfoque en experiencias.', desaf:'Puede perder interés en tareas rutinarias o estructuras rígidas.', prof:'Investigador, emprendedor, consultor, guía, explorador creativo.', ref:'Ada Lovelace: aprendió lo que nadie le enseñó para hacer lo que nadie había hecho.'},
+      comunicador:{name:'Comunicador',brief:'extrovertido, carismático, conector de personas', fort:'Claridad en la expresión, persuasión, liderazgo colaborativo.', desaf:'Puede centrarse demasiado en la interacción, descuidando el trabajo independiente.', prof:'Docente, facilitador, comunicador, líder de equipos, divulgador.', ref:'Maria Montessori: construyó un método educativo entero desde la empatía y la escucha.'},
+      protector:{name:'Protector',   brief:'solidario, confiable, orientado al bienestar de los demás', fort:'Empatía profunda, resolución de conflictos, orientación social.', desaf:'Puede descuidar su propio bienestar mientras cuida el de los demás.', prof:'Terapeuta, trabajador social, educador, enfermero, mediador.', ref:'Mieko Kamiya: dedicó su vida profesional a quienes nadie quería cuidar.'},
+      visionario:{name:'Visionario', brief:'innovador, estratégico, pensador a largo plazo', fort:'Creatividad, liderazgo con propósito, pensamiento a gran escala.', desaf:'Puede perderse en ideas abstractas sin concretarlas.', prof:'Emprendedor, director creativo, estratega, fundador de proyectos.', ref:'Frida Kahlo: transformó su realidad más difícil en visión y legado.'}
     };
     var CAMINOS = {
-      constructor:{name:'Constructor',brief:'práctico, orientado a resultados tangibles'},
-      analista:{name:'Analista',      brief:'curioso, meticuloso, buscador del porqué'},
-      maestro:{name:'Maestro',        brief:'empático, guía, orientado al impacto humano'},
-      innovador:{name:'Innovador',    brief:'creativo, expresivo, agente de cambio'},
-      negociador:{name:'Negociador',  brief:'líder, persuasivo, orientado al reto'},
-      organizador:{name:'Organizador',brief:'metódico, confiable, amante del orden'}
+      constructor:{name:'Constructor',brief:'práctico, orientado a resultados tangibles', fort:'Trabajo práctico, resolución de problemas físicos, transformar ideas en realidades.', desaf:'Puede subestimar el valor del pensamiento estratégico a largo plazo.', prof:'Ingeniero, mecánico, arquitecto, técnico, constructor, agricultor.', ref:'Emily Warren Roebling: aprendió ingeniería por su cuenta para terminar el Puente de Brooklyn.'},
+      analista:{name:'Analista',      brief:'curioso, meticuloso, buscador del porqué', fort:'Pensamiento crítico, análisis de datos, resolución de problemas abstractos.', desaf:'Puede tener dificultades para comunicar sus hallazgos de forma accesible.', prof:'Científico, analista de datos, programador, investigador, economista.', ref:'Rosalind Franklin: su rigor analítico fue fundamental para descubrir la estructura del ADN.'},
+      maestro:{name:'Maestro',        brief:'empático, guía, orientado al impacto humano', fort:'Comunicación empática, enseñanza, orientación, construcción de relaciones.', desaf:'Puede descuidar sus propias necesidades mientras cuida las de los demás.', prof:'Profesor, coach, psicólogo, trabajador social, mentor, terapeuta.', ref:'Maria Montessori: revolucionó la educación poniendo al ser humano en el centro.'},
+      innovador:{name:'Innovador',    brief:'creativo, expresivo, agente de cambio', fort:'Creatividad, diseño, autoexpresión, pensar fuera de los límites establecidos.', desaf:'Puede tener dificultades para llevar sus ideas a la práctica de forma sostenible.', prof:'Artista, diseñador, escritor, músico, publicista, director creativo.', ref:'Frida Kahlo: convirtió su experiencia más personal en un lenguaje universal.'},
+      negociador:{name:'Negociador',  brief:'líder, persuasivo, orientado al reto', fort:'Liderazgo, persuasión, toma de decisiones, visión estratégica.', desaf:'Puede sobrecargarse al asumir demasiados frentes a la vez.', prof:'Empresario, gerente de ventas, consultor, estratega, fundador.', ref:'Madam C.J. Walker: primera mujer millonaria hecha a sí misma en Estados Unidos.'},
+      organizador:{name:'Organizador',brief:'metódico, confiable, amante del orden', fort:'Planificación, atención al detalle, gestión de sistemas y procesos.', desaf:'Puede resistirse a los cambios imprevistos o a la ambigüedad.', prof:'Gestor de operaciones, contador, administrador, jefe de proyecto.', ref:'Florence Nightingale: salvó vidas implementando sistemas de gestión hospitalaria basados en datos.'}
     };
     // Orden canónico para desempates (el del libro).
     var STAR_ORDER = ['explorador','comunicador','protector','visionario'];
@@ -394,12 +408,20 @@
       var camino = dominant('camino', CAMINO_ORDER);
       var cell = MATRIZ[star][camino];
 
-      document.getElementById('r-estrella-name').textContent = STARS[star].name;
-      document.getElementById('r-estrella-brief').textContent = STARS[star].brief;
-      document.getElementById('r-camino-name').textContent = CAMINOS[camino].name;
-      document.getElementById('r-camino-brief').textContent = CAMINOS[camino].brief;
+      var S = STARS[star], C = CAMINOS[camino];
+      document.getElementById('r-estrella-name').textContent = S.name;
+      document.getElementById('r-estrella-brief').textContent = S.brief;
+      document.getElementById('r-estrella-fort').textContent = S.fort;
+      document.getElementById('r-estrella-desaf').textContent = S.desaf;
+      document.getElementById('r-estrella-ref').textContent = S.ref;
+      document.getElementById('r-camino-name').textContent = C.name;
+      document.getElementById('r-camino-brief').textContent = C.brief;
+      document.getElementById('r-camino-fort').textContent = C.fort;
+      document.getElementById('r-camino-desaf').textContent = C.desaf;
+      document.getElementById('r-camino-ref').textContent = C.ref;
       document.getElementById('r-cruce-orient').textContent = cell[0];
       document.getElementById('r-cruce-ref').textContent = 'Un referente que camina esta orientación: ' + cell[1] + '.';
+      document.getElementById('r-cruce-prof').textContent = C.prof;
 
       document.getElementById('intro').style.display='none';
       form.style.display='none';
