@@ -142,6 +142,7 @@
     /* Resultado */
     #resultado { display:none; }
     .res-eyebrow { font-family:'Inter',sans-serif; font-size:0.72rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
+    .res-lead { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(1.15rem,2.2vw,1.45rem); color:var(--gris-medio); line-height:1.5; margin:0.6rem 0 0; }
     .res-perfiles { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin:1.4rem 0; }
     .res-card { padding:1.3rem 1.4rem; background:var(--cream); border-radius:6px; }
     .res-card .k { font-family:'Inter',sans-serif; font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--gris-claro); }
@@ -218,28 +219,7 @@
 
       <section id="resultado" aria-live="polite">
         <span class="res-eyebrow">Tu ikigai activo</span>
-
-        <figure class="mapa" aria-label="Tu mapa del Ikigai Activo">
-          <svg viewBox="0 0 320 338" role="img" aria-labelledby="mapa-t">
-            <title id="mapa-t">Tu mapa del Ikigai Activo: cuatro círculos, dos rellenados por el test y dos para reflexionar</title>
-            <circle cx="160" cy="116" r="78" fill="#A8794B" fill-opacity="0.20" stroke="#A8794B" stroke-opacity="0.5"/>
-            <circle cx="210" cy="168" r="78" fill="#3F4A34" fill-opacity="0.20" stroke="#3F4A34" stroke-opacity="0.5"/>
-            <circle cx="160" cy="220" r="78" fill="none" stroke="#A8A8A8" stroke-opacity="0.55" stroke-dasharray="3 4"/>
-            <circle cx="110" cy="168" r="78" fill="none" stroke="#A8A8A8" stroke-opacity="0.55" stroke-dasharray="3 4"/>
-            <text class="lbl" x="160" y="74" text-anchor="middle">LO QUE AMAS</text>
-            <text class="val" id="m-amas" x="160" y="95" text-anchor="middle">—</text>
-            <text class="lbl" x="266" y="156" text-anchor="middle">EN LO QUE</text>
-            <text class="lbl" x="266" y="167" text-anchor="middle">ERES BUENO</text>
-            <text class="val" id="m-bueno" x="266" y="187" text-anchor="middle">—</text>
-            <text class="lbl" x="160" y="270" text-anchor="middle">LO QUE EL MUNDO NECESITA</text>
-            <text class="reflect-it" x="160" y="285" text-anchor="middle">lo caminas tú</text>
-            <text class="lbl" x="54" y="156" text-anchor="middle">POR LO QUE</text>
-            <text class="lbl" x="54" y="167" text-anchor="middle">TE PAGAN</text>
-            <text class="reflect-it" x="54" y="187" text-anchor="middle">lo caminas tú</text>
-          </svg>
-          <figcaption class="mapa-caption">El test rellena dos círculos —tu estilo y tus capacidades—; los otros dos los caminas tú.</figcaption>
-        </figure>
-
+        <p class="res-lead">Según cómo eres y qué se te da bien, tu dirección apunta hacia aquí:</p>
         <div class="res-perfiles">
           <div class="res-card">
             <span class="k">Tu estilo</span>
@@ -420,8 +400,6 @@
       document.getElementById('r-camino-brief').textContent = CAMINOS[camino].brief;
       document.getElementById('r-cruce-orient').textContent = cell[0];
       document.getElementById('r-cruce-ref').textContent = 'Un referente que camina esta orientación: ' + cell[1] + '.';
-      document.getElementById('m-amas').textContent = STARS[star].name;
-      document.getElementById('m-bueno').textContent = CAMINOS[camino].name;
 
       document.getElementById('intro').style.display='none';
       form.style.display='none';
