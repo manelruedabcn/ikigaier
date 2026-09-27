@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#F7F4EF"/>
+  <!-- Ajuste óptico para conservar la forma al reducirla a 16–32 px. -->
+  <path d="M102 356 A194 194 0 1 1 410 356"
+        fill="none" stroke="#272625" stroke-width="42" stroke-linecap="butt"/>
+  <path d="M256 112 L382 410 L322 410 L256 242 L190 410 L130 410 Z"
+        fill="#BC8266"/>
+</svg>
