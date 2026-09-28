@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Taller gratuito IKIGAIER en Vilanova i la Geltrú. 29 de septiembre a las 19:00 h. Plazas limitadas por orden de inscripción.">
+  <meta name="description" content="Taller gratuito IKIGAIER en Vilanova i la Geltrú. 29 de septiembre a las 19:00 h. Plazas completas.">
   <title>Taller gratuito IKIGAIER · 29 de septiembre · Vilanova</title>
   <link rel="canonical" href="https://www.ikigaier.com/es/taller/29-septiembre/">
 
@@ -12,14 +12,14 @@
   <link rel="manifest" href="/assets/site.webmanifest">
 
   <meta property="og:title" content="Taller gratuito IKIGAIER · 29 de septiembre">
-  <meta property="og:description" content="¿Vives la vida que realmente quieres? 29 de septiembre · 19:00 h · Vilanova i la Geltrú. Plazas limitadas.">
+  <meta property="og:description" content="¿Vives la vida que realmente quieres? 29 de septiembre · 19:00 h · Vilanova i la Geltrú. Plazas completas.">
   <meta property="og:url" content="https://www.ikigaier.com/es/taller/29-septiembre/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <meta property="og:image" content="https://www.ikigaier.com/assets/images/taller-29-septiembre-og.png?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Taller gratuito IKIGAIER · Quiero mi plaza">
+  <meta property="og:image:alt" content="Taller gratuito IKIGAIER · Plazas completas">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/taller-29-septiembre-og.png?v=2">
 
@@ -78,7 +78,7 @@
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
+          "availability": "https://schema.org/SoldOut",
           "url": "https://www.ikigaier.com/es/taller/29-septiembre/"
         },
         "url": "https://www.ikigaier.com/es/taller/29-septiembre/"
@@ -106,7 +106,7 @@
           <p>29 de septiembre · 19:00 h</p>
           <p>Carrer de la Mercè, 4<br>Vilanova i la Geltrú</p>
         </div>
-        <p class="landing-taller-limite">Plazas limitadas por orden de inscripción</p>
+        <p class="landing-taller-limite">Plazas completas</p>
 
         <div class="landing-taller-que-haremos">
           <p>No es una conferencia. Trabajaremos con preguntas, escritura y ejercicios prácticos para reconocer qué te mueve y elegir un primer paso coherente.</p>
@@ -114,31 +114,12 @@
         </div>
       </div>
 
-      <div class="landing-taller-form-card" id="reserva">
-        <h2>Reserva tu plaza</h2>
-        <p>Te confirmaremos la inscripción por el medio que indiques.</p>
-        <form class="landing-taller-form" id="taller-registro-form">
-          <label for="nombre">Nombre</label>
-          <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="given-name" required>
-
-          <label for="contacto">Teléfono o email</label>
-          <input id="contacto" type="text" name="contacto" placeholder="Como prefieras que te contactemos" required>
-
-          <label class="landing-taller-check">
-            <input type="checkbox" name="privacidad" value="sí" required>
-            <span>He leído la <a href="/es/privacidad/" target="_blank" rel="noopener">información básica de privacidad</a>.</span>
-          </label>
-
-          <label class="landing-taller-honeypot" aria-hidden="true" style="display:none !important;">Web
-            <input type="text" name="website" tabindex="-1" autocomplete="off">
-          </label>
-
-          <p class="landing-taller-privacidad"><strong>Responsable:</strong> Manel Rueda. <strong>Finalidad:</strong> gestionar tu inscripción y comunicarte la información necesaria del taller. No te suscribiremos a comunicaciones comerciales. Derechos: <a href="mailto:hola@ikigaier.com">hola@ikigaier.com</a>.</p>
-
-          <button type="submit" class="btn btn-primary" id="taller-submit">Quiero mi plaza</button>
-        </form>
-        <p id="taller-msg" class="landing-taller-msg" aria-live="polite"></p>
-        <p class="landing-taller-sin-spam">Sin suscripciones automáticas.</p>
+      <div class="landing-taller-form-card landing-taller-completo" id="reserva">
+        <p class="landing-taller-kicker">Inscripciones cerradas</p>
+        <h2>Plazas completas</h2>
+        <p>El aforo para este taller ya está completo y no podemos aceptar nuevas inscripciones.</p>
+        <p>Gracias por el interés. Publicaremos las próximas experiencias IKIGAIER en esta misma web.</p>
+        <a href="/es/taller/" class="btn">Conocer los talleres IKIGAIER</a>
       </div>
     </section>
   </main>
@@ -148,47 +129,5 @@
     <p><a href="/es/privacidad/">Política de privacidad</a></p>
   </footer>
 
-  <script>
-    (function () {
-      var form = document.getElementById('taller-registro-form');
-      var button = document.getElementById('taller-submit');
-      var msg = document.getElementById('taller-msg');
-      if (!form || !button || !msg) return;
-
-      form.addEventListener('submit', async function (event) {
-        event.preventDefault();
-        if (!form.reportValidity()) return;
-        button.disabled = true;
-        button.textContent = 'Enviando…';
-        msg.style.display = 'none';
-
-        var data = new FormData(form);
-        try {
-          var response = await fetch('https://app.ikigaier.com/api/taller/registro', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              nombre: data.get('nombre'),
-              contacto: data.get('contacto'),
-              privacidad: data.get('privacidad') === 'sí',
-              website: data.get('website') || ''
-            })
-          });
-          if (!response.ok) throw new Error('request failed');
-          form.reset();
-          msg.textContent = 'Solicitud recibida. Te confirmaremos la plaza por el medio que nos has indicado.';
-          msg.style.color = '#3F4A34';
-          msg.style.display = 'block';
-          button.textContent = 'Solicitud enviada';
-        } catch (error) {
-          msg.innerHTML = 'No hemos podido registrar la solicitud. Escríbenos a <a href="mailto:hola@ikigaier.com">hola@ikigaier.com</a>.';
-          msg.style.color = '#9A5841';
-          msg.style.display = 'block';
-          button.disabled = false;
-          button.textContent = 'Volver a intentarlo';
-        }
-      });
-    })();
-  </script>
 </body>
 </html>

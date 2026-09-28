@@ -171,6 +171,11 @@ img {
 .landing-taller-msg { display: none; margin-top: 1rem; color: var(--olive); font-size: 0.82rem; }
 .landing-taller-msg a { text-decoration: underline; text-underline-offset: 0.15em; }
 .landing-taller-sin-spam { margin: 0.8rem 0 0 !important; color: var(--gris-claro) !important; font-size: 0.68rem !important; }
+.landing-taller-completo { text-align: center; }
+.landing-taller-completo .landing-taller-kicker { margin-bottom: 0.8rem; color: var(--coral); }
+.landing-taller-completo h2 { margin-bottom: 1rem; }
+.landing-taller-completo > p:not(.landing-taller-kicker) { max-width: 31rem; margin: 0 auto 1rem; line-height: 1.7; }
+.landing-taller-completo .btn { display: inline-block; margin-top: 0.8rem; }
 .landing-taller-footer { padding: 1.8rem; border-top: 1px solid rgba(247,244,239,0.13); text-align: center; }
 .landing-taller-footer p { margin-bottom: 0.25rem; color: var(--gris-claro); font-size: 0.7rem; }
 .landing-taller-footer a { text-decoration: underline; text-underline-offset: 0.2em; }
