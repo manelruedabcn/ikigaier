@@ -174,47 +174,76 @@
 
       <div class="taller-fase">
         <div class="taller-fase-header">
-          <span class="taller-fase-etiqueta">Las cuatro partes</span>
+          <span class="taller-fase-etiqueta">El camino, paso a paso</span>
         </div>
-        <div class="taller-gestos-lista">
-          <div class="taller-gesto-item">
-            <span class="taller-gesto-num">1</span>
-            <div>
-              <h3>Comprender · El ikigai que no te contaron</h3>
-              <p>Las dos almas del ikigai, el modo zombi, el miedo y las siete máscaras que deciden por ti. Con el test de las máscaras, que solo se abre en sala.</p>
-            </div>
-          </div>
-          <div class="taller-gesto-item">
-            <span class="taller-gesto-num">2</span>
-            <div>
-              <h3>Descubrir · Tu punto de partida</h3>
-              <p>Haces en tu móvil los tests PASO, las cuatro estrellas y CAMINO: cómo caminas, cómo te relacionas y qué se te da bien, aunque no te lo reconozcas.</p>
-            </div>
-          </div>
-          <div class="taller-gesto-item">
-            <span class="taller-gesto-num">3</span>
-            <div>
-              <h3>Tu lenguaje · El poder de tus palabras</h3>
-              <p>Las frases con las que te frenas sin darte cuenta, cómo habla tu máscara y cómo reescribirlas sin mentirte. Material inédito del próximo libro.</p>
-            </div>
-          </div>
-          <div class="taller-gesto-item" style="border-bottom: none;">
-            <span class="taller-gesto-num">4</span>
-            <div>
-              <h3>Construir · Tu IKIBOARD</h3>
-              <p>El tablero vivo de la plataforma IKIGAIER: tu propósito en una frase, el álbum del futuro de tu vida y un paso con día y hora.</p>
-            </div>
-          </div>
+        <div class="ikiruta" id="ikiruta">
+<style>
+.ikiruta{margin:1.2rem 0 0}
+.ikiruta-hint{font-size:.85rem;color:var(--gris-medio);font-weight:300;margin:.2rem 0 1rem}
+.ikiruta-svg{width:100%;height:auto;display:block;overflow:visible}
+.ikiruta-base{fill:none;stroke:var(--beige);stroke-width:4;stroke-dasharray:10 8;stroke-linecap:round}
+.ikiruta-prog{fill:none;stroke:var(--coral);stroke-width:4;stroke-linecap:round;transition:stroke-dashoffset .6s ease}
+.ikiruta-stop{cursor:pointer;outline:none}
+.ikiruta-stop circle{fill:var(--bg-cream);stroke:var(--negro);stroke-width:2;transition:all .25s ease}
+.ikiruta-stop text.num{font-family:'Inter',sans-serif;font-size:19px;font-weight:500;fill:var(--negro);text-anchor:middle;pointer-events:none}
+.ikiruta-stop text.tit{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600;fill:var(--negro);text-anchor:middle;pointer-events:none}
+.ikiruta-stop.on circle,.ikiruta-stop:hover circle,.ikiruta-stop:focus-visible circle{fill:var(--coral);stroke:var(--coral)}
+.ikiruta-stop.on text.num,.ikiruta-stop:hover text.num,.ikiruta-stop:focus-visible text.num{fill:#fff}
+.ikiruta-stop.on text.tit{fill:var(--coral)}
+.ikiruta-card{margin-top:1rem;border:1px solid rgba(39,39,39,.12);background:var(--blanco);border-radius:10px;padding:1.4rem 1.5rem;min-height:12.5rem}
+.ikiruta-card .k{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral)}
+.ikiruta-card h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;margin:.2rem 0 .5rem;line-height:1.15}
+.ikiruta-card p{margin:0 0 .9rem;font-weight:300}
+.ikiruta-rows{display:grid;grid-template-columns:1fr 1fr;gap:1rem;border-top:1px solid rgba(39,39,39,.1);padding-top:.9rem}
+.ikiruta-rows span{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gris-medio);margin-bottom:.25rem}
+.ikiruta-rows div{font-size:.92rem;line-height:1.5}
+.ikiruta-card .fade{animation:ikifade .35s ease}
+@keyframes ikifade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (max-width:600px){.ikiruta-stop text.tit{font-size:40px}.ikiruta-stop text.num{font-size:26px}.ikiruta-card p{font-size:1rem;line-height:1.6}.ikiruta-rows{grid-template-columns:1fr}}
+</style>
+          <p class="ikiruta-hint">Pasa por encima de cada etapa (o tócala en el móvil) para ver qué haces y qué te llevas.</p>
+          <svg class="ikiruta-svg" viewBox="0 0 800 330" role="group" aria-label="Etapas del taller">
+            <path id="ikiruta-p" class="ikiruta-base" d="M20 290 C 140 295, 170 190, 300 200 S 460 280, 540 200 S 660 70, 770 50"/>
+            <path id="ikiruta-prog" class="ikiruta-prog" d="M20 290 C 140 295, 170 190, 300 200 S 460 280, 540 200 S 660 70, 770 50"/>
+            <g id="ikiruta-stops"></g>
+          </svg>
+          <div class="ikiruta-card" aria-live="polite"><div id="ikiruta-body"></div></div>
+          <noscript><ul class="taller-bullets"><li><strong>Entiende</strong> · el ikigai que no te contaron. Las dos almas del ikigai, el modo zombi, el miedo y las siete máscaras que deciden por ti.</li><li><strong>Descubre</strong> · qué se te da bien y cómo caminas. Tu punto de partida real, sin adivinar: cómo decides, cómo te relacionas y en qué eres fuerte.</li><li><strong>Libérate</strong> · de la voz que te frena. Las frases con las que te frenas sin darte cuenta y cómo habla tu máscara. Material inédito del próximo libro.</li><li><strong>Construye</strong> · tu hoja de ruta. Tu IKIBOARD, el tablero vivo de la plataforma: tu propósito en una frase y el álbum del futuro de tu vida.</li><li><strong>Yo soy IKIGAIER</strong> · la meta. Cerramos el círculo: abres la carta que escribiste al empezar y dices en voz alta quién estás siendo.</li></ul></noscript>
         </div>
       </div>
-
-      <div class="taller-fase">
-        <div class="taller-fase-header">
-          <span class="taller-fase-etiqueta">Cierre</span>
-          <span class="taller-fase-sub">Yo soy IKIGAIER</span>
-        </div>
-        <p class="taller-fase-desc">Abres tu carta, dices en voz alta quién estás siendo y recibes tu carnet numerado YO SOY IKIGAIER.</p>
-      </div>
+      <script>
+      (function(){
+        var D=[{"n": "1", "t": "Entiende", "s": "el ikigai que no te contaron", "d": "Las dos almas del ikigai, el modo zombi, el miedo y las siete máscaras que deciden por ti.", "h": "Escuchas, escribes y haces el test de las máscaras, que solo se abre en sala.", "l": "Tu máscara, con nombre."}, {"n": "2", "t": "Descubre", "s": "qué se te da bien y cómo caminas", "d": "Tu punto de partida real, sin adivinar: cómo decides, cómo te relacionas y en qué eres fuerte.", "h": "Haces en tu móvil los tests PASO, las cuatro estrellas y CAMINO, y los comentas en pareja.", "l": "Tus resultados guardados en la plataforma IKIGAIER."}, {"n": "3", "t": "Libérate", "s": "de la voz que te frena", "d": "Las frases con las que te frenas sin darte cuenta y cómo habla tu máscara. Material inédito del próximo libro.", "h": "Cazas tus frases trampa y las reescribes sin mentirte, con ayuda de tu pareja.", "l": "Tu frase reencuadrada."}, {"n": "4", "t": "Construye", "s": "tu hoja de ruta", "d": "Tu IKIBOARD, el tablero vivo de la plataforma: tu propósito en una frase y el álbum del futuro de tu vida.", "h": "Respondes en tres rondas guiadas y escribes un paso con día y hora.", "l": "Tu mapa descargable y un paso con fecha."}, {"n": "★", "t": "Yo soy IKIGAIER", "s": "la meta", "d": "Cerramos el círculo: abres la carta que escribiste al empezar y dices en voz alta quién estás siendo.", "h": "Una ronda final, de pie, una frase por persona.", "l": "Tu carnet numerado YO SOY IKIGAIER y una carta del mazo para los primeros días."}];
+        var HA="Qué haces", LL="Qué te llevas";
+        var P=document.getElementById('ikiruta-p'), G=document.getElementById('ikiruta-stops'), PR=document.getElementById('ikiruta-prog');
+        var body=document.getElementById('ikiruta-body'), L=P.getTotalLength(), F=[0.12,0.34,0.57,0.8,1], ns='http://www.w3.org/2000/svg';
+        PR.style.strokeDasharray=L; PR.style.strokeDashoffset=L;
+        function el(t,a,p){var e=document.createElementNS(ns,t);for(var k in a)e.setAttribute(k,a[k]);(p||G).appendChild(e);return e}
+        function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+        var gs=[];
+        D.forEach(function(s,i){
+          var pt=P.getPointAtLength(L*F[i]), last=i===D.length-1;
+          var g=el('g',{'class':'ikiruta-stop',tabindex:'0',role:'button','aria-label':s.t+' · '+s.s});
+          if(last){el('path',{d:'M'+pt.x+' '+pt.y+' v-46',stroke:'#272727','stroke-width':2.5},g);el('path',{d:'M'+pt.x+' '+(pt.y-46)+' l30 10 l-30 10 z',fill:'#C2866B'},g);}
+          el('circle',{cx:pt.x,cy:pt.y,r:last?13:21},g);
+          var n=el('text',{x:pt.x,y:pt.y+7,'class':'num'},g);n.textContent=last?'':s.n;
+          var tx=pt.x, ty=pt.y-36, an='middle';
+          if(i===0||i===2){ty=pt.y+54} else if(i===3){tx=pt.x-32;ty=pt.y+9;an='end'} else if(last){tx=pt.x-22;ty=pt.y-18;an='end'}
+          var t=el('text',{x:tx,y:ty,'class':'tit'},g);t.textContent=s.t; t.style.textAnchor=an;
+          ['mouseenter','focus','click'].forEach(function(ev){g.addEventListener(ev,function(){show(i)})});
+          g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(i)}});
+          gs.push(g);
+        });
+        var cur=-1;
+        function show(i){
+          if(i===cur)return; cur=i; var s=D[i];
+          gs.forEach(function(g,j){g.classList.toggle('on',j===i)});
+          PR.style.strokeDashoffset=L*(1-F[i]);
+          body.innerHTML='<div class="fade"><div class="k">'+(s.n==='★'?'':s.n+' · ')+esc(s.s)+'</div><h3>'+esc(s.t)+'</h3><p>'+esc(s.d)+'</p><div class="ikiruta-rows"><div><span>'+HA+'</span>'+esc(s.h)+'</div><div><span>'+LL+'</span>'+esc(s.l)+'</div></div></div>';
+        }
+        show(0);
+      })();
+      </script>
 
       <div class="taller-fase">
         <div class="taller-fase-header">
