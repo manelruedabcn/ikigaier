@@ -1,0 +1,256 @@
+/* ============================================
+   IKIGAIER — home.css
+   Portada /es/ (octubre 2026): espejo → historia → idea → libros → test → taller.
+   Usa los tokens de main.css (--texto-*, --fs-*, --acento-texto).
+   ============================================ */
+
+/* --- Hero espejo --- */
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: clamp(3.5rem, 9vh, 7rem) 1.25rem clamp(3.5rem, 9vh, 6.5rem);
+  background: #f5f2ed;
+}
+.home-hero-aire {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  width: max(1100px, 115vw);
+  transform: translate(-50%, -50%);
+  opacity: 0.75;
+  pointer-events: none;
+  z-index: 0;
+}
+.home-hero-aire img { width: 100%; height: auto; }
+.home-hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+.home-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: min(clamp(2.6rem, 6.2vw, 4.6rem), 13vw);
+  line-height: 1.12;
+  letter-spacing: 0.005em;
+  color: var(--negro);
+  margin: 0 0 1.6rem;
+}
+.home-hero h1 .linea-2 { display: block; font-style: italic; color: var(--acento-texto); }
+.home-hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--texto-principal);
+  max-width: 34ch;
+  margin: 0 auto 2.2rem;
+}
+.home-hero-nota {
+  margin: 0.9rem 0 0;
+  font-size: var(--fs-etiqueta);
+  letter-spacing: 0.04em;
+  color: var(--texto-secundario);
+}
+
+/* --- Bloques de texto comunes --- */
+.home-bloque { padding: clamp(3rem, 8vw, 5.5rem) 0; }
+.home-bloque .container { max-width: 720px; }
+.home-bloque h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 4.2vw, 2.9rem);
+  line-height: 1.15;
+  color: var(--negro);
+  margin: 0.4rem 0 1.6rem;
+}
+.home-bloque p {
+  font-size: var(--fs-lectura);
+  line-height: var(--lh-lectura);
+  color: var(--texto-principal);
+  margin: 0 0 1.2rem;
+}
+.home-enlace {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: var(--fs-apoyo);
+  font-weight: 500;
+  color: var(--acento-texto);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 1px;
+}
+.home-enlace:hover { text-decoration-thickness: 2px; }
+
+/* --- Escenas (reconocimiento) --- */
+.home-escenas {
+  list-style: none;
+  margin: 0 0 2.2rem;
+  padding: 0;
+  display: grid;
+  gap: 1.4rem;
+}
+.home-escenas li {
+  margin: 0;
+  padding: 0 0 0 1.4rem;
+  border-left: 2px solid var(--beige);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 2.3vw, 1.55rem);
+  line-height: 1.5;
+  color: var(--negro);
+}
+.home-escenas li strong { font-weight: 600; }
+
+/* --- Historia --- */
+.home-historia { background: var(--blanco); }
+.home-historia .container { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; align-items: start; max-width: 860px; }
+.home-historia-foto img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: grayscale(0.15);
+}
+.home-historia-texto { min-width: 0; }
+
+/* --- Idea central (banda oscura) --- */
+.home-idea {
+  background: var(--negro);
+  text-align: center;
+  padding: clamp(3.5rem, 9vw, 5.5rem) 1.25rem;
+}
+.home-idea blockquote { margin: 0 auto; max-width: 720px; }
+.home-idea blockquote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--texto-sobre-oscuro);
+  margin: 0 0 1.2rem;
+}
+.home-idea blockquote footer {
+  font-size: var(--fs-apoyo);
+  color: var(--apoyo-sobre-oscuro);
+}
+.home-idea blockquote footer cite { font-style: italic; }
+
+/* --- Libros (franja tranquila) --- */
+.home-libros .container { max-width: 960px; text-align: center; }
+.home-libros-intro { max-width: 560px; margin: 0 auto 2.6rem !important; }
+.home-libros-fila {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 4vw, 3rem);
+}
+.home-libros-fila li { margin: 0; }
+.home-libros-fila a { display: block; text-decoration: none; color: inherit; }
+.home-libros-fila img {
+  width: 100%;
+  max-width: 190px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  margin: 0 auto 1.1rem;
+  border-radius: 2px;
+  box-shadow: 0 2px 18px rgba(39, 39, 39, 0.10), 0 8px 44px rgba(39, 39, 39, 0.06);
+  transition: transform 0.3s ease;
+}
+.home-libros-fila a:hover img { transform: translateY(-3px); }
+.home-libro-paso {
+  display: block;
+  font-size: var(--fs-etiqueta);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--acento-texto);
+  margin-bottom: 0.35rem;
+}
+.home-libro-titulo {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--negro);
+  margin-bottom: 0.4rem;
+}
+.home-libro-linea {
+  display: block;
+  font-size: var(--fs-apoyo);
+  line-height: 1.55;
+  color: var(--texto-secundario);
+}
+
+/* --- Taller (objetivo de conversión) --- */
+.home-taller { padding: clamp(3rem, 8vw, 5.5rem) 1.25rem; }
+.home-taller-card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--blanco);
+  border: 1px solid rgba(39, 39, 39, 0.12);
+  border-top: 4px solid var(--acento-texto);
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 5vw, 3.5rem);
+  text-align: center;
+}
+.home-taller-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(2.3rem, 5vw, 3.3rem);
+  line-height: 1.1;
+  margin: 0.5rem 0 1.4rem;
+  color: var(--negro);
+}
+.home-taller-card p {
+  font-size: var(--fs-lectura);
+  line-height: var(--lh-lectura);
+  color: var(--texto-principal);
+  margin: 0 auto 1.2rem;
+  max-width: 560px;
+}
+.home-taller-lead {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.375rem, 2.5vw, 1.625rem) !important;
+  font-weight: 500;
+  line-height: 1.45 !important;
+  color: var(--negro) !important;
+}
+.home-taller-pasos {
+  list-style: none;
+  padding: 0;
+  margin: 1.8rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  max-width: 600px;
+}
+.home-taller-pasos li {
+  margin: 0;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--beige);
+  border-radius: 999px;
+  font-size: var(--fs-apoyo);
+  color: var(--negro);
+  background: var(--bg-cream);
+}
+.home-taller-pasos li span { color: var(--acento-texto); font-weight: 500; margin-right: 0.35rem; }
+.home-taller-estado {
+  font-size: var(--fs-etiqueta) !important;
+  letter-spacing: 0.04em;
+  color: var(--texto-secundario) !important;
+  margin-top: 1.6rem !important;
+}
+.home-taller-ctas { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.8rem 1.6rem; margin-top: 0.4rem; }
+
+/* --- Responsive --- */
+@media (max-width: 760px) {
+  .home-historia .container { grid-template-columns: 1fr; gap: 1.6rem; }
+  .home-historia-foto img { width: 120px; height: 150px; }
+  .home-libros-fila { grid-template-columns: 1fr; gap: 2.4rem; max-width: 320px; margin-left: auto; margin-right: auto; }
+  .home-libros-fila img { max-width: 160px; }
+  .home-hero-aire { width: 900px; top: 60%; opacity: 0.55; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-libros-fila img { transition: none; }
+  .home-libros-fila a:hover img { transform: none; }
+}

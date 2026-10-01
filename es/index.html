@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IKIGAIER — El Ikigai que no te contaron. Un método para unir el hacer y el ser: el libro, el cuaderno y el taller. Por Manel Rueda.">
-  <title>IKIGAIER · El Ikigai que no te contaron · Manel Rueda</title>
+  <meta name="description" content="Para quien lo ha conseguido casi todo y siente que algo no encaja. Libros, test gratuito y taller presencial para volver a ti sin romper la vida que has construido. Por Manel Rueda.">
+  <title>IKIGAIER · Lo tienes todo y aun así algo te falta · Manel Rueda</title>
   <link rel="canonical" href="https://www.ikigaier.com/es/">
   <meta name="google-site-verification" content="googlefe9fb9e6c006fe62">
   <!-- Favicon -->
@@ -15,8 +15,8 @@
   <link rel="manifest" href="/assets/site.webmanifest">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="IKIGAIER · El Ikigai que no te contaron">
-  <meta property="og:description" content="Un método para unir el hacer y el ser. El libro, el cuaderno y el taller.">
+  <meta property="og:title" content="Lo tienes todo. Y aun así, algo te falta · IKIGAIER">
+  <meta property="og:description" content="Un camino para volver a ti sin romper la vida que has construido. Libros, test gratuito y taller presencial de Manel Rueda.">
   <meta property="og:url" content="https://www.ikigaier.com/es/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
@@ -27,8 +27,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IKIGAIER · El Ikigai que no te contaron">
-  <meta name="twitter:description" content="Un método para unir el hacer y el ser. El libro, el cuaderno y el taller.">
+  <meta name="twitter:title" content="Lo tienes todo. Y aun así, algo te falta · IKIGAIER">
+  <meta name="twitter:description" content="Un camino para volver a ti sin romper la vida que has construido. Libros, test gratuito y taller presencial de Manel Rueda.">
   <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +41,7 @@
   <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/">
 
   <link rel="stylesheet" href="/assets/css/main.css?v=12">
+  <link rel="stylesheet" href="/assets/css/home.css?v=1">
 
   <!-- ============================================
        DATOS ESTRUCTURADOS — @graph con @id persistentes.
@@ -66,7 +67,7 @@
         "name": "IKIGAIER",
         "url": "https://www.ikigaier.com/",
         "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
-        "description": "Proyecto editorial sobre el ikigai consciente. Libro, cuaderno y taller para unir el hacer y el ser.",
+        "description": "Proyecto editorial sobre el ikigai consciente. Libros, test y taller para unir el hacer y el ser.",
         "founder": { "@id": "https://www.ikigaier.com/#person" }
       },
       {
@@ -76,37 +77,13 @@
         "url": "https://www.ikigaier.com/",
         "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
         "jobTitle": "Autor",
-        "description": "Autor y creador de IKIGAIER. Escribe sobre el ikigai consciente y la unión del hacer y el ser. Autor de El Ikigai que no te contaron y Camina sin separarte de ti.",
+        "description": "Autor y creador de IKIGAIER. Escribe sobre el ikigai consciente y la unión del hacer y el ser. Autor de No todo lo que te frena es tuyo, Disciplina para indisciplinados, El Ikigai que no te contaron y Camina sin separarte de ti.",
         "sameAs": [
           "https://manelrueda.com",
           "https://ikigaier.substack.com",
           "https://www.instagram.com/manel_rueda/",
           "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
         ]
-      },
-      {
-        "@type": "Book",
-        "@id": "https://www.ikigaier.com/#book-ikigai",
-        "name": "El Ikigai que no te contaron",
-        "author": { "@id": "https://www.ikigaier.com/#person" },
-        "description": "Una mirada profunda, clara y honesta sobre el ikigai real y la distancia entre lo que haces y lo que eres. Sin postureo. Sin atajos.",
-        "image": "https://www.ikigaier.com/assets/images/portada-libro.webp",
-        "url": "https://amzn.eu/d/0bUk5t8J",
-        "inLanguage": "es",
-        "bookFormat": "https://schema.org/Paperback",
-        "publisher": { "@id": "https://www.ikigaier.com/#organization" }
-      },
-      {
-        "@type": "Book",
-        "@id": "https://www.ikigaier.com/#book-camina",
-        "name": "Camina sin separarte de ti",
-        "author": { "@id": "https://www.ikigaier.com/#person" },
-        "description": "Cuaderno de trabajo. Una invitación a parar, mirar hacia dentro y poner por escrito lo que normalmente no te atreves a decirte. Cinco secciones, tres ejercicios y un diario de integración.",
-        "image": "https://www.ikigaier.com/assets/images/portada-cuaderno.webp",
-        "url": "https://amzn.eu/d/078eIuXs",
-        "inLanguage": "es",
-        "bookFormat": "https://schema.org/Paperback",
-        "publisher": { "@id": "https://www.ikigaier.com/#organization" }
       }
     ]
   }
@@ -122,6 +99,8 @@
   </script>
 </head>
 <body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <!-- ============================================
   HEADER — Editorial, dos niveles: kanji + logo + nav
@@ -142,15 +121,13 @@
         <span></span>
       </button>
       <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
-        <a href="#inicio-nuevo">Inicio</a>
+        <a href="/es/" aria-current="page">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="#taller">Taller</a>
+        <a href="https://app.ikigaier.com/es/paso">El test</a>
         <a href="/es/ikigai/">Ikigai</a>
         <a href="/es/blog/">Blog</a>
-        <a href="#el-libro">El libro</a>
-        <a href="#cuaderno">El cuaderno</a>
-        <a href="#taller">Taller</a>
-        <a href="#cartas">Cartas</a>
         <a href="/es/manel-rueda/">Autor</a>
-        <a href="https://app.ikigaier.com/es/paso">El test</a>
         <a href="https://app.ikigaier.com/es/login">Entrar</a>
       </nav>
     </div>
@@ -162,154 +139,163 @@
     <span class="taller-anuncio-cta">Descubrir el taller</span>
   </a>
 
-  <section id="inicio-nuevo" class="hero-puertas">
-    <div class="puerta puerta-izq">
-      <picture>
-        <source srcset="/assets/images/puerta-libro.webp" type="image/webp">
-        <img src="/assets/images/puerta-libro.png" alt="El Ikigai que no te contaron" fetchpriority="high">
-      </picture>
-      <p class="puerta-subtitulo">Para comprender el ikigai que no te contaron</p>
-      <a href="#el-libro">El libro →</a>
-    </div>
-    <div class="hero-air">
+  <main id="contenido">
+
+  <!-- ============================================
+  HERO — el espejo
+  ============================================ -->
+  <section id="inicio-nuevo" class="home-hero" aria-labelledby="home-h1">
+    <div class="home-hero-aire" aria-hidden="true">
       <picture>
         <source srcset="/assets/images/aire-puertas.webp" type="image/webp">
-        <img src="/assets/images/aire-puertas.png" alt="">
+        <img src="/assets/images/aire-puertas.png" alt="" width="1999" height="673">
       </picture>
     </div>
-    <div class="hero-center">
-      <p class="hero-hook">No lo sabes, pero llevas tiempo caminando lejos de ti.</p>
-      <h1>El camino IKIGAIER<br>tiene dos puertas</h1>
-      <p class="hero-vuelta">Aquí empieza el camino de vuelta.</p>
-      <a href="https://app.ikigaier.com/es/paso" class="btn btn-primary" style="margin-top:1.8rem;">Descubre cómo caminas · Test gratis</a>
-    </div>
-    <div class="puerta puerta-der">
-      <picture>
-        <source srcset="/assets/images/puerta-cuaderno.webp" type="image/webp">
-        <img src="/assets/images/puerta-cuaderno.png" alt="Camina sin separarte de ti" fetchpriority="high">
-      </picture>
-      <p class="puerta-subtitulo">Para caminar sin separarte de ti</p>
-      <a href="#cuaderno">El cuaderno →</a>
+    <div class="home-hero-inner">
+      <h1 id="home-h1">Lo tienes todo.<span class="linea-2">Y aun así, algo te falta.</span></h1>
+      <p class="home-hero-sub">Un camino para volver a ti sin romper la vida que has construido.</p>
+      <a href="https://app.ikigaier.com/es/paso" class="btn btn-primary">Descubre cómo caminas · Test gratis</a>
+      <p class="home-hero-nota">5 minutos · sin registro · resultado al instante</p>
     </div>
   </section>
 
   <!-- ============================================
-  EL TEST — PASO · puerta de entrada gratuita
+  RECONOCIMIENTO — tres escenas
+  ============================================ -->
+  <section id="te-suena" class="home-bloque" aria-labelledby="te-suena-h">
+    <div class="container">
+      <span class="section-label">Quizá te reconozcas</span>
+      <h2 id="te-suena-h">Casi nadie lo dice en voz alta</h2>
+      <ul class="home-escenas">
+        <li>Un lunes cualquiera, en el coche con el motor apagado, delante del edificio del puesto que persiguió media vida. Nada le impide subir. <strong>Y no sube.</strong></li>
+        <li>Una noche de octubre, en el sofá, después de dejar organizado el día siguiente de todos. Enciende la tele sin mirar qué ponen y le llega una pregunta: <strong>¿y yo dónde estoy en todo esto?</strong></li>
+        <li>A seis años de jubilarse, con la hipoteca pagada, mirando el techo de madrugada. Hace cuentas, <strong>y no son de dinero.</strong></li>
+      </ul>
+      <p>Ninguno tiene una tragedia encima, y quizá por eso ninguno pide ayuda. Lo que tienen es una grieta silenciosa entre la vida que llevan y la persona que la lleva.</p>
+      <p>Si te has visto en alguna de las tres, lo que sientes es legítimo, aunque desde fuera parezca que no te falta nada. Tiene explicación y tiene salida.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+  HISTORIA — Manel
+  ============================================ -->
+  <section id="mi-historia" class="home-bloque home-historia" aria-labelledby="historia-h">
+    <div class="container">
+      <div class="home-historia-foto">
+        <img src="/assets/images/manel-rueda.jpg" alt="Manel Rueda" width="180" height="220" loading="lazy">
+      </div>
+      <div class="home-historia-texto">
+        <span class="section-label">Yo también estuve ahí</span>
+        <h2 id="historia-h">Una mañana en Querétaro</h2>
+        <p>Hace unos diez años vivía en México con mi familia, expatriado por trabajo. Una mañana, recién despierto, miraba desde la ventana las casas bajas de Querétaro pegadas a los edificios nuevos y sentí una desazón que no supe ubicar. Ni tristeza ni ansiedad, solo una incomodidad de fondo, como cuando algo no encaja y todavía no sabes qué es.</p>
+        <p>Llevaba años resolviendo cómo cumplir mejor con mis obligaciones. Aquella mañana entendí que la pregunta de verdad era por qué había convertido mi vida entera en una obligación. También sé lo que es pasar dos años sabiendo que un trabajo ya no es tuyo, con el diagnóstico clarísimo en la cabeza y la vida igual.</p>
+        <p>No soy psicólogo ni coach. Te hablo desde el otro lado de la mesa, como alguien que consiguió casi todo lo que se había propuesto y sintió que la cuenta no salía. De esa búsqueda nació IKIGAIER.</p>
+        <a class="home-enlace" href="/es/manel-rueda/">Conoce mi historia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+  LA IDEA
+  ============================================ -->
+  <section class="home-idea" aria-label="La idea que lo sostiene todo">
+    <blockquote>
+      <p>No te falta nada.<br>Te sobra ruido.</p>
+      <footer>De <cite>No todo lo que te frena es tuyo</cite></footer>
+    </blockquote>
+  </section>
+
+  <!-- ============================================
+  LIBROS — franja tranquila
+  ============================================ -->
+  <section id="libros" class="home-bloque home-libros" aria-labelledby="libros-h">
+    <div class="container">
+      <span class="section-label">Los libros</span>
+      <h2 id="libros-h">Un camino en tres libros</h2>
+      <p class="home-libros-intro">Cada uno abre una parte del camino de vuelta. Puedes leerlos en orden o empezar por el que más te llame hoy.</p>
+      <ul class="home-libros-fila">
+        <li>
+          <a href="/es/libros/#no-todo">
+            <picture>
+              <source srcset="/assets/images/portada-no-todo.webp" type="image/webp">
+              <img src="/assets/images/portada-no-todo.jpg" alt="Portada de No todo lo que te frena es tuyo" width="600" height="900" loading="lazy">
+            </picture>
+            <span class="home-libro-paso">1 · Liberar</span>
+            <span class="home-libro-titulo">No todo lo que te frena es tuyo</span>
+            <span class="home-libro-linea">Por qué lo conseguiste casi todo y sigues sintiendo ese vacío.</span>
+          </a>
+        </li>
+        <li>
+          <a href="/es/libros/#disciplina">
+            <picture>
+              <source srcset="/assets/images/portada-disciplina.webp" type="image/webp">
+              <img src="/assets/images/portada-disciplina.jpg" alt="Portada de Disciplina para indisciplinados" width="600" height="900" loading="lazy">
+            </picture>
+            <span class="home-libro-paso">2 · Actuar</span>
+            <span class="home-libro-titulo">Disciplina para indisciplinados</span>
+            <span class="home-libro-linea">Para quien ha empezado cien lunes. Nunca fue fuerza de voluntad.</span>
+          </a>
+        </li>
+        <li>
+          <a href="/es/libros/#el-ikigai">
+            <picture>
+              <source srcset="/assets/images/portada-libro.webp" type="image/webp">
+              <img src="/assets/images/portada-libro.png" alt="Portada de El Ikigai que no te contaron" width="1445" height="2168" loading="lazy">
+            </picture>
+            <span class="home-libro-paso">3 · Alinear</span>
+            <span class="home-libro-titulo">El Ikigai que no te contaron</span>
+            <span class="home-libro-linea">El libro central del método y el origen del taller.</span>
+          </a>
+        </li>
+      </ul>
+      <a class="home-enlace" href="/es/libros/">Ver los libros</a>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
+      <img src="/assets/images/ikionda-separador-transparente.png" alt="">
+    </picture>
+  </div>
+
+  <!-- ============================================
+  EL TEST — PASO
   ============================================ -->
   <section id="el-test" class="taller-section" aria-label="El test PASO">
     <div class="container">
       <span class="section-label">El test · gratis</span>
       <h2>¿Cómo caminas<br>por la vida?</h2>
-      <p class="taller-desc">Antes de cruzar cualquier puerta, mírate. PASO es un test breve que revela tu forma de moverte por la vida: cómo decides, cómo te relacionas, cómo sostienes el ritmo y cómo lees el terreno antes de pisarlo. Un espejo para empezar el camino de vuelta.</p>
+      <p class="taller-desc">No lo sabes, pero llevas tiempo caminando lejos de ti. PASO es un test breve que revela tu forma de moverte por la vida: cómo decides, cómo te relacionas, cómo sostienes el ritmo y cómo lees el terreno antes de pisarlo. Un espejo para empezar el camino de vuelta.</p>
       <a href="https://app.ikigaier.com/es/paso" class="btn btn-primary">Descubre cómo caminas →</a>
       <p class="taller-section-nota">5 minutos · sin registro · resultado al instante</p>
     </div>
   </section>
 
-  <div class="section-divider" aria-hidden="true">
-    <picture>
-      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
-      <img src="/assets/images/ikionda-separador-transparente.png" alt="">
-    </picture>
-  </div>
-
   <!-- ============================================
-  EL LIBRO
+  TALLER — YO SOY IKIGAIER
   ============================================ -->
-  <section id="el-libro" aria-label="El libro">
-    <div class="container">
-      <h2>El Ikigai que no te contaron</h2>
-
-      <div class="libro-flex">
-        <div class="libro-portada-wrapper">
-          <picture>
-            <source srcset="/assets/images/portada-libro.webp" type="image/webp">
-            <img class="libro-portada-img"
-                 src="/assets/images/portada-libro.png"
-                 alt="Portada del libro El Ikigai que no te contaron"
-                 width="200" loading="lazy">
-          </picture>
-        </div>
-        <div class="libro-info">
-          <p>¿Sientes que algo no encaja, aunque aparentemente todo vaya bien?</p>
-          <p>No estás solo.</p>
-          <p>Muchas personas pasan años persiguiendo metas, cumpliendo expectativas y construyendo una vida que parece tener sentido, hasta que un día descubren que se han alejado de sí mismas.</p>
-          <p>Este libro es una invitación a detenerte, mirar con honestidad y comenzar el camino de vuelta.</p>
-          <p>No para convertirte en alguien diferente.</p>
-          <p>Sino para volver a encontrarte contigo.</p>
-
-          <a href="https://amzn.eu/d/0bUk5t8J" class="btn" target="_blank" rel="noopener noreferrer">Descubrir el libro →</a>
-        </div>
+  <section id="taller" class="home-taller" aria-labelledby="taller-h">
+    <div class="home-taller-card">
+      <span class="section-label">Taller presencial · 4 horas</span>
+      <h2 id="taller-h">Yo soy IKIGAIER</h2>
+      <p class="home-taller-lead">Los libros te dan el mapa, pero a casa no se llega leyendo.</p>
+      <p>Por eso existe el taller. Cuatro horas presenciales, junto a otras personas que se hacen tus mismas preguntas, para escucharte, reconocer qué importa ahora y elegir cómo quieres vivir esta etapa.</p>
+      <ol class="home-taller-pasos" aria-label="El recorrido del taller">
+        <li><span>1</span>Entiende</li>
+        <li><span>2</span>Descubre</li>
+        <li><span>3</span>Libérate</li>
+        <li><span>4</span>Construye</li>
+        <li><span>5</span>Yo soy IKIGAIER</li>
+      </ol>
+      <p>Sales con una dirección que empieza a ser tuya y un primer paso para vivirla.</p>
+      <div class="home-taller-ctas">
+        <a href="/es/taller/#info" class="btn btn-primary">Avísame de las próximas fechas</a>
+        <a href="/es/taller/" class="home-enlace">Ver el recorrido completo</a>
       </div>
+      <p class="home-taller-estado">Inspirado en <em>El Ikigai que no te contaron</em> · Presencial · Fechas, lugar y precio próximamente</p>
     </div>
   </section>
-
-  <div class="section-divider" aria-hidden="true">
-    <picture>
-      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
-      <img src="/assets/images/ikionda-separador-transparente.png" alt="">
-    </picture>
-  </div>
-
-  <!-- ============================================
-  CUADERNO
-  ============================================ -->
-  <section id="cuaderno" aria-label="El cuaderno">
-    <div class="container">
-      <h2>Camina sin separarte de ti</h2>
-
-      <div class="libro-flex">
-        <div class="libro-portada-wrapper">
-          <picture>
-            <source srcset="/assets/images/portada-camina.webp" type="image/webp">
-            <img class="libro-portada-img"
-                 src="/assets/images/portada-camina.png"
-                 alt="Portada del cuaderno Camina sin separarte de ti"
-                 width="200" loading="lazy">
-          </picture>
-        </div>
-        <div class="libro-info">
-          <p>¿Y si comprender no fuera suficiente?</p>
-          <p>A veces vemos con claridad lo que nos ocurre.</p>
-          <p>Sabemos qué nos pesa.<br>Sabemos qué queremos cambiar.<br>Sabemos incluso qué dirección nos gustaría tomar.</p>
-          <p>Y aun así seguimos donde estamos.</p>
-          <p>Porque entre comprender y transformar hay un paso imprescindible: actuar.</p>
-          <p>Este cuaderno nace para ayudarte a dar ese paso.</p>
-          <p>A través de preguntas, ejercicios y pequeñas acciones, te acompañará para convertir la reflexión en movimiento y las ideas en experiencia.</p>
-          <p>Porque el camino de vuelta no se encuentra pensándolo.</p>
-          <p>Se descubre caminándolo.</p>
-
-          <a href="https://amzn.eu/d/078eIuXs" class="btn" target="_blank" rel="noopener noreferrer">Descubrir el cuaderno →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider" aria-hidden="true">
-    <picture>
-      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
-      <img src="/assets/images/ikionda-separador-transparente.png" alt="">
-    </picture>
-  </div>
-
-  <!-- ============================================
-  TALLER
-  ============================================ -->
-  <section id="taller" class="taller-section" aria-label="El taller">
-    <div class="container">
-      <span class="section-label">El taller</span>
-      <h2>Cuando quieras<br>vivirlo con otros</h2>
-      <p class="taller-desc">Has hecho mucho. ¿Y cómo te sientes en la vida que has construido?<br>YO SOY IKIGAIER: cuatro horas para escucharte, reconocer qué importa ahora y elegir cómo quieres vivir esta etapa.</p>
-      <a href="/es/taller/" class="btn">Descubrir el taller →</a>
-    </div>
-  </section>
-
-  <div class="section-divider" aria-hidden="true">
-    <picture>
-      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
-      <img src="/assets/images/ikionda-separador-transparente.png" alt="">
-    </picture>
-  </div>
 
   <!-- ============================================
   CARTAS IKIGAIER — Newsletter
@@ -336,9 +322,6 @@
       <span class="section-label">Sobre Manel Rueda</span>
 
       <div class="firma-body">
-        <p>IKIGAIER nace de años de búsqueda, experiencia y reflexión sobre el propósito, el crecimiento personal y la forma en que vivimos nuestra vida.</p>
-        <p>Lo que comenzó como una exploración personal acabó tomando distintas formas: libros, talleres y experiencias para quienes sienten que ha llegado el momento de volver a encontrarse consigo mismos.</p>
-        <p>Hoy, IKIGAIER es una invitación a caminar sin separarte de ti.</p>
         <p>Puedes leer más sobre <a href="/es/manel-rueda/">quién soy y por qué creé IKIGAIER</a>, y conocer el resto de mi trabajo en <a href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">manelrueda.com</a>.</p>
         <p>Y si has leído alguno de mis libros, participado en un taller o simplemente hay algo que te ha resonado, me encantará leerte.</p>
         <p class="firma-pregunta">¿Tienes alguna duda, reflexión o pregunta sobre el contenido de IKIGAIER?</p>
@@ -347,6 +330,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ============================================
   FOOTER
