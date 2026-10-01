@@ -36,7 +36,7 @@
   <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/manel-rueda/">
   <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/manel-rueda/">
 
-  <link rel="stylesheet" href="/assets/css/main.css?v=10">
+  <link rel="stylesheet" href="/assets/css/main.css?v=11">
 
   <!-- Datos estructurados — ProfilePage + Person (mismo @id que el resto del sitio) -->
   <script type="application/ld+json">
@@ -132,11 +132,11 @@
     .autor-page { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
     .breadcrumb {
       max-width: 760px; margin: 2.5rem auto 0; padding: 0 1.5rem;
-      font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--gris-claro);
+      font-family: 'Inter', sans-serif; font-size: var(--fs-etiqueta); letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--texto-secundario);
     }
-    .breadcrumb a { color: var(--gris-medio); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--negro); }
+    .breadcrumb a { color: var(--texto-principal); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--negro); text-decoration: underline; text-underline-offset: 0.2em; }
     .breadcrumb span[aria-hidden] { margin: 0 0.5rem; opacity: 0.6; }
 
     .autor-hero { display: flex; gap: 2.6rem; align-items: center; margin: 2rem 0 1rem; }
@@ -146,26 +146,26 @@
     }
     .autor-hero h1 { font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 0.4rem; }
     .autor-hero .rol {
-      font-family: 'Inter', sans-serif; font-size: 0.8rem; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--gold);
+      font-family: 'Inter', sans-serif; font-size: var(--fs-etiqueta); font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--dorado-texto);
     }
     .autor-body { font-family: 'Inter', sans-serif; margin-top: 1rem; }
     .autor-body h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 2.6rem 0 0.8rem; }
-    .autor-body p { font-size: 1.02rem; line-height: 1.78; color: #35322e; margin-bottom: 1.1rem; }
+    .autor-body p { font-size: var(--fs-lectura); line-height: 1.75; color: #35322e; margin-bottom: 1.1rem; }
     .autor-body p a { color: var(--negro); text-decoration: underline; text-underline-offset: 0.2em; text-decoration-color: var(--beige); }
     .autor-body p a:hover { text-decoration-color: var(--coral); }
     .autor-body .lead-frase {
       font-family: 'Cormorant Garamond', serif; font-style: italic;
-      font-size: clamp(1.2rem, 2.4vw, 1.55rem); color: var(--gris-medio); line-height: 1.5;
+      font-size: clamp(1.25rem, 2.4vw, 1.55rem); color: var(--texto-secundario); line-height: 1.5;
       margin: 1.4rem 0 1.8rem;
     }
     .obras { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.4rem 0; }
     .obra { padding: 1.3rem 1.4rem; border: 1px solid rgba(168,168,168,0.25); border-radius: 4px; }
     .obra h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.25rem; margin: 0 0 0.3rem; }
-    .obra p { font-size: 0.9rem; color: var(--gris-medio); line-height: 1.6; margin-bottom: 0.6rem; }
-    .obra a { font-family: 'Inter', sans-serif; font-size: 0.8rem; color: var(--negro); text-decoration: none; border-bottom: 1px solid var(--coral); padding-bottom: 1px; }
+    .obra p { font-size: var(--fs-apoyo); color: var(--texto-principal); line-height: 1.65; margin-bottom: 0.6rem; }
+    .obra a { font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: var(--negro); text-decoration: none; border-bottom: 1px solid var(--coral); padding-bottom: 1px; }
     .autor-contacto { margin-top: 2.4rem; padding-top: 1.6rem; border-top: 1px solid rgba(168,168,168,0.25); }
-    .autor-contacto p { font-size: 0.95rem; color: var(--gris-medio); margin-bottom: 0.5rem; }
+    .autor-contacto p { font-size: 1.0625rem; color: var(--texto-principal); margin-bottom: 0.5rem; }
     .autor-contacto a { color: var(--negro); text-decoration: underline; text-underline-offset: 0.2em; }
     @media (max-width: 640px) {
       .autor-hero { flex-direction: column; text-align: center; gap: 1.4rem; }
@@ -267,6 +267,6 @@
     <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
   </footer>
 
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js?v=2" defer></script>
 </body>
 </html>

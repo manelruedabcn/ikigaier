@@ -1,100 +1,120 @@
-/* Readability adjustments scoped to the Spanish workshop.
-   Keep display typography and decorative palette; distinguish reading roles. */
-.taller-legible {
-  --taller-texto: #55514D;
-  --taller-secundario: #655F59;
-  --taller-acento-texto: #94583E;
+/* ============================================
+   IKIGAIER — taller-legibilidad.css
+   Estilos propios de la landing del taller (/es/taller/ y /ca/taller/).
+   La escala de lectura, colores de texto, formularios, foco, menú y pie
+   viven en main.css (tokens --texto-*, --fs-*). Aquí solo queda lo que
+   es particular del taller: gancho del hero y recorrido interactivo.
+   ============================================ */
+
+/* --- Hero --- */
+.taller-legible .taller-hook {
+  max-width: 620px;
+  margin: 0 auto 1.2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  line-height: 1.2;
+  color: var(--negro);
 }
-.taller-legible .section-label,
-.taller-legible .ikiruta-card .k {
-  font-size: .875rem;
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: .1em;
-  color: var(--taller-secundario);
-}
-.taller-legible .ikiruta-card .k { color: var(--taller-acento-texto); }
-.taller-legible .taller-hero-subtitle {
-  font-size: 1rem;
-  color: var(--taller-secundario);
-  line-height: 1.7;
-}
-.taller-legible .hero .taller-hook + .taller-hero-subtitle,
-.taller-legible .ikiruta-card p,
-.taller-legible .taller-fase-desc,
-.taller-legible .taller-bullets li {
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 1.7;
-  color: var(--taller-texto);
-}
-.taller-legible .taller-manifiesto { max-width: 65ch; }
-.taller-legible .taller-manifiesto p { color: var(--taller-texto); line-height: 1.75; }
-.taller-legible .ikiruta-hint {
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--taller-secundario);
-  line-height: 1.65;
-}
-.taller-legible .ikiruta-card h3 { font-size: 1.875rem; }
-.taller-legible .ikiruta-card { min-height: 13rem; }
-.taller-legible .ikiruta-stop.on text.tit { fill: var(--taller-acento-texto); }
-.taller-legible .ikiruta-stop.on circle,
-.taller-legible .ikiruta-stop:hover circle,
-.taller-legible .ikiruta-stop:focus-visible circle {
-  fill: var(--taller-acento-texto);
-  stroke: var(--taller-acento-texto);
-}
-.taller-legible .ikiruta-stop:focus-visible circle { stroke: var(--negro); stroke-width: 4; }
-.taller-legible .taller-contacto-item h3 { font-size: 1.5rem; }
-.taller-legible .taller-contacto-texto,
-.taller-legible .taller-contacto-nota,
-.taller-legible #taller-msg {
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--taller-texto);
-  line-height: 1.7;
-}
-.taller-legible .taller-contacto-texto { margin-bottom: .7rem; }
-.taller-legible #taller-msg { margin-top: 1rem; }
-.taller-legible .taller-form input[type="email"] {
-  font-size: 1.0625rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  min-width: 0;
-  width: 100%;
-  border-color: var(--taller-secundario);
-}
-.taller-legible .taller-form input::placeholder { color: var(--taller-secundario); font-weight: 400; opacity: 1; }
-.taller-legible .btn { font-size: 1rem; letter-spacing: .03em; }
-.taller-legible .taller-cta-final .lead { color: var(--taller-texto); font-size: 1.5rem; line-height: 1.5; }
-.taller-legible .taller-firma {
-  font-size: 1rem;
-  color: #D8C9B8;
-  font-weight: 400;
-  letter-spacing: .04em;
-  margin-top: .8rem;
-  font-style: normal;
-}
-.taller-legible .site-footer p,
-.taller-legible .footer-link-back { font-size: .9375rem; color: var(--taller-secundario); }
-.taller-legible .site-header-nav a { font-size: .9375rem; color: var(--taller-secundario); }
-.taller-legible a:focus-visible,
-.taller-legible button:focus-visible,
-.taller-legible input:focus-visible { outline: 2px solid var(--taller-acento-texto); outline-offset: 4px; }
-@media (max-width: 600px) {
-  .taller-legible .container { padding-left: 1.5rem; padding-right: 1.5rem; }
-  .taller-legible .taller-manifiesto p { font-size: 1.125rem; }
-  .taller-legible .taller-fase { padding: 0; }
-  .taller-legible .ikiruta-card { padding: 1.25rem; }
-  .taller-legible .taller-hero-ctas .btn { width: 100%; }
-  .taller-legible .taller-cta-final .lead { font-size: 1.375rem; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .taller-legible .ikiruta-card .fade { animation: none; }
-  .taller-legible .ikiruta-prog { transition: none; }
+.taller-legible .hero .taller-hook + .taller-hero-subtitle {
+  font-size: var(--fs-lectura);
+  color: var(--texto-principal);
 }
 
-/* Quiet interaction cue, using the same warm accent as station labels. */
-.taller-legible .ikiruta-hint { display: flex; align-items: flex-start; gap: .65rem; }
-.taller-legible .ikiruta-dedo { width: 1.5rem; height: 1.5rem; flex: 0 0 1.5rem; margin-top: .1rem; color: var(--taller-acento-texto); }
+/* --- Recorrido interactivo (ikiruta) --- */
+.ikiruta { margin: 1.2rem 0 0; }
+.ikiruta-hint {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 0.2rem 0 1rem;
+  font-size: var(--fs-apoyo);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--texto-secundario);
+}
+.ikiruta-dedo {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 1.5rem;
+  margin-top: 0.1rem;
+  color: var(--acento-texto);
+}
+.ikiruta-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.ikiruta-base { fill: none; stroke: var(--beige); stroke-width: 4; stroke-dasharray: 10 8; stroke-linecap: round; }
+.ikiruta-prog { fill: none; stroke: var(--coral); stroke-width: 4; stroke-linecap: round; transition: stroke-dashoffset 0.6s ease; }
+.ikiruta-stop { cursor: pointer; outline: none; }
+.ikiruta-stop .dot { fill: var(--bg-cream); stroke: var(--negro); stroke-width: 2; transition: all 0.25s ease; }
+.ikiruta-stop text.num { font-family: 'Inter', sans-serif; font-size: 19px; font-weight: 500; fill: var(--negro); text-anchor: middle; pointer-events: none; }
+.ikiruta-stop text.tit { font-family: 'Cormorant Garamond', serif; font-size: 27px; font-weight: 600; fill: var(--negro); text-anchor: middle; }
+.ikiruta-stop .hit { fill: transparent; stroke: none; }
+/* Seleccionado / hover / foco: terracota de texto (blanco sobre él: 5,6:1). */
+.ikiruta-stop.on .dot,
+.ikiruta-stop:hover .dot,
+.ikiruta-stop:focus-visible .dot { fill: var(--acento-texto); stroke: var(--acento-texto); }
+.ikiruta-stop.on text.num,
+.ikiruta-stop:hover text.num,
+.ikiruta-stop:focus-visible text.num { fill: #fff; }
+.ikiruta-stop.on text.tit { fill: var(--acento-texto); }
+.ikiruta-stop:focus-visible .dot { stroke: var(--negro); stroke-width: 4; }
+
+.ikiruta-card {
+  margin-top: 1rem;
+  min-height: 13rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid rgba(39, 39, 39, 0.12);
+  border-radius: 10px;
+  background: var(--blanco);
+}
+.ikiruta-card .k {
+  font-size: var(--fs-etiqueta);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--acento-texto);
+}
+.ikiruta-card h3 {
+  margin: 0.2rem 0 0.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.ikiruta-card p {
+  margin: 0 0 0.9rem;
+  font-size: var(--fs-lectura);
+  font-weight: 400;
+  line-height: var(--lh-lectura);
+  color: var(--texto-principal);
+}
+.ikiruta-card .fade { animation: ikifade 0.35s ease; }
+@keyframes ikifade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* --- Cierre y CTA --- */
+.taller-legible .taller-firma {
+  margin-top: 0.8rem;
+  font-size: var(--fs-apoyo);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--apoyo-sobre-oscuro);
+}
+.taller-legible .taller-cta-final .lead {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--texto-principal);
+}
+
+@media (max-width: 600px) {
+  .taller-legible .taller-manifiesto p { font-size: var(--fs-lectura); }
+  .taller-legible .taller-fase { padding: 0; }
+  .taller-legible .taller-hero-ctas .btn { width: 100%; }
+  .taller-legible .taller-cta-final .lead { font-size: 1.375rem; }
+  .ikiruta-card { padding: 1.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ikiruta-card .fade { animation: none; }
+  .ikiruta-prog,
+  .ikiruta-stop .dot { transition: none; }
+}

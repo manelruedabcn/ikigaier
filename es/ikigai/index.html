@@ -38,7 +38,8 @@
   <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/ikigai/">
   <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/ikigai/">
 
-  <link rel="stylesheet" href="/assets/css/main.css?v=10">
+  <link rel="stylesheet" href="/assets/css/main.css?v=11">
+  <link rel="stylesheet" href="/assets/css/article.css?v=2">
 
   <!-- ============================================
        DATOS ESTRUCTURADOS — @graph con @id persistentes.
@@ -164,303 +165,6 @@
        No modifica main.css. Reutiliza variables y tipografías
        del sistema. Solo añade la maqueta editorial de artículo.
        ============================================ -->
-  <style>
-    .article-wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* Migas de pan */
-    .breadcrumb {
-      max-width: 720px;
-      margin: 2.5rem auto 0;
-      padding: 0 1.5rem;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gris-claro);
-    }
-    .breadcrumb a { color: var(--gris-medio); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--negro); }
-    .breadcrumb span[aria-hidden] { margin: 0 0.5rem; opacity: 0.6; }
-
-    /* Cabecera del artículo */
-    .article-head { margin: 1.4rem 0 0.5rem; }
-    .article-head h1 {
-      font-size: clamp(2.3rem, 5vw, 3.6rem);
-      line-height: 1.12;
-      color: var(--negro);
-      margin-bottom: 1rem;
-    }
-    .article-standfirst {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: clamp(1.2rem, 2.2vw, 1.5rem);
-      color: var(--gris-medio);
-      line-height: 1.5;
-      margin-bottom: 1.6rem;
-    }
-    .article-byline {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 0.5rem 1rem;
-      padding: 1rem 0 1.4rem;
-      border-top: 1px solid rgba(168,168,168,0.25);
-      border-bottom: 1px solid rgba(168,168,168,0.25);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-      color: var(--gris-medio);
-    }
-    .article-byline .author { font-weight: 500; color: var(--negro); }
-    .article-byline .author a { color: var(--negro); text-decoration: none; border-bottom: 1px solid var(--coral); }
-    .article-byline .author a:hover { opacity: 0.7; }
-    .article-byline .role { color: var(--gris-medio); }
-    .article-byline time { color: var(--gris-claro); letter-spacing: 0.03em; }
-
-    /* Índice de contenidos */
-    .toc {
-      margin: 2.2rem 0;
-      padding: 1.6rem 1.8rem;
-      background: var(--cream);
-      border-radius: 4px;
-    }
-    .toc h2 {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gris-claro);
-      margin-bottom: 0.9rem;
-    }
-    .toc ol { list-style: none; margin: 0; padding: 0; counter-reset: toc; }
-    .toc li { counter-increment: toc; margin-bottom: 0.5rem; line-height: 1.4; }
-    .toc a {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      color: var(--charcoal);
-      text-decoration: none;
-    }
-    .toc a::before {
-      content: counter(toc, decimal-leading-zero);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.68rem;
-      color: var(--gold);
-      margin-right: 0.7rem;
-      letter-spacing: 0.05em;
-    }
-    .toc a:hover { color: var(--negro); text-decoration: underline; text-underline-offset: 0.2em; }
-
-    /* Cuerpo del artículo */
-    .prose { font-family: 'Inter', sans-serif; }
-    .prose h2 {
-      font-size: clamp(1.7rem, 3.4vw, 2.35rem);
-      margin: 3rem 0 1rem;
-      scroll-margin-top: 1.5rem;
-    }
-    .prose h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
-      font-weight: 500;
-      color: var(--negro);
-      margin: 2rem 0 0.6rem;
-    }
-    .prose p {
-      font-size: 1.02rem;
-      line-height: 1.78;
-      color: #35322e;
-      margin-bottom: 1.15rem;
-    }
-    .prose p a {
-      color: var(--negro);
-      text-decoration: underline;
-      text-underline-offset: 0.2em;
-      text-decoration-color: var(--beige);
-      transition: text-decoration-color 0.2s;
-    }
-    .prose p a:hover { text-decoration-color: var(--coral); }
-    .prose strong { font-weight: 600; color: var(--negro); }
-    .prose em { font-style: italic; }
-    .prose ul { margin: 0 0 1.3rem 0; padding: 0; list-style: none; }
-    .prose ul li {
-      position: relative;
-      padding-left: 1.4rem;
-      margin-bottom: 0.7rem;
-      font-size: 1.02rem;
-      line-height: 1.7;
-      color: #35322e;
-    }
-    .prose ul li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-    }
-
-    /* Distinción de capas: japonés / occidental / IKIGAIER */
-    .capa {
-      margin: 1.6rem 0;
-      padding: 1.2rem 1.5rem;
-      border-left: 2px solid var(--beige);
-      background: rgba(216,201,184,0.12);
-    }
-    .capa-label {
-      display: block;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.66rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
-    .capa p:last-child { margin-bottom: 0; }
-
-    /* Cita / reflexión */
-    .reflexion {
-      margin: 2.4rem 0;
-      padding: 0 0 0 1.6rem;
-      border-left: 2px solid var(--coral);
-    }
-    .reflexion p {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: clamp(1.3rem, 2.6vw, 1.7rem);
-      line-height: 1.45;
-      color: var(--charcoal);
-      margin-bottom: 0;
-    }
-
-    /* Diagrama de los cuatro círculos (SVG propio, ligero) */
-    figure { margin: 2.4rem 0; }
-    figure svg { display: block; width: 100%; max-width: 460px; height: auto; margin: 0 auto; }
-    figcaption {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.78rem;
-      color: var(--gris-claro);
-      text-align: center;
-      margin-top: 0.9rem;
-      line-height: 1.5;
-      max-width: 460px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Dos almas: Activo / Consciente */
-    .dosalmas {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-      margin: 1.8rem 0;
-    }
-    .almas-card {
-      padding: 1.4rem 1.5rem;
-      background: var(--cream);
-      border-radius: 4px;
-    }
-    .almas-card h3 { margin-top: 0; color: var(--olive); }
-    .almas-card p { font-size: 0.94rem; color: var(--gris-medio); line-height: 1.7; margin-bottom: 0; }
-
-    /* Preguntas de reflexión */
-    .preguntas {
-      margin: 1.8rem 0;
-      padding: 1.6rem 1.8rem;
-      border: 1px solid rgba(168,168,168,0.25);
-      border-radius: 4px;
-    }
-    .preguntas p:first-child {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gris-claro);
-      margin-bottom: 1rem;
-    }
-    .preguntas ul li {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--charcoal);
-    }
-    .preguntas ul li::before { content: '·'; color: var(--coral); }
-
-    /* CTA discreto */
-    .cta-linea {
-      margin: 2.4rem 0;
-      padding: 1.7rem 1.8rem;
-      background: var(--negro);
-      border-radius: 4px;
-      text-align: center;
-    }
-    .cta-linea p {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      color: var(--cream);
-      margin-bottom: 1.1rem;
-      line-height: 1.4;
-    }
-    .cta-linea .btn { border-color: var(--cream); color: var(--cream); }
-    .cta-linea .btn:hover { background: var(--cream); color: var(--negro); }
-
-    /* Recursos */
-    .recursos-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-      margin: 1.8rem 0;
-    }
-    .recurso {
-      padding: 1.3rem 1.4rem;
-      border: 1px solid rgba(168,168,168,0.25);
-      border-radius: 4px;
-    }
-    .recurso h3 { margin: 0 0 0.35rem; font-size: 1.2rem; }
-    .recurso p { font-size: 0.9rem; color: var(--gris-medio); line-height: 1.6; margin-bottom: 0.7rem; }
-    .recurso a {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-      color: var(--negro);
-      text-decoration: none;
-      border-bottom: 1px solid var(--coral);
-      padding-bottom: 1px;
-    }
-    .recurso a:hover { opacity: 0.7; }
-
-    /* FAQ visible */
-    .faq { margin-top: 1.2rem; }
-    .faq-item { border-bottom: 1px solid rgba(168,168,168,0.2); padding: 1.3rem 0; }
-    .faq-item h3 { margin: 0 0 0.5rem; font-size: 1.25rem; }
-    .faq-item p { margin-bottom: 0; }
-
-    /* Fuentes */
-    .fuentes { margin: 1rem 0 0; }
-    .fuentes ol { padding-left: 1.2rem; }
-    .fuentes li {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.84rem;
-      color: var(--gris-medio);
-      line-height: 1.6;
-      margin-bottom: 0.6rem;
-    }
-    .fuentes a { color: var(--gris-medio); text-decoration: underline; text-underline-offset: 0.15em; }
-    .fuentes a:hover { color: var(--negro); }
-    .nota-editorial {
-      margin-top: 2rem;
-      font-size: 0.82rem !important;
-      color: var(--gris-claro) !important;
-      font-style: italic;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 700px) {
-      .dosalmas, .recursos-grid { grid-template-columns: 1fr; }
-      .toc, .preguntas, .cta-linea { padding-left: 1.2rem; padding-right: 1.2rem; }
-    }
-  </style>
 </head>
 <body>
 
@@ -576,11 +280,11 @@
               <circle cx="160" cy="215" r="85" fill="#3F4A34"/>
               <circle cx="105" cy="160" r="85" fill="#58624B"/>
             </g>
-            <g font-family="Inter, sans-serif" font-size="11" fill="#35322e" text-anchor="middle">
+            <g font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#35322e" text-anchor="middle">
               <text x="160" y="60">Lo que amas</text>
-              <text x="270" y="163">En lo que</text><text x="270" y="176">eres bueno</text>
-              <text x="160" y="270">Lo que el</text><text x="160" y="283">mundo necesita</text>
-              <text x="50" y="163">Por lo que</text><text x="50" y="176">te pagan</text>
+              <text x="270" y="156">En lo que</text><text x="270" y="173">eres bueno</text>
+              <text x="160" y="264">Lo que el</text><text x="160" y="281">mundo necesita</text>
+              <text x="50" y="156">Por lo que</text><text x="50" y="173">te pagan</text>
             </g>
             <text x="160" y="164" font-family="Cormorant Garamond, serif" font-style="italic" font-size="17" fill="#272727" text-anchor="middle">ikigai</text>
           </svg>
@@ -750,6 +454,6 @@
     <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
   </footer>
 
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js?v=2" defer></script>
 </body>
 </html>
