@@ -143,14 +143,15 @@ img {
   align-items: center;
   gap: 1.5rem;
   padding: 0.75rem 1.5rem;
-  background: var(--coral);
-  color: var(--negro);
+  background: var(--acento-texto); /* blanco sobre #94583E: 5,6:1 */
+  color: #fff;
   font-size: 0.9375rem;
   line-height: 1.5;
   letter-spacing: 0.01em;
   text-align: center;
 }
 .taller-anuncio-cta { font-weight: 500; text-decoration: underline; text-underline-offset: 0.2em; }
+.taller-anuncio-barra:hover { background: #8A5038; } /* 6,4:1 */
 
 .landing-taller-body { background: #2A2724; color: var(--cream); }
 .landing-taller-header {
