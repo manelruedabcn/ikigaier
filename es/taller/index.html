@@ -40,6 +40,7 @@
   <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/taller/">
 
   <link rel="stylesheet" href="/assets/css/main.css?v=5">
+  <link rel="stylesheet" href="/assets/css/taller-legibilidad.css?v=1">
 
   <!-- Schema Markup JSON-LD — Service (Taller) -->
   <script type="application/ld+json">
@@ -92,7 +93,7 @@
     gtag('config', 'G-T2ZZKZFLHH');
   </script>
 </head>
-<body>
+<body class="taller-legible">
 
   <!-- ============================================
   HEADER — Editorial, dos niveles: kanji + logo + nav
@@ -224,11 +225,37 @@
         var cur=-1;
         function show(i){
           if(i===cur)return; cur=i; var s=D[i];
-          gs.forEach(function(g,j){g.classList.toggle('on',j===i)});
+          gs.forEach(function(g,j){g.classList.toggle('on',j===i);g.setAttribute('aria-pressed',j===i?'true':'false')});
           PR.style.strokeDashoffset=L*(1-F[i]);
           body.innerHTML='<div class="fade"><div class="k">'+(s.n==='★'?'':s.n+' · ')+esc(s.s)+'</div><h3>'+esc(s.t)+'</h3><p>'+esc(s.d)+'</p></div>';
         }
+        // Keep station text readable instead of shrinking it with the SVG.
+        var svg=P.ownerSVGElement;
+        function layout(){
+          var width=svg.getBoundingClientRect().width, compact=width<520;
+          if(!width)return;
+          var path=compact?'M48 38 C 78 65, 18 100, 48 126 S 78 188, 48 214 S 18 276, 48 302 S 78 364, 48 390':'M20 290 C 140 295, 170 190, 300 200 S 460 280, 540 200 S 660 70, 770 50';
+          svg.setAttribute('viewBox',compact?'0 0 '+width+' 438':'0 0 800 330');
+          P.setAttribute('d',path);PR.setAttribute('d',path);L=P.getTotalLength();
+          F=compact?[0,.25,.5,.75,1]:[.12,.34,.57,.8,1];
+          var scale=compact?1:width/800;
+          gs.forEach(function(g,i){
+            var pt=P.getPointAtLength(L*F[i]),last=i===D.length-1;
+            var c=g.querySelector('circle'),n=g.querySelector('.num'),t=g.querySelector('.tit');
+            c.setAttribute('cx',pt.x);c.setAttribute('cy',pt.y);c.setAttribute('r',14/scale);
+            n.setAttribute('x',pt.x);n.setAttribute('y',pt.y+5.5/scale);n.style.fontSize=16/scale+'px';
+            if(last)n.textContent='✓';
+            t.setAttribute('x',compact?pt.x+32:(i===3?pt.x-32:last?pt.x-22:pt.x));
+            t.setAttribute('y',compact?pt.y+7:(i===0||i===2?pt.y+54:i===3?pt.y+9:last?pt.y-30:pt.y-36));
+            t.style.textAnchor=compact?'start':i===3||last?'end':'middle';
+            t.style.fontSize=(compact?23:24)/scale+'px';
+            g.querySelectorAll('path').forEach(function(flag){flag.style.display=compact?'none':''});
+          });
+          PR.style.strokeDasharray=L;PR.style.strokeDashoffset=L*(1-F[Math.max(cur,0)]);
+        }
         show(0);
+        layout();
+        new ResizeObserver(layout).observe(svg);
       })();
       </script>
 
@@ -277,7 +304,7 @@
     <div class="container">
       <blockquote>
         <p>El ikigai no se alcanza. Se habita.</p>
-        <footer style="font-size: 0.9rem; color: var(--gris-claro); font-weight: 300; letter-spacing: 0.06em; margin-top: 0.8rem; font-style: normal;">Yo soy IKIGAIER.</footer>
+        <footer class="taller-firma">Yo soy IKIGAIER.</footer>
       </blockquote>
     </div>
   </section>
@@ -292,22 +319,22 @@
 
       <div class="taller-contacto">
         <div class="taller-contacto-item">
-          <h3>Déjanos tu email</h3>
+          <h3 id="taller-email-label">Déjanos tu email</h3>
           <form class="taller-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
             <input type="hidden" name="_next" value="https://www.ikigaier.com/es/taller/?success=1">
             <input type="hidden" name="_subject" value="Interés taller YO SOY IKIGAIER">
-            <input type="email" name="email" placeholder="tu@email.com" required aria-label="Tu correo electrónico">
+            <input type="email" name="email" placeholder="tu@email.com" required aria-labelledby="taller-email-label" autocomplete="email">
             <button type="submit" class="btn btn-primary" style="width: 100%;">Avísame</button>
           </form>
-          <p id="taller-msg" style="margin-top: 1rem; font-size: 0.85rem; font-weight: 300; display: none;"></p>
+          <p id="taller-msg" style="display: none;"></p>
         </div>
 
         <div class="taller-contacto-item">
           <h3>O escríbenos directamente</h3>
-          <p style="font-size: 0.9rem; margin-bottom: 0.7rem;">
+          <p class="taller-contacto-texto">
             También puedes escribirnos directamente a <a href="mailto:hola@ikigaier.com" style="color: var(--gris-medio); text-decoration: underline; text-underline-offset: 0.2em;">hola@ikigaier.com</a>
           </p>
-          <p style="font-size: 0.85rem; color: var(--gris-claro);">También puedes consultar disponibilidad para grupos, empresas o sesiones adaptadas.</p>
+          <p class="taller-contacto-nota">También puedes consultar disponibilidad para grupos, empresas o sesiones adaptadas.</p>
         </div>
       </div>
     </div>

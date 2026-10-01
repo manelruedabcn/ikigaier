@@ -1,0 +1,96 @@
+/* Readability adjustments scoped to the Spanish workshop.
+   Keep display typography and decorative palette; distinguish reading roles. */
+.taller-legible {
+  --taller-texto: #55514D;
+  --taller-secundario: #655F59;
+  --taller-acento-texto: #94583E;
+}
+.taller-legible .section-label,
+.taller-legible .ikiruta-card .k {
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: .1em;
+  color: var(--taller-secundario);
+}
+.taller-legible .ikiruta-card .k { color: var(--taller-acento-texto); }
+.taller-legible .taller-hero-subtitle {
+  font-size: 1rem;
+  color: var(--taller-secundario);
+  line-height: 1.7;
+}
+.taller-legible .hero .taller-hook + .taller-hero-subtitle,
+.taller-legible .ikiruta-card p,
+.taller-legible .taller-fase-desc,
+.taller-legible .taller-bullets li {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--taller-texto);
+}
+.taller-legible .taller-manifiesto { max-width: 65ch; }
+.taller-legible .taller-manifiesto p { color: var(--taller-texto); line-height: 1.75; }
+.taller-legible .ikiruta-hint {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--taller-secundario);
+  line-height: 1.65;
+}
+.taller-legible .ikiruta-card h3 { font-size: 1.875rem; }
+.taller-legible .ikiruta-card { min-height: 13rem; }
+.taller-legible .ikiruta-stop.on text.tit { fill: var(--taller-acento-texto); }
+.taller-legible .ikiruta-stop.on circle,
+.taller-legible .ikiruta-stop:hover circle,
+.taller-legible .ikiruta-stop:focus-visible circle {
+  fill: var(--taller-acento-texto);
+  stroke: var(--taller-acento-texto);
+}
+.taller-legible .ikiruta-stop:focus-visible circle { stroke: var(--negro); stroke-width: 4; }
+.taller-legible .taller-contacto-item h3 { font-size: 1.5rem; }
+.taller-legible .taller-contacto-texto,
+.taller-legible .taller-contacto-nota,
+.taller-legible #taller-msg {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--taller-texto);
+  line-height: 1.7;
+}
+.taller-legible .taller-contacto-texto { margin-bottom: .7rem; }
+.taller-legible #taller-msg { margin-top: 1rem; }
+.taller-legible .taller-form input[type="email"] {
+  font-size: 1.0625rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  min-width: 0;
+  width: 100%;
+  border-color: var(--taller-secundario);
+}
+.taller-legible .taller-form input::placeholder { color: var(--taller-secundario); font-weight: 400; opacity: 1; }
+.taller-legible .btn { font-size: 1rem; letter-spacing: .03em; }
+.taller-legible .taller-cta-final .lead { color: var(--taller-texto); font-size: 1.5rem; line-height: 1.5; }
+.taller-legible .taller-firma {
+  font-size: 1rem;
+  color: #D8C9B8;
+  font-weight: 400;
+  letter-spacing: .04em;
+  margin-top: .8rem;
+  font-style: normal;
+}
+.taller-legible .site-footer p,
+.taller-legible .footer-link-back { font-size: .9375rem; color: var(--taller-secundario); }
+.taller-legible .site-header-nav a { font-size: .9375rem; color: var(--taller-secundario); }
+.taller-legible a:focus-visible,
+.taller-legible button:focus-visible,
+.taller-legible input:focus-visible { outline: 2px solid var(--taller-acento-texto); outline-offset: 4px; }
+@media (max-width: 600px) {
+  .taller-legible .container { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .taller-legible .taller-manifiesto p { font-size: 1.125rem; }
+  .taller-legible .taller-fase { padding: 0; }
+  .taller-legible .ikiruta-card { padding: 1.25rem; }
+  .taller-legible .taller-hero-ctas .btn { width: 100%; }
+  .taller-legible .taller-cta-final .lead { font-size: 1.375rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .taller-legible .ikiruta-card .fade { animation: none; }
+  .taller-legible .ikiruta-prog { transition: none; }
+}
