@@ -94,3 +94,7 @@
   .taller-legible .ikiruta-card .fade { animation: none; }
   .taller-legible .ikiruta-prog { transition: none; }
 }
+
+/* Quiet interaction cue, using the same warm accent as station labels. */
+.taller-legible .ikiruta-hint { display: flex; align-items: flex-start; gap: .65rem; }
+.taller-legible .ikiruta-dedo { width: 1.5rem; height: 1.5rem; flex: 0 0 1.5rem; margin-top: .1rem; color: var(--taller-acento-texto); }
