@@ -3,47 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IKIGAIER — L'ikigai que no et van explicar. Un ecosistema per unir el fer i el ser.">
-  <meta name="robots" content="noindex, follow">
-  <title>IKIGAIER · Català</title>
+  <meta name="description" content="Per a qui ho ha aconseguit gairebé tot i sent que alguna cosa no encaixa. Llibres, test gratuït i tallers per tornar a tu sense trencar la vida que has construït. Per Manel Rueda.">
+  <title>IKIGAIER · Ho tens tot i tot i així et falta alguna cosa · Manel Rueda</title>
   <link rel="canonical" href="https://www.ikigaier.com/ca/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/">
+  <link rel="alternate" hreflang="ca" href="https://www.ikigaier.com/ca/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
   <link rel="manifest" href="/assets/site.webmanifest">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="IKIGAIER · Català">
-  <meta property="og:description" content="L'ikigai que no et van explicar. Un ecosistema per unir el fer i el ser.">
+  <meta property="og:title" content="Ho tens tot. I tot i així, et falta alguna cosa · IKIGAIER">
+  <meta property="og:description" content="Per a qui ho ha aconseguit gairebé tot i sent que alguna cosa no encaixa. Llibres, test gratuït i tallers per tornar a tu sense trencar la vida que has construït. Per Manel Rueda.">
   <meta property="og:url" content="https://www.ikigaier.com/ca/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ca_ES">
   <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="IKIGAIER · El Ikigai que no te contaron · de Manel Rueda">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IKIGAIER · L'Ikigai que no t'han explicat">
-  <meta name="twitter:description" content="Un mètode per unir el fer i el ser. El llibre, el quadern i el taller.">
+  <meta name="twitter:title" content="Ho tens tot. I tot i així, et falta alguna cosa · IKIGAIER">
+  <meta name="twitter:description" content="Per a qui ho ha aconseguit gairebé tot i sent que alguna cosa no encaixa. Llibres, test gratuït i tallers per tornar a tu sense trencar la vida que has construït. Per Manel Rueda.">
   <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
-
-  <!-- Hreflang -->
-  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/">
-  <link rel="alternate" hreflang="ca" href="https://www.ikigaier.com/ca/">
-  <link rel="alternate" hreflang="en" href="https://www.ikigaier.com/en/">
-  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/css/main.css?v=12">
-
+  <link rel="stylesheet" href="/assets/css/home.css?v=1">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=1">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH"></script>
@@ -55,23 +45,220 @@
   </script>
 </head>
 <body>
-  <main class="placeholder-page">
+
+  <a class="skip-link" href="#contingut">Salta al contingut</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/ca/" class="site-header-logo" aria-label="IKIGAIER · Inici">
+        <picture>
+          <source srcset="/assets/images/logo-ikigaier-bicolor-transparente.webp?v=1" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-transparente.png?v=1" alt="IKIGAIER" width="293" height="92">
+        </picture>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Obrir el menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegació principal">
+        <a href="/ca/" aria-current="page">Inici</a>
+        <a href="/es/libros/" hreflang="es">Llibres</a>
+        <a href="/ca/tallers/">Tallers</a>
+        <a href="/es/manel-rueda/" hreflang="es">Autor</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/ca/test/" class="nav-destacado">Test gratuït</a>
+        <a href="/es/" hreflang="es" lang="es">Castellano</a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <a class="taller-anuncio-barra" href="/ca/taller/">
+    <span><strong>Nou taller presencial</strong> · JO SOC IKIGAIER<span class="taller-anuncio-extra"> · Quatre hores per escoltar-te</span> · Dates i preu properament</span>
+    <span class="taller-anuncio-cta">Descobreix el taller</span>
+  </a>
+
+  <main id="contingut">
+
+  <section class="home-hero" aria-labelledby="home-h1">
+    <div class="home-hero-aire" aria-hidden="true">
+      <picture>
+        <source srcset="/assets/images/aire-puertas.webp" type="image/webp">
+        <img src="/assets/images/aire-puertas.png" alt="" width="1999" height="673">
+      </picture>
+    </div>
+    <div class="home-hero-inner">
+      <h1 id="home-h1">Ho tens tot.<span class="linea-2">I tot i així, et falta alguna cosa.</span></h1>
+      <p class="home-hero-sub">Un camí per tornar a tu sense trencar la vida que has construït.</p>
+      <a href="/ca/test/" class="btn btn-primary">Descobreix com camines · Test gratuït</a>
+      <p class="home-hero-nota">5 minuts · sense registre · resultat a l’instant</p>
+    </div>
+  </section>
+
+  <section class="home-bloque" aria-labelledby="et-sona-h">
+    <div class="container">
+      <span class="section-label">Potser t’hi reconeixes</span>
+      <h2 id="et-sona-h">Gairebé ningú no ho diu en veu alta</h2>
+      <ul class="home-escenes home-escenas">
+        <li>Un dilluns qualsevol, al cotxe amb el motor apagat, davant de l’edifici del càrrec que va perseguir mitja vida. Res no li impedeix pujar. <strong>I no puja.</strong></li>
+        <li>Una nit d’octubre, al sofà, després de deixar organitzat el dia següent de tothom. Encén la tele sense mirar què fan i li arriba una pregunta: <strong>i jo on soc, en tot això?</strong></li>
+        <li>A sis anys de jubilar-se, amb la hipoteca pagada, mirant el sostre de matinada. Fa comptes, <strong>i no són de diners.</strong></li>
+      </ul>
+      <p>Cap d’ells no té una tragèdia al damunt, i potser per això cap no demana ajuda. El que tenen és una esquerda silenciosa entre la vida que porten i la persona que la porta.</p>
+      <p>Si t’has vist en alguna de les tres, el que sents és legítim, encara que des de fora sembli que no et falta res. Té explicació i té sortida.</p>
+    </div>
+  </section>
+
+  <section class="home-bloque home-historia" aria-labelledby="historia-h">
+    <div class="container">
+      <div class="home-historia-foto">
+        <img src="/assets/images/manel-rueda.jpg" alt="Manel Rueda" width="180" height="220" loading="lazy">
+      </div>
+      <div class="home-historia-texto">
+        <span class="section-label">Jo també hi vaig ser</span>
+        <h2 id="historia-h">Un matí a Querétaro</h2>
+        <p>Fa uns deu anys vivia a Mèxic amb la meva família, expatriat per feina. Un matí, acabat de llevar, mirava per la finestra les cases baixes de Querétaro enganxades als edificis nous i vaig sentir un neguit que no sabia situar. Ni tristesa ni ansietat, només una incomoditat de fons, com quan alguna cosa no encaixa i encara no saps què és.</p>
+        <p>Feia anys que resolia com complir millor les meves obligacions. Aquell matí vaig entendre que la pregunta de debò era per què havia convertit tota la meva vida en una obligació. També sé què és passar dos anys sabent que una feina ja no és teva, amb el diagnòstic claríssim al cap i la vida igual.</p>
+        <p>No soc psicòleg ni coach. Et parlo des de l’altra banda de la taula, com algú que va aconseguir gairebé tot el que s’havia proposat i va sentir que el compte no sortia. D’aquesta recerca va néixer IKIGAIER.</p>
+        <a class="home-enlace" href="/es/manel-rueda/" hreflang="es">Coneix la meva història (en castellà)</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-idea" aria-label="La idea que ho sosté tot">
+    <blockquote>
+      <p>No et falta res.<br>Et sobra soroll.</p>
+      <footer>De <cite>No todo lo que te frena es tuyo</cite></footer>
+    </blockquote>
+  </section>
+
+  <section class="home-bloque home-libros" aria-labelledby="llibres-h">
+    <div class="container">
+      <span class="section-label">Els llibres</span>
+      <h2 id="llibres-h">Un camí en tres llibres</h2>
+      <p class="home-libros-intro">Cadascun obre una part del camí de tornada. Pots llegir-los en ordre o començar pel que més et cridi avui. De moment, en castellà.</p>
+      <ul class="home-libros-fila">
+        <li>
+          <a href="/es/libros/#no-todo" hreflang="es">
+            <picture>
+              <source srcset="/assets/images/portada-no-todo.webp" type="image/webp">
+              <img src="/assets/images/portada-no-todo.jpg" alt="Portada de No todo lo que te frena es tuyo" width="600" height="900" loading="lazy">
+            </picture>
+            <span class="home-libro-paso">1 · Alliberar</span>
+            <span class="home-libro-titulo">No todo lo que te frena es tuyo</span>
+            <span class="home-libro-linea">Per què ho vas aconseguir gairebé tot i continues sentint aquest buit.</span>
+          </a>
+        </li>
+        <li>
+          <a href="/es/libros/#disciplina" hreflang="es">
+            <picture>
+              <source srcset="/assets/images/portada-disciplina.webp" type="image/webp">
+              <img src="/assets/images/portada-disciplina.jpg" alt="Portada de Disciplina para indisciplinados" width="600" height="900" loading="lazy">
+            </picture>
+            <span class="home-libro-paso">2 · Actuar</span>
+            <span class="home-libro-titulo">Disciplina para indisciplinados</span>
+            <span class="home-libro-linea">Per a qui ha començat cent dilluns. Mai no va ser força de voluntat.</span>
+          </a>
+        </li>
+        <li>
+          <a href="/es/libros/#el-ikigai" hreflang="es">
+            <picture>
+              <source srcset="/assets/images/portada-libro.webp" type="image/webp">
+              <img src="/assets/images/portada-libro.png" alt="Portada de El Ikigai que no te contaron" width="1445" height="2168" loading="lazy">
+            </picture>
+            <span class="home-libro-paso">3 · Alinear</span>
+            <span class="home-libro-titulo">El Ikigai que no te contaron</span>
+            <span class="home-libro-linea">El llibre central del mètode i l’origen del taller.</span>
+          </a>
+        </li>
+      </ul>
+      <a class="home-enlace" href="/es/libros/" hreflang="es">Veure els llibres</a>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true">
     <picture>
-      <source srcset="/assets/images/logo-ikigaier-bicolor-transparente.webp?v=1" type="image/webp">
-      <img class="placeholder-logo" src="/assets/images/logo-ikigaier-bicolor-transparente.png?v=1" alt="IKIGAIER" width="2500" height="781">
+      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
+      <img src="/assets/images/ikionda-separador-transparente.png" alt="">
     </picture>
-    <span class="placeholder-title">IKIGAIER</span>
-    <p class="placeholder-frase">Camina sense separar-te de tu.</p>
-    <section class="placeholder-taller" aria-labelledby="ca-taller-titol">
-      <span class="section-label">Nou taller presencial · 4 hores</span>
-      <h2 id="ca-taller-titol">Jo soc IKIGAIER</h2>
-      <p>Has fet molt. I com et sents en la vida que has construït?<br>Quatre hores per escoltar-te, reconèixer què importa ara i triar com vols viure aquesta etapa.</p>
-      <p class="placeholder-status">Presencial · Dates i preu properament</p>
-      <a href="/ca/taller/" class="btn">Descobreix el taller →</a>
-    </section>
-    <hr class="placeholder-divider">
-    <p class="placeholder-status">Versió en català en preparació</p>
-    <a class="placeholder-link" href="/es/" hreflang="es">Veure la versió en castellà →</a>
+  </div>
+
+  <section class="taller-section" aria-label="El test PASO">
+    <div class="container">
+      <span class="section-label">El test · gratuït</span>
+      <h2>Com camines<br>per la vida?</h2>
+      <p class="taller-desc">No ho saps, però fa temps que camines lluny de tu. PASO és un test breu que revela la teva manera de moure’t per la vida: com decideixes, com et relaciones, com sostens el ritme i com llegeixes el terreny abans de trepitjar-lo. Un mirall per començar el camí de tornada.</p>
+      <a href="/ca/test/" class="btn btn-primary">Descobreix com camines →</a>
+      <p class="taller-section-nota">5 minuts · sense registre · resultat a l’instant</p>
+    </div>
+  </section>
+
+  <section class="home-taller" aria-labelledby="taller-h">
+    <div class="home-taller-card">
+      <span class="section-label">Taller presencial · 4 hores</span>
+      <h2 id="taller-h">Jo soc IKIGAIER</h2>
+      <p class="home-taller-lead">Els llibres et donen el mapa, però a casa no s’hi arriba llegint.</p>
+      <p>Per això existeix el taller. Quatre hores presencials, amb altres persones que es fan les mateixes preguntes que tu, per escoltar-te, reconèixer què importa ara i triar com vols viure aquesta etapa.</p>
+      <ol class="home-taller-pasos" aria-label="El recorregut del taller">
+        <li><span>1</span>Entén</li>
+        <li><span>2</span>Descobreix</li>
+        <li><span>3</span>Allibera’t</li>
+        <li><span>4</span>Construeix</li>
+        <li><span>5</span>Jo soc IKIGAIER</li>
+      </ol>
+      <p>Surts amb una direcció que comença a ser teva i un primer pas per viure-la.</p>
+      <div class="home-taller-ctas">
+        <a href="/ca/taller/#info" class="btn btn-primary">Avisa’m de les properes dates</a>
+        <a href="/ca/taller/" class="home-enlace">Veure el recorregut complet</a>
+      </div>
+      <p class="home-taller-estado">Per al teu equip, club o federació? <a href="/ca/tallers/empreses/">Tallers presencials o en línia a mida</a></p>
+    </div>
+  </section>
+
+  <section class="newsletter-section" aria-label="Cartes IKIGAIER">
+    <div class="container newsletter-container">
+      <h2>Cartes IKIGAIER</h2>
+      <p class="lead newsletter-lead">unint el fer i l’ésser</p>
+      <p class="newsletter-desc">Cada quinze dies t’escric: una idea, una pràctica petita i una pregunta per caminar la setmana. Arriba al teu correu i es llegeix en cinc minuts. (En castellà.)</p>
+      <a href="https://ikigaier.substack.com/subscribe" class="btn newsletter-btn" target="_blank" rel="noopener noreferrer">Subscriure’m a les cartes</a>
+      <p class="newsletter-footnote">És gratuït i pots sortir-ne quan vulguis. En subscriure’t acceptes la nostra <a href="/es/privacidad/" hreflang="es">política de privacitat</a>.</p>
+    </div>
+  </section>
+
+  <section class="firma-section" aria-label="Sobre Manel Rueda">
+    <div class="container firma-container">
+      <span class="section-label">Sobre Manel Rueda</span>
+      <div class="firma-body">
+        <p>Pots llegir més sobre <a href="/es/manel-rueda/" hreflang="es">qui soc i per què vaig crear IKIGAIER</a>, i conèixer la resta de la meva feina a <a href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">manelrueda.com</a>.</p>
+        <p>I si has llegit algun dels meus llibres, has participat en un taller o simplement hi ha alguna cosa que t’ha ressonat, m’encantarà llegir-te.</p>
+        <p class="firma-pregunta">Tens algun dubte, reflexió o pregunta sobre el contingut d’IKIGAIER?</p>
+        <p class="firma-email">manel@ikigaier.com</p>
+        <p class="firma-sigue-linea">Continua el teu camí a → <a class="firma-instagram" href="https://www.instagram.com/manel_rueda/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Manel Rueda">@manel_rueda</a></p>
+      </div>
+    </div>
+  </section>
+
   </main>
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-transparente.png" alt="" aria-hidden="true">
+    </picture>
+    <p>IKIGAIER · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/" hreflang="es">Política de privacitat</a> · <a href="/es/cookies/" hreflang="es">Política de galetes</a></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← tornar a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+  <script>
+    document.querySelectorAll('a[href^="https://app.ikigaier.com/es/paso"]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        if (window.gtag) gtag('event', 'test_click', { origen: location.pathname, ubicacion: a.dataset.ubicacion || '' });
+      });
+    });
+  </script>
+
 </body>
 </html>
