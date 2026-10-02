@@ -1,0 +1,266 @@
+/* ============================================
+   IKIGAIER — talleres.css
+   Páginas: /es/talleres/ (puente), /es/talleres/empresas/ (B2B), /es/test/ (gancho PASO).
+   Usa los tokens de main.css (--texto-*, --fs-*, --acento-texto, --beige…).
+   Prefijo .tl- para no chocar con estilos existentes.
+   ============================================ */
+
+/* --- Botón destacado en el menú (Test gratis) --- */
+.site-header-nav a.nav-destacado {
+  padding: 0.25rem 0.9rem;
+  border: 1.5px solid var(--acento-texto);
+  border-radius: 999px;
+  color: var(--acento-texto);
+  font-weight: 500;
+}
+.site-header-nav a.nav-destacado:hover,
+.site-header-nav a.nav-destacado[aria-current="page"] {
+  background: var(--acento-texto);
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .site-header-nav a.nav-destacado {
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    text-align: center;
+    border-bottom: 1.5px solid var(--acento-texto);
+  }
+}
+
+/* --- Hero --- */
+.tl-hero {
+  text-align: center;
+  padding: clamp(3rem, 8vh, 6rem) 1.25rem clamp(3rem, 8vh, 5.5rem);
+}
+.tl-hero-inner { max-width: 780px; margin: 0 auto; }
+.tl-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: min(clamp(2.5rem, 6vw, 4.4rem), 13vw);
+  line-height: 1.1;
+  margin: 0.6rem 0 1.5rem;
+}
+.tl-hero h1 em { display: block; font-style: italic; color: var(--acento-texto); }
+.tl-hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--texto-principal);
+  max-width: 38ch;
+  margin: 0 auto 2.2rem;
+}
+.tl-ctas { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.8rem 1.2rem; }
+.tl-nota {
+  margin-top: 0.9rem;
+  font-size: var(--fs-etiqueta);
+  letter-spacing: 0.04em;
+  color: var(--texto-secundario);
+}
+
+/* --- Bloques --- */
+.tl-bloque { padding: clamp(3rem, 8vw, 5rem) 0; }
+.tl-bloque-blanco { background: var(--blanco); }
+.tl-bloque .container { max-width: 960px; }
+.tl-bloque-estrecho .container { max-width: 720px; }
+.tl-bloque h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 4.2vw, 2.8rem);
+  line-height: 1.15;
+  margin: 0.4rem 0 1.4rem;
+}
+.tl-bloque p { color: var(--texto-principal); margin-bottom: 1.1rem; }
+.tl-centro { text-align: center; }
+.tl-centro .tl-intro { margin-left: auto; margin-right: auto; }
+.tl-intro { max-width: 620px; }
+
+/* --- Tarjetas en rejilla (puertas, formatos, dimensiones) --- */
+.tl-grid {
+  list-style: none;
+  padding: 0;
+  margin: 2.2rem 0 0;
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.tl-grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .tl-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .tl-grid-4 { grid-template-columns: 1fr; } }
+.tl-grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.tl-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  background: var(--blanco);
+  border: 1px solid rgba(39, 39, 39, 0.12);
+  border-top: 3px solid var(--beige);
+  text-align: left;
+}
+.tl-bloque-blanco .tl-card { background: var(--bg-cream); }
+.tl-card-destacada { border-top-color: var(--acento-texto); }
+.tl-card-etiqueta {
+  font-size: var(--fs-etiqueta);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--acento-texto);
+}
+.tl-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 2.6vw, 2rem);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0.4rem 0 0.8rem;
+}
+.tl-card p { font-size: var(--fs-apoyo); line-height: 1.65; margin-bottom: 0.9rem; }
+.tl-card .tl-card-meta { font-size: var(--fs-etiqueta); color: var(--texto-secundario); letter-spacing: 0.03em; }
+.tl-card .btn { margin-top: auto; align-self: flex-start; }
+.tl-card a.home-enlace { margin-top: auto; }
+
+/* --- Lista con guion editorial --- */
+.tl-lista { list-style: none; padding: 0; margin: 1.4rem 0; }
+.tl-lista li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.9rem;
+  color: var(--texto-principal);
+  line-height: var(--lh-lectura);
+}
+.tl-lista li::before { content: '—'; position: absolute; left: 0; color: var(--acento-texto); }
+.tl-lista strong { color: var(--negro); font-weight: 500; }
+
+/* --- Etiquetas tipo píldora (público) --- */
+.tl-pildoras { list-style: none; padding: 0; margin: 1.6rem 0 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.tl-centro .tl-pildoras { justify-content: center; }
+.tl-pildoras li {
+  margin: 0;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--beige);
+  border-radius: 999px;
+  background: var(--bg-cream);
+  font-size: var(--fs-apoyo);
+  color: var(--negro);
+}
+
+/* --- Pasos numerados --- */
+.tl-pasos { list-style: none; padding: 0; margin: 2rem 0 0; counter-reset: paso; display: grid; gap: 1.6rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.tl-pasos li { counter-increment: paso; margin: 0; }
+.tl-pasos li::before {
+  content: counter(paso);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-bottom: 0.8rem;
+  border: 1.5px solid var(--acento-texto);
+  border-radius: 50%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: var(--acento-texto);
+}
+.tl-pasos h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 500; margin-bottom: 0.4rem; }
+.tl-pasos p { font-size: var(--fs-apoyo); line-height: 1.6; margin: 0; }
+
+/* --- Banda oscura (cita / credibilidad) --- */
+.tl-banda {
+  background: var(--negro);
+  color: var(--texto-sobre-oscuro);
+  padding: clamp(3rem, 8vw, 5rem) 1.25rem;
+  text-align: center;
+}
+.tl-banda blockquote { max-width: 720px; margin: 0 auto; }
+.tl-banda blockquote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(1.6rem, 3.6vw, 2.3rem);
+  line-height: 1.3;
+  color: var(--blanco);
+  margin: 0;
+}
+.tl-banda blockquote footer { margin-top: 1rem; font-size: var(--fs-etiqueta); color: var(--apoyo-sobre-oscuro); letter-spacing: 0.06em; }
+
+/* --- Autor (credibilidad B2B) --- */
+.tl-autor { display: grid; grid-template-columns: 160px 1fr; gap: 2.2rem; align-items: start; }
+.tl-autor img { width: 160px; height: 196px; object-fit: cover; filter: grayscale(15%); }
+
+/* --- FAQ --- */
+.tl-faq details { border-bottom: 1px solid rgba(39, 39, 39, 0.14); padding: 1.1rem 0; }
+.tl-faq summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--negro);
+  padding-right: 2rem;
+  position: relative;
+}
+.tl-faq summary::-webkit-details-marker { display: none; }
+.tl-faq summary::after { content: '+'; position: absolute; right: 0; top: 0; color: var(--acento-texto); font-family: 'Inter', sans-serif; font-weight: 300; }
+.tl-faq details[open] summary::after { content: '–'; }
+.tl-faq details p { margin: 0.7rem 0 0; font-size: var(--fs-apoyo); }
+
+/* --- Formulario de contacto (empresas) --- */
+.tl-form-card {
+  max-width: 680px;
+  margin: 2rem auto 0;
+  padding: clamp(1.5rem, 4vw, 2.6rem);
+  background: var(--blanco);
+  border: 1px solid rgba(39, 39, 39, 0.12);
+  border-top: 4px solid var(--acento-texto);
+  text-align: left;
+}
+.tl-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.2rem; }
+.tl-campo { display: flex; flex-direction: column; gap: 0.35rem; }
+.tl-campo-ancho { grid-column: 1 / -1; }
+.tl-campo label {
+  font-size: var(--fs-etiqueta);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--texto-secundario);
+}
+.tl-campo input,
+.tl-campo select,
+.tl-campo textarea {
+  width: 100%;
+  padding: 0.8rem 0.95rem;
+  border: 1.5px solid var(--gris-claro);
+  border-radius: 0;
+  background: var(--bg-cream);
+  color: var(--negro);
+  font: 400 1rem/1.5 'Inter', sans-serif;
+}
+.tl-campo textarea { min-height: 120px; resize: vertical; }
+.tl-campo input:focus,
+.tl-campo select:focus,
+.tl-campo textarea:focus { outline: 2px solid var(--acento-texto); outline-offset: 1px; border-color: var(--acento-texto); }
+.tl-check { grid-column: 1 / -1; display: grid; grid-template-columns: 18px 1fr; gap: 0.6rem; font-size: var(--fs-etiqueta); line-height: 1.5; color: var(--texto-secundario); }
+.tl-check input { margin-top: 0.2rem; }
+.tl-check a { text-decoration: underline; text-underline-offset: 0.15em; }
+.tl-form .btn { grid-column: 1 / -1; width: 100%; }
+.tl-honeypot { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+.tl-msg { margin-top: 1rem; padding: 0.9rem 1rem; background: var(--bg-cream); border-left: 3px solid var(--olive); color: var(--olive); font-size: var(--fs-apoyo); }
+.tl-form-alt { margin-top: 1.4rem; text-align: center; font-size: var(--fs-apoyo); color: var(--texto-secundario); }
+.tl-form-alt a { color: var(--acento-texto); text-decoration: underline; text-underline-offset: 0.2em; }
+
+/* --- Franja de invitación cruzada (test ↔ empresas) --- */
+.tl-cruce {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.6rem 1.8rem;
+  border: 1px dashed var(--beige);
+  text-align: center;
+}
+.tl-cruce p { margin: 0 0 0.6rem; color: var(--texto-principal); }
+
+/* --- Responsive --- */
+@media (max-width: 700px) {
+  .tl-form { grid-template-columns: 1fr; }
+  .tl-autor { grid-template-columns: 1fr; gap: 1.2rem; }
+  .tl-autor img { width: 120px; height: 147px; }
+  .tl-ctas .btn { width: 100%; }
+}
