@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://www.ikigaier.com/es/ikigai/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -80,13 +80,13 @@
   </url>
   <url>
     <loc>https://www.ikigaier.com/es/blog/libros-sobre-ikigai/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ikigaier.com/es/manel-rueda/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -140,7 +140,7 @@
   </url>
   <url>
     <loc>https://www.ikigaier.com/ca/tallers/empreses/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -152,7 +152,7 @@
   </url>
   <url>
     <loc>https://www.ikigaier.com/ca/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -173,5 +173,11 @@
     <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.ikigaier.com/es/libros/el-ikigai-que-no-te-contaron/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
