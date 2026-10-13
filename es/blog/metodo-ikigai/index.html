@@ -78,6 +78,11 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "inLanguage": "es",
       "publisher": {
         "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
       }
     },
     {
@@ -94,7 +99,22 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://manelrueda.com",
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/"
-      ]
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
     },
     {
       "@type": "Person",
@@ -108,7 +128,20 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/",
         "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
-      ]
+      ],
+      "description": "Autor y creador de IKIGAIER. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
     },
     {
       "@type": "BlogPosting",

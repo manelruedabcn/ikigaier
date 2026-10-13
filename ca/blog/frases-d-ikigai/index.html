@@ -69,6 +69,11 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "inLanguage": "ca",
       "publisher": {
         "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Projecte editorial de Manel Rueda sobre l’ikigai conscient: llibres, test d’ikigai gratuït, tallers i blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/ca/blog/"
       }
     },
     {
@@ -85,7 +90,22 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://manelrueda.com",
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/"
-      ]
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "informació",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
     },
     {
       "@type": "Person",
@@ -99,7 +119,20 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/",
         "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
-      ]
+      ],
+      "description": "Autor i creador d’IKIGAIER. Escriu sobre l’ikigai conscient i la unió del fer i l’ésser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "informació",
+        "email": "hola@ikigaier.com"
+      }
     },
     {
       "@type": "BlogPosting",

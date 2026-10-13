@@ -70,6 +70,11 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "inLanguage": "ca",
       "publisher": {
         "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Projecte editorial de Manel Rueda sobre l’ikigai conscient: llibres, test d’ikigai gratuït, tallers i blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/ca/blog/"
       }
     },
     {
@@ -86,7 +91,22 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://manelrueda.com",
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/"
-      ]
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "informació",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
     },
     {
       "@type": "ProfilePage",
@@ -123,7 +143,16 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/",
         "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
-      ]
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "informació",
+        "email": "hola@ikigaier.com"
+      }
     },
     {
       "@type": "Book",
@@ -133,10 +162,19 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "@id": "https://www.ikigaier.com/#person"
       },
       "url": "https://amzn.eu/d/0bUk5t8J",
-      "inLanguage": "ca",
+      "inLanguage": "es",
       "bookFormat": "https://schema.org/Paperback",
       "publisher": {
         "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Una mirada profunda, clara i honesta sobre l’ikigai real i la distància entre el que fas i el que ets. Sense postureig. Sense dreceres.",
+      "image": "https://www.ikigaier.com/assets/images/portada-libro.webp",
+      "genre": "Desenvolupament personal",
+      "datePublished": "2025",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ASIN",
+        "value": "B0F4KNS4CN"
       }
     },
     {
@@ -147,11 +185,15 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "@id": "https://www.ikigaier.com/#person"
       },
       "url": "https://amzn.eu/d/078eIuXs",
-      "inLanguage": "ca",
+      "inLanguage": "es",
       "bookFormat": "https://schema.org/Paperback",
       "publisher": {
         "@id": "https://www.ikigaier.com/#organization"
-      }
+      },
+      "description": "Quadern de treball. Una invitació a aturar-te, mirar cap endins i posar per escrit el que normalment no t’atreveixes a dir-te.",
+      "image": "https://www.ikigaier.com/assets/images/portada-cuaderno.webp",
+      "genre": "Desenvolupament personal",
+      "datePublished": "2026"
     },
     {
       "@type": "BreadcrumbList",
