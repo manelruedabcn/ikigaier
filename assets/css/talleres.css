@@ -107,6 +107,7 @@
   text-transform: uppercase;
   color: var(--acento-texto);
 }
+.tl-card h2,
 .tl-card h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.6rem, 2.6vw, 2rem);
