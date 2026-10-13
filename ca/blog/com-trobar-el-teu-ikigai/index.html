@@ -2,13 +2,22 @@
 
 <html lang="ca">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K7BXTLDM');</script>
-<!-- End Google Tag Manager -->
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FDFBF7">
@@ -144,18 +153,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
   </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T2ZZKZFLHH');
-  </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7BXTLDM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <a class="skip-link" href="#contenido">Salta al contingut</a>
 <header class="site-header">
 <div class="site-header-inner">
@@ -245,9 +244,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Ona d’IKIGAIER" width="150" height="113" aria-hidden="true" decoding="async">
 </picture>
 <p>IKIGAIER · Manel Rueda · 2026</p>
-<p class="footer-legal"><a href="/ca/privacitat/">Política de privacitat</a> · <a href="/ca/galetes/">Política de galetes</a></p>
+<p class="footer-legal"><a href="/ca/privacitat/">Política de privacitat</a> · <a href="/ca/galetes/">Política de galetes</a> · <a href="#" data-cookies-config>Configurar galetes</a></p>
 <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← tornar a manelrueda.com</a>
 </footer>
 <script src="/assets/js/main.js?v=2" defer=""></script>
+  <script src="/assets/js/cookies.js?v=1" defer></script>
 </body>
 </html>

@@ -2,13 +2,22 @@
 
 <html lang="ca">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K7BXTLDM');</script>
-<!-- End Google Tag Manager -->
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FDFBF7">
@@ -50,14 +59,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/main.css?v=12">
 <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T2ZZKZFLHH');
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -125,9 +126,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7BXTLDM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <!-- ============================================
   HEADER
   ============================================ -->
@@ -169,7 +167,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2>Què és una galeta?</h2>
 <p>Una galeta (cookie) és un petit fitxer de text que un lloc web desa al teu navegador quan el visites. Serveix per recordar informació sobre la teva visita, com ara preferències o dades tècniques que permeten que la pàgina funcioni correctament.</p>
 <h2>Galetes que fem servir</h2>
-<p>IKIGAIER és un web senzill i respectuós amb la teva privacitat. <strong>No fem servir galetes d’anàlisi, de seguiment ni de publicitat.</strong> No fem servir Google Analytics, píxels de xarxes socials ni eines de perfilació. Únicament es poden generar les galetes tècniques descrites a continuació.</p>
+<p>Fem servir dos tipus de galetes: les <strong>tècniques</strong>, necessàries perquè el web funcioni i estigui protegit, i les d’<strong>analítica</strong> (Google Analytics), que només s’activen si les acceptes a l’avís de galetes. No fem servir galetes de publicitat, píxels de xarxes socials ni eines de perfilació.</p>
+<h2>Galetes d’analítica (només amb el teu consentiment)</h2>
+<p>Si acceptes, carreguem Google Analytics 4 a través de Google Tag Manager, serveis de Google Ireland Limited. Ens serveix per saber quantes persones visiten el web, quines pàgines llegeixen i des d’on arriben, de manera agregada. No el fem servir per a publicitat ni per identificar-te.</p>
+<p>Galetes que instal·la: <strong>_ga</strong> (distingeix visitants, dura 2 anys) i <strong>_ga_&lt;ID&gt;</strong> (manté l’estat de la sessió, dura 2 anys). Google pot tractar dades fora de l’Espai Econòmic Europeu amb les garanties previstes al Marc de Privacitat de Dades UE-EUA. Més informació a la <a href="https://policies.google.com/privacy?hl=ca" rel="noopener noreferrer" target="_blank">política de privacitat de Google</a>.</p>
+<p>Si les rebutges, no es carreguen ni Google Analytics ni Google Tag Manager. La teva elecció es desa al navegador durant 12 mesos i la pots canviar quan vulguis: <a href="#" data-cookies-config>configurar galetes</a>.</p>
 <h2>Galetes tècniques (estrictament necessàries)</h2>
 <p>El nostre proveïdor d’infraestructura i seguretat, Cloudflare, pot instal·lar galetes tècniques necessàries per protegir el lloc i garantir-ne el funcionament correcte (per exemple, per distingir trànsit legítim d’atacs automatitzats). Aquestes galetes no recullen informació personal amb finalitats comercials i estan exemptes del deure de consentiment segons la normativa vigent. Pots consultar més informació a la <a href="https://www.cloudflare.com/es-es/privacypolicy/" rel="noopener noreferrer" target="_blank">política de privacitat de Cloudflare</a>.</p>
 <h2>Galetes de tercers</h2>
@@ -182,7 +184,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Tingues en compte que si desactives les galetes tècniques, algunes funcions del lloc podrien no funcionar correctament.</p>
 <h2>Més informació</h2>
 <p>Per saber com tractem les teves dades personals, consulta la nostra <a href="/ca/privacitat/">política de privacitat</a>. Si tens qualsevol dubte, ens pots escriure a <a href="mailto:hola@ikigaier.com">hola@ikigaier.com</a>.</p>
-<p class="legal-updated">Data de l’última actualització: 09/08/2026</p>
+<p class="legal-updated">Data de l’última actualització: 13/10/2026</p>
 </div>
 </section>
 </main>
@@ -192,9 +194,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <footer class="site-footer">
 <img class="site-footer-kanji" src="/assets/images/isotipo-kanji-48.png" alt="Segell kanji d’IKIGAIER" width="24" height="24" aria-hidden="true" decoding="async">
 <p>IKIGAIER · Manel Rueda · 2026</p>
-<p class="footer-legal"><a href="/ca/privacitat/">Política de privacitat</a> · <a href="/ca/galetes/">Política de galetes</a></p>
+<p class="footer-legal"><a href="/ca/privacitat/">Política de privacitat</a> · <a href="/ca/galetes/">Política de galetes</a> · <a href="#" data-cookies-config>Configurar galetes</a></p>
 <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← tornar a manelrueda.com</a>
 </footer>
 <script src="/assets/js/main.js?v=2" defer=""></script>
+  <script src="/assets/js/cookies.js?v=1" defer></script>
 </body>
 </html>

@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K7BXTLDM');</script>
-<!-- End Google Tag Manager -->
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FDFBF7">
@@ -54,15 +63,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <link rel="stylesheet" href="/assets/css/main.css?v=12">
   <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T2ZZKZFLHH');
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -130,10 +130,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7BXTLDM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
   <!-- ============================================
   HEADER
@@ -191,6 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>Proveedores de servicios</h2>
         <p>El servicio de envío de correos electrónicos lo gestiona Substack Inc. Los datos que facilitas (dirección de correo electrónico) se almacenan en sus servidores. Puedes consultar su política de privacidad en <a href="https://substack.com/privacy" target="_blank" rel="noopener noreferrer">substack.com/privacy</a>.</p>
         <p>Los formularios de inscripción a talleres se procesan mediante la infraestructura privada de IKIGAIER desplegada en Vercel. Los registros se almacenan en Supabase y los avisos transaccionales se envían mediante Resend. Estos proveedores actúan como encargados del tratamiento y no utilizamos las inscripciones para suscripciones automáticas.</p>
+        <p>Si aceptas las cookies de analítica, usamos Google Analytics 4 (Google Ireland Limited) para medir de forma agregada las visitas a la web. Los datos de navegación (páginas vistas, origen de la visita, tipo de dispositivo e IP abreviada) se tratan sobre la base de tu consentimiento, que puedes retirar en cualquier momento desde <a href="#" data-cookies-config>configurar cookies</a>. Más detalle en la <a href="/es/cookies/">política de cookies</a>.</p>
 
         <h2>Datos recogidos y conservación</h2>
         <p>Para la newsletter recogemos tu dirección de correo electrónico. Para los talleres recogemos únicamente tu nombre y el teléfono o correo electrónico que decidas facilitar. Conservaremos los datos de inscripción mientras sean necesarios para organizar y celebrar el taller y, después, durante el tiempo imprescindible para atender posibles responsabilidades.</p>
@@ -198,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>Derechos del usuario</h2>
         <p>Tienes derecho a acceder, rectificar, suprimir y oponerte al tratamiento de tus datos en cualquier momento. Puedes darte de baja de la newsletter mediante el enlace presente al final de cada correo enviado, o escribiendo a <a href="mailto:hola@ikigaier.com">hola@ikigaier.com</a>.</p>
 
-        <p class="legal-updated">Fecha de última actualización: 18/09/2026</p>
+        <p class="legal-updated">Fecha de última actualización: 13/10/2026</p>
       </div>
     </section>
   </main>
@@ -212,10 +209,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          width="24" height="24"
          aria-hidden="true" decoding="async">
     <p>IKIGAIER · Manel Rueda · 2026</p>
-    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a></p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <a href="#" data-cookies-config>Configurar cookies</a></p>
     <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
   </footer>
 
   <script src="/assets/js/main.js?v=2" defer></script>
+  <script src="/assets/js/cookies.js?v=1" defer></script>
 </body>
 </html>
