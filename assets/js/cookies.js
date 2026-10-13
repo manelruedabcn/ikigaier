@@ -79,7 +79,12 @@
       '.iki-cookies button{font:inherit;font-size:.85rem;letter-spacing:.04em;padding:.55rem 1.2rem;cursor:pointer;' +
       'border:1px solid #272727;background:transparent;color:#272727}' +
       '.iki-cookies button:hover,.iki-cookies button:focus-visible{background:#272727;color:#FDFBF7}' +
-      '@media (max-width:480px){.iki-cookies-botones{width:100%}.iki-cookies button{flex:1}}';
+      '@media (max-width:480px){.iki-cookies-botones{width:100%}.iki-cookies button{flex:1}}' +
+      // «Configurar cookies» es un botón con aspecto de enlace (no un <a href="#">)
+      '.iki-cookies-config{font:inherit;letter-spacing:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;' +
+      'text-decoration:underline;text-underline-offset:.2em}' +
+      '.footer-legal .iki-cookies-config{text-decoration-color:var(--beige,currentColor)}' +
+      '.footer-legal .iki-cookies-config:hover{color:var(--negro,#272727);text-decoration-color:currentColor}';
     document.head.appendChild(css);
   }
 
@@ -126,5 +131,6 @@
     mostrar();
   });
 
+  estilos();
   if (!leer()) mostrar();
 })();
