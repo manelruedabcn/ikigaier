@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Test de ikigai gratis y sin registro: dieciséis preguntas sobre lo que haces y cómo lo vives, con una devolución personal al instante.">
+  <title>Test de ikigai gratis: inventario honesto | IKIGAIER</title>
+  <link rel="canonical" href="https://www.ikigaier.com/es/test-de-ikigai/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/test-de-ikigai/">
+  <link rel="alternate" hreflang="ca" href="https://www.ikigaier.com/ca/test-d-ikigai/">
+  <link rel="alternate" hreflang="en" href="https://www.ikigaier.com/en/ikigai-test/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/test-de-ikigai/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="IKIGAIER">
+  <meta property="og:locale:alternate" content="ca_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:title" content="Test de ikigai gratis · Inventario honesto de tu ikigai">
+  <meta property="og:description" content="No te dice a qué dedicarte. Te dice desde dónde empiezas. Un test de ikigai basado en «El Ikigai que no te contaron», gratis y sin registro.">
+  <meta property="og:url" content="https://www.ikigaier.com/es/test-de-ikigai/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Test de ikigai gratis · Inventario honesto de tu ikigai">
+  <meta name="twitter:description" content="No te dice a qué dedicarte. Te dice desde dónde empiezas. Un test de ikigai basado en «El Ikigai que no te contaron», gratis y sin registro.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=13">
+  <link rel="stylesheet" href="/assets/css/home.css?v=1">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=1">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.ikigaier.com/es/test-de-ikigai/#webpage",
+      "name": "Test de ikigai gratis: Inventario honesto de tu ikigai",
+      "url": "https://www.ikigaier.com/es/test-de-ikigai/",
+      "description": "Test de ikigai gratis y sin registro, basado en el libro «El Ikigai que no te contaron». Dieciséis preguntas sobre lo que haces y cómo lo vives, con una devolución personal al instante y un ejercicio para tu semana.",
+      "about": {
+        "@type": "Thing",
+        "name": "Ikigai"
+      },
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "breadcrumb": {
+        "@id": "https://www.ikigaier.com/es/test-de-ikigai/#breadcrumb"
+      },
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/test-de-ikigai/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ikigai",
+          "item": "https://www.ikigaier.com/es/ikigai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Test de ikigai",
+          "item": "https://www.ikigaier.com/es/test-de-ikigai/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.ikigaier.com/es/test-de-ikigai/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿El test de ikigai es gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Es gratuito y no necesitas crear una cuenta. Ves tu devolución en pantalla al terminar. Si quieres, puedes pedir que te la enviemos por email."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Este test me dice cuál es mi ikigai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Ningún test puede decirte cuál es tu ikigai, porque el ikigai no se calcula: se reconoce. Este test te muestra desde dónde empiezas en sus dos dimensiones, lo que te sostiene y lo que merece atención, y te propone un ejercicio del libro para esa semana."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se basa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En el libro «El Ikigai que no te contaron», de Manel Rueda. Todas las preguntas salen de sus ejercicios, y la devolución usa citas y ejercicios del libro. No es un instrumento psicológico validado ni un diagnóstico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el Ikigai Activo y el Ikigai Consciente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El Ikigai Activo es la dimensión del hacer: dirección, capacidades, contribución, lo que construyes. El Ikigai Consciente es la dimensión del ser: presencia, coherencia y la sensación de que tu vida tiene valor tal como es. El test explora las dos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Sirve si no tengo un empleo remunerado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Las preguntas hablan de tu ocupación principal, sea un empleo, cuidar de otras personas, estudiar, buscar trabajo o la jubilación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa después del test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ves tu devolución y, si quieres, te la enviamos por email. Si te apetece seguir, puedes apuntarte gratis a «Un mes conociendo tu ikigai»: un correo cada lunes durante cuatro semanas, con un ejercicio del libro, y encuentros en grupo opcionales. En la cuarta semana repites el test y ves qué ha cambiado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con mis respuestas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las respuestas cerradas se guardan sin datos personales, para mejorar el test. Tu email y lo que escribas en la pregunta abierta solo se guardan si pides recibir la devolución por correo. Recibir otras comunicaciones es una casilla aparte y opcional."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/es/" class="site-header-logo" aria-label="IKIGAIER · Inicio">
+        <picture>
+          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-600.png" alt="IKIGAIER" width="293" height="92" fetchpriority="high">
+        </picture>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="/es/talleres/">Talleres</a>
+        <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/blog/">Blog</a>
+        <a href="/es/manel-rueda/">Autor</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/es/test-de-ikigai/" class="nav-destacado" aria-current="page">Test ikigai gratis</a>
+        <a href="/ca/test-d-ikigai/" hreflang="ca" lang="ca" class="nav-idioma" title="Català" aria-label="Català"><span class="nav-idioma-corto" aria-hidden="true">CA</span><span class="nav-idioma-largo">Català</span></a>
+        <a href="/en/ikigai-test/" hreflang="en" lang="en" class="nav-idioma" title="English" aria-label="English"><span class="nav-idioma-corto" aria-hidden="true">EN</span><span class="nav-idioma-largo">English</span></a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <main id="contenido">
+
+  <section class="tl-hero" aria-labelledby="h1">
+    <div class="tl-hero-inner">
+      <span class="section-label">Test de ikigai · gratis</span>
+      <h1 id="h1">Test de ikigai<em>Inventario honesto</em></h1>
+      <p class="tl-hero-sub">No te dice a qué dedicarte. Te dice desde dónde empiezas: lo que haces, cómo lo vives y qué merece tu atención esta semana.</p>
+      <div class="tl-ctas">
+        <a href="https://app.ikigaier.com/es/inventario?src=web" class="btn btn-primary" data-ubicacion="hero">Hacer el test de ikigai</a>
+      </div>
+      <p class="tl-nota">16 preguntas · gratis · sin registro · devolución al instante</p>
+    </div>
+  </section>
+
+  <section class="tl-bloque tl-bloque-blanco tl-bloque-estrecho" aria-labelledby="distinto-h">
+    <div class="container">
+      <span class="section-label">Por qué otro test de ikigai</span>
+      <h2 id="distinto-h">El ikigai no cabe en cuatro círculos</h2>
+      <p>La mayoría de los tests de ikigai repiten el diagrama de los cuatro círculos: lo que amas, lo que se te da bien, lo que el mundo necesita y por lo que te pueden pagar. En el centro, una profesión. Es útil para ordenarse, pero deja fuera la mitad del ikigai.</p>
+      <p>En <a href="/es/libros/el-ikigai-que-no-te-contaron/">El Ikigai que no te contaron</a> trabajo dos dimensiones que conviven. El <strong>Ikigai Activo</strong> es el hacer: dirección, capacidades, lo que aportas. El <strong>Ikigai Consciente</strong> es el ser: si estás presente en lo que haces, si puedes ser quien eres, si tu vida tiene valor más allá de lo que logras. Un ikigaier no elige entre las dos. Aprende a moverse en las dos.</p>
+      <p>Este test explora las dos a la vez. Si quieres el marco completo, empieza por <a href="/es/ikigai/">qué es el ikigai</a>.</p>
+    </div>
+  </section>
+
+  <section class="tl-bloque" aria-labelledby="pregunta-h">
+    <div class="container">
+      <div class="tl-centro">
+        <span class="section-label">Qué te pregunta</span>
+        <h2 id="pregunta-h">Dieciséis preguntas, todas del libro</h2>
+      </div>
+      <ul class="tl-grid">
+        <li class="tl-card"><span class="tl-card-etiqueta">Ikigai Activo</span><h3>Lo que haces</h3><p>Las cuatro preguntas del mapa del ikigai y una frase del test CAMINO: qué te reconocen los demás.</p></li>
+        <li class="tl-card"><span class="tl-card-etiqueta">Ikigai Consciente</span><h3>Cómo lo vives</h3><p>Si ayer estuviste del todo ahí, si puedes ser quien eres, si negocias tus valores, si tienes a alguien cerca.</p></li>
+        <li class="tl-card"><span class="tl-card-etiqueta">Entre las dos</span><h3>Lo que te queda</h3><p>El ritmo que te exige tu día y la energía con la que llegas al final para lo que también importa.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="tl-bloque tl-bloque-blanco" aria-labelledby="recibes-h">
+    <div class="container">
+      <div class="tl-centro">
+        <span class="section-label">Qué recibes</span>
+        <h2 id="recibes-h">Una foto de hoy, no un perfil</h2>
+      </div>
+      <ol class="tl-pasos">
+        <li><h3>Tus dos columnas</h3><p>Lo que dicen tus respuestas sobre tu Ikigai Activo y tu Ikigai Consciente, una al lado de la otra.</p></li>
+        <li><h3>Lo que te sostiene y lo que merece atención</h3><p>Observaciones concretas, cada una con un fragmento del libro. Si no hay nada que señalar, no se inventa.</p></li>
+        <li><h3>Un ejercicio para tu semana</h3><p>Uno solo, del libro, elegido según tus respuestas. Lo que escribas en la pregunta abierta se te devuelve tal cual.</p></li>
+      </ol>
+      <p class="tl-intro" style="margin-top:2rem">Al terminar, si quieres, puedes apuntarte gratis a «Un mes conociendo tu ikigai»: un correo cada lunes durante cuatro semanas, con un ejercicio del libro, y encuentros en grupo opcionales.</p>
+      <div class="tl-ctas" style="margin-top:2.4rem">
+        <a href="https://app.ikigaier.com/es/inventario?src=web" class="btn btn-primary" data-ubicacion="que-recibes">Empezar el test</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tl-bloque tl-bloque-estrecho" aria-labelledby="no-h">
+    <div class="container">
+      <span class="section-label">Lo que no hace</span>
+      <h2 id="no-h">Sin profesión ideal, sin porcentajes</h2>
+      <p>No te da una profesión, ni un porcentaje de ikigai, ni una etiqueta de personalidad. Ningún test puede decirte cuál es tu ikigai: <a href="/es/blog/test-de-ikigai/">lo que un test de ikigai puede decirte (y lo que no)</a>. Este te enseña desde dónde partes, para que el trabajo de reconocerlo empiece en un sitio real.</p>
+    </div>
+  </section>
+
+  <section class="tl-banda" aria-label="Cita">
+    <blockquote>
+      <p>Un ikigaier no elige entre las dos. Aprende a moverse en las dos.</p>
+      <footer>De <cite>El Ikigai que no te contaron</cite></footer>
+    </blockquote>
+  </section>
+
+  <section class="tl-bloque tl-bloque-estrecho tl-faq" aria-labelledby="faq-h">
+    <div class="container">
+      <span class="section-label">Preguntas frecuentes</span>
+      <h2 id="faq-h">Antes de empezar</h2>
+      <details>
+        <summary>¿El test de ikigai es gratis?</summary>
+        <p>Sí. Es gratuito y no necesitas crear una cuenta. Ves tu devolución en pantalla al terminar. Si quieres, puedes pedir que te la enviemos por email.</p>
+      </details>
+      <details>
+        <summary>¿Este test me dice cuál es mi ikigai?</summary>
+        <p>No. Ningún test puede decirte cuál es tu ikigai, porque el ikigai no se calcula: se reconoce. Este test te muestra desde dónde empiezas en sus dos dimensiones, lo que te sostiene y lo que merece atención, y te propone un ejercicio del libro para esa semana.</p>
+      </details>
+      <details>
+        <summary>¿En qué se basa?</summary>
+        <p>En el libro <a href="/es/libros/el-ikigai-que-no-te-contaron/">El Ikigai que no te contaron</a>, de Manel Rueda. Todas las preguntas salen de sus ejercicios, y la devolución usa citas y ejercicios del libro. No es un instrumento psicológico validado ni un diagnóstico.</p>
+      </details>
+      <details>
+        <summary>¿Qué es el Ikigai Activo y el Ikigai Consciente?</summary>
+        <p>El Ikigai Activo es la dimensión del hacer: dirección, capacidades, contribución, lo que construyes. El Ikigai Consciente es la dimensión del ser: presencia, coherencia y la sensación de que tu vida tiene valor tal como es. El test explora las dos.</p>
+      </details>
+      <details>
+        <summary>¿Sirve si no tengo un empleo remunerado?</summary>
+        <p>Sí. Las preguntas hablan de tu ocupación principal, sea un empleo, cuidar de otras personas, estudiar, buscar trabajo o la jubilación.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa después del test?</summary>
+        <p>Ves tu devolución y, si quieres, te la enviamos por email. Si te apetece seguir, puedes apuntarte gratis a «Un mes conociendo tu ikigai»: un correo cada lunes durante cuatro semanas, con un ejercicio del libro, y encuentros en grupo opcionales. En la cuarta semana repites el test y ves qué ha cambiado.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa con mis respuestas?</summary>
+        <p>Las respuestas cerradas se guardan sin datos personales, para mejorar el test. Tu email y lo que escribas en la pregunta abierta solo se guardan si pides recibir la devolución por correo. Recibir otras comunicaciones es una casilla aparte y opcional. Más detalle en la <a href="/es/privacidad/">política de privacidad</a>.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="tl-bloque" aria-labelledby="despues-h">
+    <div class="container">
+      <div class="tl-centro">
+        <span class="section-label">Después del test</span>
+        <h2 id="despues-h">Si quieres seguir</h2>
+      </div>
+      <ul class="tl-grid">
+        <li class="tl-card"><span class="tl-card-etiqueta">Leer</span><h3>El Ikigai que no te contaron</h3><p>El libro del que sale el test: las dos almas del ikigai, con ejercicios para tu libreta.</p><a class="home-enlace" href="/es/libros/el-ikigai-que-no-te-contaron/">Ver el libro</a></li>
+        <li class="tl-card"><span class="tl-card-etiqueta">Gratis</span><h3>Cartas IKIGAIER</h3><p>Cada quince días, una idea, una práctica pequeña y una pregunta para la semana.</p><a class="home-enlace" href="https://ikigaier.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Suscribirme</a></li>
+        <li class="tl-card tl-card-destacada"><span class="tl-card-etiqueta">Vivirlo</span><h3>Los talleres</h3><p>Presenciales u online, para ti o para tu equipo.</p><a class="home-enlace" href="/es/talleres/">Ver talleres</a></li>
+      </ul>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de IKIGAIER" width="150" height="113" aria-hidden="true" decoding="async">
+    </picture>
+    <p>IKIGAIER · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <a href="#" data-cookies-config>Configurar cookies</a></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+  <script>
+    /* Medición: clics hacia el test de ikigai (evento GA4 «test_click») */
+    document.querySelectorAll('a[href^="https://app.ikigaier.com/es/inventario"]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        if (window.gtag) gtag('event', 'test_click', { test: 'inventario', origen: location.pathname, ubicacion: a.dataset.ubicacion || '' });
+      });
+    });
+  </script>
+
+  <script src="/assets/js/cookies.js?v=1" defer></script>
+</body>
+</html>

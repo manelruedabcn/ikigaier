@@ -319,6 +319,10 @@ img {
 
 .site-header-nav a:hover { color: var(--negro); }
 
+/* Idiomas: en escritorio, código corto (ES · CA · EN) con el nombre al pasar
+   por encima (title); en el menú móvil, el nombre completo. */
+.nav-idioma-largo { display: none; }
+
 /* --- HERO --- */
 .hero {
   text-align: center;
@@ -1597,11 +1601,17 @@ img {
     z-index: 26;
     box-shadow: -4px 0 24px rgba(0,0,0,0.1);
     overflow-y: auto;
+    /* Sin esto hereda flex-wrap: wrap del escritorio y, si los enlaces no
+       caben en la altura, los últimos saltan a una segunda columna fuera del panel. */
+    flex-wrap: nowrap;
   }
 
   .site-header-nav.open {
     display: flex;
   }
+
+  .nav-idioma-corto { display: none; }
+  .nav-idioma-largo { display: inline; }
 
   .site-header-nav a {
     font-size: var(--fs-apoyo);
