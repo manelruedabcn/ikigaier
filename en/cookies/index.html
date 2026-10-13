@@ -71,6 +71,11 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "inLanguage": "en",
       "publisher": {
         "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Manel Rueda’s editorial project on conscious ikigai: books, a free ikigai test, workshops and a blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/en/blog/"
       }
     },
     {
@@ -87,7 +92,22 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://manelrueda.com",
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/"
-      ]
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "general enquiries",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
     },
     {
       "@type": "Person",
@@ -101,7 +121,20 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/",
         "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
-      ]
+      ],
+      "description": "Author and creator of IKIGAIER. He writes about conscious ikigai and bringing doing and being together.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "general enquiries",
+        "email": "hola@ikigaier.com"
+      }
     },
     {
       "@type": "WebPage",

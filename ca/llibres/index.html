@@ -58,143 +58,162 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
 <link rel="stylesheet" href="/assets/css/home.css?v=1">
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "CollectionPage",
-        "@id": "https://www.ikigaier.com/ca/llibres/#page",
-        "url": "https://www.ikigaier.com/ca/llibres/",
-        "name": "Llibres de Manel Rueda",
-        "inLanguage": "ca",
-        "isPartOf": {
-          "@id": "https://www.ikigaier.com/#website"
-        },
-        "breadcrumb": {
-          "@id": "https://www.ikigaier.com/ca/llibres/#breadcrumb"
-        },
-        "mainEntity": {
-          "@id": "https://www.ikigaier.com/ca/llibres/#lista"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.ikigaier.com/ca/llibres/#page",
+      "url": "https://www.ikigaier.com/ca/llibres/",
+      "name": "Llibres de Manel Rueda",
+      "inLanguage": "ca",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.ikigaier.com/ca/llibres/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Inici",
-            "item": "https://www.ikigaier.com/ca/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Llibres",
-            "item": "https://www.ikigaier.com/ca/llibres/"
-          }
-        ]
+      "breadcrumb": {
+        "@id": "https://www.ikigaier.com/ca/llibres/#breadcrumb"
       },
-      {
-        "@type": "ItemList",
-        "@id": "https://www.ikigaier.com/ca/llibres/#lista",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@id": "https://www.ikigaier.com/#book-no-todo"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@id": "https://www.ikigaier.com/#book-disciplina"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@id": "https://www.ikigaier.com/#book-ikigai"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "item": {
-              "@id": "https://www.ikigaier.com/#book-camina"
-            }
-          }
-        ]
+      "mainEntity": {
+        "@id": "https://www.ikigaier.com/ca/llibres/#lista"
       },
-      {
-        "@type": "Book",
-        "@id": "https://www.ikigaier.com/#book-no-todo",
-        "name": "No todo lo que te frena es tuyo",
-        "author": {
-          "@id": "https://www.ikigaier.com/#person"
-        },
-        "description": "Per què ho vas aconseguir gairebé tot i continues sentint aquest buit: les dreceres que porta de sèrie qualsevol cervell i les creences que et van instal·lar, i com se sostenen entre si.",
-        "image": "https://www.ikigaier.com/assets/images/portada-no-todo.jpg",
-        "inLanguage": "ca",
-        "datePublished": "2026-07",
-        "publisher": {
-          "@id": "https://www.ikigaier.com/#organization"
-        }
-      },
-      {
-        "@type": "Book",
-        "@id": "https://www.ikigaier.com/#book-disciplina",
-        "name": "Disciplina para indisciplinados",
-        "alternativeHeadline": "Per què mai no va ser força de voluntat",
-        "author": {
-          "@id": "https://www.ikigaier.com/#person"
-        },
-        "description": "Motivació i força de voluntat són dos sistemes diferents. Vuit patrons per entendre per què ho deixes i com reprendre-ho sense començar de zero.",
-        "image": "https://www.ikigaier.com/assets/images/portada-disciplina.jpg",
-        "inLanguage": "ca",
-        "datePublished": "2026-07",
-        "publisher": {
-          "@id": "https://www.ikigaier.com/#organization"
-        }
-      },
-      {
-        "@type": "Book",
-        "@id": "https://www.ikigaier.com/#book-ikigai",
-        "name": "El Ikigai que no te contaron",
-        "author": {
-          "@id": "https://www.ikigaier.com/#person"
-        },
-        "description": "Una mirada profunda, clara i honesta sobre l’ikigai real i la distància entre el que fas i el que ets. Sense postureig. Sense dreceres.",
-        "image": "https://www.ikigaier.com/assets/images/portada-libro.webp",
-        "url": "https://www.ikigaier.com/ca/llibres/el-ikigai-que-no-te-contaron/",
-        "sameAs": "https://amzn.eu/d/0bUk5t8J",
-        "inLanguage": "ca",
-        "bookFormat": "https://schema.org/Paperback",
-        "publisher": {
-          "@id": "https://www.ikigaier.com/#organization"
-        }
-      },
-      {
-        "@type": "Book",
-        "@id": "https://www.ikigaier.com/#book-camina",
-        "name": "Camina sin separarte de ti",
-        "author": {
-          "@id": "https://www.ikigaier.com/#person"
-        },
-        "description": "Quadern de treball. Una invitació a aturar-te, mirar cap endins i posar per escrit el que normalment no t’atreveixes a dir-te.",
-        "image": "https://www.ikigaier.com/assets/images/portada-cuaderno.webp",
-        "url": "https://amzn.eu/d/078eIuXs",
-        "inLanguage": "ca",
-        "bookFormat": "https://schema.org/Paperback",
-        "publisher": {
-          "@id": "https://www.ikigaier.com/#organization"
-        }
+      "description": "Els llibres de Manel Rueda: No todo lo que te frena es tuyo, Disciplina para indisciplinados i El Ikigai que no te contaron. Un camí de tornada a tu.",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.ikigaier.com/assets/images/og-image.png?v=2"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/ca/llibres/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inici",
+          "item": "https://www.ikigaier.com/ca/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Llibres",
+          "item": "https://www.ikigaier.com/ca/llibres/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.ikigaier.com/ca/llibres/#lista",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.ikigaier.com/#book-no-todo"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.ikigaier.com/#book-disciplina"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://www.ikigaier.com/#book-ikigai"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@id": "https://www.ikigaier.com/#book-camina"
+          }
+        }
+      ],
+      "name": "Llibres de Manel Rueda",
+      "numberOfItems": 4,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending"
+    },
+    {
+      "@type": "Book",
+      "@id": "https://www.ikigaier.com/#book-no-todo",
+      "name": "No todo lo que te frena es tuyo",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "Per què ho vas aconseguir gairebé tot i continues sentint aquest buit: les dreceres que porta de sèrie qualsevol cervell i les creences que et van instal·lar, i com se sostenen entre si.",
+      "image": "https://www.ikigaier.com/assets/images/portada-no-todo.jpg",
+      "inLanguage": "es",
+      "datePublished": "2026-07",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "genre": "Desenvolupament personal"
+    },
+    {
+      "@type": "Book",
+      "@id": "https://www.ikigaier.com/#book-disciplina",
+      "name": "Disciplina para indisciplinados",
+      "alternativeHeadline": "Per què mai no va ser força de voluntat",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "Motivació i força de voluntat són dos sistemes diferents. Vuit patrons per entendre per què ho deixes i com reprendre-ho sense començar de zero.",
+      "image": "https://www.ikigaier.com/assets/images/portada-disciplina.jpg",
+      "inLanguage": "es",
+      "datePublished": "2026-07",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "genre": "Desenvolupament personal"
+    },
+    {
+      "@type": "Book",
+      "@id": "https://www.ikigaier.com/#book-ikigai",
+      "name": "El Ikigai que no te contaron",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "Una mirada profunda, clara i honesta sobre l’ikigai real i la distància entre el que fas i el que ets. Sense postureig. Sense dreceres.",
+      "image": "https://www.ikigaier.com/assets/images/portada-libro.webp",
+      "url": "https://www.ikigaier.com/ca/llibres/el-ikigai-que-no-te-contaron/",
+      "sameAs": "https://amzn.eu/d/0bUk5t8J",
+      "inLanguage": "es",
+      "bookFormat": "https://schema.org/Paperback",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "genre": "Desenvolupament personal",
+      "datePublished": "2025",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ASIN",
+        "value": "B0F4KNS4CN"
+      }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://www.ikigaier.com/#book-camina",
+      "name": "Camina sin separarte de ti",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "Quadern de treball. Una invitació a aturar-te, mirar cap endins i posar per escrit el que normalment no t’atreveixes a dir-te.",
+      "image": "https://www.ikigaier.com/assets/images/portada-cuaderno.webp",
+      "url": "https://amzn.eu/d/078eIuXs",
+      "inLanguage": "es",
+      "bookFormat": "https://schema.org/Paperback",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "genre": "Desenvolupament personal",
+      "datePublished": "2026"
+    }
+  ]
+}
   </script>
 <style>
     .breadcrumb {

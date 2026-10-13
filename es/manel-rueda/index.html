@@ -76,6 +76,11 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "inLanguage": "es",
       "publisher": {
         "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
       }
     },
     {
@@ -92,7 +97,22 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://manelrueda.com",
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/"
-      ]
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
     },
     {
       "@type": "ProfilePage",
@@ -129,7 +149,16 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/",
         "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
-      ]
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
     },
     {
       "@type": "Book",
@@ -143,6 +172,15 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "bookFormat": "https://schema.org/Paperback",
       "publisher": {
         "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Una mirada profunda, clara y honesta sobre el ikigai real y la distancia entre lo que haces y lo que eres. Sin postureo. Sin atajos.",
+      "image": "https://www.ikigaier.com/assets/images/portada-libro.webp",
+      "genre": "Desarrollo personal",
+      "datePublished": "2025",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ASIN",
+        "value": "B0F4KNS4CN"
       }
     },
     {
@@ -157,7 +195,11 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "bookFormat": "https://schema.org/Paperback",
       "publisher": {
         "@id": "https://www.ikigaier.com/#organization"
-      }
+      },
+      "description": "Cuaderno de trabajo. Una invitación a parar, mirar hacia dentro y poner por escrito lo que normalmente no te atreves a decirte.",
+      "image": "https://www.ikigaier.com/assets/images/portada-cuaderno.webp",
+      "genre": "Desarrollo personal",
+      "datePublished": "2026"
     },
     {
       "@type": "BreadcrumbList",

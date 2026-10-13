@@ -78,6 +78,11 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "inLanguage": "ca",
       "publisher": {
         "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Projecte editorial de Manel Rueda sobre l’ikigai conscient: llibres, test d’ikigai gratuït, tallers i blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/ca/blog/"
       }
     },
     {
@@ -94,7 +99,22 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://manelrueda.com",
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/"
-      ]
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "informació",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
     },
     {
       "@type": "Person",
@@ -109,7 +129,19 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/",
         "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
-      ]
+      ],
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "informació",
+        "email": "hola@ikigaier.com"
+      }
     },
     {
       "@type": "Article",
@@ -195,7 +227,18 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
             "text": "Menys omplint un diagrama i més observant la teva vida amb honestedat: què t’absorbeix fins a perdre la noció del temps, què faries encara que no et veiessin, on t’has anat allunyant de tu. No es troba pensant-hi d’una vegada, sinó parant atenció al que ja et sosté."
           }
         }
-      ]
+      ],
+      "name": "Ikigai: què és, significat i com trobar-lo | IKIGAIER",
+      "inLanguage": "ca",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://www.ikigaier.com/ca/ikigai/#breadcrumb"
+      }
     }
   ]
 }
