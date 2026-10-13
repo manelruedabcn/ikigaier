@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K7BXTLDM');</script>
-<!-- End Google Tag Manager -->
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="description" content="Archivo de la convocatoria del taller IKIGAIER del 29 de septiembre de 2026 en Vilanova i la Geltrú. Consulta los próximos talleres gratuitos.">
   <title>Taller IKIGAIER · 29 septiembre 2026 · Convocatoria pasada</title>
   <link rel="canonical" href="https://www.ikigaier.com/es/taller/29-septiembre/">
@@ -17,6 +28,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
   <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="IKIGAIER">
 
   <meta property="og:title" content="Taller IKIGAIER · 29 septiembre 2026 · Convocatoria pasada">
   <meta property="og:description" content="Convocatoria del 29 de septiembre de 2026 en Vilanova i la Geltrú. Inscripciones cerradas. Consulta los próximos talleres IKIGAIER.">
@@ -29,6 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:image:alt" content="Taller gratuito IKIGAIER · Plazas completas">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/taller-29-septiembre-og.png?v=2">
+  <meta name="twitter:image:alt" content="Taller gratuito IKIGAIER · Plazas completas">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,74 +50,87 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="/assets/css/main.css?v=12">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.ikigaier.com/#organization",
-        "name": "IKIGAIER",
-        "url": "https://www.ikigaier.com/",
-        "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
-        "founder": { "@id": "https://www.ikigaier.com/#person" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "IKIGAIER",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
       },
-      {
-        "@type": "Person",
-        "@id": "https://www.ikigaier.com/#person",
-        "name": "Manel Rueda",
-        "url": "https://www.ikigaier.com/",
-        "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
-        "jobTitle": "Autor",
-        "sameAs": [
-          "https://manelrueda.com",
-          "https://ikigaier.substack.com",
-          "https://www.instagram.com/manel_rueda/",
-          "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
-        ]
+      "description": "Proyecto editorial sobre el ikigai consciente. Libros, test y taller para unir el hacer y el ser.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ]
+    },
+    {
+      "@type": "Event",
+      "name": "Taller gratuito IKIGAIER · El camino hacia tu propósito",
+      "startDate": "2026-09-29T19:00:00+02:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "isAccessibleForFree": true,
+      "location": {
+        "@type": "Place",
+        "name": "BalanceaTe Experience",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Carrer de la Mercè, 4",
+          "postalCode": "08800",
+          "addressLocality": "Vilanova i la Geltrú",
+          "addressCountry": "ES"
+        }
       },
-      {
-        "@type": "Event",
-        "name": "Taller gratuito IKIGAIER · El camino hacia tu propósito",
-        "startDate": "2026-09-29T19:00:00+02:00",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "isAccessibleForFree": true,
-        "location": {
-          "@type": "Place",
-          "name": "BalanceaTe Experience",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Carrer de la Mercè, 4",
-            "postalCode": "08800",
-            "addressLocality": "Vilanova i la Geltrú",
-            "addressCountry": "ES"
-          }
-        },
-        "organizer": { "@id": "https://www.ikigaier.com/#organization" },
-        "performer": { "@id": "https://www.ikigaier.com/#person" },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/SoldOut",
-          "url": "https://www.ikigaier.com/es/taller/29-septiembre/"
-        },
+      "organizer": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "performer": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/SoldOut",
         "url": "https://www.ikigaier.com/es/taller/29-septiembre/"
-      }
-    ]
-  }
+      },
+      "url": "https://www.ikigaier.com/es/taller/29-septiembre/",
+      "description": "Archivo de la convocatoria del taller IKIGAIER del 29 de septiembre de 2026 en Vilanova i la Geltrú. Consulta los próximos talleres gratuitos.",
+      "image": [
+        "https://www.ikigaier.com/assets/images/taller-29-septiembre-og.png?v=2"
+      ],
+      "endDate": "2026-09-29T20:00:00+02:00"
+    }
+  ]
+}
   </script>
 </head>
 <body class="landing-taller-body">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7BXTLDM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
   <header class="landing-taller-header">
     <a href="/es/" class="landing-taller-logo" aria-label="IKIGAIER · Inicio">
       <picture>
-        <source srcset="/assets/images/logo-ikigaier-claro.webp?v=1" type="image/webp">
-        <img src="/assets/images/logo-ikigaier-claro.png?v=1" alt="IKIGAIER" width="2500" height="781">
+        <source srcset="/assets/images/logo-ikigaier-claro-600.webp" type="image/webp">
+        <img src="/assets/images/logo-ikigaier-claro-600.png" alt="IKIGAIER" width="600" height="187" fetchpriority="high">
       </picture>
     </a>
   </header>
@@ -143,5 +170,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p><a href="/es/privacidad/">Política de privacidad</a></p>
   </footer>
 
+  <script src="/assets/js/cookies.js?v=1" defer></script>
 </body>
 </html>

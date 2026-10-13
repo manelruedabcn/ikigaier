@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K7BXTLDM');</script>
-<!-- End Google Tag Manager -->
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="description" content="IKIGAIER — El Ikigai que no te contaron. Un ecosistema para unir el hacer y el ser.">
   <title>IKIGAIER</title>
   <meta http-equiv="refresh" content="0;url=/es/">
@@ -23,6 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="manifest" href="/assets/site.webmanifest">
 
   <!-- Open Graph -->
+  <meta property="og:site_name" content="IKIGAIER">
   <meta property="og:title" content="IKIGAIER">
   <meta property="og:description" content="El Ikigai que no te contaron. Un ecosistema para unir el hacer y el ser.">
   <meta property="og:url" content="https://www.ikigaier.com/es/">
@@ -38,6 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="twitter:title" content="IKIGAIER">
   <meta name="twitter:description" content="El Ikigai que no te contaron. Un ecosistema para unir el hacer y el ser.">
   <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -62,21 +75,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     a:hover { text-decoration: underline; }
   </style>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T2ZZKZFLHH');
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "IKIGAIER",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "IKIGAIER",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "description": "Proyecto editorial sobre el ikigai consciente. Libros, test y taller para unir el hacer y el ser.",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7BXTLDM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <h1>IKIGAIER</h1>
   <p>Redirigiendo… <a href="/es/">Entrar en IKIGAIER</a></p>
+  <script src="/assets/js/cookies.js?v=1" defer></script>
 </body>
 </html>

@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K7BXTLDM');</script>
-<!-- End Google Tag Manager -->
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="description" content="Política de cookies de IKIGAIER — qué cookies usamos, cookies técnicas, de terceros y cómo gestionarlas.">
   <title>Política de cookies · IKIGAIER</title>
   <link rel="canonical" href="https://www.ikigaier.com/es/cookies/">
@@ -26,6 +37,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="manifest" href="/assets/site.webmanifest">
 
   <!-- Open Graph -->
+  <meta property="og:site_name" content="IKIGAIER">
+  <meta property="og:locale:alternate" content="ca_ES">
+  <meta property="og:locale:alternate" content="en_GB">
   <meta property="og:title" content="Política de cookies · IKIGAIER">
   <meta property="og:description" content="Política de cookies de IKIGAIER — qué cookies usamos, cookies técnicas, de terceros y cómo gestionarlas.">
   <meta property="og:url" content="https://www.ikigaier.com/es/cookies/">
@@ -41,28 +55,81 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="twitter:title" content="Política de cookies · IKIGAIER">
   <meta name="twitter:description" content="Política de cookies de IKIGAIER.">
   <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/css/main.css?v=12">
-  <link rel="stylesheet" href="/assets/css/talleres.css?v=1">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T2ZZKZFLHH');
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "IKIGAIER",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "IKIGAIER",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "description": "Proyecto editorial sobre el ikigai consciente. Libros, test y taller para unir el hacer y el ser.",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.ikigaier.com/es/cookies/#webpage",
+      "url": "https://www.ikigaier.com/es/cookies/",
+      "name": "Política de cookies · IKIGAIER",
+      "description": "Política de cookies de IKIGAIER — qué cookies usamos, cookies técnicas, de terceros y cómo gestionarlas.",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.ikigaier.com/assets/images/og-image.png?v=2"
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7BXTLDM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
   <!-- ============================================
   HEADER
@@ -71,10 +138,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="site-header-inner">
       <a href="/es/" class="site-header-logo" aria-label="IKIGAIER · Inicio">
         <picture>
-          <source srcset="/assets/images/logo-ikigaier-bicolor-transparente.webp?v=1" type="image/webp">
-          <img src="/assets/images/logo-ikigaier-bicolor-transparente.png?v=1"
+          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-600.png"
                alt="IKIGAIER"
-               width="293" height="92">
+               width="293" height="92" fetchpriority="high">
         </picture>
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
@@ -110,7 +177,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Una cookie es un pequeño archivo de texto que un sitio web guarda en tu navegador cuando lo visitas. Sirve para recordar información sobre tu visita, como preferencias o datos técnicos que permiten que la página funcione correctamente.</p>
 
         <h2>Cookies que utilizamos</h2>
-        <p>IKIGAIER es una web sencilla y respetuosa con tu privacidad. <strong>No utilizamos cookies de análisis, de seguimiento ni de publicidad.</strong> No usamos Google Analytics, píxeles de redes sociales ni herramientas de perfilado. Únicamente pueden generarse las cookies técnicas descritas a continuación.</p>
+        <p>Usamos dos tipos de cookies: las <strong>técnicas</strong>, necesarias para que la web funcione y esté protegida, y las de <strong>analítica</strong> (Google Analytics), que solo se activan si las aceptas en el aviso de cookies. No usamos cookies de publicidad, píxeles de redes sociales ni herramientas de perfilado.</p>
+
+        <h2>Cookies de analítica (solo con tu consentimiento)</h2>
+        <p>Si aceptas, cargamos Google Analytics 4 a través de Google Tag Manager, servicios de Google Ireland Limited. Nos sirve para saber cuántas personas visitan la web, qué páginas leen y desde dónde llegan, de forma agregada. No lo usamos para publicidad ni para identificarte.</p>
+        <p>Cookies que instala: <strong>_ga</strong> (distingue visitantes, dura 2 años) y <strong>_ga_&lt;ID&gt;</strong> (mantiene el estado de la sesión, dura 2 años). Google puede tratar datos fuera del Espacio Económico Europeo con las garantías previstas en el Marco de Privacidad de Datos UE-EE. UU. Más información en la <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener noreferrer">política de privacidad de Google</a>.</p>
+        <p>Si las rechazas, no se cargan ni Google Analytics ni Google Tag Manager. Tu elección se guarda en tu navegador durante 12 meses y puedes cambiarla cuando quieras: <a href="#" data-cookies-config>configurar cookies</a>.</p>
 
         <h2>Cookies técnicas (estrictamente necesarias)</h2>
         <p>Nuestro proveedor de infraestructura y seguridad, Cloudflare, puede instalar cookies técnicas necesarias para proteger el sitio y garantizar su correcto funcionamiento (por ejemplo, para distinguir tráfico legítimo de ataques automatizados). Estas cookies no recogen información personal con fines comerciales y están exentas del deber de consentimiento según la normativa vigente. Puedes consultar más información en la <a href="https://www.cloudflare.com/es-es/privacypolicy/" target="_blank" rel="noopener noreferrer">política de privacidad de Cloudflare</a>.</p>
@@ -131,7 +203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>Más información</h2>
         <p>Para saber cómo tratamos tus datos personales, consulta nuestra <a href="/es/privacidad/">política de privacidad</a>. Si tienes cualquier duda, puedes escribirnos a <a href="mailto:hola@ikigaier.com">hola@ikigaier.com</a>.</p>
 
-        <p class="legal-updated">Fecha de última actualización: 09/08/2026</p>
+        <p class="legal-updated">Fecha de última actualización: 13/10/2026</p>
       </div>
     </section>
   </main>
@@ -141,15 +213,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   ============================================ -->
   <footer class="site-footer">
     <img class="site-footer-kanji"
-         src="/assets/images/isotipo-kanji.png"
-         alt=""
+         src="/assets/images/isotipo-kanji-48.png" alt="Sello kanji de IKIGAIER"
          width="24" height="24"
-         aria-hidden="true">
+         aria-hidden="true" decoding="async">
     <p>IKIGAIER · Manel Rueda · 2026</p>
-    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a></p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <a href="#" data-cookies-config>Configurar cookies</a></p>
     <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
   </footer>
 
   <script src="/assets/js/main.js?v=2" defer></script>
+  <script src="/assets/js/cookies.js?v=1" defer></script>
 </body>
 </html>

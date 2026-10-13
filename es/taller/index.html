@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K7BXTLDM');</script>
-<!-- End Google Tag Manager -->
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="description" content="YO SOY IKIGAIER: cuatro horas para escucharte, reconocer qué importa ahora y elegir cómo quieres vivir esta etapa. Taller presencial con Manel Rueda.">
   <title>Taller presencial de ikigai · Yo soy IKIGAIER</title>
   <link rel="canonical" href="https://www.ikigaier.com/es/taller/">
@@ -26,6 +37,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="manifest" href="/assets/site.webmanifest">
 
   <!-- Open Graph -->
+  <meta property="og:site_name" content="IKIGAIER">
+  <meta property="og:locale:alternate" content="ca_ES">
+  <meta property="og:locale:alternate" content="en_GB">
   <meta property="og:title" content="YO SOY IKIGAIER | Escucha qué importa ahora">
   <meta property="og:description" content="Cuatro horas para escucharte, reconocer qué importa ahora y elegir cómo quieres vivir esta etapa. Taller presencial con Manel Rueda.">
   <meta property="og:url" content="https://www.ikigaier.com/es/taller/">
@@ -41,6 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="twitter:title" content="YO SOY IKIGAIER | Escucha qué importa ahora">
   <meta name="twitter:description" content="Cuatro horas para escucharte, reconocer qué importa ahora y elegir cómo quieres vivir esta etapa. Con Manel Rueda.">
   <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-taller-es.png?v=1">
+  <meta name="twitter:image:alt" content="YO SOY IKIGAIER · Taller presencial de cuatro horas para escucharte · Manel Rueda">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,66 +63,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
   <link rel="stylesheet" href="/assets/css/main.css?v=12">
-  <link rel="stylesheet" href="/assets/css/talleres.css?v=1">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
   <link rel="stylesheet" href="/assets/css/taller-legibilidad.css?v=3">
   <noscript><style>.ikiruta-hint, .ikiruta-svg, .ikiruta-card { display: none; }</style></noscript>
 
   <!-- Schema Markup JSON-LD — Service (Taller) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.ikigaier.com/#organization",
-        "name": "IKIGAIER",
-        "url": "https://www.ikigaier.com/",
-        "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
-        "founder": { "@id": "https://www.ikigaier.com/#person" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "IKIGAIER",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
       },
-      {
-        "@type": "Person",
-        "@id": "https://www.ikigaier.com/#person",
-        "name": "Manel Rueda",
-        "url": "https://www.ikigaier.com/",
-        "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
-        "jobTitle": "Autor",
-        "sameAs": [
-          "https://manelrueda.com",
-          "https://ikigaier.substack.com",
-          "https://www.instagram.com/manel_rueda/",
-          "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
-        ]
+      "description": "Proyecto editorial sobre el ikigai consciente. Libros, test y taller para unir el hacer y el ser.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "YO SOY IKIGAIER · Escucha qué importa ahora",
+      "description": "Taller presencial de cuatro horas para escucharte, reconocer qué importa ahora y elegir cómo quieres vivir esta etapa. Un recorrido para comprender lo que sientes y elegir un primer paso posible, cuidando lo que quieres conservar.",
+      "provider": {
+        "@id": "https://www.ikigaier.com/#organization"
       },
-      {
-        "@type": "Service",
-        "name": "YO SOY IKIGAIER · Escucha qué importa ahora",
-        "description": "Taller presencial de cuatro horas para escucharte, reconocer qué importa ahora y elegir cómo quieres vivir esta etapa. Un recorrido para comprender lo que sientes y elegir un primer paso posible, cuidando lo que quieres conservar.",
-        "provider": { "@id": "https://www.ikigaier.com/#organization" },
-        "serviceType": "Taller intensivo presencial",
-        "areaServed": { "@type": "Country", "name": "España" },
-        "url": "https://www.ikigaier.com/es/taller/",
-        "image": "https://www.ikigaier.com/assets/images/og-taller-es.png?v=1",
-        "inLanguage": "es"
-      }
-    ]
-  }
-  </script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T2ZZKZFLHH');
+      "serviceType": "Taller intensivo presencial",
+      "areaServed": {
+        "@type": "Country",
+        "name": "España"
+      },
+      "url": "https://www.ikigaier.com/es/taller/",
+      "image": "https://www.ikigaier.com/assets/images/og-taller-es.png?v=1",
+      "inLanguage": "es"
+    }
+  ]
+}
   </script>
 </head>
 <body class="taller-legible">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7BXTLDM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
   <!-- ============================================
   HEADER — Editorial, dos niveles: kanji + logo + nav
@@ -116,10 +131,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="site-header-inner">
       <a href="/es/" class="site-header-logo" aria-label="IKIGAIER · Inicio">
         <picture>
-          <source srcset="/assets/images/logo-ikigaier-bicolor-transparente.webp?v=1" type="image/webp">
-          <img src="/assets/images/logo-ikigaier-bicolor-transparente.png?v=1"
+          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-600.png"
                alt="IKIGAIER"
-               width="293" height="92">
+               width="293" height="92" fetchpriority="high">
         </picture>
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
@@ -250,8 +265,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section-divider" aria-hidden="true">
     <picture>
-      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
-      <img src="/assets/images/ikionda-separador-transparente.png" alt="">
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img src="/assets/images/ikionda-separador-300.png" alt="Onda de IKIGAIER" width="150" height="113" decoding="async">
     </picture>
   </div>
 
@@ -272,8 +287,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section-divider" aria-hidden="true">
     <picture>
-      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
-      <img src="/assets/images/ikionda-separador-transparente.png" alt="">
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img src="/assets/images/ikionda-separador-300.png" alt="Onda de IKIGAIER" width="150" height="113" decoding="async">
     </picture>
   </div>
 
@@ -325,11 +340,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   ============================================ -->
   <footer class="site-footer">
     <picture>
-      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
       <img class="footer-ikionda"
-           src="/assets/images/ikionda-separador-transparente.png"
-           alt=""
-           aria-hidden="true">
+           src="/assets/images/ikionda-separador-300.png"
+           alt="Onda de IKIGAIER"
+           width="150" height="113"
+           aria-hidden="true" decoding="async">
     </picture>
     <p>IKIGAIER · Manel Rueda · 2026</p>
     <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
@@ -352,5 +368,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     })();
   </script>
+  <script src="/assets/js/cookies.js?v=1" defer></script>
 </body>
 </html>

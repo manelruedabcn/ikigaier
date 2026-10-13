@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K7BXTLDM');</script>
-<!-- End Google Tag Manager -->
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="description" content="Qué significa la palabra ikigai: cómo se escribe en japonés, de dónde viene y por qué «razón de ser» se queda corto. Por Manel Rueda.">
   <title>Ikigai: significado de la palabra japonesa | IKIGAIER</title>
   <link rel="canonical" href="https://www.ikigaier.com/es/blog/ikigai-significado/">
@@ -26,6 +37,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="manifest" href="/assets/site.webmanifest">
 
   <!-- Open Graph -->
+  <meta property="og:site_name" content="IKIGAIER">
+  <meta property="og:locale:alternate" content="ca_ES">
+  <meta property="og:locale:alternate" content="en_GB">
   <meta property="og:title" content="Ikigai: significado de la palabra japonesa">
   <meta property="og:description" content="Cómo se escribe ikigai en japonés, de dónde viene y por qué «razón de ser» es una traducción incompleta.">
   <meta property="og:url" content="https://www.ikigaier.com/es/blog/ikigai-significado/">
@@ -41,6 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="twitter:title" content="Ikigai: significado de la palabra japonesa">
   <meta name="twitter:description" content="Cómo se escribe ikigai en japonés, de dónde viene y por qué «razón de ser» es una traducción incompleta.">
   <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,88 +63,109 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
   <link rel="stylesheet" href="/assets/css/main.css?v=12">
-  <link rel="stylesheet" href="/assets/css/talleres.css?v=1">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
   <link rel="stylesheet" href="/assets/css/article.css?v=2">
 
   <!-- Datos estructurados — BlogPosting + identidad por @id -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.ikigaier.com/#website",
-        "url": "https://www.ikigaier.com/",
-        "name": "IKIGAIER",
-        "inLanguage": "es",
-        "publisher": { "@id": "https://www.ikigaier.com/#organization" }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://www.ikigaier.com/#organization",
-        "name": "IKIGAIER",
-        "url": "https://www.ikigaier.com/",
-        "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
-        "founder": { "@id": "https://www.ikigaier.com/#person" }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://www.ikigaier.com/#person",
-        "name": "Manel Rueda",
-        "url": "https://www.ikigaier.com/",
-        "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
-        "jobTitle": "Autor",
-        "description": "Autor y creador de IKIGAIER. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
-        "sameAs": [
-          "https://manelrueda.com",
-          "https://ikigaier.substack.com",
-          "https://www.instagram.com/manel_rueda/",
-          "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
-        ]
-      },
-      {
-        "@type": "BlogPosting",
-        "@id": "https://www.ikigaier.com/es/blog/ikigai-significado/#article",
-        "isPartOf": { "@id": "https://www.ikigaier.com/#website" },
-        "mainEntityOfPage": "https://www.ikigaier.com/es/blog/ikigai-significado/",
-        "headline": "Ikigai: qué significa realmente la palabra",
-        "description": "Cómo se escribe ikigai en japonés (生き甲斐), de dónde viene y por qué «razón de ser» es una traducción bonita pero incompleta.",
-        "inLanguage": "es",
-        "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
-        "datePublished": "2026-09-21",
-        "dateModified": "2026-09-21",
-        "articleSection": "Significado",
-        "author": { "@id": "https://www.ikigaier.com/#person" },
-        "publisher": { "@id": "https://www.ikigaier.com/#organization" },
-        "about": { "@type": "Thing", "name": "Ikigai" }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.ikigaier.com/es/blog/ikigai-significado/#breadcrumb",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.ikigaier.com/es/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.ikigaier.com/es/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Ikigai: significado", "item": "https://www.ikigaier.com/es/blog/ikigai-significado/" }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "IKIGAIER",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
       }
-    ]
-  }
-  </script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T2ZZKZFLHH');
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "IKIGAIER",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "Proyecto editorial sobre el ikigai consciente. Libros, test y taller para unir el hacer y el ser.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+      "jobTitle": "Autor",
+      "description": "Autor y creador de IKIGAIER. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.ikigaier.com/es/blog/ikigai-significado/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/es/blog/ikigai-significado/",
+      "headline": "Ikigai: qué significa realmente la palabra",
+      "description": "Cómo se escribe ikigai en japonés (生き甲斐), de dónde viene y por qué «razón de ser» es una traducción bonita pero incompleta.",
+      "inLanguage": "es",
+      "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
+      "datePublished": "2026-09-21",
+      "dateModified": "2026-09-21",
+      "articleSection": "Significado",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Ikigai"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/blog/ikigai-significado/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.ikigaier.com/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ikigai: significado",
+          "item": "https://www.ikigaier.com/es/blog/ikigai-significado/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7BXTLDM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
@@ -137,8 +173,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="site-header-inner">
       <a href="/es/" class="site-header-logo" aria-label="IKIGAIER · Inicio">
         <picture>
-          <source srcset="/assets/images/logo-ikigaier-bicolor-transparente.webp?v=1" type="image/webp">
-          <img src="/assets/images/logo-ikigaier-bicolor-transparente.png?v=1" alt="IKIGAIER" width="293" height="92">
+          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-600.png" alt="IKIGAIER" width="293" height="92" fetchpriority="high">
         </picture>
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
@@ -246,14 +282,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <footer class="site-footer">
     <picture>
-      <source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
-      <img class="footer-ikionda" src="/assets/images/ikionda-separador-transparente.png" alt="" aria-hidden="true">
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de IKIGAIER" width="150" height="113" aria-hidden="true" decoding="async">
     </picture>
     <p>IKIGAIER · Manel Rueda · 2026</p>
-    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a></p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <a href="#" data-cookies-config>Configurar cookies</a></p>
     <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← volver a manelrueda.com</a>
   </footer>
 
   <script src="/assets/js/main.js?v=2" defer></script>
+  <script src="/assets/js/cookies.js?v=1" defer></script>
 </body>
 </html>

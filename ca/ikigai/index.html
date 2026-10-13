@@ -2,15 +2,26 @@
 
 <html lang="ca">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K7BXTLDM');</script>
-<!-- End Google Tag Manager -->
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="description" content="Què és l’ikigai, què significa la paraula i d’on ve el diagrama dels quatre cercles. Una introducció honesta al propòsit, per Manel Rueda.">
 <title>Ikigai: què és, significat i com trobar-lo | IKIGAIER</title>
   <link rel="canonical" href="https://www.ikigaier.com/ca/ikigai/">
@@ -25,6 +36,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
 <link rel="manifest" href="/assets/site.webmanifest">
 <!-- Open Graph -->
+<meta property="og:site_name" content="IKIGAIER">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
 <meta property="og:title" content="Ikigai: què és, significat i com trobar el teu">
 <meta property="og:description" content="Què és l’ikigai, què significa realment la paraula i d’on ve el diagrama dels quatre cercles. Una introducció honesta al propòsit, per Manel Rueda.">
 <meta property="og:url" content="https://www.ikigaier.com/ca/ikigai/">
@@ -39,11 +53,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:title" content="Ikigai: què és, significat i com trobar el teu">
 <meta name="twitter:description" content="Què és l’ikigai, què significa realment la paraula i d’on ve el diagrama dels quatre cercles. Una introducció honesta al propòsit.">
 <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+<meta name="twitter:image:alt" content="IKIGAIER · L’ikigai que no t’han explicat · per Manel Rueda">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/main.css?v=12">
-<link rel="stylesheet" href="/assets/css/talleres.css?v=1">
+<link rel="stylesheet" href="/assets/css/talleres.css?v=2">
 <link rel="stylesheet" href="/assets/css/article.css?v=2">
 <!-- ============================================
        DATOS ESTRUCTURADOS — @graph con @id persistentes.
@@ -52,141 +67,138 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        el resto del sitio deberá adoptar (retrofit de la home).
        ============================================ -->
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.ikigaier.com/#website",
-        "url": "https://www.ikigaier.com/",
-        "name": "IKIGAIER",
-        "inLanguage": "ca",
-        "publisher": {
-          "@id": "https://www.ikigaier.com/#organization"
-        }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://www.ikigaier.com/#organization",
-        "name": "IKIGAIER",
-        "url": "https://www.ikigaier.com/",
-        "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
-        "description": "Projecte editorial sobre l’ikigai conscient. Llibre, quadern i taller per unir el fer i l’ésser.",
-        "founder": {
-          "@id": "https://www.ikigaier.com/#person"
-        }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://www.ikigaier.com/#person",
-        "name": "Manel Rueda",
-        "url": "https://www.ikigaier.com/",
-        "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
-        "jobTitle": "Autor",
-        "description": "Autor i creador d’IKIGAIER. Escriu sobre l’ikigai conscient i la unió del fer i l’ésser. Autor d’El Ikigai que no te contaron i Camina sin separarte de ti.",
-        "sameAs": [
-          "https://manelrueda.com",
-          "https://ikigaier.substack.com",
-          "https://www.instagram.com/manel_rueda/",
-          "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
-        ]
-      },
-      {
-        "@type": "Article",
-        "@id": "https://www.ikigaier.com/ca/ikigai/#article",
-        "isPartOf": {
-          "@id": "https://www.ikigaier.com/#website"
-        },
-        "mainEntityOfPage": "https://www.ikigaier.com/ca/ikigai/",
-        "headline": "Ikigai: què és realment i què no t’han explicat",
-        "description": "Què és l’ikigai, què significa la paraula japonesa i d’on ve el diagrama dels quatre cercles. Una introducció honesta a l’ikigai i al propòsit.",
-        "inLanguage": "ca",
-        "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
-        "datePublished": "2026-09-21",
-        "dateModified": "2026-09-21",
-        "author": {
-          "@id": "https://www.ikigaier.com/#person"
-        },
-        "publisher": {
-          "@id": "https://www.ikigaier.com/#organization"
-        },
-        "about": [
-          {
-            "@type": "Thing",
-            "name": "Ikigai"
-          },
-          {
-            "@type": "Thing",
-            "name": "Propòsit de vida"
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.ikigaier.com/ca/ikigai/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Inici",
-            "item": "https://www.ikigaier.com/ca/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Ikigai",
-            "item": "https://www.ikigaier.com/ca/ikigai/"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.ikigaier.com/ca/ikigai/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Què significa ikigai?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ikigai (生き甲斐) és una paraula japonesa formada per iki (viure) i gai (valor, allò que val la pena). Se sol traduir com a «raó per viure» o «allò que fa que la vida valgui la pena». No es refereix a una gran missió, sinó al que dona sentit a cada dia."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "L’ikigai és el diagrama dels quatre cercles?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. El diagrama de quatre cercles que creua el que estimes, el que se’t dona bé, el que el món necessita i allò per què et paguen no és japonès ni descriu l’ikigai original. Va néixer d’un diagrama sobre el propòsit de l’autor Andrés Zuzunaga (2011) i es va relacionar amb la paraula ikigai en un article del bloguer Marc Winn el 2014."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "L’ikigai és el mateix que el propòsit de vida?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No exactament. El propòsit, tal com s’entén a Occident, sol apuntar a una meta o una gran direcció. L’ikigai japonès és més quotidià i plural: són les raons, sovint petites, per les quals et lleves cada matí. Pots tenir molts ikigai alhora."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Com es troba l’ikigai?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Menys omplint un diagrama i més observant la teva vida amb honestedat: què t’absorbeix fins a perdre la noció del temps, què faries encara que no et veiessin, on t’has anat allunyant de tu. No es troba pensant-hi d’una vegada, sinó parant atenció al que ja et sosté."
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "IKIGAIER",
+      "inLanguage": "ca",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
       }
-    ]
-  }
-  </script>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T2ZZKZFLHH');
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "IKIGAIER",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "description": "Projecte editorial sobre l’ikigai conscient. Llibre, quadern i taller per unir el fer i l’ésser.",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+      "jobTitle": "Autor",
+      "description": "Autor i creador d’IKIGAIER. Escriu sobre l’ikigai conscient i la unió del fer i l’ésser. Autor d’El Ikigai que no te contaron i Camina sin separarte de ti.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://www.ikigaier.com/ca/ikigai/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/ca/ikigai/",
+      "headline": "Ikigai: què és realment i què no t’han explicat",
+      "description": "Què és l’ikigai, què significa la paraula japonesa i d’on ve el diagrama dels quatre cercles. Una introducció honesta a l’ikigai i al propòsit.",
+      "inLanguage": "ca",
+      "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
+      "datePublished": "2026-09-21",
+      "dateModified": "2026-09-21",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Ikigai"
+        },
+        {
+          "@type": "Thing",
+          "name": "Propòsit de vida"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/ca/ikigai/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inici",
+          "item": "https://www.ikigaier.com/ca/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ikigai",
+          "item": "https://www.ikigaier.com/ca/ikigai/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.ikigaier.com/ca/ikigai/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Què significa ikigai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ikigai (生き甲斐) és una paraula japonesa formada per iki (viure) i gai (valor, allò que val la pena). Se sol traduir com a «raó per viure» o «allò que fa que la vida valgui la pena». No es refereix a una gran missió, sinó al que dona sentit a cada dia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L’ikigai és el diagrama dels quatre cercles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El diagrama de quatre cercles que creua el que estimes, el que se’t dona bé, el que el món necessita i allò per què et paguen no és japonès ni descriu l’ikigai original. Va néixer d’un diagrama sobre el propòsit de l’autor Andrés Zuzunaga (2011) i es va relacionar amb la paraula ikigai en un article del bloguer Marc Winn el 2014."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L’ikigai és el mateix que el propòsit de vida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No exactament. El propòsit, tal com s’entén a Occident, sol apuntar a una meta o una gran direcció. L’ikigai japonès és més quotidià i plural: són les raons, sovint petites, per les quals et lleves cada matí. Pots tenir molts ikigai alhora."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Com es troba l’ikigai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Menys omplint un diagrama i més observant la teva vida amb honestedat: què t’absorbeix fins a perdre la noció del temps, què faries encara que no et veiessin, on t’has anat allunyant de tu. No es troba pensant-hi d’una vegada, sinó parant atenció al que ja et sosté."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 <!-- ============================================
        ESTILO LOCAL DE LA PILAR — aislado.
@@ -195,17 +207,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        ============================================ -->
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7BXTLDM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <a class="skip-link" href="#contenido">Salta al contingut</a>
 <!-- HEADER — coherente con el resto del sitio; nav con rutas absolutas a /es/ -->
 <header class="site-header">
 <div class="site-header-inner">
 <a href="/ca/" class="site-header-logo" aria-label="IKIGAIER · Inici">
 <picture>
-<source srcset="/assets/images/logo-ikigaier-bicolor-transparente.webp?v=1" type="image/webp">
-<img src="/assets/images/logo-ikigaier-bicolor-transparente.png?v=1" alt="IKIGAIER" width="293" height="92">
+<source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+<img src="/assets/images/logo-ikigaier-bicolor-600.png" alt="IKIGAIER" width="293" height="92" fetchpriority="high">
 </picture>
 </a>
 <button class="nav-toggle" id="nav-toggle" aria-label="Obrir el menú" aria-expanded="false" aria-controls="nav-links">
@@ -419,13 +428,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- FOOTER — coherente con el resto del sitio -->
 <footer class="site-footer">
 <picture>
-<source srcset="/assets/images/ikionda-separador-transparente.webp" type="image/webp">
-<img class="footer-ikionda" src="/assets/images/ikionda-separador-transparente.png" alt="" aria-hidden="true">
+<source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+<img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Ona d’IKIGAIER" width="150" height="113" aria-hidden="true" decoding="async">
 </picture>
 <p>IKIGAIER · Manel Rueda · 2026</p>
-<p class="footer-legal"><a href="/ca/privacitat/">Política de privacitat</a> · <a href="/ca/galetes/">Política de galetes</a></p>
+<p class="footer-legal"><a href="/ca/privacitat/">Política de privacitat</a> · <a href="/ca/galetes/">Política de galetes</a> · <a href="#" data-cookies-config>Configurar galetes</a></p>
 <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="noopener noreferrer">← tornar a manelrueda.com</a>
 </footer>
 <script src="/assets/js/main.js?v=2" defer=""></script>
+  <script src="/assets/js/cookies.js?v=1" defer></script>
 </body>
 </html>
