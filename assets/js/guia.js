@@ -12,7 +12,7 @@
   // llamada» abre un formulario y Manel cierra día y hora por correo.
   var AGENDA_URL = '';
   var ENDPOINT = 'https://app.ikigaier.com/api/guia/contacto';
-  var AVATAR = '/assets/images/guia-manel.svg?v=2';
+  var AVATAR = '/assets/images/guia-manel.svg?v=3';
 
   var lang = (document.documentElement.lang || 'es').slice(0, 2);
   if (lang !== 'ca' && lang !== 'en') lang = 'es';
