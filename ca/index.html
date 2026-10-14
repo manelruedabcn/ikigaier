@@ -194,9 +194,15 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
     <div class="nav-overlay" id="nav-overlay"></div>
   </header>
 
+  <!-- Franja: el programa gratuito mientras el taller no tenga fechas. Anuncio del taller:
   <a class="taller-anuncio-barra" href="/ca/taller/">
     <span><strong>Nou taller presencial</strong> · JO SOC IKIGAIER<span class="taller-anuncio-extra"> · Quatre hores per escoltar-te</span> · Dates i preu properament</span>
     <span class="taller-anuncio-cta">Descobreix el taller</span>
+  </a>
+  -->
+  <a class="taller-anuncio-barra" href="/ca/programa-ikigai-gratuit/">
+    <span><strong>Nou · Programa gratuït de 4 setmanes</strong> · Un mes coneixent el teu ikigai<span class="taller-anuncio-extra"> · Un correu cada dilluns, sense compte</span></span>
+    <span class="taller-anuncio-cta">Començar gratis</span>
   </a>
 
   <main id="contingut">
@@ -211,9 +217,11 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
     <div class="home-hero-inner">
       <h1 id="home-h1">Ho tens tot.<span class="linea-2">I tot i així, et falta alguna cosa.</span></h1>
       <p class="home-hero-sub">Un camí per tornar a tu sense trencar la vida que has construït.</p>
-      <a href="/ca/test-d-ikigai/" class="btn btn-primary">Fes el test d’ikigai · gratuït</a>
-      <p class="home-hero-nota">16 preguntes · sense registre · retorn a l’instant</p>
-      <p class="home-hero-nota"><a class="home-enlace" href="/ca/programa-ikigai-gratuit/">O comença pel programa gratuït d’un mes →</a></p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center">
+        <a href="/ca/test-d-ikigai/" class="btn btn-primary">Fes el test d’ikigai · gratuït</a>
+        <a href="/ca/programa-ikigai-gratuit/" class="btn">Programa gratuït de 4 setmanes</a>
+      </div>
+      <p class="home-hero-nota">Test: 16 preguntes, sense registre · Programa: un correu cada dilluns durant un mes</p>
     </div>
   </section>
 
