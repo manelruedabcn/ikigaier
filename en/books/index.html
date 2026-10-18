@@ -38,7 +38,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 <meta property="og:locale:alternate" content="ca_ES">
 <meta property="og:locale:alternate" content="es_ES">
 <meta property="og:title" content="Books by Manel Rueda | IKIGAIER">
-<meta property="og:description" content="One path back to yourself, in three books: release, act and align.">
+<meta property="og:description" content="One path back to yourself, in four books: release, act, align and communicate.">
 <meta property="og:url" content="https://www.ikigaier.com/en/books/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_GB">
@@ -48,7 +48,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 <meta property="og:image:alt" content="IKIGAIER · books by Manel Rueda">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Books by Manel Rueda | IKIGAIER">
-<meta name="twitter:description" content="One path back to yourself, in three books.">
+<meta name="twitter:description" content="One path back to yourself, in four books.">
 <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
 <meta name="twitter:image:alt" content="IKIGAIER · books by Manel Rueda">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,6 +129,13 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         {
           "@type": "ListItem",
           "position": 4,
+          "item": {
+            "@id": "https://www.ikigaier.com/#book-comunicacion"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
           "item": {
             "@id": "https://www.ikigaier.com/#book-camina"
           }
@@ -214,6 +221,23 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       },
       "genre": "Personal development",
       "datePublished": "2026"
+    },
+    {
+      "@type": "Book",
+      "@id": "https://www.ikigaier.com/#book-comunicacion",
+      "name": "La comunicación que no te enseñaron",
+      "alternativeHeadline": "Cambia lo que te dices, escucha lo que te dicen",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "A book about exploring your inner dialogue, expressing what you need and listening more closely. Includes exercises to prepare for everyday conversations at home and at work.",
+      "image": "https://www.ikigaier.com/assets/images/portada-comunicacion.jpg",
+      "url": "https://amzn.eu/d/01qVa1Rv",
+      "inLanguage": "es",
+      "datePublished": "2026-10-06",
+      "isbn": "9798160573717",
+      "numberOfPages": 160,
+      "bookFormat": "https://schema.org/Paperback"
     }
   ]
 }
@@ -319,7 +343,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 <div class="libros-page">
 <header class="libros-cabecera">
 <h1>The books</h1>
-<p>One path back to yourself, in three books. You can read them in order or start with the one that calls you most today. For now, they are available in Spanish only.</p>
+<p>One path back to yourself, in four books. You can read them in order or start with the one that calls you most today. For now, they are available in Spanish only.</p>
 </header>
 <article id="no-todo" class="libro-ficha" aria-labelledby="no-todo-h">
 <picture>
@@ -372,7 +396,23 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 </div>
 </div>
 </article>
-<aside id="camina" class="cuaderno-nota" aria-labelledby="camina-h">
+<article id="comunicacion" class="libro-ficha" aria-labelledby="comunicacion-h">
+        <picture>
+          <img src="/assets/images/portada-comunicacion.jpg" alt="Cover of La comunicación que no te enseñaron" width="1000" height="1499" loading="lazy">
+        </picture>
+        <div class="libro-ficha-texto">
+          <span class="paso">4 · Communicate</span>
+          <h2 id="comunicacion-h">La comunicación que no te enseñaron</h2>
+          <p class="subtitulo">Cambia lo que te dices, escucha lo que te dicen</p>
+          <p>A book about exploring your inner dialogue, expressing what you need and listening more closely. Includes exercises to prepare for everyday conversations at home and at work.</p>
+          <p class="para-ti">For you if setting boundaries or finding the words in a difficult conversation feels hard.</p>
+          <div class="acciones">
+            <a class="btn" href="https://amzn.eu/d/01qVa1Rv" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+          </div>
+        </div>
+      </article>
+
+      <aside id="camina" class="cuaderno-nota" aria-labelledby="camina-h">
 <picture>
 <source srcset="/assets/images/portada-camina.webp" type="image/webp">
 <img src="/assets/images/portada-camina.png" alt="Cover of Camina sin separarte de ti" width="1410" height="2000" loading="lazy" decoding="async">

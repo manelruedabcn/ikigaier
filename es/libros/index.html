@@ -42,7 +42,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
   <meta property="og:locale:alternate" content="en_GB">
 
   <meta property="og:title" content="Libros de Manel Rueda | IKIGAIER">
-  <meta property="og:description" content="Un mismo camino de vuelta a ti, en tres libros: liberar, actuar y alinear.">
+  <meta property="og:description" content="Un mismo camino de vuelta a ti, en cuatro libros: liberar, actuar, alinear y comunicar.">
   <meta property="og:url" content="https://www.ikigaier.com/es/libros/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
@@ -53,7 +53,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Libros de Manel Rueda | IKIGAIER">
-  <meta name="twitter:description" content="Un mismo camino de vuelta a ti, en tres libros.">
+  <meta name="twitter:description" content="Un mismo camino de vuelta a ti, en cuatro libros.">
   <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
   <meta name="twitter:image:alt" content="IKIGAIER · libros de Manel Rueda">
 
@@ -139,6 +139,13 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
           "@type": "ListItem",
           "position": 4,
           "item": {
+            "@id": "https://www.ikigaier.com/#book-comunicacion"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
             "@id": "https://www.ikigaier.com/#book-camina"
           }
         }
@@ -223,6 +230,23 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       },
       "genre": "Desarrollo personal",
       "datePublished": "2026"
+    },
+    {
+      "@type": "Book",
+      "@id": "https://www.ikigaier.com/#book-comunicacion",
+      "name": "La comunicación que no te enseñaron",
+      "alternativeHeadline": "Cambia lo que te dices, escucha lo que te dicen",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "Un libro para explorar el diálogo interior, expresar lo que necesitas y escuchar con más atención. Incluye ejercicios para preparar conversaciones cotidianas, en casa y en el trabajo.",
+      "image": "https://www.ikigaier.com/assets/images/portada-comunicacion.jpg",
+      "url": "https://amzn.eu/d/01qVa1Rv",
+      "inLanguage": "es",
+      "datePublished": "2026-10-06",
+      "isbn": "9798160573717",
+      "numberOfPages": 160,
+      "bookFormat": "https://schema.org/Paperback"
     }
   ]
 }
@@ -334,7 +358,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 
       <header class="libros-cabecera">
         <h1>Los libros</h1>
-        <p>Un mismo camino de vuelta a ti, en tres libros. Puedes leerlos en orden o empezar por el que más te llame hoy.</p>
+        <p>Un mismo camino de vuelta a ti, en cuatro libros. Puedes leerlos en orden o empezar por el que más te llame hoy.</p>
       </header>
 
       <article id="no-todo" class="libro-ficha" aria-labelledby="no-todo-h">
@@ -389,6 +413,22 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
             <a class="home-enlace" href="/es/libros/el-ikigai-que-no-te-contaron/">Descubrir el libro</a>
             <a class="btn btn-primary" href="https://amzn.eu/d/0bUk5t8J" target="_blank" rel="noopener noreferrer">Ver en Amazon</a>
             <a class="home-enlace" href="/es/taller/">Conocer el taller</a>
+          </div>
+        </div>
+      </article>
+
+      <article id="comunicacion" class="libro-ficha" aria-labelledby="comunicacion-h">
+        <picture>
+          <img src="/assets/images/portada-comunicacion.jpg" alt="Portada de La comunicación que no te enseñaron" width="1000" height="1499" loading="lazy">
+        </picture>
+        <div class="libro-ficha-texto">
+          <span class="paso">4 · Comunicar</span>
+          <h2 id="comunicacion-h">La comunicación que no te enseñaron</h2>
+          <p class="subtitulo">Cambia lo que te dices, escucha lo que te dicen</p>
+          <p>Un libro para explorar el diálogo interior, expresar lo que necesitas y escuchar con más atención. Incluye ejercicios para preparar conversaciones cotidianas, en casa y en el trabajo.</p>
+          <p class="para-ti">Para ti si te cuesta poner límites o encontrar las palabras cuando una conversación se complica.</p>
+          <div class="acciones">
+            <a class="btn" href="https://amzn.eu/d/01qVa1Rv" target="_blank" rel="noopener noreferrer">Ver en Amazon</a>
           </div>
         </div>
       </article>
