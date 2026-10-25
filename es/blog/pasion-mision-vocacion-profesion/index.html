@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Pasión, misión, vocación y profesión en el modelo ikigai: qué es cada zona, ejemplos, qué le falta a cada una y una plantilla sencilla para leer las tuyas.">
+  <title>Pasión, misión, vocación y profesión: las zonas del ikigai | IKIGAIER</title>
+  <link rel="canonical" href="https://www.ikigaier.com/es/blog/pasion-mision-vocacion-profesion/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/blog/pasion-mision-vocacion-profesion/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/blog/pasion-mision-vocacion-profesion/">
+
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="IKIGAIER">
+
+
+
+  <meta property="og:title" content="Pasión, misión, vocación y profesión: las cuatro zonas del ikigai">
+  <meta property="og:description" content="Las cuatro zonas que rodean al centro del diagrama del ikigai, qué le falta a cada una y cómo leerlas sin frustrarte.">
+  <meta property="og:url" content="https://www.ikigaier.com/es/blog/pasion-mision-vocacion-profesion/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pasión, misión, vocación y profesión: las cuatro zonas del ikigai">
+  <meta name="twitter:description" content="Las cuatro zonas que rodean al centro del diagrama del ikigai, qué le falta a cada una y cómo leerlas sin frustrarte.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=13">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+  <link rel="stylesheet" href="/assets/css/article.css?v=2">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "IKIGAIER",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "IKIGAIER",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "Proyecto editorial sobre el ikigai consciente. Libros, test y taller para unir el hacer y el ser.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/"
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "description": "Autor y creador de IKIGAIER. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.ikigaier.com/es/blog/pasion-mision-vocacion-profesion/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/es/blog/pasion-mision-vocacion-profesion/",
+      "headline": "Pasión, misión, vocación y profesión: las cuatro zonas del ikigai",
+      "description": "Las cuatro zonas que rodean al centro del diagrama del ikigai, qué le falta a cada una y cómo leerlas sin frustrarte.",
+      "inLanguage": "es",
+      "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "articleSection": "Zonas del ikigai",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Ikigai"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/blog/pasion-mision-vocacion-profesion/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.ikigaier.com/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Las cuatro zonas del ikigai",
+          "item": "https://www.ikigaier.com/es/blog/pasion-mision-vocacion-profesion/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/es/" class="site-header-logo" aria-label="IKIGAIER · Inicio">
+        <picture>
+          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-600.png" alt="IKIGAIER" width="293" height="92" fetchpriority="high">
+        </picture>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="/es/talleres/">Talleres</a>
+        <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/blog/" aria-current="page">Blog</a>
+        <a href="/es/manel-rueda/">Autor</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/es/test-de-ikigai/" class="nav-destacado">Test ikigai gratis</a>
+        <a href="/ca/blog/" hreflang="ca" lang="ca" class="nav-idioma" title="Català" aria-label="Català"><span class="nav-idioma-corto" aria-hidden="true">CA</span><span class="nav-idioma-largo">Català</span></a>
+        <a href="/en/blog/" hreflang="en" lang="en" class="nav-idioma" title="English" aria-label="English"><span class="nav-idioma-corto" aria-hidden="true">EN</span><span class="nav-idioma-largo">English</span></a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/blog/">Blog</a><span aria-hidden="true">›</span><span>Las cuatro zonas del ikigai</span>
+  </nav>
+
+  <main id="contenido">
+    <article class="article-wrap">
+
+      <header class="article-head">
+        <h1>Pasión, misión, vocación y profesión: las cuatro zonas del ikigai</h1>
+        <p class="article-standfirst">Antes del centro, el diagrama dibuja cuatro cruces de dos círculos. Son las zonas que casi todo el mundo reconoce en su vida, y suelen decir más que el punto central que nadie termina de encontrar.</p>
+        <div class="article-byline">
+          <span class="author"><a href="/es/manel-rueda/">Manel Rueda</a></span>
+          <span class="role">Autor y creador de IKIGAIER</span>
+          <time datetime="2026-10-25">25 de octubre de 2026</time>
+        </div>
+      </header>
+
+      <div class="prose">
+
+        <p>Quien se acerca al ikigai suele mirar primero al centro del diagrama. Es lógico, el dibujo está hecho para que la vista vaya ahí. Pero alrededor de ese punto hay cuatro zonas bastante más grandes, cada una formada por el cruce de dos círculos, y es en ellas donde transcurre la vida de casi todo el mundo.</p>
+
+        <p>Este artículo recorre las cuatro zonas del modelo ikigai, la <strong>pasión</strong>, la <strong>misión</strong>, la <strong>vocación</strong> y la <strong>profesión</strong>. Explica qué le falta a cada una, con algún ejemplo, y propone una plantilla para leerlas que no termine en la frustración de la <a href="/es/blog/zona-ikigai/">zona ikigai</a>.</p>
+
+        <figure>
+          <svg viewBox="0 0 320 320" role="img" aria-labelledby="zonas-titulo zonas-desc">
+            <title id="zonas-titulo">Las cuatro zonas del diagrama del ikigai</title>
+            <desc id="zonas-desc">Cuatro círculos que se cruzan: lo que amas arriba, en lo que eres bueno a la izquierda, lo que el mundo necesita a la derecha y por lo que te pagan abajo. Donde se tocan dos círculos aparecen la pasión, la misión, la vocación y la profesión.</desc>
+            <g fill-opacity="0.18" stroke="#4B443E" stroke-opacity="0.35" stroke-width="1">
+              <circle cx="160" cy="105" r="85" fill="#C2866B"/>
+              <circle cx="105" cy="160" r="85" fill="#58624B"/>
+              <circle cx="215" cy="160" r="85" fill="#A8794B"/>
+              <circle cx="160" cy="215" r="85" fill="#3F4A34"/>
+            </g>
+            <g font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#35322e" text-anchor="middle">
+              <text x="160" y="50">Lo que amas</text>
+              <text x="52" y="156">En lo que</text><text x="52" y="172">eres bueno</text>
+              <text x="268" y="156">Lo que el</text><text x="268" y="172">mundo necesita</text>
+              <text x="160" y="270">Por lo que</text><text x="160" y="286">te pagan</text>
+            </g>
+            <g font-family="Cormorant Garamond, serif" font-style="italic" font-size="16" fill="#272727" text-anchor="middle">
+              <text x="112" y="114">Pasión</text>
+              <text x="208" y="114">Misión</text>
+              <text x="208" y="214">Vocación</text>
+              <text x="112" y="214">Profesión</text>
+            </g>
+          </svg>
+          <figcaption>Las cuatro zonas del ikigai aparecen donde se tocan dos círculos. El centro, la zona ikigai, queda en medio de todas.</figcaption>
+        </figure>
+
+        <h2 id="las-cuatro-zonas">Las cuatro zonas del ikigai, una a una</h2>
+
+        <p>El diagrama coloca cuatro círculos: lo que amas, en lo que eres bueno, lo que el mundo necesita y aquello por lo que te pueden pagar. Donde se tocan dos de ellos aparece una zona con nombre propio.</p>
+
+        <h3 id="pasion">Pasión</h3>
+        <p>Es el cruce entre lo que amas y lo que se te da bien. Ahí están las actividades en las que se te va el tiempo sin notarlo, las que harías un sábado por la mañana aunque nadie se enterara. A la pasión no le hace falta servir a nadie más ni dar dinero, y por eso suele ser lo primero que se abandona cuando la agenda aprieta. Tocar un instrumento o restaurar muebles por gusto son ejemplos de ikigai típicos de esta zona.</p>
+
+        <h3 id="mision">Misión</h3>
+        <p>Une lo que amas con lo que el mundo necesita. Es la zona del cuidado, de enseñar, de acompañar a una persona o a una causa. Muchas misiones se ejercen sin cobrar, o cobrando poco, y no pesan menos en una vida por eso.</p>
+
+        <h3 id="vocacion">Vocación</h3>
+        <p>Cruza lo que el mundo necesita con aquello por lo que te pagan. Son trabajos útiles y reconocidos, a menudo exigentes. La palabra engaña un poco, porque en el diagrama la vocación no implica que te apasione. Solo dice que es necesaria y que está remunerada. Una enfermera competente que no siente la enfermería como su gran pasión vive aquí.</p>
+
+        <h3 id="profesion">Profesión</h3>
+        <p>Junta lo que se te da bien con lo que te pagan. Es el oficio que sostiene la casa, el que has aprendido a hacer con solvencia con los años. Puede gustarte mucho, poco o nada, y el diagrama no lo pregunta. El contable solvente al que los números ni le van ni le vienen es el ejemplo de manual.</p>
+
+        <h2 id="tres-circulos">Qué pasa cuando se cruzan tres círculos</h2>
+
+        <p>Entre las cuatro zonas y el centro, el diagrama que popularizó Marc Winn en 2014 describe cuatro vidas que casi funcionan. A cada una le falta un solo círculo, y las descripciones que las acompañan son bastante certeras.</p>
+
+        <p>Si amas lo que haces, se te da bien y sirve a otros pero no te pagan, hay plenitud con apuro económico. Si lo amas, se te da bien y te pagan pero no responde a ninguna necesidad real, aparece la satisfacción acompañada de una sensación de inutilidad. Cuando lo haces bien, sirve y te pagan pero no lo amas, la vida es cómoda y tiene un fondo de vacío. Y cuando lo amas, sirve y te pagan pero no te sientes capaz, hay ilusión mezclada con inseguridad, la impresión de ocupar un sitio que te queda grande.</p>
+
+        <p>Leído así, el diagrama parece un manual de diagnóstico, y es fácil olvidar que una vida con tres círculos ocupados ya es una vida bastante rica.</p>
+
+        <h2 id="como-leerlas">Una plantilla para leer tus zonas sin convertirlas en un examen</h2>
+
+        <p>La pregunta habitual es qué zona te falta. Da más juego la contraria, qué zonas ocupas ya y con qué. Para eso basta una plantilla ikigai hecha a mano. Dibuja los cuatro círculos en una hoja, escribe el nombre de las cuatro zonas donde se cruzan y anota en cada una algo concreto de tu última semana, una tarde, una conversación, una tarea terminada. Nada abstracto.</p>
+
+        <p>Lo normal es que alguna quede vacía. Eso es información, no un veredicto. Mucha gente vive con una profesión que sostiene la casa y una misión que ocurre fuera del horario, en la familia o en una asociación, y esa combinación funciona. El sentido no tiene por qué cobrarse en la misma nómina.</p>
+
+        <p>Hay un caso en que la zona vacía sí avisa de algo. Cuando la profesión ocupa tanto espacio que ninguna otra zona encuentra sitio, el problema rara vez es de propósito. Es de tiempo y de energía, y eso se resuelve antes en la agenda que en el diagrama.</p>
+
+        <h2 id="lo-que-no-ve">Lo que el diagrama no ve</h2>
+
+        <p>Las cuatro zonas describen bien una parte del asunto, el hacer. Qué haces, para quién y a cambio de qué. En IKIGAIER lo llamamos <em>Ikigai Activo</em>. Se queda fuera desde dónde lo haces, la presencia y la coherencia con la que habitas cada una de esas zonas, que es lo que llamamos <em>Ikigai Consciente</em>. Es una elaboración propia, conviene decirlo, y no forma parte de la tradición japonesa.</p>
+
+        <p>Esa tradición, de hecho, nunca dividió el ikigai en zonas. El diagrama nació en Occidente a partir del diagrama del propósito de Andrés Zuzunaga y solo después recibió la palabra <em>ikigai</em> (lo cuento en <a href="/es/blog/diagrama-ikigai/">el artículo sobre el diagrama</a> y en la <a href="/es/blog/historia-del-ikigai/">historia del ikigai</a>). Para la psiquiatra Mieko Kamiya, que empezó a estudiarlo en los años sesenta, el ikigai podía vivir en una sola de estas zonas, o fuera de todas.</p>
+
+        <div class="cta-linea">
+          <p>Si quieres ver qué zonas tienes ocupadas sin la presión del centro perfecto, empieza por aquí.</p>
+          <a href="/es/test-de-ikigai/" class="btn">Hacer el test de ikigai gratis →</a>
+        </div>
+
+        <p>Para entender por qué el centro es tan pequeño, lee <a href="/es/blog/zona-ikigai/">la zona ikigai</a>. Y si el centro te ha salido vacío, quizá te sirva <a href="/es/blog/no-encuentro-mi-ikigai/">qué hacer cuando no encuentras tu ikigai</a>.</p>
+
+        <h2 id="fuentes">Fuentes</h2>
+
+        <div class="fuentes">
+          <ol>
+            <li>Zuzunaga, Andrés. Diagrama del propósito (2011), publicado en <em>¿Qué harías si el dinero no fuera un problema?</em></li>
+            <li>Winn, Marc. «What is your ikigai?» (2014). Artículo que asoció el diagrama con la palabra <em>ikigai</em>. <a href="https://theviewinside.me/ikigai" target="_blank" rel="noopener noreferrer">theviewinside.me</a>.</li>
+            <li>Kamiya, Mieko. <em>Ikigai ni tsuite</em> (1966). Texto fundacional del estudio del ikigai.</li>
+            <li>Entrada general: <a href="https://en.wikipedia.org/wiki/Ikigai" target="_blank" rel="noopener noreferrer">Ikigai (Wikipedia)</a>.</li>
+          </ol>
+          <p class="nota-editorial">El origen del diagrama y la descripción de las zonas se apoyan en las fuentes citadas. La lectura de las zonas y la distinción entre Ikigai Activo e Ikigai Consciente son una elaboración propia de IKIGAIER. Última actualización: 25 de octubre de 2026.</p>
+        </div>
+
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de IKIGAIER" width="150" height="113" aria-hidden="true" decoding="async">
+    </picture>
+    <p>IKIGAIER · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <button type="button" class="iki-cookies-config" data-cookies-config>Configurar cookies</button></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← volver a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/guia.js?v=6" defer></script>
+  <script src="/assets/js/cookies.js?v=2" defer></script>
+</body>
+</html>

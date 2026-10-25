@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Si no encuentras tu ikigai, quizá el problema está en el método. Por qué el centro sale vacío, qué dice la psicología y cómo descubrir tu ikigai sin él.">
+  <title>No encuentro mi ikigai: qué hacer cuando el centro sale vacío | IKIGAIER</title>
+  <link rel="canonical" href="https://www.ikigaier.com/es/blog/no-encuentro-mi-ikigai/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/blog/no-encuentro-mi-ikigai/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/blog/no-encuentro-mi-ikigai/">
+
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="IKIGAIER">
+
+
+
+  <meta property="og:title" content="No encuentro mi ikigai: qué hacer cuando el centro sale vacío">
+  <meta property="og:description" content="Por qué el centro del diagrama del ikigai sale vacío tan a menudo y qué mirar en su lugar.">
+  <meta property="og:url" content="https://www.ikigaier.com/es/blog/no-encuentro-mi-ikigai/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="No encuentro mi ikigai: qué hacer cuando el centro sale vacío">
+  <meta name="twitter:description" content="Por qué el centro del diagrama del ikigai sale vacío tan a menudo y qué mirar en su lugar.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=13">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+  <link rel="stylesheet" href="/assets/css/article.css?v=2">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "IKIGAIER",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "IKIGAIER",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "Proyecto editorial sobre el ikigai consciente. Libros, test y taller para unir el hacer y el ser.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/"
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "description": "Autor y creador de IKIGAIER. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.ikigaier.com/es/blog/no-encuentro-mi-ikigai/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/es/blog/no-encuentro-mi-ikigai/",
+      "headline": "No encuentro mi ikigai: qué hacer cuando el centro sale vacío",
+      "description": "Por qué el centro del diagrama del ikigai sale vacío tan a menudo y qué mirar en su lugar.",
+      "inLanguage": "es",
+      "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "articleSection": "Zona ikigai",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Ikigai"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/blog/no-encuentro-mi-ikigai/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.ikigaier.com/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "No encuentro mi ikigai",
+          "item": "https://www.ikigaier.com/es/blog/no-encuentro-mi-ikigai/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/es/" class="site-header-logo" aria-label="IKIGAIER · Inicio">
+        <picture>
+          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-600.png" alt="IKIGAIER" width="293" height="92" fetchpriority="high">
+        </picture>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="/es/talleres/">Talleres</a>
+        <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/blog/" aria-current="page">Blog</a>
+        <a href="/es/manel-rueda/">Autor</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/es/test-de-ikigai/" class="nav-destacado">Test ikigai gratis</a>
+        <a href="/ca/blog/" hreflang="ca" lang="ca" class="nav-idioma" title="Català" aria-label="Català"><span class="nav-idioma-corto" aria-hidden="true">CA</span><span class="nav-idioma-largo">Català</span></a>
+        <a href="/en/blog/" hreflang="en" lang="en" class="nav-idioma" title="English" aria-label="English"><span class="nav-idioma-corto" aria-hidden="true">EN</span><span class="nav-idioma-largo">English</span></a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/blog/">Blog</a><span aria-hidden="true">›</span><span>No encuentro mi ikigai</span>
+  </nav>
+
+  <main id="contenido">
+    <article class="article-wrap">
+
+      <header class="article-head">
+        <h1>No encuentro mi ikigai: qué hacer cuando el centro sale vacío</h1>
+        <p class="article-standfirst">Es la conclusión a la que llega mucha gente después de hacer el ejercicio de los cuatro círculos. Casi nunca significa lo que parece.</p>
+        <div class="article-byline">
+          <span class="author"><a href="/es/manel-rueda/">Manel Rueda</a></span>
+          <span class="role">Autor y creador de IKIGAIER</span>
+          <time datetime="2026-10-25">25 de octubre de 2026</time>
+        </div>
+      </header>
+
+      <div class="prose">
+
+        <p>Llegas a esta frase después de haberlo intentado. Has dibujado los cuatro círculos, has hecho listas, quizá algún test, y el centro sigue vacío. La sensación se parece a la de suspender un examen que todos los demás dicen haber aprobado.</p>
+
+        <p>Antes de seguir buscando, merece la pena revisar qué se está buscando y dónde. Cuando alguien dice «no encuentro mi ikigai», muchas veces está describiendo un problema del método más que de su vida.</p>
+
+        <h2 id="por-que-vacio">Por qué el centro sale vacío</h2>
+
+        <p>La primera razón es geométrica. La <a href="/es/blog/zona-ikigai/">zona ikigai</a> es la región más pequeña del diagrama, y exige que cuatro condiciones se cumplan a la vez y de forma estable. Que ese punto salga vacío es lo esperable, no una anomalía tuya.</p>
+
+        <p>La segunda es que el diagrama le pide al trabajo que lo resuelva todo. Talento, utilidad, entusiasmo y sueldo en el mismo sitio. Cuando el empleo no da para tanto, la conclusión automática es que te falta propósito, cuando a lo mejor solo hace falta separar las cuentas.</p>
+
+        <p>La tercera es más sutil. Se busca el ikigai como quien busca una respuesta definitiva, una palabra que quepa en una tarjeta. En su origen japonés se parece más a una colección de razones pequeñas que a una sola grande, y buscar la grande hace invisibles las pequeñas.</p>
+
+        <h2 id="lo-que-me-paso">Lo que me pasó con los cuatro círculos</h2>
+
+        <p>Vengo de la ingeniería y de muchos años de dirección en empresas. Cuando conocí el diagrama lo traté como trataba cualquier problema técnico. Definir las variables, rellenar las casillas, buscar la intersección. Durante un tiempo funcionó, o eso creía, porque mi vida profesional encajaba.</p>
+
+        <p>Luego llegó un cambio profesional de los que lo ponen todo patas arriba, y el diagrama dejó de darme respuestas. Los círculos seguían ahí, pero ya no sabía qué escribir dentro. Fue entonces cuando empecé a ver que mezclaba dos preguntas distintas, y que la segunda no tenía casilla.</p>
+
+        <h2 id="dos-preguntas">Dos preguntas en lugar de una</h2>
+
+        <p>La primera pregunta es qué haces. A qué dedicas el tiempo, qué se te da bien, a quién sirves, de qué vives. Es la que el diagrama sabe hacer, y en IKIGAIER la llamamos <em>Ikigai Activo</em>.</p>
+
+        <p>La segunda es desde dónde lo haces. Con qué presencia, con qué coherencia, cuánto de ti hay en lo que haces cada día. Es el <em>Ikigai Consciente</em>, una distinción propia que no viene de la tradición japonesa, y ningún círculo la recoge. Hay quien tiene la primera bastante resuelta y siente que algo no encaja, y hay quien tiene un trabajo modesto y vive con una claridad envidiable. Cuando el centro sale vacío, a veces lo que está vacío es la segunda pregunta.</p>
+
+        <h2 id="psicologia">Lo que dice la psicología del ikigai</h2>
+
+        <p>Mieko Kamiya, la psiquiatra que empezó a estudiar el ikigai en 1966, separaba dos cosas que solemos confundir. Por un lado están las fuentes del ikigai, aquello de lo que una persona saca razones para vivir. Por otro, lo que ella llamó <em>ikigai-kan</em>, la sensación de que tu vida vale la pena. Se pueden tener fuentes y no sentir nada, sobre todo en épocas de cansancio o de pérdida, y se puede sentir sin saber explicar de dónde viene.</p>
+
+        <p>Para quien no encuentra su ikigai, esta distinción de la psicología ayuda bastante. A veces no faltan las razones. Falta la sensación, y esa rara vez aparece rellenando casillas.</p>
+
+        <h2 id="que-hacer">Qué hacer mientras tanto</h2>
+
+        <p>Hay cosas que ayudan más que volver a rellenar el diagrama una vez más.</p>
+
+        <ul>
+          <li><strong>Baja la escala.</strong> Kamiya lo buscó en personas que vivían aisladas en un sanatorio, en condiciones muy duras. Si allí había razones para levantarse, también las hay en una tarde corriente. Busca las pequeñas antes que la grande.</li>
+          <li><strong>Separa sostén y sentido.</strong> Tu trabajo puede pagar las facturas y el sentido ocurrir en otra parte. Revisa si le estás exigiendo a tu empleo algo que nunca prometió (lo desarrollo en <a href="/es/blog/ikigai-en-el-trabajo/">ikigai en el trabajo</a>).</li>
+          <li><strong>Ten en cuenta el momento.</strong> Después de una pérdida, un despido o un cambio grande, es normal que nada tenga sabor durante un tiempo. Buscar el ikigai en plena tormenta suele dar resultados pobres, y a veces toca primero sostenerse.</li>
+          <li><strong>Observa antes de decidir.</strong> Si quieres descubrir tu ikigai sin el diagrama, las preguntas de <a href="/es/blog/como-encontrar-tu-ikigai/">cómo encontrar tu ikigai</a> funcionan mejor vividas durante una semana que contestadas en una tarde.</li>
+        </ul>
+
+        <p>Una advertencia honesta. Si la sensación de vacío viene con una tristeza que no se va, con cansancio constante o con falta de ganas de casi todo, puede que el problema no sea de propósito. En ese caso lo sensato es hablarlo con un profesional de la salud, porque el ikigai no sustituye esa ayuda.</p>
+
+        <div class="cta-linea">
+          <p>Si quieres un punto de partida, el test de ikigai es gratuito y sin registro. No te dice cuál es tu ikigai, te muestra desde dónde empiezas.</p>
+          <a href="/es/test-de-ikigai/" class="btn">Hacer el test de ikigai gratis →</a>
+        </div>
+
+        <p>Para entender qué hay alrededor del centro, lee <a href="/es/blog/pasion-mision-vocacion-profesion/">pasión, misión, vocación y profesión</a>. Y para el marco completo, <a href="/es/ikigai/">qué es el ikigai</a>.</p>
+
+        <h2 id="fuentes">Fuentes</h2>
+
+        <div class="fuentes">
+          <ol>
+            <li>Kamiya, Mieko. <em>Ikigai ni tsuite</em> (1966). Texto fundacional del estudio del ikigai.</li>
+            <li>Winn, Marc. «What is your ikigai?» (2014). Artículo que asoció el diagrama con la palabra <em>ikigai</em>. <a href="https://theviewinside.me/ikigai" target="_blank" rel="noopener noreferrer">theviewinside.me</a>.</li>
+            <li>Entrada general: <a href="https://en.wikipedia.org/wiki/Ikigai" target="_blank" rel="noopener noreferrer">Ikigai (Wikipedia)</a>.</li>
+          </ol>
+          <p class="nota-editorial">Los datos sobre el origen del diagrama y sobre Mieko Kamiya se apoyan en las fuentes citadas. La distinción entre Ikigai Activo e Ikigai Consciente es una elaboración propia de IKIGAIER. Última actualización: 25 de octubre de 2026.</p>
+        </div>
+
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de IKIGAIER" width="150" height="113" aria-hidden="true" decoding="async">
+    </picture>
+    <p>IKIGAIER · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <button type="button" class="iki-cookies-config" data-cookies-config>Configurar cookies</button></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← volver a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/guia.js?v=6" defer></script>
+  <script src="/assets/js/cookies.js?v=2" defer></script>
+</body>
+</html>

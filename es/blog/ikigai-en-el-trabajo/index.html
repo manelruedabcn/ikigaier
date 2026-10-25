@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Cómo vivir el ikigai en el trabajo sin pedirle a tu empleo que lo resuelva todo. Qué parte del diagrama le toca y cómo vivir con propósito fuera de él.">
+  <title>Ikigai en el trabajo: lo que tu empleo puede darte y lo que no | IKIGAIER</title>
+  <link rel="canonical" href="https://www.ikigaier.com/es/blog/ikigai-en-el-trabajo/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/blog/ikigai-en-el-trabajo/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/blog/ikigai-en-el-trabajo/">
+
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="IKIGAIER">
+
+
+
+  <meta property="og:title" content="Ikigai en el trabajo: lo que tu empleo puede darte y lo que no">
+  <meta property="og:description" content="Qué parte del ikigai puede vivir dentro de tu trabajo, qué parte no y cómo encontrar sentido en el empleo que ya tienes.">
+  <meta property="og:url" content="https://www.ikigaier.com/es/blog/ikigai-en-el-trabajo/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ikigai en el trabajo: lo que tu empleo puede darte y lo que no">
+  <meta name="twitter:description" content="Qué parte del ikigai puede vivir dentro de tu trabajo, qué parte no y cómo encontrar sentido en el empleo que ya tienes.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=13">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+  <link rel="stylesheet" href="/assets/css/article.css?v=2">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "IKIGAIER",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "IKIGAIER",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "Proyecto editorial sobre el ikigai consciente. Libros, test y taller para unir el hacer y el ser.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/"
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "description": "Autor y creador de IKIGAIER. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.ikigaier.com/es/blog/ikigai-en-el-trabajo/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/es/blog/ikigai-en-el-trabajo/",
+      "headline": "Ikigai en el trabajo: lo que tu empleo puede darte y lo que no",
+      "description": "Qué parte del ikigai puede vivir dentro de tu trabajo, qué parte no y cómo encontrar sentido en el empleo que ya tienes.",
+      "inLanguage": "es",
+      "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "articleSection": "Ikigai y trabajo",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Ikigai"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/blog/ikigai-en-el-trabajo/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.ikigaier.com/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ikigai en el trabajo",
+          "item": "https://www.ikigaier.com/es/blog/ikigai-en-el-trabajo/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/es/" class="site-header-logo" aria-label="IKIGAIER · Inicio">
+        <picture>
+          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-600.png" alt="IKIGAIER" width="293" height="92" fetchpriority="high">
+        </picture>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="/es/talleres/">Talleres</a>
+        <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/blog/" aria-current="page">Blog</a>
+        <a href="/es/manel-rueda/">Autor</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/es/test-de-ikigai/" class="nav-destacado">Test ikigai gratis</a>
+        <a href="/ca/blog/" hreflang="ca" lang="ca" class="nav-idioma" title="Català" aria-label="Català"><span class="nav-idioma-corto" aria-hidden="true">CA</span><span class="nav-idioma-largo">Català</span></a>
+        <a href="/en/blog/" hreflang="en" lang="en" class="nav-idioma" title="English" aria-label="English"><span class="nav-idioma-corto" aria-hidden="true">EN</span><span class="nav-idioma-largo">English</span></a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/blog/">Blog</a><span aria-hidden="true">›</span><span>Ikigai en el trabajo</span>
+  </nav>
+
+  <main id="contenido">
+    <article class="article-wrap">
+
+      <header class="article-head">
+        <h1>Ikigai en el trabajo: lo que tu empleo puede darte y lo que no</h1>
+        <p class="article-standfirst">El diagrama del ikigai que circula por Occidente es, en el fondo, un mapa del trabajo. Por eso conviene saber qué parte del sentido le corresponde a tu empleo y cuál vive en otro sitio.</p>
+        <div class="article-byline">
+          <span class="author"><a href="/es/manel-rueda/">Manel Rueda</a></span>
+          <span class="role">Autor y creador de IKIGAIER</span>
+          <time datetime="2026-10-25">25 de octubre de 2026</time>
+        </div>
+      </header>
+
+      <div class="prose">
+
+        <p>Buena parte de lo que se escribe sobre el ikigai en el trabajo parte de una promesa implícita. Si encuentras el empleo adecuado, el que amas, se te da bien, sirve y te paga, todo lo demás se ordena solo. Es una promesa atractiva y bastante injusta con el trabajo, que no está pensado para cargar con tanto.</p>
+
+        <p>Aquí propongo otra forma de mirarlo. Qué parte del ikigai puede vivir dentro de tu empleo, qué parte no, y cómo encontrar sentido en el trabajo que ya tienes sin esperar al trabajo perfecto.</p>
+
+        <h2 id="que-parte-cabe">Qué parte del ikigai cabe en un trabajo</h2>
+
+        <p>Si miras <a href="/es/blog/diagrama-ikigai/">el diagrama</a>, dos de sus cuatro círculos hablan directamente de empleo, lo que se te da bien y aquello por lo que te pagan. Su cruce se llama profesión (las <a href="/es/blog/pasion-mision-vocacion-profesion/">cuatro zonas del ikigai</a> están explicadas aquí). Los otros dos, lo que amas y lo que el mundo necesita, pueden entrar en el trabajo, aunque no tienen por qué.</p>
+
+        <p>En IKIGAIER a todo esto lo llamamos <em>Ikigai Activo</em>, el hacer. Un trabajo puede darte mucho Ikigai Activo. Oficio, utilidad, reconocimiento, compañeros, una razón para levantarte un lunes. Lo que no puede garantizarte es la otra mitad, desde dónde vives todo eso, que es lo que llamamos <em>Ikigai Consciente</em> y que depende bastante más de ti que de la empresa.</p>
+
+        <h2 id="todo-en-el-empleo">Cuando todo el sentido está en el empleo</h2>
+
+        <p>Hay una imagen que uso para esto. Estás subido a una escalera pintando el techo, con toda la atención puesta arriba, y alguien se lleva la escalera. Te quedas agarrado de la brocha. Es lo que ocurre cuando todo el sentido de una vida depende de un solo cargo o de una sola empresa, y eso desaparece.</p>
+
+        <p>No hace falta un despido para notarlo. Basta un cambio de jefe o una reorganización. Quien había repartido su sentido entre varias zonas encaja el golpe con más margen. Quien lo tenía todo en el trabajo pierde de una vez el sueldo y la razón.</p>
+
+        <h2 id="un-trabajo-que-apretaba">Lo que aprendí en un trabajo que me apretaba</h2>
+
+        <p>En una etapa de mi vida profesional estuve en un entorno que me encajaba en un molde que no era el mío. Cumplía, el trabajo salía, y me reconocía cada vez menos en lo que hacía. Hasta que un día me dije una frase que todavía recuerdo palabra por palabra.</p>
+
+        <div class="reflexion">
+          <p>«Mañana Manel será Manel, guste o no.»</p>
+        </div>
+
+        <p>El trabajo no cambió aquel día. Cambió desde dónde lo hacía. De esa frase, de algún modo, nace IKIGAIER.</p>
+
+        <h2 id="encontrar-sentido">Cómo encontrar ikigai en el trabajo que ya tienes</h2>
+
+        <p>Antes de pensar en cambiar de empleo, merece la pena mirar el que tienes con otros ojos.</p>
+
+        <ul>
+          <li><strong>Busca el trozo concreto.</strong> Rara vez el sentido está en el puesto entero. Suele estar en una parte, como formar a alguien de tu equipo o resolver el problema de verdad de un cliente (hay más casos en <a href="/es/blog/ejemplos-de-ikigai/">ejemplos de ikigai</a>).</li>
+          <li><strong>Pregúntate desde dónde lo haces.</strong> La misma tarea se vive distinto hecha con prisa y miedo que hecha con atención. Esa parte depende de ti.</li>
+          <li><strong>Deja que el sueldo sostenga otras zonas.</strong> Un trabajo correcto que te da tiempo y estabilidad para una misión fuera del horario es un buen trato, aunque no salga en el centro del diagrama. Vivir con propósito no exige que el propósito te pague.</li>
+          <li><strong>Revisa cada cierto tiempo.</strong> Lo que te da sentido a los treinta no coincide con lo que te lo da a los cincuenta. El encaje se mueve, y el diagrama de hoy caduca.</li>
+        </ul>
+
+        <p>Y una excepción honesta. A veces el problema es el trabajo, sin más. Si lo que te pide va contra tus valores o te está desgastando la salud, ningún cambio de mirada lo arregla, y plantearte salir es razonable. El ikigai no obliga a quedarse ni a irse. Ayuda a ver con más claridad qué estás decidiendo.</p>
+
+        <div class="cta-linea">
+          <p>Si quieres ver cuánto de tu ikigai está puesto en el trabajo y cuánto fuera, el test es un buen punto de partida.</p>
+          <a href="/es/test-de-ikigai/" class="btn">Hacer el test de ikigai gratis →</a>
+        </div>
+
+        <p>Si sientes que el centro del diagrama no te sale, sigue por <a href="/es/blog/no-encuentro-mi-ikigai/">qué hacer cuando no encuentras tu ikigai</a>. Y para entender por qué ese centro es tan exigente, <a href="/es/blog/zona-ikigai/">la zona ikigai</a>.</p>
+
+        <h2 id="fuentes">Fuentes</h2>
+
+        <div class="fuentes">
+          <ol>
+            <li>Winn, Marc. «What is your ikigai?» (2014). Artículo que asoció el diagrama con la palabra <em>ikigai</em>. <a href="https://theviewinside.me/ikigai" target="_blank" rel="noopener noreferrer">theviewinside.me</a>.</li>
+            <li>Kamiya, Mieko. <em>Ikigai ni tsuite</em> (1966). Texto fundacional del estudio del ikigai.</li>
+            <li>Entrada general: <a href="https://en.wikipedia.org/wiki/Ikigai" target="_blank" rel="noopener noreferrer">Ikigai (Wikipedia)</a>.</li>
+          </ol>
+          <p class="nota-editorial">El origen del diagrama se apoya en las fuentes citadas. La lectura del ikigai en el trabajo y la distinción entre Ikigai Activo e Ikigai Consciente son una elaboración propia de IKIGAIER. Última actualización: 25 de octubre de 2026.</p>
+        </div>
+
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de IKIGAIER" width="150" height="113" aria-hidden="true" decoding="async">
+    </picture>
+    <p>IKIGAIER · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <button type="button" class="iki-cookies-config" data-cookies-config>Configurar cookies</button></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← volver a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/guia.js?v=6" defer></script>
+  <script src="/assets/js/cookies.js?v=2" defer></script>
+</body>
+</html>
