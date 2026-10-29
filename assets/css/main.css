@@ -1721,3 +1721,6 @@ img {
 .placeholder-taller h2 { font-size: clamp(1.9rem, 6vw, 2.4rem); margin-bottom: 0.8rem; }
 .placeholder-taller p { color: var(--texto-principal); line-height: var(--lh-lectura); }
 .placeholder-taller .btn { margin-top: 0.6rem; }
+
+/* Enlace al programa bajo el test (portada) */
+.taller-section-nota a { color: var(--negro); text-decoration: underline; text-decoration-color: var(--coral); text-underline-offset: 0.2em; }
