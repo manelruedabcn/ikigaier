@@ -196,9 +196,9 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       <p class="taller-hook">Has hecho mucho. ¿Y cómo te sientes en la vida que has construido?</p>
       <p class="taller-hero-subtitle">Cuatro horas para escucharte, reconocer qué importa ahora y elegir cómo quieres vivir esta etapa.</p>
       <p class="taller-hero-subtitle">Inspirado en el libro <a href="/es/libros/el-ikigai-que-no-te-contaron/"><em>El Ikigai que no te contaron</em></a>, de Manel Rueda.</p>
-      <p class="section-label">Presencial · 4 horas · Fechas y precio próximamente</p>
+      <p class="section-label">Domingo 29 de noviembre · 10:00 a 14:00 · Vilanova i la Geltrú</p>
       <div class="taller-hero-ctas">
-        <a href="#info" class="btn btn-primary">Próximas fechas · Avísame</a>
+        <a href="https://www.balanceateexperience.com/service-page/yo-soy-ikigaier" class="btn btn-primary" target="_blank" rel="noopener">Reservar plaza</a>
         <a href="#recorrido" class="btn">Ver el recorrido</a>
       </div>
     </div>
@@ -286,7 +286,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         <div class="taller-fase-header">
           <span class="taller-fase-etiqueta">Qué te llevas</span>
         </div>
-        <p class="taller-fase-desc">Te llevas una dirección que empieza a ser tuya y un primer paso para vivirla.</p>
+        <p class="taller-fase-desc">Te llevas tu IKIBOARD, la carta que te escribes al empezar y un primer paso con día y hora.</p>
       </div>
     </div>
   </section>
@@ -338,11 +338,13 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
   <section id="info" class="taller-cta-final" aria-label="Información y contacto">
     <div class="container">
       <h2>Date cuatro horas para escuchar lo que llevas tiempo posponiendo.</h2>
-      <p class="lead">Fechas, lugar y precio: más detalles próximamente. Déjanos tu email y te avisaremos en cuanto abramos plazas.</p>
+      <p class="lead">Primera edición: domingo 29 de noviembre de 2026, de 10:00 a 14:00, en BalanceaTe (Carrer de la Mercè, 4, Vilanova i la Geltrú). 59 € hasta el 15 de noviembre; 69 € a partir del 16. Plazas limitadas.</p>
+      <div class="taller-hero-ctas" style="justify-content:center;margin:1.5rem 0 1rem"><a href="https://www.balanceateexperience.com/service-page/yo-soy-ikigaier" class="btn btn-primary" target="_blank" rel="noopener">Reservar plaza</a></div>
+      <p class="taller-contacto-nota" style="text-align:center">Ese domingo hay elecciones generales: puedes votar antes de venir o al salir (los colegios abren de 9:00 a 20:00).</p>
 
       <div class="taller-contacto">
         <div class="taller-contacto-item">
-          <h3 id="taller-email-label">Déjanos tu email</h3>
+          <h3 id="taller-email-label">¿No puedes el 29? Déjanos tu email</h3>
           <form class="taller-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
             <input type="hidden" name="_next" value="https://www.ikigaier.com/es/taller/?success=1">
             <input type="hidden" name="_subject" value="Interés taller YO SOY IKIGAIER">
@@ -389,7 +391,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       if (params.get('success') === '1') {
         var msg = document.getElementById('taller-msg');
         if (msg) {
-          msg.textContent = 'Gracias. Te avisaremos en cuanto abramos plazas.';
+          msg.textContent = 'Gracias. Te avisaremos de la próxima edición.';
           msg.hidden = false;
         }
         var url = new URL(window.location.href);
