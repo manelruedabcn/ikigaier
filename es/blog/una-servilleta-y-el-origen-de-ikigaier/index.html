@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Cómo descubrí el ikigai en un artículo de Marc Winn y acabé dibujando cuatro círculos en una servilleta para explicárselo a mis hijos.">
+  <title>Una servilleta y el origen de IKIGAIER | IKIGAIER</title>
+  <link rel="canonical" href="https://www.ikigaier.com/es/blog/una-servilleta-y-el-origen-de-ikigaier/">
+
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="IKIGAIER">
+
+  <meta property="og:locale:alternate" content="ca_ES">
+
+  <meta property="og:locale:alternate" content="en_GB">
+
+  <meta property="og:title" content="Una servilleta y el origen de IKIGAIER">
+  <meta property="og:description" content="Cómo descubrí el ikigai en un artículo de Marc Winn y acabé dibujando cuatro círculos en una servilleta para explicárselo a mis hijos.">
+  <meta property="og:url" content="https://www.ikigaier.com/es/blog/una-servilleta-y-el-origen-de-ikigaier/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Una servilleta y el origen de IKIGAIER">
+  <meta name="twitter:description" content="Cómo descubrí el ikigai en un artículo de Marc Winn y acabé dibujando cuatro círculos en una servilleta para explicárselo a mis hijos.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="IKIGAIER · El ikigai que no te contaron · por Manel Rueda">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=14">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+  <link rel="stylesheet" href="/assets/css/article.css?v=4">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "IKIGAIER",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "IKIGAIER",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "Proyecto editorial sobre el ikigai consciente. Libros, test y taller para unir el hacer y el ser.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/"
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "description": "Autor y creador de IKIGAIER. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.ikigaier.com/es/blog/una-servilleta-y-el-origen-de-ikigaier/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/es/blog/una-servilleta-y-el-origen-de-ikigaier/",
+      "headline": "Una servilleta y el origen de IKIGAIER",
+      "description": "Cómo descubrí el ikigai en un artículo de Marc Winn y acabé dibujando cuatro círculos en una servilleta para explicárselo a mis hijos.",
+      "inLanguage": "es",
+      "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "articleSection": "Origen de IKIGAIER",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Ikigai"
+      },
+      "mentions": [
+        {
+          "@type": "Person",
+          "name": "Andrés Zuzunaga"
+        },
+        {
+          "@type": "Person",
+          "name": "Marc Winn"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/blog/una-servilleta-y-el-origen-de-ikigaier/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.ikigaier.com/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Una servilleta y el origen de IKIGAIER",
+          "item": "https://www.ikigaier.com/es/blog/una-servilleta-y-el-origen-de-ikigaier/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/es/" class="site-header-logo" aria-label="IKIGAIER · Inicio">
+        <picture>
+          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-600.png" alt="IKIGAIER" width="293" height="92" fetchpriority="high">
+        </picture>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="/es/talleres/">Talleres</a>
+        <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/blog/" aria-current="page">Blog</a>
+        <a href="/es/manel-rueda/">Autor</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/es/test-de-ikigai/" class="nav-destacado">Test ikigai gratis</a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/blog/">Blog</a><span aria-hidden="true">›</span><span>Una servilleta y el origen de IKIGAIER</span>
+  </nav>
+
+  <main id="contenido">
+    <article class="article-wrap">
+
+      <header class="article-head">
+        <h1>Una servilleta y el origen de IKIGAIER</h1>
+        <p class="article-standfirst">Cómo descubrí el ikigai en un artículo de Marc Winn y acabé dibujando cuatro círculos en una servilleta para explicárselo a mis hijos.</p>
+        <div class="article-byline">
+          <span class="author"><a href="/es/manel-rueda/">Manel Rueda</a></span>
+          <span class="role">Autor y creador de IKIGAIER</span>
+          <time datetime="2026-11-03">3 de noviembre de 2026</time>
+        </div>
+      </header>
+
+      <div class="prose">
+        <p>Hace unos diez años llegué a un blog llamado <em>The View Inside</em>. Su autor, Marc Winn, había publicado una reflexión sobre el ikigai acompañada de un sencillo diagrama de cuatro círculos. El artículo se titulaba <a href="https://theviewinside.me/what-is-your-ikigai" target="_blank" rel="noopener noreferrer">«What is your Ikigai?»</a> y se había publicado el 14 de mayo de 2014.</p>
+
+        <p>Aquella imagen me impactó profundamente. Fue ahí donde conecté con el ikigai.</p>
+
+        <h2>Cuatro círculos en una servilleta</h2>
+
+        <p>Hace aproximadamente diez años, cogí una servilleta y les dibujé a mis hijos una versión simplificada de aquellos cuatro círculos. Quería compartir con ellos algo que a mí me había hecho pensar: que encontrar nuestro camino quizá tenía más que ver con conocernos que con decidir qué queríamos ser de mayores.</p>
+
+        <p>Lo que amas. Lo que se te da bien. Lo que el mundo necesita. Aquello por lo que puedes recibir una remuneración. Cuatro preguntas que cabían en una servilleta y abrían una conversación mucho más grande.</p>
+
+        <p>Entonces no podía imaginar que aquella servilleta sería una de las primeras semillas de lo que, años después, acabaría convirtiéndose en IKIGAIER.</p>
+
+        <h2>Reconocer de dónde viene la imagen</h2>
+
+        <p>El diagrama original de los cuatro círculos es de <strong>Andrés Zuzunaga</strong> y nació como un diagrama sobre el propósito. La aportación de <strong>Marc Winn</strong> fue asociar aquella imagen con el ikigai y poner esa palabra en el centro. El propio Winn lo reconoce en una nota añadida a su artículo.</p>
+
+        <p>Esa distinción importa. El dibujo que me ayudó a acercarme al ikigai tiene una historia concreta; no es una representación tradicional japonesa del concepto. En el blog cuento con más detalle <a href="/es/blog/diagrama-ikigai/">el origen y los límites del diagrama de los cuatro círculos</a>.</p>
+
+        <h2>Una primera semilla</h2>
+
+        <p>Hoy, desde IKIGAIER, distingo entre lo que hacemos y desde dónde lo vivimos. El <em>Ikigai Activo</em> tiene que ver con lo que construimos y aportamos. El <em>Ikigai Consciente</em>, con cómo habitamos nuestra propia vida. Es la mirada que desarrollo en este proyecto.</p>
+
+        <p>Vuelvo a aquella servilleta como quien vuelve a una primera pregunta. Una imagen me hizo pensar y quise compartirla con mis hijos. Ahí está una parte del origen de IKIGAIER.</p>
+
+        <div class="fuentes">
+          <p><strong>Fuente y atribución:</strong> Marc Winn, <a href="https://theviewinside.me/what-is-your-ikigai" target="_blank" rel="noopener noreferrer">«What is your Ikigai?»</a>, <em>The View Inside</em>, 14 de mayo de 2014. La nota posterior del autor atribuye el diagrama del propósito a Andrés Zuzunaga y explica la asociación con el ikigai.</p>
+          <p class="nota-editorial">El recuerdo de la servilleta se sitúa hace aproximadamente diez años; la fecha de publicación del artículo de Winn es anterior.</p>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de IKIGAIER" width="150" height="113" aria-hidden="true" decoding="async">
+    </picture>
+    <p>IKIGAIER · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <button type="button" class="iki-cookies-config" data-cookies-config>Configurar cookies</button></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← volver a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/guia.js?v=6" defer></script>
+  <script src="/assets/js/cookies.js?v=2" defer></script>
+</body>
+</html>
