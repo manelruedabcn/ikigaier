@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="ikigaier is the approach to ikigai created by Manel Rueda: it brings together what you do (active ikigai) and how you live it (conscious ikigai). What it means, where it comes from and how to practise it.">
+  <title>What is ikigaier: the ikigai that unites doing and being · Manel Rueda</title>
+  <link rel="canonical" href="https://www.ikigaier.com/en/what-is-ikigaier/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/que-es-ikigaier/">
+  <link rel="alternate" hreflang="ca" href="https://www.ikigaier.com/ca/que-es-ikigaier/">
+  <link rel="alternate" hreflang="en" href="https://www.ikigaier.com/en/what-is-ikigaier/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/que-es-ikigaier/">
+
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="IKIGAIER">
+  <meta property="og:title" content="What is ikigaier: the ikigai that unites doing and being">
+  <meta property="og:description" content="ikigaier is Manel Rueda’s approach that brings together what you do (active ikigai) and how you live it (conscious ikigai).">
+  <meta property="og:url" content="https://www.ikigaier.com/en/what-is-ikigaier/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="ca_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What is ikigaier: the ikigai that unites doing and being">
+  <meta name="twitter:description" content="ikigaier is Manel Rueda’s approach that brings together what you do (active ikigai) and how you live it (conscious ikigai).">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=14">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "IKIGAIER",
+      "alternateName": [
+        "ikigaier",
+        "Ikigaier"
+      ],
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "IKIGAIER",
+      "alternateName": [
+        "ikigaier",
+        "Ikigaier"
+      ],
+      "url": "https://www.ikigaier.com/",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.tiktok.com/@manelbcn68"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.ikigaier.com/en/what-is-ikigaier/#termino",
+      "name": "ikigaier",
+      "alternateName": "IKIGAIER",
+      "description": "Approach to ikigai created by Manel Rueda that brings together active ikigai (what you do and contribute) and conscious ikigai (how you live it). By extension, an ikigaier is someone who learns not to separate the two.",
+      "url": "https://www.ikigaier.com/en/what-is-ikigaier/",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "ikigaier concepts",
+        "url": "https://www.ikigaier.com/en/what-is-ikigaier/"
+      }
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.ikigaier.com/en/what-is-ikigaier/#pagina",
+      "url": "https://www.ikigaier.com/en/what-is-ikigaier/",
+      "name": "What is ikigaier: the ikigai that unites doing and being",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://www.ikigaier.com/en/what-is-ikigaier/#termino"
+        },
+        {
+          "@id": "https://www.ikigaier.com/#organization"
+        }
+      ],
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "dateModified": "2026-11-14"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.ikigaier.com/en/what-is-ikigaier/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does ikigaier mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It’s the approach to ikigai that brings together active ikigai, what you do and contribute, and conscious ikigai, how you live it. An ikigaier is someone who learns not to separate the two."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ikigaier the same as ikigai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Ikigai is a Japanese word usually translated as what makes life worth living. ikigaier is a new word I use to name my way of working with it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who created ikigaier?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I did: Manel Rueda. I’m an engineer, writer and facilitator, and I live near Barcelona."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do I start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With the ikigai test. It’s free, needs no sign-up, and at the end it shows you what holds you up, what needs attention and an exercise for your week."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/en/what-is-ikigaier/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.ikigaier.com/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "What is ikigaier",
+          "item": "https://www.ikigaier.com/en/what-is-ikigaier/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <style>
+    .iki-page { max-width: 760px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+    .breadcrumb {
+      max-width: 760px; margin: 2.5rem auto 0; padding: 0 1.5rem;
+      font-family: 'Inter', sans-serif; font-size: var(--fs-etiqueta); letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--texto-secundario);
+    }
+    .breadcrumb a { color: var(--texto-principal); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--negro); text-decoration: underline; text-underline-offset: 0.2em; }
+    .breadcrumb span[aria-hidden] { margin: 0 0.5rem; opacity: 0.6; }
+    .iki-page h1 { font-size: clamp(2.4rem, 5vw, 3.4rem); margin: 2rem 0 1.2rem; }
+    .iki-body { font-family: 'Inter', sans-serif; }
+    .iki-body h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 2.6rem 0 0.8rem; }
+    .iki-body h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.3rem; margin: 1.6rem 0 0.4rem; }
+    .iki-body p, .iki-body li { font-size: var(--fs-lectura); line-height: 1.75; color: #35322e; }
+    .iki-body p { margin-bottom: 1.1rem; }
+    .iki-body ul { margin: 0 0 1.2rem 1.2rem; }
+    .iki-body li { margin-bottom: 0.5rem; }
+    .iki-body a:not(.btn) { color: var(--negro); text-decoration: underline; text-underline-offset: 0.2em; text-decoration-color: var(--beige); }
+    .iki-body a:not(.btn):hover { text-decoration-color: var(--coral); }
+    .iki-definicion {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 2.6vw, 1.6rem);
+      line-height: 1.5; color: var(--negro); border-left: 2px solid var(--coral);
+      padding: 0.2rem 0 0.2rem 1.2rem; margin: 0 0 1.6rem;
+    }
+    .iki-dos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.2rem 0 1.4rem; }
+    .iki-cara { padding: 1.3rem 1.4rem; border: 1px solid rgba(168,168,168,0.25); border-radius: 4px; }
+    .iki-cara h3 { margin-top: 0; }
+    .iki-cara p { font-size: var(--fs-apoyo); margin-bottom: 0; }
+    .iki-faq h3 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 1.0625rem; margin-top: 1.4rem; }
+    .iki-cta { margin-top: 2.4rem; padding-top: 1.6rem; border-top: 1px solid rgba(168,168,168,0.25); }
+    @media (max-width: 640px) { .iki-dos { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Skip to content</a>
+
+<header class="site-header">
+<div class="site-header-inner">
+<a href="/en/" class="site-header-logo" aria-label="IKIGAIER · Home">
+<picture>
+<source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+<img src="/assets/images/logo-ikigaier-bicolor-600.png" alt="IKIGAIER" width="293" height="92" fetchpriority="high">
+</picture>
+</a>
+<button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<nav class="site-header-nav" id="nav-links" aria-label="Main navigation">
+        <a href="/en/">Home</a>
+        <a href="/en/books/">Books</a>
+        <a href="/en/workshops/">Workshops</a>
+        <a href="/en/ikigai/">Ikigai</a>
+        <a href="/en/what-is-ikigaier/" aria-current="page">What is ikigaier</a>
+        <a href="/en/blog/">Blog</a>
+        <a href="/en/manel-rueda/">About</a>
+        <a href="https://app.ikigaier.com/en/login">Log in</a>
+        <a href="/en/ikigai-test/" class="nav-destacado">Free ikigai test</a>
+        <a href="/es/que-es-ikigaier/" hreflang="es" lang="es" class="nav-idioma" title="Castellano" aria-label="Castellano"><span class="nav-idioma-corto" aria-hidden="true">ES</span><span class="nav-idioma-largo">Castellano</span></a>
+        <a href="/ca/que-es-ikigaier/" hreflang="ca" lang="ca" class="nav-idioma" title="Català" aria-label="Català"><span class="nav-idioma-corto" aria-hidden="true">CA</span><span class="nav-idioma-largo">Català</span></a>
+      </nav>
+</div>
+<div class="nav-overlay" id="nav-overlay"></div>
+</header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/en/">Home</a><span aria-hidden="true">›</span><span>What is ikigaier</span>
+  </nav>
+
+  <main id="contenido">
+    <article class="iki-page">
+
+      <h1>What is ikigaier</h1>
+
+      <div class="iki-body">
+        <p class="iki-definicion">ikigaier is the approach to ikigai that I, Manel Rueda, have created. It starts from a simple idea: ikigai has two sides, what you do and how you live it. An ikigaier is someone who learns not to separate the two.</p>
+
+        <p>The word is new. It isn’t Japanese, and it isn’t a typo for <a href="/en/ikigai/">ikigai</a>: I use it to name a particular way of looking at ikigai, the one I develop in my books, the test and the workshops.</p>
+
+        <h2>The two sides of ikigai</h2>
+        <p>The ikigai you find online, the one with four overlapping circles, describes what we do fairly well. What it misses is where we do it from. That’s why I distinguish two dimensions. It’s my own elaboration, not a Japanese tradition.</p>
+        <div class="iki-dos">
+          <div class="iki-cara">
+            <h3>active ikigai</h3>
+            <p>The dimension of doing: what you build, what you produce, what you give to others. It’s what the popular diagram tries to organise.</p>
+          </div>
+          <div class="iki-cara">
+            <h3>conscious ikigai</h3>
+            <p>The dimension of being: the presence and coherence with which you live what you do. It isn’t measured in achievements.</p>
+          </div>
+        </div>
+        <p>You can have plenty of the first and very little of the second. It’s what happens to many people who have achieved almost everything and still feel something doesn’t fit.</p>
+
+        <h2>Where it comes from</h2>
+        <p>About ten years ago I drew four circles on a napkin to explain them to my children. Around the same years, while living in Querétaro, Mexico, I woke one morning with an unease I couldn’t place: I had achieved almost everything I had set out to do, and the sums didn’t add up.</p>
+        <p>Over the years I realised the diagram helped me organise what I did, but told me nothing about how I was living it. ikigaier grew out of that search. I tell more of my story on <a href="/en/manel-rueda/">my About page</a>.</p>
+
+        <h2>How it’s practised</h2>
+        <p>ikigaier is practised alone and in a group:</p>
+        <ul>
+          <li>The <a href="/en/ikigai-test/">free ikigai test</a>: 16 questions on both sides of ikigai.</li>
+          <li>The <a href="/en/free-ikigai-program/">free one-month programme</a>, with exercises by email.</li>
+          <li>The <a href="/en/books/">books</a> (in Spanish): <em>No todo lo que te frena es tuyo</em>, <em>Disciplina para indisciplinados</em>, <em>El Ikigai que no te contaron</em> and the workbook <em>Camina sin separarte de ti</em>.</li>
+          <li>The <a href="/en/workshops/">in-person workshops</a>, where we practise the method’s five gestures: stopping and listening, looking at where you’ve drifted from yourself, recognising the masks, coming down from the mind into the body, and choosing a first step.</li>
+        </ul>
+
+        <h2>What ikigaier is not</h2>
+        <p>It isn’t coaching or therapy, and I’m not a psychologist. It won’t tell you what to do with your life, nor does it promise you’ll find meaning in a weekend. It’s a way of looking, with simple tools, that I share from my own experience.</p>
+
+        <section class="iki-faq" aria-labelledby="faq-h">
+          <h2 id="faq-h">Frequently asked questions</h2>
+          <h3>What does ikigaier mean?</h3>
+          <p>It’s the approach to ikigai that brings together active ikigai, what you do and contribute, and conscious ikigai, how you live it. An ikigaier is someone who learns not to separate the two.</p>
+          <h3>Is ikigaier the same as ikigai?</h3>
+          <p>No. Ikigai is a Japanese word usually translated as what makes life worth living. ikigaier is a new word I use to name my way of working with it.</p>
+          <h3>Who created ikigaier?</h3>
+          <p>I did: Manel Rueda. I’m an engineer, writer and facilitator, and I live near Barcelona.</p>
+          <h3>Where do I start?</h3>
+          <p>With the <a href="/en/ikigai-test/">ikigai test</a>. It’s free, needs no sign-up, and at the end it shows you what holds you up, what needs attention and an exercise for your week.</p>
+        </section>
+
+        <div class="iki-cta">
+          <a href="/en/ikigai-test/" class="btn btn-primary">Take the ikigai test →</a>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+<footer class="site-footer">
+<picture>
+<source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+<img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="IKIGAIER wave" width="150" height="113" aria-hidden="true" decoding="async">
+</picture>
+<p>IKIGAIER · Manel Rueda · 2026</p>
+<p class="footer-legal"><a href="/en/privacy/">Privacy policy</a> · <a href="/en/cookies/">Cookie policy</a> · <button type="button" class="iki-cookies-config" data-cookies-config>Cookie settings</button></p>
+<a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← back to manelrueda.com</a>
+</footer>
+<script src="/assets/js/main.js?v=2" defer=""></script>
+<script src="/assets/js/guia.js?v=6" defer></script>
+  <script src="/assets/js/cookies.js?v=2" defer></script>
+</body>
+</html>
