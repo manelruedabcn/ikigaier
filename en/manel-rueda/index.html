@@ -75,7 +75,11 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "potentialAction": {
         "@type": "ReadAction",
         "target": "https://www.ikigaier.com/en/blog/"
-      }
+      },
+      "alternateName": [
+        "ikigaier",
+        "Ikigaier"
+      ]
     },
     {
       "@type": "Organization",
@@ -90,7 +94,8 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "sameAs": [
         "https://manelrueda.com",
         "https://ikigaier.substack.com",
-        "https://www.instagram.com/manel_rueda/"
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.tiktok.com/@manelbcn68"
       ],
       "email": "hola@ikigaier.com",
       "contactPoint": {
@@ -106,7 +111,11 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "ES"
-      }
+      },
+      "alternateName": [
+        "ikigaier",
+        "Ikigaier"
+      ]
     },
     {
       "@type": "ProfilePage",
@@ -128,12 +137,15 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "url": "https://www.ikigaier.com/en/manel-rueda/",
       "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
       "jobTitle": "Author",
-      "description": "Author and creator of IKIGAIER. Engineer, writer and facilitator. He writes about ikigai, purpose and bringing doing and being together. Author of El Ikigai que no te contaron and Camina sin separarte de ti.",
+      "description": "Author and creator of ikigaier. Engineer, writer and facilitator. A senior manager since the age of 28, with an international career in Japanese, German, French, Indian and Dutch multinationals, between Spain and Latin America. Writes about ikigai, purpose and bringing doing and being together.",
       "worksFor": {
         "@id": "https://www.ikigaier.com/#organization"
       },
       "knowsAbout": [
         "Ikigai",
+        "ikigaier",
+        "People management",
+        "Personal growth",
         "Purpose",
         "Self-knowledge",
         "Personal development"
@@ -142,6 +154,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://manelrueda.com",
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/",
+        "https://www.tiktok.com/@manelbcn68",
         "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
       ],
       "address": {
@@ -253,6 +266,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
     .obra h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.25rem; margin: 0 0 0.3rem; }
     .obra p { font-size: var(--fs-apoyo); color: var(--texto-principal); line-height: 1.65; margin-bottom: 0.6rem; }
     .obra a { font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: var(--negro); text-decoration: none; border-bottom: 1px solid var(--coral); padding-bottom: 1px; }
+    .autor-body h3.faq-autor { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 1.0625rem; margin: 1.4rem 0 0.4rem; }
     .autor-contacto { margin-top: 2.4rem; padding-top: 1.6rem; border-top: 1px solid rgba(168,168,168,0.25); }
     .autor-contacto p { font-size: 1.0625rem; color: var(--texto-principal); margin-bottom: 0.5rem; }
     .autor-contacto a { color: var(--negro); text-decoration: underline; text-underline-offset: 0.2em; }
@@ -261,6 +275,39 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       .obras { grid-template-columns: 1fr; }
     }
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.ikigaier.com/en/manel-rueda/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is Manel Rueda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An engineer, writer and facilitator. A senior manager since the age of 28, with an international career in Japanese, German, French, Indian and Dutch multinationals. He created ikigaier and wrote El Ikigai que no te contaron."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you a coach or a psychologist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. I don’t call myself a coach or a guru, and I’m not a psychologist. I write and accompany from experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is ikigaier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The approach to ikigai I created: it brings together what you do (active ikigai) and how you live it (conscious ikigai). I explain it in what is ikigaier."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#contenido">Skip to content</a>
@@ -282,6 +329,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         <a href="/en/books/">Books</a>
         <a href="/en/workshops/">Workshops</a>
         <a href="/en/ikigai/">Ikigai</a>
+        <a href="/en/what-is-ikigaier/">What is ikigaier</a>
         <a href="/en/blog/">Blog</a>
         <a href="/en/manel-rueda/" aria-current="page">About</a>
         <a href="https://app.ikigaier.com/en/login">Log in</a>
@@ -310,6 +358,9 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 <p>For years I looked for purpose in doing, in results and in quick answers. Over time I understood that meaning isn’t found only by moving forward, but by learning not to separate from yourself as you walk.</p>
 <p>IKIGAIER was born from that search: a more human, deeper and more real way of looking at ikigai.</p>
 <p>I don’t call myself a coach or a guru. I don’t promise results or sell five-step formulas: I write and accompany from the experience of someone who has walked —and is still walking— the same questions he proposes.</p>
+<h2>My career</h2>
+<p>I’m an engineer, and I’ve been a senior manager since I was 28. I’ve had an international career in multinationals from many countries: Japan, Germany, France, India and the Netherlands. I’ve worked between Spain and Latin America, and I lived in Mexico with my family as an expat. Along the way I’ve led many different projects, and what has always truly interested me is people management, contribution and personal growth.</p>
+<p>I know what it’s like to have a career that keeps moving forward and, at the same time, an unease in the background you can’t place. The questions I share through <a href="/en/what-is-ikigaier/">ikigaier</a> come from there, not from a manual.</p>
 <h2>Why IKIGAIER was born</h2>
 <p>IKIGAIER was born from a suspicion: that the ikigai we’ve been told about —the four intersecting circles— falls short. It describes what we do well and leaves out something just as important: where we do it from.</p>
 <p>Hence the distinction that holds up all my work, which is my own elaboration and not a Japanese tradition: <strong>Active Ikigai</strong> —what you build and contribute— and <strong>Conscious Ikigai</strong> —the presence and coherence with which you live. An <em>ikigaier</em> is someone who learns not to separate the two. You can read this perspective at your own pace in the guide on <a href="/en/ikigai/">what ikigai is</a>.</p>
@@ -330,6 +381,14 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 <p>I publish articles on ikigai and purpose on the <a href="/en/blog/">IKIGAIER blog</a>, and every two weeks I write the <a href="https://ikigaier.substack.com" rel="me noopener" target="_blank">IKIGAIER letters</a>, a more personal newsletter (in Spanish). I also share on <a href="https://www.instagram.com/manel_rueda/" rel="me noopener" target="_blank">Instagram</a>. You can see the rest of my work at <a href="https://manelrueda.com" rel="me noopener" target="_blank">manelrueda.com</a>.</p>
 <h2>The method and the workshops</h2>
 <p>The IKIGAIER method can be practised alone —with the book, the workbook and the <a href="/en/ikigai-test/">ikigai test</a>— and also in a group, in <a href="/en/workshop/">experiential workshops</a> that work on the five gestures that hold it up: stopping and listening, looking at where you’ve drifted from yourself, recognising the masks, coming down from the mind into the body, and choosing a first step.</p>
+<h2 id="preguntas">Frequently asked questions</h2>
+<h3 class="faq-autor">Who is Manel Rueda?</h3>
+<p>An engineer, writer and facilitator. A senior manager since the age of 28, with an international career in Japanese, German, French, Indian and Dutch multinationals. He created <a href="/en/what-is-ikigaier/">ikigaier</a> and wrote <em>El Ikigai que no te contaron</em>.</p>
+<h3 class="faq-autor">Are you a coach or a psychologist?</h3>
+<p>No. I don’t call myself a coach or a guru, and I’m not a psychologist. I write and accompany from experience.</p>
+<h3 class="faq-autor">What is ikigaier?</h3>
+<p>The approach to ikigai I created: it brings together what you do (active ikigai) and how you live it (conscious ikigai). I explain it in <a href="/en/what-is-ikigaier/">what is ikigaier</a>.</p>
+
 <div class="autor-contacto">
 <p>Any doubt, reflection or question about IKIGAIER’s content? Write to me at <a href="mailto:manel@ikigaier.com">manel@ikigaier.com</a>.</p>
 </div>

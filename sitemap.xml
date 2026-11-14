@@ -188,7 +188,7 @@
   </url>
   <url>
     <loc>https://www.ikigaier.com/ca/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -320,7 +320,7 @@
   </url>
   <url>
     <loc>https://www.ikigaier.com/en/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -473,5 +473,17 @@
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ikigaier.com/ca/que-es-ikigaier/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ikigaier.com/en/what-is-ikigaier/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
