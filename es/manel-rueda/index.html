@@ -134,13 +134,16 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       "url": "https://www.ikigaier.com/es/manel-rueda/",
       "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg",
       "jobTitle": "Autor",
-      "description": "Autor y creador de IKIGAIER. Ingeniero, escritor y facilitador. Escribe sobre el ikigai, el propósito y la unión del hacer y el ser. Autor de El Ikigai que no te contaron y Camina sin separarte de ti.",
+      "description": "Autor y creador de ikigaier. Ingeniero, escritor y facilitador. Directivo desde los 28 años, con una carrera internacional en multinacionales japonesas, alemanas, francesas, indias y holandesas, entre España y Latinoamérica. Escribe sobre el ikigai, el propósito y la unión del hacer y el ser. Autor de El Ikigai que no te contaron y Camina sin separarte de ti.",
       "worksFor": {
         "@id": "https://www.ikigaier.com/#organization"
       },
       "knowsAbout": [
         "Ikigai",
+        "ikigaier",
         "Propósito",
+        "Gestión de personas",
+        "Crecimiento personal",
         "Autoconocimiento",
         "Desarrollo personal"
       ],
@@ -148,6 +151,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         "https://manelrueda.com",
         "https://ikigaier.substack.com",
         "https://www.instagram.com/manel_rueda/",
+        "https://www.tiktok.com/@manelbcn68",
         "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
       ],
       "address": {
@@ -260,6 +264,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
     .obra h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.25rem; margin: 0 0 0.3rem; }
     .obra p { font-size: var(--fs-apoyo); color: var(--texto-principal); line-height: 1.65; margin-bottom: 0.6rem; }
     .obra a { font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: var(--negro); text-decoration: none; border-bottom: 1px solid var(--coral); padding-bottom: 1px; }
+    .autor-body h3.faq-autor { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 1.0625rem; margin: 1.4rem 0 0.4rem; }
     .autor-contacto { margin-top: 2.4rem; padding-top: 1.6rem; border-top: 1px solid rgba(168,168,168,0.25); }
     .autor-contacto p { font-size: 1.0625rem; color: var(--texto-principal); margin-bottom: 0.5rem; }
     .autor-contacto a { color: var(--negro); text-decoration: underline; text-underline-offset: 0.2em; }
@@ -268,6 +273,39 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       .obras { grid-template-columns: 1fr; }
     }
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.ikigaier.com/es/manel-rueda/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Quién es Manel Rueda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ingeniero, escritor y facilitador. Directivo desde los 28 años, con una carrera internacional en multinacionales japonesas, alemanas, francesas, indias y holandesas, entre España y Latinoamérica. Es el creador de ikigaier y autor de El Ikigai que no te contaron."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es coach o psicólogo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. No se define como coach ni como gurú, y no es psicólogo. Escribe y acompaña desde la experiencia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es ikigaier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El enfoque sobre el ikigai creado por Manel Rueda: une lo que haces (el ikigai activo) con cómo lo vives (el ikigai consciente)."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -291,8 +329,9 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         <a href="/es/libros/">Libros</a>
         <a href="/es/talleres/">Talleres</a>
         <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/que-es-ikigaier/">Qué es ikigaier</a>
         <a href="/es/blog/">Blog</a>
-        <a href="/es/manel-rueda/" aria-current="page">Autor</a>
+        <a href="/es/manel-rueda/" aria-current="page">Sobre mí</a>
         <a href="https://app.ikigaier.com/es/login">Entrar</a>
         <a href="/es/test-de-ikigai/" class="nav-destacado">Test ikigai gratis</a>
         <a href="/ca/manel-rueda/" hreflang="ca" lang="ca" class="nav-idioma" title="Català" aria-label="Català"><span class="nav-idioma-corto" aria-hidden="true">CA</span><span class="nav-idioma-largo">Català</span></a>
@@ -323,6 +362,10 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         <h2>Quién soy</h2>
         <p>Durante años busqué el propósito en el hacer, en los resultados y en las respuestas rápidas. Con el tiempo entendí que el sentido no se encuentra solo avanzando, sino aprendiendo a no separarte de ti mientras caminas.</p>
         <p>De esa búsqueda nace IKIGAIER: una forma más humana, profunda y real de mirar el ikigai.</p>
+
+        <h2>Mi trayectoria</h2>
+        <p>Soy ingeniero y soy directivo desde los 28 años. He tenido una carrera internacional en multinacionales de muchos países: Japón, Alemania, Francia, India y Holanda. He trabajado entre España y Latinoamérica, y llegué a vivir en México con mi familia, expatriado por trabajo. Por el camino he liderado muchos proyectos distintos, y lo que siempre me ha interesado de verdad es la gestión de personas, la contribución y el crecimiento personal.</p>
+        <p>Sé lo que es tener una carrera que avanza y, a la vez, una incomodidad de fondo que no sabes ubicar. Las preguntas que comparto en <a href="/es/que-es-ikigaier/">ikigaier</a> salen de ahí, no de un manual.</p>
         <p>No me defino como coach ni como gurú. No prometo resultados ni vendo fórmulas de cinco pasos: escribo y acompaño desde la experiencia de alguien que ha recorrido —y sigue recorriendo— las mismas preguntas que propone.</p>
 
         <h2>Por qué nace IKIGAIER</h2>
@@ -348,6 +391,14 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 
         <h2>El método y los talleres</h2>
         <p>El método IKIGAIER se practica en solitario —con el libro, el cuaderno y el <a href="/es/test-de-ikigai/">test de ikigai</a>— y también en grupo, en <a href="/es/taller/">talleres experienciales</a> donde se trabajan los cinco gestos que lo sostienen: parar y escuchar, mirar dónde te has alejado de ti, reconocer las máscaras, bajar de la mente al cuerpo, y elegir un primer paso.</p>
+
+        <h2 id="preguntas">Preguntas frecuentes</h2>
+        <h3 class="faq-autor">¿Quién es Manel Rueda?</h3>
+        <p>Ingeniero, escritor y facilitador. Directivo desde los 28 años, con una carrera internacional en multinacionales japonesas, alemanas, francesas, indias y holandesas. Es el creador de <a href="/es/que-es-ikigaier/">ikigaier</a> y autor de <em>El Ikigai que no te contaron</em>.</p>
+        <h3 class="faq-autor">¿Es coach o psicólogo?</h3>
+        <p>No. No me defino como coach ni como gurú, y no soy psicólogo. Escribo y acompaño desde la experiencia.</p>
+        <h3 class="faq-autor">¿Qué es ikigaier?</h3>
+        <p>El enfoque sobre el ikigai que he creado: une lo que haces (el ikigai activo) con cómo lo vives (el ikigai consciente). Lo explico en <a href="/es/que-es-ikigaier/">qué es ikigaier</a>.</p>
 
         <div class="autor-contacto">
           <p>¿Alguna duda, reflexión o pregunta sobre el contenido de IKIGAIER? Escríbeme a <a href="mailto:manel@ikigaier.com">manel@ikigaier.com</a>.</p>
