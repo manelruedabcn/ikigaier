@@ -1,4 +1,4 @@
-# ikigaier | The ikigai that unites doing and being · Manel Rueda
+# ikigaier | The ikigai of doing and being · Manel Rueda
 
 > ikigaier, Manel Rueda’s approach uniting what you do and how you live it. If you have almost everything yet something doesn’t fit: free ikigai test, books.
 
