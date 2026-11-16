@@ -56,7 +56,7 @@ Cadascun obre una part del camí de tornada. Pots llegir-los en ordre o comença
 
 - [1 · Alliberar — No todo lo que te frena es tuyo — Per què ho vas aconseguir gairebé tot i continues sentint aquest buit.](https://www.ikigaier.com/ca/llibres/#no-todo)
 - [2 · Actuar — Disciplina para indisciplinados — Per a qui ha començat cent dilluns. Mai no va ser força de voluntat.](https://www.ikigaier.com/ca/llibres/#disciplina)
-- [3 · Alinear — El Ikigai que no te contaron — El llibre central del mètode i l’origen del taller.](https://www.ikigaier.com/ca/llibres/el-ikigai-que-no-te-contaron/)
+- [3 · Alinear — El Ikigai que no te contaron — El llibre central de la pràctica i l’origen del taller.](https://www.ikigaier.com/ca/llibres/el-ikigai-que-no-te-contaron/)
 
 [Veure els llibres](https://www.ikigaier.com/ca/llibres/)
 

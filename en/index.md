@@ -56,7 +56,7 @@ Each one opens part of the way back. You can read them in order or start with th
 
 - [1 · Release — No todo lo que te frena es tuyo — Why you achieved almost everything and still feel that emptiness.](https://www.ikigaier.com/en/books/#no-todo)
 - [2 · Act — Disciplina para indisciplinados — For anyone who has started a hundred Mondays. It was never willpower.](https://www.ikigaier.com/en/books/#disciplina)
-- [3 · Align — El Ikigai que no te contaron — The central book of the method and the origin of the workshop.](https://www.ikigaier.com/en/books/el-ikigai-que-no-te-contaron/)
+- [3 · Align — El Ikigai que no te contaron — The central book of the practice and the origin of the workshop.](https://www.ikigaier.com/en/books/el-ikigai-que-no-te-contaron/)
 
 [See the books](https://www.ikigaier.com/en/books/)
 

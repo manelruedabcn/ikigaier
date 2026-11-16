@@ -56,7 +56,7 @@ Cada uno abre una parte del camino de vuelta. Puedes leerlos en orden o empezar 
 
 - [1 · Liberar — No todo lo que te frena es tuyo — Por qué lo conseguiste casi todo y sigues sintiendo ese vacío.](https://www.ikigaier.com/es/libros/#no-todo)
 - [2 · Actuar — Disciplina para indisciplinados — Para quien ha empezado cien lunes. Nunca fue fuerza de voluntad.](https://www.ikigaier.com/es/libros/#disciplina)
-- [3 · Alinear — El Ikigai que no te contaron — El libro central del método y el origen del taller.](https://www.ikigaier.com/es/libros/el-ikigai-que-no-te-contaron/)
+- [3 · Alinear — El Ikigai que no te contaron — El libro central de la práctica y el origen del taller.](https://www.ikigaier.com/es/libros/el-ikigai-que-no-te-contaron/)
 
 [Ver los libros](https://www.ikigaier.com/es/libros/)
 
