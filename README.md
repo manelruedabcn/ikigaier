@@ -1,3 +1,3 @@
 # ikigaier
 
-Sitio oficial del ecosistema IKIGAIER de Manel Rueda.
+Sitio oficial del ecosistema ikigaier de Manel Rueda.

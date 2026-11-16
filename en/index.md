@@ -40,7 +40,7 @@ About ten years ago I was living in Mexico with my family, posted abroad for wor
 
 For years I had been working out how to meet my obligations better. That morning I understood that the real question was why I had turned my whole life into an obligation. I also know what it is to spend two years knowing a job is no longer yours, with the diagnosis crystal clear in your head and your life unchanged.
 
-I’m not a psychologist or a coach. I speak to you from the other side of the table, as someone who achieved almost everything he set out to do and felt the numbers didn’t add up. IKIGAIER was born from that search.
+I’m not a psychologist or a coach. I speak to you from the other side of the table, as someone who achieved almost everything he set out to do and felt the numbers didn’t add up. ikigaier was born from that search.
 
 [Read my story](https://www.ikigaier.com/en/manel-rueda/)
 
@@ -72,7 +72,7 @@ The ikigaier test doesn’t tell you what to do with your life: it helps you see
 
 When you finish, if you like, carry on with [a month getting to know your ikigai](https://www.ikigaier.com/en/free-ikigai-program/): one email a week, free.
 
-## IKIGAIER Letters
+## ikigaier Letters
 
 bringing doing and being together
 
@@ -84,11 +84,11 @@ It’s free and you can leave whenever you like. By subscribing you accept our [
 
 About Manel Rueda
 
-You can read more about [who I am and why I created IKIGAIER](https://www.ikigaier.com/en/manel-rueda/), and see the rest of my work at [manelrueda.com](https://manelrueda.com).
+You can read more about [who I am and why I created ikigaier](https://www.ikigaier.com/en/manel-rueda/), and see the rest of my work at [manelrueda.com](https://manelrueda.com).
 
 And if you’ve read one of my books, taken part in a workshop or something simply resonated with you, I’d love to hear from you.
 
-Any doubt, reflection or question about IKIGAIER’s content?
+Any doubt, reflection or question about ikigaier’s content?
 
 manel@ikigaier.com
 
