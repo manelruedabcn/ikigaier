@@ -40,7 +40,7 @@ Fa uns deu anys vivia a Mèxic amb la meva família, expatriat per feina. Un mat
 
 Feia anys que resolia com complir millor les meves obligacions. Aquell matí vaig entendre que la pregunta de debò era per què havia convertit tota la meva vida en una obligació. També sé què és passar dos anys sabent que una feina ja no és teva, amb el diagnòstic claríssim al cap i la vida igual.
 
-No soc psicòleg ni coach. Et parlo des de l’altra banda de la taula, com algú que va aconseguir gairebé tot el que s’havia proposat i va sentir que el compte no sortia. D’aquesta recerca va néixer IKIGAIER.
+No soc psicòleg ni coach. Et parlo des de l’altra banda de la taula, com algú que va aconseguir gairebé tot el que s’havia proposat i va sentir que el compte no sortia. D’aquesta recerca va néixer ikigaier.
 
 [Coneix la meva història](https://www.ikigaier.com/ca/manel-rueda/)
 
@@ -72,7 +72,7 @@ El test ikigaier no et diu a què dedicar-te: t’ajuda a veure on és el que et
 
 En acabar, si vols, continua amb [un mes coneixent el teu ikigai](https://www.ikigaier.com/ca/programa-ikigai-gratuit/): un correu per setmana, gratuït.
 
-## Cartes IKIGAIER
+## Cartes ikigaier
 
 unint el fer i l’ésser
 
@@ -84,11 +84,11 @@ Cada quinze dies t’escric: una idea, una pràctica petita i una pregunta per c
 
 Sobre Manel Rueda
 
-Pots llegir més sobre [qui soc i per què vaig crear IKIGAIER](https://www.ikigaier.com/ca/manel-rueda/), i conèixer la resta de la meva feina a [manelrueda.com](https://manelrueda.com).
+Pots llegir més sobre [qui soc i per què vaig crear ikigaier](https://www.ikigaier.com/ca/manel-rueda/), i conèixer la resta de la meva feina a [manelrueda.com](https://manelrueda.com).
 
 I si has llegit algun dels meus llibres, has participat en un taller o simplement hi ha alguna cosa que t’ha ressonat, m’encantarà llegir-te.
 
-Tens algun dubte, reflexió o pregunta sobre el contingut d’IKIGAIER?
+Tens algun dubte, reflexió o pregunta sobre el contingut d’ikigaier?
 
 manel@ikigaier.com
 

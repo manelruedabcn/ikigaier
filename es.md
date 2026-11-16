@@ -40,7 +40,7 @@ Hace unos diez años vivía en México con mi familia, expatriado por trabajo. U
 
 Llevaba años resolviendo cómo cumplir mejor con mis obligaciones. Aquella mañana entendí que la pregunta de verdad era por qué había convertido mi vida entera en una obligación. También sé lo que es pasar dos años sabiendo que un trabajo ya no es tuyo, con el diagnóstico clarísimo en la cabeza y la vida igual.
 
-No soy psicólogo ni coach. Te hablo desde el otro lado de la mesa, como alguien que consiguió casi todo lo que se había propuesto y sintió que la cuenta no salía. De esa búsqueda nació IKIGAIER.
+No soy psicólogo ni coach. Te hablo desde el otro lado de la mesa, como alguien que consiguió casi todo lo que se había propuesto y sintió que la cuenta no salía. De esa búsqueda nació ikigaier.
 
 [Conoce mi historia](https://www.ikigaier.com/es/manel-rueda/)
 
@@ -72,7 +72,7 @@ El test ikigaier no te dice a qué dedicarte: te ayuda a ver dónde está lo que
 
 Al terminar, si quieres, sigue con [un mes conociendo tu ikigai](https://www.ikigaier.com/es/programa-ikigai-gratis/): un correo por semana, gratis.
 
-## Cartas IKIGAIER
+## Cartas ikigaier
 
 uniendo el hacer y el ser
 
@@ -84,11 +84,11 @@ Es gratis y puedes salir cuando quieras. Al suscribirte aceptas nuestra [políti
 
 Sobre Manel Rueda
 
-Puedes leer más sobre [quién soy y por qué creé IKIGAIER](https://www.ikigaier.com/es/manel-rueda/), y conocer el resto de mi trabajo en [manelrueda.com](https://manelrueda.com).
+Puedes leer más sobre [quién soy y por qué creé ikigaier](https://www.ikigaier.com/es/manel-rueda/), y conocer el resto de mi trabajo en [manelrueda.com](https://manelrueda.com).
 
 Y si has leído alguno de mis libros, participado en un taller o simplemente hay algo que te ha resonado, me encantará leerte.
 
-¿Tienes alguna duda, reflexión o pregunta sobre el contenido de IKIGAIER?
+¿Tienes alguna duda, reflexión o pregunta sobre el contenido de ikigaier?
 
 manel@ikigaier.com
 
