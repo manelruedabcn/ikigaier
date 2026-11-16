@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Qué ha medido la psicología sobre el ikigai, de la cohorte de Ohsaki al estudio de Harvard de 2022, qué resultados aguantan y cuáles no. Por Manel Rueda.">
+  <title>Ikigai y psicología: lo que dicen los estudios · ikigaier</title>
+  <link rel="canonical" href="https://www.ikigaier.com/es/blog/ikigai-psicologia/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/blog/ikigai-psicologia/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/blog/ikigai-psicologia/">
+
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="ikigaier">
+
+
+
+  <meta property="og:title" content="Ikigai y psicología: lo que dicen los estudios y lo que no">
+  <meta property="og:description" content="Qué ha medido la psicología sobre el ikigai, qué resultados aguantan y qué se ha estirado al llegar a Occidente.">
+  <meta property="og:url" content="https://www.ikigaier.com/es/blog/ikigai-psicologia/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ikigaier · El ikigai que no te contaron · por Manel Rueda">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ikigai y psicología: lo que dicen los estudios y lo que no">
+  <meta name="twitter:description" content="Qué ha medido la psicología sobre el ikigai, qué resultados aguantan y qué se ha estirado al llegar a Occidente.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="ikigaier · El ikigai que no te contaron · por Manel Rueda">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=14">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+  <link rel="stylesheet" href="/assets/css/article.css?v=4">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "ikigaier",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "ikigaier",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "ikigaier es el enfoque sobre el ikigai creado por Manel Rueda. Une el ikigai activo (lo que haces y aportas) con el ikigai consciente (cómo lo vives). Libros, test de ikigai gratuito, talleres y newsletter.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.tiktok.com/@manelbcn68",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg?v=3",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "description": "Autor y creador de ikigaier. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.ikigaier.com/es/blog/ikigai-psicologia/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/es/blog/ikigai-psicologia/",
+      "headline": "Ikigai y psicología: lo que dicen los estudios y lo que no",
+      "description": "Qué ha medido la psicología sobre el ikigai, qué resultados aguantan y qué se ha estirado al llegar a Occidente.",
+      "inLanguage": "es",
+      "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "articleSection": "Psicología",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": [{"@type": "Thing", "name": "Ikigai"}, {"@type": "Thing", "name": "Psicología"}, {"@type": "Thing", "name": "Bienestar"}]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/blog/ikigai-psicologia/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.ikigaier.com/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ikigai y psicología",
+          "item": "https://www.ikigaier.com/es/blog/ikigai-psicologia/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.ikigaier.com/es/blog/ikigai-psicologia/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Está demostrado científicamente el ikigai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hay estudios grandes, sobre todo en Japón, que relacionan tener ikigai con menor mortalidad, menos discapacidad y menos demencia en personas mayores. Son estudios observacionales: muestran una asociación sólida, pero no prueban que el ikigai sea la causa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se mide el ikigai en psicología?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Con una pregunta directa, si la persona tiene ikigai en su vida, o con escalas como la Ikigai-9, de nueve afirmaciones, creada en Japón en 2012 y validada en inglés en 2019."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Los estudios científicos hablan del diagrama de los cuatro círculos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Miden la sensación de que la vida vale la pena. El diagrama de los cuatro círculos es una creación occidental posterior y no se ha estudiado como causa de salud o longevidad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es verdad que en Okinawa viven más por el ikigai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es la parte con menos base. Las cifras de centenarios de las llamadas zonas azules, Okinawa incluida, están cuestionadas por errores en los registros, y no hay un estudio que atribuya esa longevidad al ikigai."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/es/" class="site-header-logo" aria-label="ikigaier · Inicio">
+        <picture>
+          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-600.png" alt="ikigaier" width="293" height="92" fetchpriority="high">
+        </picture>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="/es/talleres/">Talleres</a>
+        <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/que-es-ikigaier/">Qué es ikigaier</a>
+        <a href="/es/blog/" aria-current="page">Blog</a>
+        <a href="/es/manel-rueda/">Sobre mí</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/es/test-de-ikigai/" class="nav-destacado">Test ikigai gratis</a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/blog/">Blog</a><span aria-hidden="true">›</span><span>Ikigai y psicología</span>
+  </nav>
+
+  <main id="contenido">
+    <article class="article-wrap">
+
+      <header class="article-head">
+        <h1>Ikigai y psicología: lo que dicen los estudios y lo que no</h1>
+        <p class="article-standfirst">Desde hace décadas el ikigai se estudia en Japón con cuestionarios, escalas y cohortes de miles de personas. Algunos resultados son sólidos y otros se han estirado bastante por el camino.</p>
+        <div class="article-byline">
+          <span class="author"><a href="/es/manel-rueda/">Manel Rueda</a></span>
+          <span class="role">Autor y creador de ikigaier</span>
+          <time datetime="2026-11-16">16 de noviembre de 2026</time>
+        </div>
+      </header>
+
+
+      <nav class="toc" aria-labelledby="toc-titulo">
+        <h2 id="toc-titulo">En este artículo</h2>
+        <ol>
+          <li><a href="#como-se-mide">Cómo se mide el ikigai</a></li>
+          <li><a href="#lo-que-encontraron">Lo que sí encontraron los estudios</a></li>
+          <li><a href="#lo-que-no-dicen">Lo que los estudios no dicen</a></li>
+          <li><a href="#okinawa">El caso de Okinawa</a></li>
+          <li><a href="#proposito-en-la-vida">Ikigai y propósito en la vida</a></li>
+          <li><a href="#lo-que-me-llevo">Lo que me llevo a la práctica ikigaier</a></li>
+          <li><a href="#fuentes">Fuentes</a></li>
+        </ol>
+      </nav>
+
+      <div class="prose">
+
+        <p>Cuando alguien me dice que el ikigai está demostrado científicamente, le pregunto qué estudio leyó. Casi nunca hay uno concreto detrás. Hay una idea que circula, la de que en Okinawa la gente vive más porque tiene ikigai, y la sensación de que alguien en algún sitio lo midió.</p>
+
+        <p>Vengo de la ingeniería y de muchos años dirigiendo negocios, y me quedó la costumbre de preguntar de dónde sale una cifra antes de creérmela. Con el ikigai la pregunta merece la pena, porque la investigación existe, es bastante seria y dice cosas más interesantes que el eslogan.</p>
+
+        <h2 id="como-se-mide">Cómo se mide el ikigai</h2>
+
+        <p>La forma más sencilla es preguntar. En muchos estudios japoneses basta con una pregunta directa, si la persona tiene ikigai en su vida, y tres respuestas posibles. Parece poco, pero en Japón funciona porque la palabra pertenece al idioma de todos los días y nadie necesita que se la expliquen.</p>
+
+        <p>Para medirlo con más detalle hay escalas. Una de las más usadas es la Ikigai-9, nueve afirmaciones que la persona valora, publicada en 2012 por Tadanori Imai, Hisao Osada y Yoshitsugu Nishimura, de la Universidad Mejiro de Tokio. En 2019, Dean Fido, Yasuhiro Kotera y Kenichi Asano la tradujeron al inglés y la validaron con una muestra británica.</p>
+
+        <p>Detrás de casi todas estas herramientas sigue la distinción que hizo <a href="/es/blog/historia-del-ikigai/">Mieko Kamiya en 1966</a>, entre aquello que da sentido a una vida y la sensación íntima de que tu vida vale. Los cuestionarios recogen sobre todo lo segundo. Conviene tenerlo presente al leer cualquier cifra, porque lo que se está midiendo es una sensación declarada por la propia persona.</p>
+
+        <h2 id="lo-que-encontraron">Lo que sí encontraron los estudios</h2>
+
+        <p>El estudio más citado viene de la cohorte de Ohsaki, en la prefectura de Miyagi. Toshimasa Sone y su equipo, de la Universidad de Tohoku, siguieron durante siete años a 43.391 adultos de entre 40 y 79 años. Al empezar, en 1994, el 59 % dijo tener ikigai, el 36,4 % no estaba seguro y el 4,6 % respondió que no.</p>
+
+        <p>En esos siete años murieron 3.048 personas. Quienes habían dicho que no tenían ikigai presentaron una mortalidad mayor, también después de ajustar por su salud, su estrés, su nivel de estudios y otras circunstancias. El aumento se concentraba en la enfermedad cardiovascular y las causas externas, y no aparecía en el cáncer. El trabajo se publicó en <em>Psychosomatic Medicine</em> en 2008.</p>
+
+        <p>En 2022 llegó un estudio más amplio en lo que mide. Un equipo de Harvard y de universidades japonesas, con Sakurako Okuzono y Tyler VanderWeele entre los autores, usó los datos de miles de personas mayores de 65 años del estudio nacional japonés JAGES. Tener ikigai en 2013 se asoció con un 31 % menos de riesgo de discapacidad funcional y un 36 % menos de demencia en los tres años siguientes, además de menos síntomas depresivos. Lo publicó <em>The Lancet Regional Health - Western Pacific</em>.</p>
+
+        <p>Fuera de Japón la investigación es más reciente y más pequeña. En 2022, Juliet Wilkes y sus colegas de la Universidad de Derby estudiaron a 94 adultos occidentales con la Ikigai-9 y vieron que la puntuación ayudaba a predecir su bienestar y sus síntomas de depresión y ansiedad. Los propios autores piden más estudios antes de sacar conclusiones.</p>
+
+        <div class="capa">
+          <span class="capa-label">Lo que conviene recordar</span>
+          <p>Sentir que tu vida vale la pena va unido, en estudios grandes y bien hechos, a mejor salud y a vivir más años. Esa parte de lo que se cuenta sobre el ikigai tiene base.</p>
+        </div>
+
+        <h2 id="lo-que-no-dicen">Lo que los estudios no dicen</h2>
+
+        <p>Todos son estudios observacionales. Encuentran que tener ikigai y estar mejor van juntos, y dejan abierta la pregunta de qué empuja a qué. En Ohsaki, quienes decían no tener ikigai también estaban con menos frecuencia casados o empleados, tenían peor salud y más dolor. Los investigadores ajustaron por todo eso y el efecto se mantuvo, pero un ajuste estadístico no convierte una asociación en una causa.</p>
+
+        <p>El estudio de 2022 añade un matiz que casi nunca se cita. La relación entre ikigai y salud apareció sobre todo en hombres y en personas de nivel socioeconómico alto. Las propias autoras dicen que hace falta entender qué pasa en mujeres y en personas con menos recursos. Tener una razón para vivir parece ayudar más cuando la vida ya te da cierto margen.</p>
+
+        <p>Y hay algo que ninguno de estos trabajos mide, el diagrama de los cuatro círculos. Nadie ha estudiado si cruzar lo que amas, lo que se te da bien, lo que el mundo necesita y aquello por lo que te pagan alarga la vida. Lo que se midió fue la sensación de que tu vida vale, preguntada en japonés a personas para las que la palabra no tiene nada de exótico. El diagrama llegó después, desde Occidente, y lo cuento en el artículo sobre el <a href="/es/blog/diagrama-ikigai/">diagrama del ikigai</a>.</p>
+
+        <h2 id="okinawa">El caso de Okinawa</h2>
+
+        <p>La frase que más se repite es que en Okinawa viven más años gracias al ikigai. Esa idea se popularizó con las zonas azules de Dan Buettner, las regiones del mundo con supuestamente más centenarios, y es la parte con la base más débil.</p>
+
+        <p>Saul Justin Newman, investigador del University College de Londres, lleva años revisando los registros de las personas más longevas y sostiene que muchas no tenían la edad que figuraba en sus papeles, por errores de registro y, en algunos casos, por fraude en las pensiones. Recuerda además que en 2010 una revisión en Japón encontró que muchos de los centenarios registrados habían desaparecido o habían muerto hacía tiempo. Buettner defiende que sus datos se verificaron. El debate sigue abierto, y mientras tanto el vínculo entre Okinawa y el ikigai se apoya en mucho menos que el estudio de Ohsaki.</p>
+
+        <h2 id="proposito-en-la-vida">Ikigai y propósito en la vida</h2>
+
+        <p>En la psicología occidental existe desde hace décadas un concepto vecino, el propósito en la vida, y una tradición que se interesa por el sentido. Viktor Frankl escribió <em>El hombre en busca de sentido</em> después de sobrevivir a los campos de concentración, y es difícil no pensar en Kamiya, que estudió el ikigai entre enfermos de lepra aislados en un sanatorio. Los dos fueron a buscar el sentido de la vida allí donde parecía imposible encontrarlo.</p>
+
+        <p>El equipo de 2022 describe el ikigai como un concepto relacionado con el propósito, pero más amplio. Cabe en él una afición, una rutina o un nieto, sin que tenga que ordenar toda una vida. Es la misma diferencia que explico en <a href="/es/blog/ikigai-y-proposito/">ikigai y propósito</a>, y tiene consecuencias. Un propósito se encuentra o se pierde, mientras que de ikigai se pueden tener varios y de distinto tamaño.</p>
+
+        <h2 id="lo-que-me-llevo">Lo que me llevo a la práctica ikigaier</h2>
+
+        <p>Lo que miden estos estudios se parece mucho a lo que en la práctica ikigaier llamo ikigai consciente, la sensación de que lo que haces y lo que vives te pertenece. Me da tranquilidad que la investigación ponga el foco ahí y no en encontrar un punto exacto entre cuatro círculos.</p>
+
+        <p>Tampoco quiero usar estas cifras para prometer nada. Un 31 % menos de riesgo en un grupo de mayores japoneses no dice qué te va a pasar a ti, y nadie ha demostrado que un taller o un ejercicio aumenten el ikigai de alguien de forma duradera. Lo que sí me parece razonable es tomarse en serio la pregunta.</p>
+
+        <p>La de Ohsaki se hizo en 1994, en los centros de salud de una ciudad y trece pueblos de Miyagi, y se podía contestar en un segundo. Más de un tercio de la gente respondió que no estaba seguro. De todas las respuestas, es la que me parece más honesta y la más útil para empezar.</p>
+
+        <h2 id="preguntas">Preguntas frecuentes</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>¿Está demostrado científicamente el ikigai?</h3>
+            <p>Hay estudios grandes, sobre todo en Japón, que relacionan tener ikigai con menor mortalidad, menos discapacidad y menos demencia en personas mayores. Son estudios observacionales: muestran una asociación sólida, pero no prueban que el ikigai sea la causa.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Cómo se mide el ikigai en psicología?</h3>
+            <p>Con una pregunta directa, si la persona tiene ikigai en su vida, o con escalas como la Ikigai-9, de nueve afirmaciones, creada en Japón en 2012 y validada en inglés en 2019.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Los estudios científicos hablan del diagrama de los cuatro círculos?</h3>
+            <p>No. Miden la sensación de que la vida vale la pena. El diagrama de los cuatro círculos es una creación occidental posterior y no se ha estudiado como causa de salud o longevidad.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Es verdad que en Okinawa viven más por el ikigai?</h3>
+            <p>Es la parte con menos base. Las cifras de centenarios de las llamadas zonas azules, Okinawa incluida, están cuestionadas por errores en los registros, y no hay un estudio que atribuya esa longevidad al ikigai.</p>
+          </div>
+        </div>
+
+        <div class="programa-bloque">
+          <p class="programa-etiqueta">Test de ikigai · gratis</p>
+          <h3>¿Lo que te falta está en lo que haces o en cómo lo vives?</h3>
+          <p>El test ikigaier te lo dice en 16 preguntas: qué te sostiene, qué pide tu atención y un ejercicio para tu semana. Al terminar, si quieres, puedes seguir con un mes de ejercicios: un correo por semana, gratis.</p>
+          <a href="/es/test-de-ikigai/" class="btn btn-primary">Hacer el test de ikigai →</a>
+          <p class="programa-nota">Gratis · sin registro · unos diez minutos</p>
+        </div>
+
+        <h2 id="fuentes">Fuentes</h2>
+
+        <div class="fuentes">
+          <ol>
+            <li>Sone, Toshimasa, et al. «Sense of life worth living (ikigai) and mortality in Japan: Ohsaki Study». <em>Psychosomatic Medicine</em>, 70(6), 2008, pp. 709-715. <a href="https://pubmed.ncbi.nlm.nih.gov/18596247/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
+            <li>Okuzono, Sakurako S., et al. «Ikigai and subsequent health and wellbeing among Japanese older adults: Longitudinal outcome-wide analysis». <em>The Lancet Regional Health - Western Pacific</em>, 21, 2022. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8814687/" target="_blank" rel="noopener noreferrer">Texto completo (PMC)</a>.</li>
+            <li>Imai, Tadanori; Osada, Hisao y Nishimura, Yoshitsugu. Escala Ikigai-9, Universidad Mejiro, 2012.</li>
+            <li>Fido, Dean; Kotera, Yasuhiro y Asano, Kenichi. «English translation and validation of the Ikigai-9 in a UK sample». <em>International Journal of Mental Health and Addiction</em>, 2019. <a href="https://doi.org/10.1007/s11469-019-00150-w" target="_blank" rel="noopener noreferrer">DOI</a>.</li>
+            <li>Wilkes, Juliet; Garip, Gulcan; Kotera, Yasuhiro y Fido, Dean. «Can ikigai predict anxiety, depression, and well-being?». <em>International Journal of Mental Health and Addiction</em>, 21, 2023 (en línea 2022), pp. 2941-2953. <a href="https://doi.org/10.1007/s11469-022-00764-7" target="_blank" rel="noopener noreferrer">DOI</a>.</li>
+            <li>Sobre las zonas azules y los registros de centenarios: Saul Justin Newman, citado en <a href="https://theworld.org/stories/2024/12/10/fake-news-unpacking-the-blue-zone-myth-in-okinawa" target="_blank" rel="noopener noreferrer">The World (2024)</a> y <a href="https://fortune.com/europe/2024/12/14/are-blue-zones-myth-extreme-aging-pension-fraud-century-old-lies/" target="_blank" rel="noopener noreferrer">Fortune (2024)</a>.</li>
+            <li>Kamiya, Mieko. <em>Ikigai ni tsuite</em> («Sobre el ikigai»). Misuzu Shobō, 1966.</li>
+            <li>Frankl, Viktor. <em>El hombre en busca de sentido</em>. Herder (ed. original 1946).</li>
+          </ol>
+          <p class="nota-editorial">Los datos se apoyan en las fuentes citadas. La relación con el ikigai consciente es una lectura propia de la práctica ikigaier. Última actualización: 16 de noviembre de 2026.</p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de ikigaier" width="150" height="113" aria-hidden="true" decoding="async">
+    </picture>
+    <p>ikigaier · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <button type="button" class="iki-cookies-config" data-cookies-config>Configurar cookies</button></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← volver a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/guia.js?v=7" defer></script>
+  <script src="/assets/js/cookies.js?v=2" defer></script>
+</body>
+</html>

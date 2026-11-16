@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Si llevas muchos temas a la vez y te han dicho que te falta foco, el diagrama del ikigai puede hacerte sentir peor. El ikigai japonés se dice en plural. Por Manel Rueda.">
+  <title>Ikigai para multipotenciales: cuando tienes varias razones · ikigaier</title>
+  <link rel="canonical" href="https://www.ikigaier.com/es/blog/ikigai-multipotencial/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/blog/ikigai-multipotencial/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/blog/ikigai-multipotencial/">
+
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="ikigaier">
+
+
+
+  <meta property="og:title" content="Ikigai para multipotenciales: cuando tienes varias razones a la vez">
+  <meta property="og:description" content="Por qué el diagrama de los cuatro círculos choca con quien tiene muchos intereses y qué cambia al leer el ikigai en plural.">
+  <meta property="og:url" content="https://www.ikigaier.com/es/blog/ikigai-multipotencial/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ikigaier · El ikigai que no te contaron · por Manel Rueda">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ikigai para multipotenciales: cuando tienes varias razones a la vez">
+  <meta name="twitter:description" content="Por qué el diagrama de los cuatro círculos choca con quien tiene muchos intereses y qué cambia al leer el ikigai en plural.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="ikigaier · El ikigai que no te contaron · por Manel Rueda">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=14">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+  <link rel="stylesheet" href="/assets/css/article.css?v=4">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "ikigaier",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "ikigaier",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "ikigaier es el enfoque sobre el ikigai creado por Manel Rueda. Une el ikigai activo (lo que haces y aportas) con el ikigai consciente (cómo lo vives). Libros, test de ikigai gratuito, talleres y newsletter.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.tiktok.com/@manelbcn68",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg?v=3",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "description": "Autor y creador de ikigaier. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.ikigaier.com/es/blog/ikigai-multipotencial/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/es/blog/ikigai-multipotencial/",
+      "headline": "Ikigai para multipotenciales: cuando tienes varias razones a la vez",
+      "description": "Por qué el diagrama de los cuatro círculos choca con quien tiene muchos intereses y qué cambia al leer el ikigai en plural.",
+      "inLanguage": "es",
+      "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "articleSection": "Multipotenciales",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": [{"@type": "Thing", "name": "Ikigai"}, {"@type": "Thing", "name": "Multipotencialidad"}]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/blog/ikigai-multipotencial/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.ikigaier.com/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ikigai para multipotenciales",
+          "item": "https://www.ikigaier.com/es/blog/ikigai-multipotencial/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.ikigaier.com/es/blog/ikigai-multipotencial/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es una persona multipotencial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alguien con muchos intereses que se entrega a cada uno con intensidad y tiende a pasar de uno a otro. El término lo popularizó Emilie Wapnick en una charla TED de 2015. Es una forma de describirse, no un diagnóstico."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede tener más de un ikigai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. En su sentido japonés, el ikigai puede estar en varias cosas a la vez, de tamaños distintos. La idea de un único ikigai viene del diagrama occidental de los cuatro círculos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo sé si algo es una razón o un proyecto abierto más?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fíjate en qué pasa cuando se queda parado. Una razón sigue ahí y vuelves a ella con ganas. Un proyecto abierto se vive como un pendiente que pesa."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/es/" class="site-header-logo" aria-label="ikigaier · Inicio">
+        <picture>
+          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-600.png" alt="ikigaier" width="293" height="92" fetchpriority="high">
+        </picture>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="/es/talleres/">Talleres</a>
+        <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/que-es-ikigaier/">Qué es ikigaier</a>
+        <a href="/es/blog/" aria-current="page">Blog</a>
+        <a href="/es/manel-rueda/">Sobre mí</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/es/test-de-ikigai/" class="nav-destacado">Test ikigai gratis</a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/blog/">Blog</a><span aria-hidden="true">›</span><span>Ikigai para multipotenciales</span>
+  </nav>
+
+  <main id="contenido">
+    <article class="article-wrap">
+
+      <header class="article-head">
+        <h1>Ikigai para multipotenciales: cuando tienes varias razones a la vez</h1>
+        <p class="article-standfirst">Si llevas muchos temas a la vez y te han dicho que te falta foco, buscar el centro de los cuatro círculos puede hacerte sentir peor. El ikigai japonés se lleva mucho mejor con lo plural.</p>
+        <div class="article-byline">
+          <span class="author"><a href="/es/manel-rueda/">Manel Rueda</a></span>
+          <span class="role">Autor y creador de ikigaier</span>
+          <time datetime="2026-11-16">16 de noviembre de 2026</time>
+        </div>
+      </header>
+
+
+      <div class="prose">
+
+        <p>Durante años pensé que me faltaba algo que a otros les sobraba. Veía a gente con una sola carrera y una vocación clara, y daba por hecho que ellos ya estaban en su sitio mientras yo seguía buscando el mío.</p>
+
+        <p>Yo siempre he llevado muchos temas a la vez. Paso de un libro a un taller, del taller a un proyecto nuevo, y cuando vuelvo al libro lo retomo con las mismas ganas con que lo dejé. Lo llamé falta de foco tanto tiempo que acabé creyéndomelo. Y cuando descubrí el ikigai, el diagrama de los cuatro círculos me lo confirmó, porque en su centro solo cabe una cosa.</p>
+
+        <h2 id="multipotencial">Qué es una persona multipotencial</h2>
+
+        <p>La palabra la popularizó Emilie Wapnick en una charla TED de 2015 titulada <em>Why some of us don't have one true calling</em>, por qué algunos no tenemos una única vocación. Con ella describía a quienes tienen muchos intereses, se entregan a cada uno con intensidad y, tarde o temprano, sienten la necesidad de pasar a otro.</p>
+
+        <p>Tómala como una manera de describirte, sin más. No hay ningún diagnóstico ni ninguna categoría cerrada detrás. Entre quien se dedica a una sola cosa toda la vida y quien cambia de tema cada pocos meses hay un espectro entero, y en los dos extremos se puede vivir bien. Lo que suele doler a quien está más cerca del lado multipotencial es la sospecha de estar haciendo algo mal.</p>
+
+        <h2 id="diagrama">Por qué el diagrama del ikigai choca con esto</h2>
+
+        <p>El diagrama más conocido propone buscar el punto donde coinciden lo que amas, lo que se te da bien, lo que el mundo necesita y aquello por lo que te pagan. Ese punto suele dibujarse como uno solo, y la lectura que se hace casi siempre es que tienes que encontrar tu cosa.</p>
+
+        <p>Para alguien con varios intereses el ejercicio sale raro. Cada círculo se llena de cosas distintas, los cruces se multiplican y el centro o queda vacío o se llena de cinco opciones que compiten entre sí. Mucha gente lo cierra con la sensación de que el problema es suyo.</p>
+
+        <p>Ayuda saber que ese dibujo no es japonés. Andrés Zuzunaga lo creó como un diagrama del propósito, y Marc Winn le puso la palabra ikigai en el centro en 2014. Lo cuento con calma en <a href="/es/blog/diagrama-ikigai/">el diagrama del ikigai</a>.</p>
+
+        <h2 id="plural">El ikigai japonés se dice en plural</h2>
+
+        <p>En Japón la palabra se usa de una forma mucho más doméstica. Alguien puede decir que su ikigai son sus nietos, y otro día que es su huerto o su trabajo, sin sentir que tenga que elegir. Mieko Kamiya, la psiquiatra que lo estudió por primera vez a fondo en 1966, hablaba de aquello que hace que la vida merezca la pena, y en su manera de contarlo caben varias cosas a la vez. Lo explico en detalle en <a href="/es/blog/ikigai-significado/">qué significa ikigai</a>.</p>
+
+        <p>Cuando lo leí así se me recolocó algo. Lo que yo llevaba a la vez podían ser varias razones, cada una con su peso, sin que ninguna tuviera que ganar a las demás para que el día valiera la pena.</p>
+
+        <div class="capa">
+          <span class="capa-label">Lo que conviene recordar</span>
+          <p>El ikigai japonés admite varias razones a la vez. La exigencia de encontrar una sola viene del diagrama occidental.</p>
+        </div>
+
+        <h2 id="razones-y-proyectos">Varias razones no son veinte proyectos abiertos</h2>
+
+        <p>Tampoco quiero convertir esto en una excusa. Tener varias razones para vivir y tener veinte proyectos a medias se parecen poco, aunque desde dentro cueste distinguirlos. A mí me ha costado, y ahora estoy concentrándome en menos proyectos. Ya no lo hago para corregir un defecto, sino para cuidar mejor los que de verdad me sostienen.</p>
+
+        <p>Una pista sencilla para separarlos es fijarte en lo que pasa cuando algo se queda parado. Una razón sigue ahí aunque lleves semanas sin tocarla y vuelves a ella con ganas. Un proyecto abierto pesa, aparece como un pendiente y te quita algo cada vez que lo recuerdas.</p>
+
+        <h2 id="hilo-comun">El hilo que suele haber debajo</h2>
+
+        <p>Con los años he visto que casi todo lo que llevo a la vez se parece en una cosa. Daba clases de refuerzo de matemáticas, ahora escribo y doy talleres, y en todo acabo haciendo lo mismo, solucionar algo. Durante mucho tiempo lo conté como una dispersión más.</p>
+
+        <p>En quien tiene muchos intereses es frecuente que los temas cambien y el verbo se repita. Uno enseña, otro arregla, otro organiza o cuida, y lo hace igual en el trabajo, en una afición o en casa. Ese verbo da bastante más pistas sobre tu ikigai que cualquiera de los temas por separado.</p>
+
+        <h2 id="ejercicio">Un ejercicio para esta semana</h2>
+
+        <p>Escribe en una hoja todo lo que llevas entre manos, sin ordenar ni filtrar. Al lado de cada cosa apunta si es una razón o un pendiente, con la pista de antes. Después, solo para las razones, escribe qué haces cuando estás dentro, con un verbo.</p>
+
+        <p>No tienes que elegir una. Mira si algún verbo se repite y si alguno de los pendientes podría soltarse sin que te quitara nada. Si quieres un formato completo para hacerlo con los cuatro círculos, está la <a href="/es/blog/plantilla-ikigai/">plantilla ikigai</a>.</p>
+
+        <p>En las clases de refuerzo, lo que había que solucionar era la necesidad de aprobar. En un taller es el vacío de quien siente que algo le falta. Visto de cerca, lo primero también era un vacío.</p>
+
+        <h2 id="preguntas">Preguntas frecuentes</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>¿Qué es una persona multipotencial?</h3>
+            <p>Alguien con muchos intereses que se entrega a cada uno con intensidad y tiende a pasar de uno a otro. El término lo popularizó Emilie Wapnick en una charla TED de 2015. Es una forma de describirse, no un diagnóstico.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Se puede tener más de un ikigai?</h3>
+            <p>Sí. En su sentido japonés, el ikigai puede estar en varias cosas a la vez, de tamaños distintos. La idea de un único ikigai viene del diagrama occidental de los cuatro círculos.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Cómo sé si algo es una razón o un proyecto abierto más?</h3>
+            <p>Fíjate en qué pasa cuando se queda parado. Una razón sigue ahí y vuelves a ella con ganas. Un proyecto abierto se vive como un pendiente que pesa.</p>
+          </div>
+        </div>
+
+        <div class="programa-bloque">
+          <p class="programa-etiqueta">Test de ikigai · gratis</p>
+          <h3>¿Lo que te falta está en lo que haces o en cómo lo vives?</h3>
+          <p>El test ikigaier te lo dice en 16 preguntas: qué te sostiene, qué pide tu atención y un ejercicio para tu semana. Al terminar, si quieres, puedes seguir con un mes de ejercicios: un correo por semana, gratis.</p>
+          <a href="/es/test-de-ikigai/" class="btn btn-primary">Hacer el test de ikigai →</a>
+          <p class="programa-nota">Gratis · sin registro · unos diez minutos</p>
+        </div>
+
+        <h2 id="fuentes">Fuentes</h2>
+
+        <div class="fuentes">
+          <ol>
+            <li>Wapnick, Emilie. «Why some of us don't have one true calling». Charla TED, 2015. <a href="https://www.ted.com/talks/emilie_wapnick_why_some_of_us_don_t_have_one_true_calling" target="_blank" rel="noopener noreferrer">ted.com</a>.</li>
+            <li>Kamiya, Mieko. <em>Ikigai ni tsuite</em> («Sobre el ikigai»). Misuzu Shobō, 1966.</li>
+            <li>Zuzunaga, Andrés. Diagrama del propósito (2011). Winn, Marc. «What is your ikigai?» (2014), <a href="https://theviewinside.me/ikigai" target="_blank" rel="noopener noreferrer">theviewinside.me</a>.</li>
+          </ol>
+          <p class="nota-editorial">La distinción entre razones y proyectos abiertos y el ejercicio del verbo común son propuestas de la práctica ikigaier. Última actualización: 16 de noviembre de 2026.</p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de ikigaier" width="150" height="113" aria-hidden="true" decoding="async">
+    </picture>
+    <p>ikigaier · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <button type="button" class="iki-cookies-config" data-cookies-config>Configurar cookies</button></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← volver a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/guia.js?v=7" defer></script>
+  <script src="/assets/js/cookies.js?v=2" defer></script>
+</body>
+</html>

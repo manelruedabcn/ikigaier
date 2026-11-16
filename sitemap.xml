@@ -85,6 +85,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.ikigaier.com/es/blog/ikigai-psicologia/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ikigaier.com/es/blog/ikigai-multipotencial/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.ikigaier.com/es/blog/zona-ikigai/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
