@@ -70,7 +70,7 @@ The ikigaier test doesn’t tell you what to do with your life: it helps you see
 
 16 questions · no sign-up · instant reading
 
-When you finish, if you like, carry on with [a month getting to know your ikigai](https://www.ikigaier.com/en/free-ikigai-program/): one email a week, free.
+When you finish, if you like, carry on with [a month getting to know your ikigai](https://www.ikigaier.com/en/free-ikigai-program/): two emails a week for four weeks, plus welcome and closing emails, free.
 
 ## ikigaier Letters
 
