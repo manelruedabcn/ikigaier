@@ -70,7 +70,7 @@ El test ikigaier no et diu a què dedicar-te: t’ajuda a veure on és el que et
 
 16 preguntes · sense registre · retorn a l’instant
 
-En acabar, si vols, continua amb [un mes coneixent el teu ikigai](https://www.ikigaier.com/ca/programa-ikigai-gratuit/): un correu per setmana, gratuït.
+En acabar, si vols, continua amb [un mes coneixent el teu ikigai](https://www.ikigaier.com/ca/programa-ikigai-gratuit/): dos correus per setmana durant quatre setmanes, més benvinguda i tancament, gratuït.
 
 ## Cartes ikigaier
 

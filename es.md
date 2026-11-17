@@ -70,7 +70,7 @@ El test ikigaier no te dice a qué dedicarte: te ayuda a ver dónde está lo que
 
 16 preguntas · sin registro · devolución al instante
 
-Al terminar, si quieres, sigue con [un mes conociendo tu ikigai](https://www.ikigaier.com/es/programa-ikigai-gratis/): un correo por semana, gratis.
+Al terminar, si quieres, sigue con [un mes conociendo tu ikigai](https://www.ikigaier.com/es/programa-ikigai-gratis/): dos correos por semana durante cuatro semanas, más bienvenida y cierre, gratis.
 
 ## Cartas ikigaier
 
