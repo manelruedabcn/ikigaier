@@ -164,7 +164,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       <h2 id="proximo-h">La última sesión llenó la sala</h2>
       <p class="tl-intro">Déjame tu email y te aviso en cuanto haya fecha y lugar. Solo te escribiré para eso.</p>
       <div class="tl-form-card">
-        <form class="tl-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
+        <form class="tl-form" action="https://app.ikigaier.com/api/web/contacto" data-formulario="taller-gratuito-aviso" method="POST">
           <input type="hidden" name="_next" value="https://www.ikigaier.com/es/talleres/taller-gratuito/?ok=aviso#proximo">
           <input type="hidden" name="_subject" value="Avísame · taller gratuito El ikigai que no te contaron">
           <input type="text" name="_gotcha" class="tl-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -198,7 +198,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         <li><strong>Lo hablamos</strong> antes: fecha, número de personas y lo que necesitamos para proyectar.</li>
       </ul>
       <div class="tl-form-card">
-        <form class="tl-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
+        <form class="tl-form" action="https://app.ikigaier.com/api/web/contacto" data-formulario="taller-gratuito-organizar" method="POST">
           <input type="hidden" name="_next" value="https://www.ikigaier.com/es/talleres/taller-gratuito/?ok=grupo#organiza">
           <input type="hidden" name="_subject" value="Quiero organizar el taller gratuito El ikigai que no te contaron">
           <input type="text" name="_gotcha" class="tl-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -268,6 +268,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
   </footer>
 
   <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/formularios.js?v=1" defer></script>
 <script src="/assets/js/guia.js?v=7" defer></script>
   <script>
     /* Medición: clics hacia el test PASO (evento GA4 «test_click») */

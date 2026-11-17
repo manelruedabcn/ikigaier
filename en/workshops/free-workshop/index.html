@@ -152,7 +152,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 <h2 id="proximo-h">The last session filled the room</h2>
 <p class="tl-intro">Leave me your email and I’ll let you know as soon as there’s a date and venue. I’ll only write to you for that.</p>
 <div class="tl-form-card">
-<form class="tl-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
+<form class="tl-form" action="https://app.ikigaier.com/api/web/contacto" data-formulario="taller-gratuito-aviso" method="POST">
 <input type="hidden" name="_next" value="https://www.ikigaier.com/en/workshops/free-workshop/?ok=aviso#proximo">
 <input type="hidden" name="_subject" value="Avísame · taller gratuito El ikigai que no te contaron">
 <input type="text" name="_gotcha" class="tl-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -185,7 +185,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 <li><strong>We discuss</strong> it beforehand: date, number of people and what we need for projection.</li>
 </ul>
 <div class="tl-form-card">
-<form class="tl-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
+<form class="tl-form" action="https://app.ikigaier.com/api/web/contacto" data-formulario="taller-gratuito-organizar" method="POST">
 <input type="hidden" name="_next" value="https://www.ikigaier.com/en/workshops/free-workshop/?ok=grupo#organiza">
 <input type="hidden" name="_subject" value="Quiero organizar el taller gratuito El ikigai que no te contaron">
 <input type="text" name="_gotcha" class="tl-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -251,6 +251,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← back to manelrueda.com</a>
 </footer>
 <script src="/assets/js/main.js?v=2" defer=""></script>
+<script src="/assets/js/formularios.js?v=1" defer></script>
 <script src="/assets/js/guia.js?v=7" defer></script>
 <script>
     /* Medición: clics hacia el test PASO (evento GA4 «test_click») */

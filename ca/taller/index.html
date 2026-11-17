@@ -347,7 +347,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       <div class="taller-contacto">
         <div class="taller-contacto-item">
           <h3 id="taller-email-label">No pots el 29? Deixa’ns el teu correu</h3>
-          <form class="taller-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
+          <form class="taller-form" action="https://app.ikigaier.com/api/web/contacto" data-formulario="taller-aviso" method="POST">
             <input type="hidden" name="_next" value="https://www.ikigaier.com/ca/taller/?success=1">
             <input type="hidden" name="_subject" value="Interés taller YO SOY IKIGAIER">
             <input type="email" name="email" placeholder="nom@correu.com" required aria-labelledby="taller-email-label" autocomplete="email">
@@ -385,6 +385,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
   </footer>
 
   <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/formularios.js?v=1" defer></script>
 <script src="/assets/js/guia.js?v=7" defer></script>
   <script>
     /* Confirmación del formulario en la página de taller */

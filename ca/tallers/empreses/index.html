@@ -281,7 +281,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       <p class="tl-intro">Et responc en 48 hores laborables per concertar una primera conversa.</p>
 
       <div class="tl-form-card">
-        <form class="tl-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
+        <form class="tl-form" action="https://app.ikigaier.com/api/web/contacto" data-formulario="empresas" method="POST">
           <input type="hidden" name="_next" value="https://www.ikigaier.com/ca/tallers/empreses/?success=1#contacte">
           <input type="hidden" name="_subject" value="Sol·licitud taller per a equips · ikigaier (CA)">
           <input type="text" name="_gotcha" class="tl-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -344,6 +344,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
   </footer>
 
   <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/formularios.js?v=1" defer></script>
 <script src="/assets/js/guia.js?v=7" defer></script>
   <script>
     document.querySelectorAll('a[href^="https://app.ikigaier.com/ca/paso"]').forEach(function (a) {

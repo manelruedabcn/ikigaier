@@ -308,7 +308,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 <h2 id="contacto-h">Tell me about your team</h2>
 <p class="tl-intro">I’ll reply within 48 working hours to arrange a first conversation.</p>
 <div class="tl-form-card">
-<form class="tl-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
+<form class="tl-form" action="https://app.ikigaier.com/api/web/contacto" data-formulario="empresas" method="POST">
 <input type="hidden" name="_next" value="https://www.ikigaier.com/en/workshops/teams/?success=1#contacto">
 <input type="hidden" name="_subject" value="Solicitud taller para equipos · ikigaier">
 <input type="text" name="_gotcha" class="tl-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -367,6 +367,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
 <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← back to manelrueda.com</a>
 </footer>
 <script src="/assets/js/main.js?v=2" defer=""></script>
+<script src="/assets/js/formularios.js?v=1" defer></script>
 <script src="/assets/js/guia.js?v=7" defer></script>
 <script>
     /* Medición: clics hacia el test PASO (evento GA4 «test_click») */

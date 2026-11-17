@@ -241,7 +241,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       <h2 id="proper-h">L’última sessió va omplir la sala</h2>
       <p class="tl-intro">Deixa’m el teu correu i t’aviso tan bon punt hi hagi data i lloc. Només t’escriuré per això.</p>
       <div class="tl-form-card">
-        <form class="tl-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
+        <form class="tl-form" action="https://app.ikigaier.com/api/web/contacto" data-formulario="taller-gratuito-aviso" method="POST">
           <input type="hidden" name="_next" value="https://www.ikigaier.com/ca/tallers/taller-gratuit/?ok=aviso#proper">
           <input type="hidden" name="_subject" value="Avisa'm · taller gratuït (CA)">
           <input type="text" name="_gotcha" class="tl-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -275,7 +275,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         <li><strong>Ho parlem</strong> abans: data, nombre de persones i el que necessitem per projectar.</li>
       </ul>
       <div class="tl-form-card">
-        <form class="tl-form" action="https://formspree.io/f/manelrueda@gmail.com" method="POST">
+        <form class="tl-form" action="https://app.ikigaier.com/api/web/contacto" data-formulario="taller-gratuito-organizar" method="POST">
           <input type="hidden" name="_next" value="https://www.ikigaier.com/ca/tallers/taller-gratuit/?ok=grupo#organitza">
           <input type="hidden" name="_subject" value="Vull organitzar el taller gratuït (CA)">
           <input type="text" name="_gotcha" class="tl-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -345,6 +345,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
   </footer>
 
   <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/formularios.js?v=1" defer></script>
 <script src="/assets/js/guia.js?v=7" defer></script>
   <script>
     document.querySelectorAll('a[href^="https://app.ikigaier.com/ca/paso"]').forEach(function (a) {
