@@ -90,7 +90,7 @@ And if you’ve read one of my books, taken part in a workshop or something simp
 
 Any doubt, reflection or question about ikigaier’s content?
 
-manel@ikigaier.com
+hola@ikigaier.com
 
 Keep walking at → [@manel\_rueda](https://www.instagram.com/manel_rueda/)
 

@@ -139,7 +139,7 @@
   padding: 0;
   margin: 0 0 2.4rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(1.25rem, 4vw, 3rem);
 }
 .home-libros-fila li { margin: 0; }
@@ -242,6 +242,9 @@
 .home-taller-ctas { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.8rem 1.6rem; margin-top: 0.4rem; }
 
 /* --- Responsive --- */
+@media (max-width: 960px) and (min-width: 761px) {
+  .home-libros-fila { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 560px; margin-left: auto; margin-right: auto; }
+}
 @media (max-width: 760px) {
   .home-historia .container { grid-template-columns: 1fr; gap: 1.6rem; }
   .home-historia-foto img { width: 120px; height: 150px; }

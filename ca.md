@@ -90,7 +90,7 @@ I si has llegit algun dels meus llibres, has participat en un taller o simplemen
 
 Tens algun dubte, reflexió o pregunta sobre el contingut d’ikigaier?
 
-manel@ikigaier.com
+hola@ikigaier.com
 
 Continua el teu camí a → [@manel\_rueda](https://www.instagram.com/manel_rueda/)
 
