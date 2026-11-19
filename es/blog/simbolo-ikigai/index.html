@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="El ikigai no tiene un símbolo oficial. De dónde sale el diagrama de cuatro círculos, dónde va cada zona y el error que se repite en sus láminas.">
+  <title>Símbolo del ikigai: cuatro círculos y una lámina mal rotulada · ikigaier</title>
+  <link rel="canonical" href="https://www.ikigaier.com/es/blog/simbolo-ikigai/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/blog/simbolo-ikigai/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/blog/simbolo-ikigai/">
+
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="ikigaier">
+
+
+
+  <meta property="og:title" content="Símbolo del ikigai: los cuatro círculos y una lámina mal rotulada">
+  <meta property="og:description" content="Qué se llama símbolo del ikigai, de dónde sale el diagrama y dónde van de verdad pasión, misión, vocación y profesión. Con la lámina corregida para descargar.">
+  <meta property="og:url" content="https://www.ikigaier.com/es/blog/simbolo-ikigai/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/ikigai-activo-cuatro-zonas.png?v=1">
+  <meta property="og:image:width" content="2048">
+  <meta property="og:image:height" content="1536">
+  <meta property="og:image:alt" content="Diagrama del ikigai activo con las cuatro zonas: pasión, misión, vocación y profesión">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Símbolo del ikigai: los cuatro círculos y una lámina mal rotulada">
+  <meta name="twitter:description" content="Qué se llama símbolo del ikigai, de dónde sale el diagrama y dónde van de verdad pasión, misión, vocación y profesión. Con la lámina corregida para descargar.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/ikigai-activo-cuatro-zonas.png?v=1">
+  <meta name="twitter:image:alt" content="Diagrama del ikigai activo con las cuatro zonas: pasión, misión, vocación y profesión">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=14">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+  <link rel="stylesheet" href="/assets/css/article.css?v=4">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "ikigaier",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "ikigaier",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "ikigaier es el enfoque sobre el ikigai creado por Manel Rueda. Une el ikigai activo (lo que haces y aportas) con el ikigai consciente (cómo lo vives). Libros, test de ikigai gratuito, talleres y newsletter.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.tiktok.com/@manelbcn68",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg?v=3",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "description": "Autor y creador de ikigaier. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.ikigaier.com/es/blog/simbolo-ikigai/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/es/blog/simbolo-ikigai/",
+      "headline": "Símbolo del ikigai: los cuatro círculos y una lámina mal rotulada",
+      "description": "Qué se llama símbolo del ikigai, de dónde sale el diagrama y dónde van de verdad pasión, misión, vocación y profesión. Con la lámina corregida para descargar.",
+      "inLanguage": "es",
+      "image": "https://www.ikigaier.com/assets/images/ikigai-activo-cuatro-zonas.png?v=1",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
+      "articleSection": "Diagrama del ikigai",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": [{"@type": "Thing", "name": "Ikigai"}, {"@type": "Thing", "name": "Diagrama del ikigai"}]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/blog/simbolo-ikigai/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.ikigaier.com/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Símbolo del ikigai",
+          "item": "https://www.ikigaier.com/es/blog/simbolo-ikigai/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.ikigaier.com/es/blog/simbolo-ikigai/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es el símbolo del ikigai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No hay un símbolo oficial. La imagen que más se usa es el diagrama occidental de cuatro círculos, creado como diagrama del propósito y asociado al ikigai en 2014."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde van pasión, misión, vocación y profesión en el diagrama?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En los cruces de dos círculos. Pasión une lo que amas y lo que se te da bien; misión, lo que amas y lo que el mundo necesita; vocación, lo que el mundo necesita y aquello por lo que te pagan; profesión, lo que se te da bien y aquello por lo que te pagan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El diagrama de los cuatro círculos es japonés?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Lo creó Andrés Zuzunaga en 2011 como diagrama del propósito, y Marc Winn lo unió a la palabra ikigai en 2014."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/es/" class="site-header-logo" aria-label="ikigaier · Inicio">
+        <picture>
+          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
+          <img src="/assets/images/logo-ikigaier-bicolor-600.png" alt="ikigaier" width="293" height="92" fetchpriority="high">
+        </picture>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="/es/talleres/">Talleres</a>
+        <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/que-es-ikigaier/">Qué es ikigaier</a>
+        <a href="/es/blog/" aria-current="page">Blog</a>
+        <a href="/es/manel-rueda/">Sobre mí</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/es/test-de-ikigai/" class="nav-destacado">Test ikigai gratis</a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/blog/">Blog</a><span aria-hidden="true">›</span><span>Símbolo del ikigai</span>
+  </nav>
+
+  <main id="contenido">
+    <article class="article-wrap">
+
+      <header class="article-head">
+        <h1>Símbolo del ikigai: los cuatro círculos y una lámina mal rotulada</h1>
+        <p class="article-standfirst">Quien busca el símbolo del ikigai casi siempre acaba en el mismo dibujo, cuatro círculos que se cruzan. Ese dibujo es occidental y nada oficial, y circula muchas veces con los nombres cambiados de sitio.</p>
+        <div class="article-byline">
+          <span class="author"><a href="/es/manel-rueda/">Manel Rueda</a></span>
+          <span class="role">Autor y creador de ikigaier</span>
+          <time datetime="2026-11-19">19 de noviembre de 2026</time>
+        </div>
+      </header>
+
+
+      <div class="prose">
+
+        <p>Esta semana abrí una plantilla de Canva para hacer una lámina del ikigai que pudiera usar en los talleres. Era bonita, cuatro círculos en tonos azules y verdes, un corazón negro en el centro y un texto breve en cada esquina. Al leer los textos vi que pasión, misión, vocación y profesión estaban colgadas cada una de un círculo, cuando en el diagrama son los cruces entre dos. La vocación, por ejemplo, se definía como tus habilidades y talentos.</p>
+
+        <p>No era la primera vez que me encontraba esa versión. Es probablemente la que más se comparte cuando alguien busca una imagen del ikigai, y por eso me ha parecido que valía la pena contar de dónde sale el dibujo y dónde va cada nombre.</p>
+
+        <h2 id="simbolo-oficial">No existe un símbolo oficial del ikigai</h2>
+
+        <p>Ikigai es una palabra corriente en japonés, y en Japón nadie le ha dado un logotipo, del mismo modo que en español nadie ha dibujado un emblema para la palabra ilusión. Lo que significa la palabra lo cuento en <a href="/es/blog/ikigai-significado/">qué significa ikigai</a>. Lo que aparece al buscar «símbolo ikigai» es otra cosa, un esquema que con los años ha acabado en tazas, cuadernos, tatuajes y presentaciones.</p>
+
+        <h2 id="cuatro-circulos">Los cuatro círculos</h2>
+
+        <p>Ese esquema es el diagrama. Cuatro círculos que se cruzan, lo que amas, lo que se te da bien, lo que el mundo necesita y aquello por lo que te pagan, con la palabra ikigai en el centro. Es lo que hoy casi todo el mundo reconoce como el símbolo del ikigai, y no viene de Japón. Andrés Zuzunaga creó en 2011 un diagrama del propósito con esa estructura, y en 2014 Marc Winn le puso la palabra ikigai en el centro. La historia completa está en <a href="/es/blog/diagrama-ikigai/">el diagrama del ikigai</a>.</p>
+
+        <p>Que no sea japonés no le quita utilidad. A mí me sirve para ordenar lo que hago y para ver qué zonas tengo más vacías, siempre que no lo lea como un examen que hay que aprobar llegando al centro.</p>
+
+        <h2 id="error-laminas">El error que se repite en las láminas</h2>
+
+        <p>En el diagrama, los círculos son cuatro preguntas y los nombres van donde se tocan dos de ellos:</p>
+
+        <ul>
+          <li><strong>Pasión</strong>: lo que amas y lo que se te da bien.</li>
+          <li><strong>Misión</strong>: lo que amas y lo que el mundo necesita.</li>
+          <li><strong>Vocación</strong>: lo que el mundo necesita y aquello por lo que te pagan.</li>
+          <li><strong>Profesión</strong>: lo que se te da bien y aquello por lo que te pagan.</li>
+        </ul>
+
+        <p>La lámina que abrí, y bastantes de las que circulan, colocan cada nombre sobre un solo círculo. La pasión pasa a ser lo que te apasiona, la profesión lo que te da dinero, la misión tu aportación al mundo y la vocación tus talentos. Parece un detalle de maquetación y cambia la lectura entera. Con dos círculos detrás, cada zona te dice qué tiene y qué le falta. La profesión junta lo que sabes hacer con lo que te pagan y no pregunta si te gusta, y esa ausencia es justo lo interesante. Con un solo círculo por nombre, el diagrama se queda en cuatro etiquetas y deja de decir nada sobre tu vida.</p>
+
+        <p>La palabra que más confunde es vocación. En el lenguaje de todos los días suena a llamada, a algo que te apasiona desde pequeño. En el diagrama solo dice que lo que haces es necesario y que te pagan por ello. Una enfermera competente que no siente la enfermería como su gran pasión vive en esa zona. Lo cuento con más ejemplos en <a href="/es/blog/pasion-mision-vocacion-profesion/">pasión, misión, vocación y profesión</a>.</p>
+
+        <h2 id="lamina">La lámina, corregida</h2>
+
+        <p>He rehecho aquella plantilla con cada nombre en su cruce y una frase corta para cada zona. También le he cambiado el título, que ahora dice ikigai activo, porque en la práctica ikigaier así llamo a lo que dibujan los cuatro círculos, la parte del hacer. Puedes descargarla para imprimirla o para usarla en una clase.</p>
+
+        <figure>
+          <picture>
+            <source media="(max-width: 700px)" srcset="/assets/images/ikigai-activo-cuatro-zonas-vertical.webp" type="image/webp" width="1080" height="1350">
+            <source media="(max-width: 700px)" srcset="/assets/images/ikigai-activo-cuatro-zonas-vertical.png" width="1080" height="1350">
+            <source srcset="/assets/images/ikigai-activo-cuatro-zonas.webp" type="image/webp" width="2048" height="1536">
+            <img src="/assets/images/ikigai-activo-cuatro-zonas.png" alt="Diagrama del ikigai activo: cuatro círculos (lo que amas, lo que se te da bien, lo que el mundo necesita y por lo que te pagan) con pasión, misión, vocación y profesión rotuladas en los cruces de dos círculos" width="2048" height="1536" loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Cada zona nace del cruce de dos círculos. <a href="/assets/images/ikigai-activo-cuatro-zonas.pdf" download>Descargar la lámina en PDF</a>.</figcaption>
+        </figure>
+
+        <p>Si prefieres rellenarla con tus propias respuestas, la <a href="/es/blog/plantilla-ikigai/">plantilla ikigai</a> trae una pregunta por círculo y espacio para escribir.</p>
+
+        <h2 id="lo-que-falta">Lo que ningún símbolo recoge</h2>
+
+        <p>Los cuatro círculos no dicen nada de cómo vives lo que haces. Se puede ocupar una profesión impecable y atravesarla cada día en piloto automático, y el diagrama la dibujaría igual de llena. Junto al ikigai activo, en la práctica ikigaier a esa otra mitad la llamo ikigai consciente, la presencia con la que habitas cada zona, y es una elaboración propia que no forma parte de la tradición japonesa.</p>
+
+        <p>En la plantilla original el centro lo ocupaba un corazón negro, pequeño, apenas más grande que la letra de los rótulos. En la mía lo ocupa ahora la A de ikigaier, sobre un disco crema para que no se pierda entre los colores, y sigue siendo la parte de la lámina que menos explica.</p>
+
+        <h2 id="preguntas">Preguntas frecuentes</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>¿Cuál es el símbolo del ikigai?</h3>
+            <p>No hay un símbolo oficial. La imagen que más se usa es el diagrama occidental de cuatro círculos, creado como diagrama del propósito y asociado al ikigai en 2014.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Dónde van pasión, misión, vocación y profesión en el diagrama?</h3>
+            <p>En los cruces de dos círculos. Pasión une lo que amas y lo que se te da bien; misión, lo que amas y lo que el mundo necesita; vocación, lo que el mundo necesita y aquello por lo que te pagan; profesión, lo que se te da bien y aquello por lo que te pagan.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿El diagrama de los cuatro círculos es japonés?</h3>
+            <p>No. Lo creó Andrés Zuzunaga en 2011 como diagrama del propósito, y Marc Winn lo unió a la palabra ikigai en 2014.</p>
+          </div>
+        </div>
+
+        <div class="programa-bloque">
+          <p class="programa-etiqueta">Test de ikigai · gratis</p>
+          <h3>¿Lo que te falta está en lo que haces o en cómo lo vives?</h3>
+          <p>El test ikigaier te lo dice en 16 preguntas: qué te sostiene, qué pide tu atención y un ejercicio para tu semana. Al terminar, si quieres, puedes seguir con un mes de ejercicios: dos correos por semana durante cuatro semanas, más bienvenida y cierre, gratis.</p>
+          <a href="/es/test-de-ikigai/" class="btn btn-primary">Hacer el test de ikigai →</a>
+          <p class="programa-nota">Gratis · sin registro · unos diez minutos</p>
+        </div>
+
+        <h2 id="fuentes">Fuentes</h2>
+
+        <div class="fuentes">
+          <ol>
+            <li>Zuzunaga, Andrés. Diagrama del propósito, creado en 2011 según <a href="https://www.cosmograma.com/proposito.php" target="_blank" rel="noopener noreferrer">Cosmograma</a>.</li>
+            <li>Winn, Marc. «What is your ikigai?» (14 de mayo de 2014), <a href="https://theviewinside.me/ikigai" target="_blank" rel="noopener noreferrer">theviewinside.me</a>.</li>
+          </ol>
+          <p class="nota-editorial">El origen del diagrama se apoya en las fuentes citadas. La lectura sobre el ikigai activo y el ikigai consciente es una elaboración propia de la práctica ikigaier. Última actualización: 19 de noviembre de 2026.</p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de ikigaier" width="150" height="113" aria-hidden="true" decoding="async">
+    </picture>
+    <p>ikigaier · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <button type="button" class="iki-cookies-config" data-cookies-config>Configurar cookies</button></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← volver a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/guia.js?v=7" defer></script>
+  <script src="/assets/js/cookies.js?v=2" defer></script>
+</body>
+</html>
