@@ -425,9 +425,12 @@
     var up = ck && ck.getClientRects().length && ck.getBoundingClientRect().right > window.innerWidth - 96 ? ck.offsetHeight + 12 : 0;
     document.documentElement.style.setProperty('--guia-up', up + 'px');
   }
-  ajustar();
-  if (window.MutationObserver) new MutationObserver(ajustar).observe(document.body, { childList: true });
-  window.addEventListener('resize', ajustar);
+  // Se mide en el siguiente fotograma para no forzar un recálculo de diseño durante la carga.
+  var pendiente = false;
+  function programar() { if (pendiente) return; pendiente = true; requestAnimationFrame(function () { pendiente = false; ajustar(); }); }
+  programar();
+  if (window.MutationObserver) new MutationObserver(programar).observe(document.body, { childList: true });
+  window.addEventListener('resize', programar);
 
   // Una sola invitación por visita, a los pocos segundos, y nada si ya lo abrió.
   if (!store('guia-visto')) {

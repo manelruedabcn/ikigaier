@@ -58,12 +58,11 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
   <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
   <meta name="twitter:image:alt" content="ikigaier · El ikigai que no te contaron · por Manel Rueda">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
 
-  <link rel="stylesheet" href="/assets/css/main.css?v=14">
+  <link rel="stylesheet" href="/assets/css/main.css?v=15">
   <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
   <link rel="stylesheet" href="/assets/css/home.css?v=2">
 
@@ -175,12 +174,9 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
   <header class="site-header">
     <div class="site-header-inner">
       <a href="/es/" class="site-header-logo" aria-label="ikigaier · Inicio">
-        <picture>
-          <source srcset="/assets/images/logo-ikigaier-bicolor-600.webp" type="image/webp">
-          <img src="/assets/images/logo-ikigaier-bicolor-600.png"
+        <img src="/assets/images/logo-ikigaier-bicolor-600.webp" srcset="/assets/images/logo-ikigaier-bicolor-400.webp 400w, /assets/images/logo-ikigaier-bicolor-600.webp 600w" sizes="(max-width: 760px) 193px, 293px"
                alt="ikigaier"
                width="293" height="92" fetchpriority="high">
-        </picture>
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
         <span></span>
@@ -216,10 +212,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
   ============================================ -->
   <section id="inicio-nuevo" class="home-hero" aria-labelledby="home-h1">
     <div class="home-hero-aire" aria-hidden="true">
-      <picture>
-        <source srcset="/assets/images/aire-puertas-1600.webp" type="image/webp">
-        <img src="/assets/images/aire-puertas-1600.png" alt="Hojas llevadas por el aire" width="1600" height="539" decoding="async">
-      </picture>
+      <img src="/assets/images/aire-puertas-1200.webp" srcset="/assets/images/aire-puertas-600.webp 600w, /assets/images/aire-puertas-900.webp 900w, /assets/images/aire-puertas-1200.webp 1200w, /assets/images/aire-puertas-1600-ligera.webp 1600w" sizes="(max-width: 760px) 600px, max(1100px, 115vw)" alt="Hojas llevadas por el aire" width="1600" height="539" fetchpriority="high">
     </div>
     <div class="home-hero-inner">
       <h1 id="home-h1">Lo tienes todo.<span class="linea-2">Y aun así, algo te falta.</span></h1>
@@ -266,7 +259,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
   <section id="mi-historia" class="home-bloque home-historia" aria-labelledby="historia-h">
     <div class="container">
       <div class="home-historia-foto">
-        <img src="/assets/images/manel-rueda-400.jpg?v=3" alt="Manel Rueda" width="180" height="220" loading="lazy" decoding="async">
+        <img src="/assets/images/manel-rueda-240.webp" srcset="/assets/images/manel-rueda-240.webp 240w, /assets/images/manel-rueda-400.webp 400w" sizes="(max-width: 760px) 120px, 180px" alt="Manel Rueda" width="180" height="220" loading="lazy" decoding="async">
       </div>
       <div class="home-historia-texto">
         <span class="section-label">Yo también estuve ahí</span>
@@ -300,10 +293,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
       <ul class="home-libros-fila">
         <li>
           <a href="/es/libros/#no-todo">
-            <picture>
-              <source srcset="/assets/images/portada-no-todo.webp" type="image/webp">
-              <img src="/assets/images/portada-no-todo.jpg" alt="Portada de No todo lo que te frena es tuyo" width="600" height="900" loading="lazy" decoding="async">
-            </picture>
+            <img src="/assets/images/portada-no-todo-320.webp" srcset="/assets/images/portada-no-todo-320.webp 320w, /assets/images/portada-no-todo.webp 600w" sizes="(max-width: 760px) 160px, 220px" alt="Portada de No todo lo que te frena es tuyo" width="600" height="900" loading="lazy" decoding="async">
             <span class="home-libro-paso">1 · Liberar</span>
             <span class="home-libro-titulo">No todo lo que te frena es tuyo</span>
             <span class="home-libro-linea">Por qué lo conseguiste casi todo y sigues sintiendo ese vacío.</span>
@@ -311,10 +301,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         </li>
         <li>
           <a href="/es/libros/#disciplina">
-            <picture>
-              <source srcset="/assets/images/portada-disciplina.webp" type="image/webp">
-              <img src="/assets/images/portada-disciplina.jpg" alt="Portada de Disciplina para indisciplinados" width="600" height="900" loading="lazy" decoding="async">
-            </picture>
+            <img src="/assets/images/portada-disciplina-320.webp" srcset="/assets/images/portada-disciplina-320.webp 320w, /assets/images/portada-disciplina.webp 600w" sizes="(max-width: 760px) 160px, 220px" alt="Portada de Disciplina para indisciplinados" width="600" height="900" loading="lazy" decoding="async">
             <span class="home-libro-paso">2 · Actuar</span>
             <span class="home-libro-titulo">Disciplina para indisciplinados</span>
             <span class="home-libro-linea">Para quien ha empezado cien lunes. Nunca fue fuerza de voluntad.</span>
@@ -322,10 +309,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         </li>
         <li>
           <a href="/es/libros/el-ikigai-que-no-te-contaron/">
-            <picture>
-              <source srcset="/assets/images/portada-libro.webp" type="image/webp">
-              <img src="/assets/images/portada-libro-600.jpg" alt="Portada de El Ikigai que no te contaron" width="600" height="900" loading="lazy" decoding="async">
-            </picture>
+            <img src="/assets/images/portada-libro-320.webp" srcset="/assets/images/portada-libro-320.webp 320w, /assets/images/portada-libro-600.webp 600w" sizes="(max-width: 760px) 160px, 220px" alt="Portada de El Ikigai que no te contaron" width="600" height="900" loading="lazy" decoding="async">
             <span class="home-libro-paso">3 · Alinear</span>
             <span class="home-libro-titulo">El Ikigai que no te contaron</span>
             <span class="home-libro-linea">El libro central de la práctica y el origen del taller.</span>
@@ -333,10 +317,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
         </li>
         <li>
           <a href="/es/libros/#comunicacion">
-            <picture>
-              <source srcset="/assets/images/portada-comunicacion.webp" type="image/webp">
-              <img src="/assets/images/portada-comunicacion-600.jpg" alt="Portada de La comunicación que no te enseñaron" width="600" height="900" loading="lazy" decoding="async">
-            </picture>
+            <img src="/assets/images/portada-comunicacion-320.webp" srcset="/assets/images/portada-comunicacion-320.webp 320w, /assets/images/portada-comunicacion.webp 600w" sizes="(max-width: 760px) 160px, 220px" alt="Portada de La comunicación que no te enseñaron" width="600" height="900" loading="lazy" decoding="async">
             <span class="home-libro-paso">4 · Comunicar</span>
             <span class="home-libro-titulo">La comunicación que no te enseñaron</span>
             <span class="home-libro-linea">Para cuando cuesta poner límites o encontrar las palabras.</span>
@@ -424,7 +405,7 @@ try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
   </footer>
 
   <script src="/assets/js/main.js?v=2" defer></script>
-<script src="/assets/js/guia.js?v=7" defer></script>
+<script src="/assets/js/guia.js?v=8" defer></script>
   <script src="/assets/js/cookies.js?v=2" defer></script>
 </body>
 </html>
