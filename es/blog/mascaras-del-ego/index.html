@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Las siete máscaras del ego con las que nos protegemos sin darnos cuenta, el miedo que sostiene cada una y qué cambia cuando aprendes a reconocer la tuya.">
+  <title>Las máscaras del ego: las siete y el miedo que esconden · ikigaier</title>
+  <link rel="canonical" href="https://www.ikigaier.com/es/blog/mascaras-del-ego/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/blog/mascaras-del-ego/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/blog/mascaras-del-ego/">
+
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="ikigaier">
+
+
+
+  <meta property="og:title" content="Las máscaras del ego: siete formas de protegernos sin saberlo">
+  <meta property="og:description" content="Las siete máscaras del ego con las que nos protegemos sin darnos cuenta, el miedo que sostiene cada una y qué cambia cuando aprendes a reconocer la tuya.">
+  <meta property="og:url" content="https://www.ikigaier.com/es/blog/mascaras-del-ego/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ikigaier · El ikigai que no te contaron · por Manel Rueda">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Las máscaras del ego: siete formas de protegernos sin saberlo">
+  <meta name="twitter:description" content="Las siete máscaras del ego con las que nos protegemos sin darnos cuenta, el miedo que sostiene cada una y qué cambia cuando aprendes a reconocer la tuya.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="ikigaier · El ikigai que no te contaron · por Manel Rueda">
+
+  <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=15">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+  <link rel="stylesheet" href="/assets/css/article.css?v=4">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "ikigaier",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "ikigaier",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "ikigaier es el enfoque sobre el ikigai creado por Manel Rueda. Une el ikigai activo (lo que haces y aportas) con el ikigai consciente (cómo lo vives). Libros, test de ikigai gratuito, talleres y newsletter.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.tiktok.com/@manelbcn68",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg?v=3",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "description": "Autor y creador de ikigaier. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.ikigaier.com/es/blog/mascaras-del-ego/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/es/blog/mascaras-del-ego/",
+      "headline": "Las máscaras del ego: siete formas de protegernos sin saberlo",
+      "description": "Las siete máscaras del ego con las que nos protegemos sin darnos cuenta, el miedo que sostiene cada una y qué cambia cuando aprendes a reconocer la tuya.",
+      "inLanguage": "es",
+      "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
+      "datePublished": "2026-11-21",
+      "dateModified": "2026-11-21",
+      "articleSection": "Máscaras",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": [{"@type": "Thing", "name": "Máscaras del ego"}, {"@type": "Thing", "name": "Máscaras del ego"}]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/blog/mascaras-del-ego/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.ikigaier.com/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Las máscaras del ego",
+          "item": "https://www.ikigaier.com/es/blog/mascaras-del-ego/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.ikigaier.com/es/blog/mascaras-del-ego/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué son las máscaras del ego?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Son reacciones automáticas que aprendimos de pequeños para protegernos de algo que dolía, como el rechazo o la vergüenza. Funcionaron en su momento y siguen activas aunque ya no hagan falta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuáles son las siete máscaras?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Exigente, la Controladora, la Manipuladora, la Jueza, la Complaciente, la Víctima y la Impostora. Cada una protege de un miedo distinto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede llevar más de una máscara?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, lo habitual es llevar varias y que se turnen según el contexto. Interesa más saber cuál toma el volante en cada momento que buscar una etiqueta fija."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/es/" class="site-header-logo" aria-label="ikigaier · Inicio">
+        <img src="/assets/images/logo-ikigaier-bicolor-600.webp" srcset="/assets/images/logo-ikigaier-bicolor-400.webp 400w, /assets/images/logo-ikigaier-bicolor-600.webp 600w" sizes="(max-width: 760px) 193px, 293px" alt="ikigaier" width="293" height="92" fetchpriority="high">
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="/es/talleres/">Talleres</a>
+        <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/que-es-ikigaier/">Qué es ikigaier</a>
+        <a href="/es/blog/" aria-current="page">Blog</a>
+        <a href="/es/manel-rueda/">Sobre mí</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/es/test-de-ikigai/" class="nav-destacado">Test ikigai gratis</a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/blog/">Blog</a><span aria-hidden="true">›</span><span>Las máscaras del ego</span>
+  </nav>
+
+  <main id="contenido">
+    <article class="article-wrap">
+
+      <header class="article-head">
+        <h1>Las máscaras del ego: siete formas de protegernos sin saberlo</h1>
+        <p class="article-standfirst">Qué son, de qué miedo nace cada una y qué cambia cuando aprendes a reconocer la tuya.</p>
+        <div class="article-byline">
+          <span class="author"><a href="/es/manel-rueda/">Manel Rueda</a></span>
+          <span class="role">Autor y creador de ikigaier</span>
+          <time datetime="2026-11-21">21 de noviembre de 2026</time>
+        </div>
+      </header>
+
+
+      <div class="prose">
+
+        <p>Hay reacciones que no terminan de encajar con quien crees que eres. Dices que sí cuando querías decir que no, revisas por quinta vez un trabajo terminado o te adelantas a criticar antes de que nadie te critique a ti. Luego, en frío, no te reconoces del todo en lo que hiciste.</p>
+
+        <p>En la práctica ikigaier a esas reacciones automáticas las llamamos máscaras. Este artículo recoge las siete que trabajo en <a href="/es/libros/el-ikigai-que-no-te-contaron/"><em>El ikigai que no te contaron</em></a>, el miedo que sostiene cada una y una forma sencilla de saber cuál está tomando decisiones por ti.</p>
+
+        <h2 id="que-es">Qué es una máscara</h2>
+
+        <p>Cuando hablo de máscaras no me refiero a falsedad ni a doblez. Son estrategias emocionales que aprendimos de pequeños para protegernos de algo que dolía, como el rechazo o la vergüenza. Cada persona desarrolló las suyas según lo que su entorno premiaba o castigaba, y funcionaron. Gracias a ellas, en su momento, salimos adelante.</p>
+
+        <p>El problema aparece cuando siguen activas mucho después de que el peligro haya desaparecido. Se vuelven automáticas, y una reacción automática ya no se elige. Por eso cuesta tanto verlas desde dentro, porque se confunden con el carácter.</p>
+
+        <h2 id="las-siete">Las siete máscaras y el miedo que esconden</h2>
+
+        <p>Detrás de cada máscara hay un miedo concreto. A veces está a la vista y otras se presenta con nombres más amables, como prudencia o sentido común.</p>
+
+        <h3 id="exigente">La Exigente</h3>
+        <p>Desde fuera parece disciplina y amor por el detalle. Por dentro nace del miedo a no estar a la altura, y por eso nunca da nada por terminado. El gesto que la desarma es pequeño, entregar algo antes de sentirte preparado. La desarrollo con más calma en <a href="/es/blog/mascara-exigente/">la máscara Exigente</a>.</p>
+
+        <h3 id="controladora">La Controladora</h3>
+        <p>Se presenta como responsabilidad y previsión. Nace del miedo a perder el control y cobra su precio en cansancio, porque casi nunca delega ni descansa del todo. Se entrena dejando una cosa sin controlar a propósito y observando qué pasa. Casi siempre, nada. Más en <a href="/es/blog/mascara-controladora/">la máscara Controladora</a>.</p>
+
+        <h3 id="manipuladora">La Manipuladora</h3>
+        <p>Rara vez se vive como manipulación. Parece inteligencia social o capacidad de adaptarse, y nace del miedo a mostrarse tal cual eres. La salida son las microverdades, decir algo pequeño y honesto en un lugar seguro, por ejemplo «esto me genera dudas».</p>
+
+        <h3 id="jueza">La Jueza</h3>
+        <p>Critica para no ser criticada. Debajo hay vergüenza y miedo a que te vean los puntos débiles antes de poder esconderlos. La dureza que dirige hacia fuera acaba volviendo hacia uno mismo. Ayuda una pregunta sencilla, qué está intentando proteger esta persona, o yo.</p>
+
+        <h3 id="complaciente">La Complaciente</h3>
+        <p>Amable, disponible, nunca conflictiva. Nace del miedo al rechazo y termina dejando a la persona disponible para todos menos para sí misma. Empieza a aflojar con una micropausa antes de responder a cualquier petición, un «déjame pensarlo».</p>
+
+        <h3 id="victima">La Víctima</h3>
+        <p>Casi nunca se presenta como víctima. Habla con frases razonables como «no depende de mí» o «yo es que soy así». Nace del miedo a no ser capaz de cambiar, a tomar las riendas y equivocarse. Lo que funciona es buscar un 1 % de poder, algo pequeño que hoy dependa solo de ti.</p>
+
+        <h3 id="impostora">La Impostora</h3>
+        <p>Suele aparecer cuando las cosas van bien, antes de exponerte, y susurra que en cualquier momento se van a dar cuenta. Nace del miedo a ser descubierta. Se desarma con pruebas, anotando cada logro tal como ocurrió, acción y resultado, porque vive de la amnesia.</p>
+
+        <h2 id="varias">Casi nadie lleva una sola</h2>
+
+        <p>Lo habitual es llevar varias y que se turnen según el contexto. Se puede ser Exigente en el trabajo y Complaciente en casa, o Controladora en lo profesional y Víctima en lo personal. Por eso no tiene mucho sentido buscar una etiqueta fija. Interesa más saber cuál toma el volante en cada momento.</p>
+
+        <h2 id="al-mando">Cómo saber cuál está al mando</h2>
+
+        <p>Hay una pregunta que funciona casi siempre. Piensa en un momento reciente en que reaccionaste peor de lo que te habría gustado, algo cotidiano y sin dramatismo. Repasa la lista anterior y mira cuál de las siete reconoces en esa reacción.</p>
+
+        <p>La primera respuesta suele ser la buena. Si dudas entre dos, probablemente llevas las dos.</p>
+
+        <h2 id="descubrirla">Qué pasa cuando la descubres</h2>
+
+        <p>Mucha gente espera que, una vez vista, la máscara desaparezca. No ocurre así. Sigue ahí y vuelve a aparecer en los sitios de siempre, aunque con menos fuerza.</p>
+
+        <p>Mientras actúa en automático, decide sola. En cuanto tiene nombre, la reconoces al llegar, y entre ese momento y la reacción queda un margen pequeño en el que puedes elegir.</p>
+
+        <p>En mi caso fue la Exigente. Sigue apareciendo, la reconozco cuando vuelve y la mayoría de las veces ya no decide por mí. Hay días en que gana igual, y aun así no es la misma que cuando no sabía que estaba ahí.</p>
+
+        <h2 id="primer-paso">Un primer paso</h2>
+
+        <p>Esta semana, elige la reacción que menos te gustó y ponle uno de los siete nombres. Solo el nombre, sin justificarte ni corregirte. Apúntalo en una libreta y observa qué pasa la próxima vez que aparezca.</p>
+
+        <p>Si quieres ir más despacio, las máscaras ocupan el capítulo 3 de <em>El ikigai que no te contaron</em>, con el desarrollo completo de cada una y sus ejercicios. Y en la newsletter estoy escribiendo una carta por máscara, en primera persona, que empieza en <a href="https://ikigaier.substack.com/p/siete-mascaras-para-volver" target="_blank" rel="noopener">Siete máscaras para volver</a>.</p>
+
+        <h2 id="preguntas">Preguntas frecuentes</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>¿Qué son las máscaras del ego?</h3>
+            <p>Son reacciones automáticas que aprendimos de pequeños para protegernos de algo que dolía, como el rechazo o la vergüenza. Funcionaron en su momento y siguen activas aunque ya no hagan falta.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Cuáles son las siete máscaras?</h3>
+            <p>La Exigente, la Controladora, la Manipuladora, la Jueza, la Complaciente, la Víctima y la Impostora. Cada una protege de un miedo distinto.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Se puede llevar más de una máscara?</h3>
+            <p>Sí, lo habitual es llevar varias y que se turnen según el contexto. Interesa más saber cuál toma el volante en cada momento que buscar una etiqueta fija.</p>
+          </div>
+        </div>
+
+        <div class="programa-bloque">
+          <p class="programa-etiqueta">Test de ikigai · gratis</p>
+          <h3>¿Lo que te falta está en lo que haces o en cómo lo vives?</h3>
+          <p>El test ikigaier te lo dice en 16 preguntas: qué te sostiene, qué pide tu atención y un ejercicio para tu semana. Al terminar, si quieres, puedes seguir con un mes de ejercicios: dos correos por semana durante cuatro semanas, más bienvenida y cierre, gratis.</p>
+          <a href="/es/test-de-ikigai/" class="btn btn-primary">Hacer el test de ikigai →</a>
+          <p class="programa-nota">Gratis · sin registro · unos diez minutos</p>
+        </div>
+
+        <h2 id="fuentes">Fuentes</h2>
+
+        <div class="fuentes">
+          <ol>
+            <li>Rueda, Manel. <em>El ikigai que no te contaron</em>, capítulo 3, «El ego y las máscaras».</li>
+            <li>Rueda, Manel. <em>Camina sin separarte de ti</em>, sección «Máscaras y miedo».</li>
+          </ol>
+          <p class="nota-editorial">Las siete máscaras son una elaboración propia de la práctica ikigaier, desarrollada en <em>El ikigai que no te contaron</em> (capítulo 3) y <em>Camina sin separarte de ti</em>. No es un diagnóstico ni sustituye la ayuda de un profesional. Última actualización: 21 de noviembre de 2026.</p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de ikigaier" width="150" height="113" aria-hidden="true" decoding="async">
+    </picture>
+    <p>ikigaier · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <button type="button" class="iki-cookies-config" data-cookies-config>Configurar cookies</button></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← volver a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/guia.js?v=8" defer></script>
+  <script src="/assets/js/cookies.js?v=2" defer></script>
+</body>
+</html>
