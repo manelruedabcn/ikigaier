@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Qué significa musubi, la palabra japonesa que une atar y hacer nacer, y por qué ayuda a entender el ikigai como un nudo entre lo que haces y cómo lo vives.">
+  <title>Musubi: qué significa y qué tiene que ver con el ikigai · ikigaier</title>
+  <link rel="canonical" href="https://www.ikigaier.com/es/blog/musubi-ikigai/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/blog/musubi-ikigai/">
+  <link rel="alternate" hreflang="ca" href="https://www.ikigaier.com/ca/blog/musubi-ikigai/">
+  <link rel="alternate" hreflang="en" href="https://www.ikigaier.com/en/blog/musubi-ikigai/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/blog/musubi-ikigai/">
+
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="ikigaier">
+
+  <meta property="og:locale:alternate" content="ca_ES">
+
+  <meta property="og:locale:alternate" content="en_GB">
+
+  <meta property="og:title" content="Musubi e ikigai: el nudo entre lo que haces y cómo lo vives">
+  <meta property="og:description" content="Musubi es atar y es también la fuerza que hace nacer las cosas. De dónde viene la palabra, qué es el en-musubi y qué tiene que ver todo ello con el ikigai.">
+  <meta property="og:url" content="https://www.ikigaier.com/es/blog/musubi-ikigai/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ikigaier · El ikigai que no te contaron · por Manel Rueda">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Musubi e ikigai: el nudo entre lo que haces y cómo lo vives">
+  <meta name="twitter:description" content="Musubi es atar y es también la fuerza que hace nacer las cosas. De dónde viene la palabra, qué es el en-musubi y qué tiene que ver todo ello con el ikigai.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="ikigaier · El ikigai que no te contaron · por Manel Rueda">
+
+  <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=15">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+  <link rel="stylesheet" href="/assets/css/article.css?v=4">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "ikigaier",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "ikigaier",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "ikigaier es el enfoque sobre el ikigai creado por Manel Rueda. Une el ikigai activo (lo que haces y aportas) con el ikigai consciente (cómo lo vives). Libros, test de ikigai gratuito, talleres y newsletter.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.tiktok.com/@manelbcn68",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg?v=3",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "description": "Autor y creador de ikigaier. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.ikigaier.com/es/blog/musubi-ikigai/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/es/blog/musubi-ikigai/",
+      "headline": "Musubi e ikigai: el nudo entre lo que haces y cómo lo vives",
+      "description": "Musubi es atar y es también la fuerza que hace nacer las cosas. De dónde viene la palabra, qué es el en-musubi y qué tiene que ver todo ello con el ikigai.",
+      "inLanguage": "es",
+      "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
+      "datePublished": "2026-11-22",
+      "dateModified": "2026-11-22",
+      "articleSection": "Ikigai",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Ikigai"
+        },
+        {
+          "@type": "Thing",
+          "name": "Musubi"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/blog/musubi-ikigai/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.ikigaier.com/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Musubi e ikigai",
+          "item": "https://www.ikigaier.com/es/blog/musubi-ikigai/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.ikigaier.com/es/blog/musubi-ikigai/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué significa musubi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Musubi es una palabra japonesa que une dos ideas: atar o anudar, y la fuerza que hace nacer y crecer las cosas. En el sintoísmo designa el poder de creación, y en la vida diaria se usa para nudos, lazos entre personas y bolas de arroz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es el en-musubi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es atar los lazos que unen a las personas. Une musubi con en, una palabra de raíz budista para el hilo que liga una causa con lo que acaba ocurriendo. Se asocia sobre todo a la pareja, pero abarca también la familia, el trabajo y la comunidad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué a las bolas de arroz se les llama omusubi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Musubi como nombre de la bola de arroz hecha a mano se extendió en el periodo Edo, y la o de cortesía se añadió después. Hoy convive con onigiri. Se discute si el nombre tiene relación directa con el mito, pero los dos sentidos, atar y crear, están en la palabra."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El musubi forma parte del ikigai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No en la tradición japonesa: son palabras distintas. Relacionarlas es una lectura propia de la práctica ikigaier, que usa el musubi como imagen del nudo entre el ikigai activo, lo que haces, y el ikigai consciente, cómo lo vives."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/es/" class="site-header-logo" aria-label="ikigaier · Inicio">
+        <img src="/assets/images/logo-ikigaier-bicolor-600.webp" srcset="/assets/images/logo-ikigaier-bicolor-400.webp 400w, /assets/images/logo-ikigaier-bicolor-600.webp 600w" sizes="(max-width: 760px) 193px, 293px" alt="ikigaier" width="293" height="92" fetchpriority="high">
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="/es/talleres/">Talleres</a>
+        <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/que-es-ikigaier/">Qué es ikigaier</a>
+        <a href="/es/blog/" aria-current="page">Blog</a>
+        <a href="/es/manel-rueda/">Sobre mí</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/es/test-de-ikigai/" class="nav-destacado">Test ikigai gratis</a>
+        <a href="/ca/blog/musubi-ikigai/" hreflang="ca" lang="ca" class="nav-idioma" title="Català" aria-label="Català"><span class="nav-idioma-corto" aria-hidden="true">CA</span><span class="nav-idioma-largo">Català</span></a>
+        <a href="/en/blog/musubi-ikigai/" hreflang="en" lang="en" class="nav-idioma" title="English" aria-label="English"><span class="nav-idioma-corto" aria-hidden="true">EN</span><span class="nav-idioma-largo">English</span></a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/blog/">Blog</a><span aria-hidden="true">›</span><span>Musubi e ikigai</span>
+  </nav>
+
+  <main id="contenido">
+    <article class="article-wrap">
+
+      <header class="article-head">
+        <h1>Musubi e ikigai: el nudo entre lo que haces y cómo lo vives</h1>
+        <p class="article-standfirst">Musubi es una palabra japonesa que significa atar y que, a la vez, nombra la fuerza que hace nacer las cosas. No forma parte del ikigai, pero ayuda a entender algo que los cuatro círculos no explican: qué pasa entre lo que haces y la manera en que lo vives, y entre tú y las personas que aparecen en tu vida.</p>
+        <div class="article-byline">
+          <span class="author"><a href="/es/manel-rueda/">Manel Rueda</a></span>
+          <span class="role">Autor y creador de ikigaier</span>
+          <time datetime="2026-11-22">22 de noviembre de 2026</time>
+        </div>
+      </header>
+
+      <div class="prose">
+
+        <p>Cuando se habla del ikigai casi siempre se habla de piezas: lo que amas, lo que se te da bien, lo que el mundo necesita, lo que te pagan. Se habla mucho menos de cómo se juntan. Una persona puede tener todas las piezas y vivirlas por separado, como cajones de un mueble que se abren de uno en uno. Para pensar en esa juntura me ha servido una palabra japonesa que no suele aparecer en los libros sobre el ikigai, musubi.</p>
+
+        <h2 id="que-significa">Qué significa musubi</h2>
+
+        <p>Musubi se escribe de dos maneras, y las dos cuentan. La más corriente es 結び, del verbo musubu, atar. Es la palabra del nudo de un cordón, de un lazo, de un compromiso que se cierra. La otra es más antigua y aparece en los textos de los mitos, escrita 産霊 o 産巣日 y leída a veces musuhi. Según la Enciclopedia del sintoísmo de la Universidad Kokugakuin, <em>musu</em> lleva la idea de crear y desarrollarse, y <em>hi</em> la de una fuerza invisible o misteriosa. Juntas nombran lo que hace que el cielo, la tierra y todas las cosas lleguen a existir.</p>
+
+        <p>En el sintoísmo, el musubi es el poder de llegar a ser. En el relato de la creación del Kojiki, del año 712, de los tres primeros dioses que aparecen, dos llevan la palabra en el nombre: Takamimusubi y Kamimusubi. La misma universidad lo resume como el espíritu del nacimiento y del devenir, las fuerzas que crean y armonizan.</p>
+
+        <p>Lo que me interesa es que la lengua no separa los dos sentidos. Atar y hacer nacer van en la misma palabra, como si el japonés antiguo hubiera entendido que lo que se crea sale de algo que se une.</p>
+
+        <h2 id="omusubi">De los dioses a una bola de arroz</h2>
+
+        <p>Cualquiera que haya pasado por una tienda japonesa conoce el omusubi, la bola de arroz apretada a mano, muchas veces en forma de triángulo y envuelta en alga. También se llama onigiri, que viene de nigiru, apretar. El nombre de musubi para el arroz moldeado se extendió en el periodo Edo, entre 1603 y 1868, y más tarde se le añadió la o de cortesía. Hay quien lo relaciona con los dioses del Kojiki y hay quien lo discute. Lo seguro es que la palabra carga con los dos sentidos a la vez.</p>
+
+        <p>Hay una historia reciente que lo muestra bien. Después del terremoto de Kobe, en enero de 1995, los voluntarios dieron de comer a miles de personas desplazadas sobre todo con bolas de arroz, porque se hacen en cantidad con poco, se llevan en la mano y no necesitan platos. En el año 2000, una asociación dedicada a la cocina japonesa declaró el 17 de enero, el día del terremoto, Día del Omusubi. Eligió esa palabra y no onigiri precisamente por lo que evoca, los lazos entre personas.</p>
+
+        <h2 id="ikigai">Qué tiene que ver con el ikigai</h2>
+
+        <p>En japonés, ikigai es una palabra corriente, aquello que hace que la vida valga la pena. Lo cuento con calma en <a href="/es/blog/ikigai-significado/">qué significa ikigai</a>. Musubi es otra palabra y otra tradición, y nadie en Japón te dirá que forman pareja. Relacionarlas es una lectura mía, y la presento como tal.</p>
+
+        <p>En la práctica ikigaier hablo de dos caras del ikigai. Una es el ikigai activo, lo que haces y aportas, lo que dibujan los cuatro círculos. La otra es el ikigai consciente, la manera en que vives eso que haces: si estás presente, si te traicionas en las decisiones pequeñas. Lo explico más despacio en <a href="/es/que-es-ikigaier/">qué es ikigaier</a>.</p>
+
+        <p>El musubi me da una imagen para lo que pasa entre las dos. Dos cuerdas sueltas no sujetan nada, por muy buenas que sean. Cuando se anudan aguantan peso, y aparece algo que antes no estaba. Con el ikigai pasa algo parecido. Se puede tener un trabajo que encaja en el diagrama y hacerlo cada día con la cabeza en otra parte. Y se puede vivir con mucha atención y no hacer nada con ella. En los dos casos falta el nudo. Lo que llamo ikigai, en el sentido completo, es lo que nace cuando se atan.</p>
+
+        <p>Esto cambia una pregunta. En lugar de «¿qué me falta?», que suele llevar a buscar una pieza nueva, aparece otra más incómoda: «¿qué tengo ya que no he atado?». Muchas veces las piezas están. Lo que no está es la juntura.</p>
+
+        <h2 id="en-musubi">Las personas que aparecen</h2>
+
+        <p>En japonés hay una expresión que junta musubi con otra palabra, <em>en</em> (縁), de raíz budista: el hilo que une una causa con lo que acaba ocurriendo. <em>En-musubi</em> es atar esos lazos. En los santuarios se pide sobre todo para encontrar pareja, pero el santuario de Izumo, el más conocido, lo entiende de forma más amplia: los vínculos con la familia, con el trabajo y con la gente que te rodea.</p>
+
+        <p>Yo tengo una teoría que no puedo demostrar y que, sin embargo, me ha acompañado toda la vida. Creo que estamos más unidos de lo que parece, y que cuando tienes algo que hacer o que disfrutar con alguien, esa persona aparece. No lo llamo casualidad. Lo llamo causalidad. El en-musubi es la manera japonesa de decir algo parecido, y me gusta que tenga nombre.</p>
+
+        <p>Si lo llevo al ikigai, el nudo no se hace solo entre lo que haces y cómo lo vives. También se hace con otros. Hay cosas que solo cobran sentido cuando aparece la persona con quien hacerlas.</p>
+
+        <h2 id="practica">Un nudo pequeño para esta semana</h2>
+
+        <p>Un nudo no se hace pensando en nudos. Se hace con las manos y con algo concreto. Si quieres probarlo:</p>
+
+        <ul>
+          <li>Elige una sola cosa que haces cada día por obligación o por costumbre: un trayecto, una reunión, preparar la comida.</li>
+          <li>Antes de empezarla, pregúntate para quién es o qué sostiene. Una frase basta.</li>
+          <li>Hazla esa vez sabiendo la respuesta, sin cambiar nada más.</li>
+        </ul>
+
+        <p>La tarea no cambia. Cambia que la estás atando a algo. Si en algún momento notas la diferencia entre hacerla así y hacerla en piloto automático, has visto un musubi pequeño. Si no la notas, también es información.</p>
+
+        <p>La idea de las dos caras del ikigai, y por qué la mayoría de los métodos se quedan con una sola, está desarrollada en <a href="/es/libros/el-ikigai-que-no-te-contaron/">El ikigai que no te contaron</a> y en <a href="/es/blog/metodo-ikigai/">el método ikigai y la mitad que le falta</a>.</p>
+
+        <h2 id="preguntas">Preguntas frecuentes</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>¿Qué significa musubi?</h3>
+            <p>Musubi es una palabra japonesa que une dos ideas: atar o anudar, y la fuerza que hace nacer y crecer las cosas. En el sintoísmo designa el poder de creación, y en la vida diaria se usa para nudos, lazos entre personas y bolas de arroz.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Qué es el en-musubi?</h3>
+            <p>Es atar los lazos que unen a las personas. Une musubi con en, una palabra de raíz budista para el hilo que liga una causa con lo que acaba ocurriendo. Se asocia sobre todo a la pareja, pero abarca también la familia, el trabajo y la comunidad.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Por qué a las bolas de arroz se les llama omusubi?</h3>
+            <p>Musubi como nombre de la bola de arroz hecha a mano se extendió en el periodo Edo, y la o de cortesía se añadió después. Hoy convive con onigiri. Se discute si el nombre tiene relación directa con el mito, pero los dos sentidos, atar y crear, están en la palabra.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿El musubi forma parte del ikigai?</h3>
+            <p>No en la tradición japonesa: son palabras distintas. Relacionarlas es una lectura propia de la práctica ikigaier, que usa el musubi como imagen del nudo entre el ikigai activo, lo que haces, y el ikigai consciente, cómo lo vives.</p>
+          </div>
+        </div>
+
+                <div class="programa-bloque">
+          <p class="programa-etiqueta">Test de ikigai · gratis</p>
+          <h3>¿Lo que te falta está en lo que haces o en cómo lo vives?</h3>
+          <p>El test ikigaier te lo dice en 16 preguntas: qué te sostiene, qué pide tu atención y un ejercicio para tu semana. Al terminar, si quieres, puedes seguir con un mes de ejercicios: dos correos por semana durante cuatro semanas, más bienvenida y cierre, gratis.</p>
+          <a href="/es/test-de-ikigai/" class="btn btn-primary">Hacer el test de ikigai →</a>
+          <p class="programa-nota">Gratis · sin registro · unos diez minutos</p>
+        </div>
+
+        <h2 id="fuentes">Fuentes</h2>
+
+        <div class="fuentes">
+          <ol>
+            <li>Universidad Kokugakuin, <em>Encyclopedia of Shinto</em>, entrada «Musuhi», <a href="https://d-museum.kokugakuin.ac.jp/eos/detail/?id=8720" target="_blank" rel="noopener noreferrer">d-museum.kokugakuin.ac.jp</a>.</li>
+            <li>Universidad Kokugakuin, <em>Basic Terms of Shinto</em>, entrada «Musubi», <a href="https://www2.kokugakuin.ac.jp/ijcc/wp/bts/bts_m.html" target="_blank" rel="noopener noreferrer">kokugakuin.ac.jp</a>.</li>
+            <li>Encyclopaedia Britannica, «musubi», <a href="https://www.britannica.com/topic/musubi" target="_blank" rel="noopener noreferrer">britannica.com</a>.</li>
+            <li>Nakamura Yūsuke, «Onigiri: The Evolving Face of Japan’s Beloved Rice Ball», Nippon.com (3 de febrero de 2026), <a href="https://www.nippon.com/en/japan-topics/g02574/" target="_blank" rel="noopener noreferrer">nippon.com</a>.</li>
+            <li>Santuario Izumo Ōyashiro, «Visión general del santuario», <a href="https://izumooyashiro.or.jp/en" target="_blank" rel="noopener noreferrer">izumooyashiro.or.jp</a>.</li>
+          </ol>
+          <p class="nota-editorial">El significado de musubi y en-musubi y la historia del omusubi se apoyan en las fuentes citadas. La relación entre el musubi y el ikigai, la lectura del ikigai activo y el ikigai consciente y la idea de la causalidad son una elaboración propia de la práctica ikigaier. Última actualización: 22 de noviembre de 2026.</p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+<footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de ikigaier" width="150" height="113" aria-hidden="true" decoding="async">
+    </picture>
+    <p>ikigaier · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <button type="button" class="iki-cookies-config" data-cookies-config>Configurar cookies</button></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← volver a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/guia.js?v=9" defer></script>
+  <script src="/assets/js/cookies.js?v=2" defer></script>
+</body>
+</html>
