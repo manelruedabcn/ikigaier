@@ -5,7 +5,9 @@
  * talleres, acompañamiento). Lo que alguien deja escrito (pedir una llamada,
  * escribir a Manel, aviso de talleres) va a la app, que se lo envía a Manel
  * por correo: https://app.ikigaier.com/api/guia/contacto.
- * Los textos se eligen según el idioma de la página (<html lang>).
+ * Idioma: por defecto, el de la página (<html lang>). La persona puede elegir
+ * otro en la cabecera (ES · CA · EN); la elección se recuerda en el navegador
+ * y la conversación vuelve a empezar en ese idioma, con sus enlaces.
  */
 (function () {
   // Enlace de agenda (Google Calendar, Calendly…). Mientras esté vacío, «una
@@ -14,19 +16,27 @@
   var ENDPOINT = 'https://app.ikigaier.com/api/guia/contacto';
   var AVATAR = '/assets/images/guia-manel.svg?v=3';
 
-  var lang = (document.documentElement.lang || 'es').slice(0, 2);
-  if (lang !== 'ca' && lang !== 'en') lang = 'es';
+  var LANGS = ['es', 'ca', 'en'];
+  var LANG_NAMES = { es: 'Castellano', ca: 'Català', en: 'English' };
+  function valido(l) { return LANGS.indexOf(l) >= 0 ? l : null; }
+  function elegido(v) {
+    try { if (v === undefined) return localStorage.getItem('guia-lang'); localStorage.setItem('guia-lang', v); } catch (e) { return null; }
+  }
+  var lang = valido(elegido()) || valido((document.documentElement.lang || 'es').slice(0, 2)) || 'es';
 
-  var U = {
+  var URLS = {
     es: { test: '/es/test-de-ikigai/', prog: '/es/programa-ikigai-gratis/', paso: '/es/test/', tallerGratis: '/es/talleres/taller-gratuito/', taller: '/es/taller/', empresas: '/es/talleres/empresas/', libros: '/es/libros/', libroIkigai: '/es/libros/el-ikigai-que-no-te-contaron/', ikigai: '/es/ikigai/', que: '/es/que-es-ikigaier/', manel: '/es/manel-rueda/', priv: '/es/privacidad/' },
     ca: { test: '/ca/test-d-ikigai/', prog: '/ca/programa-ikigai-gratuit/', paso: '/ca/test/', tallerGratis: '/ca/tallers/taller-gratuit/', taller: '/ca/taller/', empresas: '/ca/tallers/empreses/', libros: '/ca/llibres/', libroIkigai: '/ca/llibres/el-ikigai-que-no-te-contaron/', ikigai: '/ca/ikigai/', que: '/ca/que-es-ikigaier/', manel: '/ca/manel-rueda/', priv: '/ca/privacitat/' },
     en: { test: '/en/ikigai-test/', prog: '/en/free-ikigai-program/', paso: '/en/test/', tallerGratis: '/en/workshops/free-workshop/', taller: '/en/workshop/', empresas: '/en/workshops/teams/', libros: '/en/books/', libroIkigai: '/en/books/el-ikigai-que-no-te-contaron/', ikigai: '/en/ikigai/', que: '/en/what-is-ikigaier/', manel: '/en/manel-rueda/', priv: '/en/privacy/' }
-  }[lang];
+  };
+  var U, T, C;
 
   // Cada paso: lo que dice Manel (says) y lo que se puede contestar.
   // Opción: { t: texto, go: paso } · { t, href } · los pasos con «form»
   // muestran un formulario (escribir, llamada, aviso).
-  var T = {
+  // Los textos se construyen para el idioma activo (llevan dentro sus enlaces).
+  function textos() {
+  return {
     es: {
       chrome: { open: 'Hablar con Manel', close: 'Cerrar', title: 'Manel', sub: 'Respuestas escritas por mí. Aquí no hay IA.', restart: 'Volver a empezar', teaser: '¿Por dónde empiezo?', back: 'Volver', name: 'Tu nombre', email: 'Tu correo', phone: 'Teléfono (si prefieres que te llame)', when: '¿Qué días y horas te van mejor?', msg: 'Lo que quieras contarme', msgOpt: '¿Algo que quieras contarme antes? (opcional)', privacy: 'He leído la <a href="' + U.priv + '" target="_blank" rel="noopener">política de privacidad</a>', send: 'Enviar', sending: 'Enviando…', agenda: 'Ver mi agenda', error: 'No se ha podido enviar. Puedes escribirme a <a href="mailto:hola@ikigaier.com">hola@ikigaier.com</a>.', invalid: 'Revisa tu correo y marca la casilla de privacidad.' },
       steps: {
@@ -166,8 +176,15 @@
       }
     }
   }[lang];
+  }
 
-  var C = T.chrome;
+  function usar(l) {
+    lang = l;
+    U = URLS[l];
+    T = textos();
+    C = T.chrome;
+  }
+  usar(lang);
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var ruta = [];
   var opened = false;
@@ -198,6 +215,10 @@
     '.guia-head b{display:block;font:500 20px/1.1 "Cormorant Garamond",Georgia,serif}' +
     '.guia-head small{display:block;font-size:12px;color:#655F59}' +
     '.guia-head .guia-x{margin-left:auto;background:none;border:0;font-size:24px;line-height:1;color:#655F59;cursor:pointer;padding:6px 8px;border-radius:8px}' +
+    '.guia-lang{display:flex;gap:2px;margin-left:auto;font:500 11px/1 Inter,system-ui,sans-serif;letter-spacing:.08em}' +
+    '.guia-lang button{background:none;border:0;color:#655F59;cursor:pointer;padding:6px 5px;border-radius:6px}' +
+    '.guia-lang button[aria-pressed=true]{color:#94583E;text-decoration:underline;text-underline-offset:3px}' +
+    '.guia-head .guia-lang+.guia-x{margin-left:0}' +
     '.guia-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}' +
     '.guia-m{max-width:88%;padding:10px 14px;border-radius:4px 16px 16px 16px;background:#F2E8D5;color:#3A2A15;font-family:"Cormorant Garamond",Georgia,serif;font-size:18px;line-height:1.4;animation:guiaIn .35s ease both}' +
     '.guia-u{align-self:flex-end;max-width:85%;padding:8px 13px;border-radius:16px 4px 16px 16px;background:#272727;color:#F5F2ED;font-size:14px;animation:guiaIn .25s ease both}' +
@@ -241,7 +262,10 @@
   panel.setAttribute('role', 'dialog');
   panel.setAttribute('aria-label', C.open);
   panel.innerHTML =
-    '<div class="guia-head"><img src="' + AVATAR + '" alt="" width="40" height="40"><div><b>' + C.title + '</b><small>' + C.sub + '</small></div>' +
+    '<div class="guia-head"><img src="' + AVATAR + '" alt="" width="40" height="40"><div><b>' + C.title + '</b><small class="guia-sub">' + C.sub + '</small></div>' +
+    '<div class="guia-lang" role="group">' + LANGS.map(function (l) {
+      return '<button type="button" data-lang="' + l + '" lang="' + l + '" aria-label="' + LANG_NAMES[l] + '" aria-pressed="' + (l === lang) + '">' + l.toUpperCase() + '</button>';
+    }).join('') + '</div>' +
     '<button type="button" class="guia-x" aria-label="' + C.close + '">&times;</button></div>' +
     '<div class="guia-log" aria-live="polite"></div>' +
     '<div class="guia-foot"><button type="button" class="guia-restart">' + C.restart + '</button></div>';
@@ -392,6 +416,30 @@
     log.innerHTML = '';
     ir('inicio');
   }
+
+  // ── Cambiar de idioma ─────────────────────────────────────
+  function pintarChrome() {
+    panel.querySelector('.guia-sub').textContent = C.sub;
+    panel.querySelector('.guia-x').setAttribute('aria-label', C.close);
+    panel.querySelector('.guia-restart').textContent = C.restart;
+    panel.setAttribute('aria-label', C.open);
+    btn.setAttribute('aria-label', opened ? C.close : C.open);
+    teaser.textContent = C.teaser;
+    Array.prototype.forEach.call(panel.querySelectorAll('.guia-lang button'), function (b) {
+      b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang));
+    });
+  }
+  Array.prototype.forEach.call(panel.querySelectorAll('.guia-lang button'), function (b) {
+    b.addEventListener('click', function () {
+      var l = b.getAttribute('data-lang');
+      if (l === lang) return;
+      usar(l);
+      elegido(l);
+      pintarChrome();
+      empezado = true;
+      empezar();
+    });
+  });
 
   // ── Abrir y cerrar ────────────────────────────────────────
   var empezado = false;
