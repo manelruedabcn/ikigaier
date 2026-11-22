@@ -103,6 +103,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.ikigaier.com/es/blog/musubi-ikigai/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.ikigaier.com/es/blog/simbolo-ikigai/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
