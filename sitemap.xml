@@ -98,7 +98,13 @@
   </url>
   <url>
     <loc>https://www.ikigaier.com/es/blog/mascara-controladora/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ikigaier.com/es/blog/mascara-manipuladora/</loc>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
