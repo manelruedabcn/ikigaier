@@ -1,0 +1,31 @@
+name: IndexNow
+# Avisa a Bing, Yahoo, Yandex y otros buscadores de las páginas cambiadas en cada publicación.
+on:
+  push:
+    branches: [main]
+    paths: ['**.html']
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Esperar a que GitHub Pages publique
+        run: sleep 150
+      - name: Enviar URLs cambiadas a IndexNow
+        env:
+          HOST: www.ikigaier.com
+          KEY: cd18186d8e2e77ceecd9550d88ed57a4
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            FILES=$(git ls-files '*.html')
+          else
+            FILES=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- '*.html')
+          fi
+          URLS=$(echo "$FILES" | grep -v '^404.html$' | grep -v '^google' | sed -E 's#(^|/)index\.html$#\1#' | sed "s#^#https://$HOST/#" | grep -v '^https://$HOST/$' || true)
+          [ -z "$URLS" ] && { echo "Sin páginas cambiadas"; exit 0; }
+          JSON=$(printf '%s\n' $URLS https://$HOST/ | sort -u | jq -R . | jq -s --arg h "$HOST" --arg k "$KEY" '{host:$h,key:$k,keyLocation:("https://"+$h+"/"+$k+".txt"),urlList:.}')
+          echo "$JSON"
+          curl -sS -o /dev/null -w "IndexNow: HTTP %{http_code}\n" -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$JSON"
