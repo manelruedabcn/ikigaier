@@ -264,5 +264,7 @@ figcaption {
 .sigue-leyendo .sigue-etiqueta { font-family: 'Inter', sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--coral); margin: 0 0 0.6rem; }
 .sigue-leyendo ul { list-style: none; margin: 0; padding: 0; }
 .sigue-leyendo li { margin: 0 0 0.45rem; padding-left: 1.1rem; position: relative; }
-.sigue-leyendo li::before { content: "→"; position: absolute; left: 0; color: var(--coral); }
+.prose .sigue-leyendo li::before, .sigue-leyendo li::before { content: "→"; position: absolute; left: 0; color: var(--coral); }
 .sigue-leyendo .sigue-carta { margin: 0.9rem 0 0; font-size: 0.95rem; }
+.prose .sigue-leyendo a, .sigue-leyendo a { color: inherit; text-decoration: underline; text-decoration-color: rgba(194,134,107,0.6); text-underline-offset: 3px; }
+.prose .sigue-leyendo a:hover, .sigue-leyendo a:hover { text-decoration-color: var(--coral); }
