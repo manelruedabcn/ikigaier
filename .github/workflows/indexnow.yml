@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
       - name: Esperar a que GitHub Pages publique
         run: sleep 150
       - name: Enviar URLs cambiadas a IndexNow
@@ -22,7 +22,9 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             FILES=$(git ls-files '*.html')
           else
-            FILES=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- '*.html')
+            BEFORE="${{ github.event.before }}"
+            git cat-file -e "$BEFORE" 2>/dev/null || BEFORE=HEAD~1
+            FILES=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- '*.html')
           fi
           URLS=$(echo "$FILES" | grep -v '^404.html$' | grep -v '^google' | sed -E 's#(^|/)index\.html$#\1#' | sed "s#^#https://$HOST/#" | grep -v '^https://$HOST/$' || true)
           [ -z "$URLS" ] && { echo "Sin páginas cambiadas"; exit 0; }
