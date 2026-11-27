@@ -260,3 +260,9 @@ figcaption {
 .programa-bloque p { margin-bottom: 1.1rem; }
 .programa-bloque .programa-nota { font-family: 'Inter', sans-serif; font-size: 0.8125rem; color: var(--texto-principal); opacity: 0.75; margin: 0.8rem 0 0; }
 @media (max-width: 600px) { .programa-bloque { padding: 1.4rem 1.1rem 1.5rem; margin: 2.2rem 0; } .programa-bloque .btn { display: block; } }
+.sigue-leyendo { margin: 2.6rem 0 0; padding: 1.4rem 0 0; border-top: 1px solid rgba(194,134,107,0.35); }
+.sigue-leyendo .sigue-etiqueta { font-family: 'Inter', sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--coral); margin: 0 0 0.6rem; }
+.sigue-leyendo ul { list-style: none; margin: 0; padding: 0; }
+.sigue-leyendo li { margin: 0 0 0.45rem; padding-left: 1.1rem; position: relative; }
+.sigue-leyendo li::before { content: "→"; position: absolute; left: 0; color: var(--coral); }
+.sigue-leyendo .sigue-carta { margin: 0.9rem 0 0; font-size: 0.95rem; }
