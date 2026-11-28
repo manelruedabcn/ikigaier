@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Analítica con consentimiento: Google Analytics y GTM solo se cargan si la
+     persona acepta en el aviso de cookies (/assets/js/cookies.js) -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+window.ikiCargarAnalitica=function(){
+  if(window.ikiAnaliticaCargada)return;window.ikiAnaliticaCargada=true;
+  gtag('consent','update',{analytics_storage:'granted'});
+  gtag('js',new Date());gtag('config','G-T2ZZKZFLHH');
+  dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  ['https://www.googletagmanager.com/gtag/js?id=G-T2ZZKZFLHH','https://www.googletagmanager.com/gtm.js?id=GTM-K7BXTLDM'].forEach(function(u){
+    var s=document.createElement('script');s.async=true;s.src=u;document.head.appendChild(s);});
+};
+try{var c=JSON.parse(localStorage.getItem('iki-cookies')||'null');
+  if(c&&c.e==='si'&&Date.now()-c.t<31536000000)ikiCargarAnalitica();}catch(e){}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFBF7">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="La Jueza critica para no ser criticada. De qué miedo nace, cómo reconocerla en el trabajo y en casa, y qué pregunta ayuda a que el juicio no sea lo último.">
+  <title>Máscara jueza: el miedo a que te juzguen · ikigaier</title>
+  <link rel="canonical" href="https://www.ikigaier.com/es/blog/mascara-jueza/">
+  <link rel="alternate" hreflang="es" href="https://www.ikigaier.com/es/blog/mascara-jueza/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ikigaier.com/es/blog/mascara-jueza/">
+
+  <link rel="icon" type="image/png" sizes="any" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ikigaier-isotipo-favicon.png?v=12">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <meta property="og:site_name" content="ikigaier">
+
+
+
+  <meta property="og:title" content="La máscara Jueza: el miedo a que te juzguen">
+  <meta property="og:description" content="La Jueza critica para no ser criticada. De qué miedo nace, cómo reconocerla en el trabajo y en casa, y qué pregunta ayuda a que el juicio no sea lo último.">
+  <meta property="og:url" content="https://www.ikigaier.com/es/blog/mascara-jueza/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ikigaier · El ikigai que no te contaron · por Manel Rueda">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La máscara Jueza: el miedo a que te juzguen">
+  <meta name="twitter:description" content="La Jueza critica para no ser criticada. De qué miedo nace, cómo reconocerla en el trabajo y en casa, y qué pregunta ayuda a que el juicio no sea lo último.">
+  <meta name="twitter:image" content="https://www.ikigaier.com/assets/images/og-image.png?v=2">
+  <meta name="twitter:image:alt" content="ikigaier · El ikigai que no te contaron · por Manel Rueda">
+
+  <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=15">
+  <link rel="stylesheet" href="/assets/css/talleres.css?v=2">
+  <link rel="stylesheet" href="/assets/css/article.css?v=6">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ikigaier.com/#website",
+      "url": "https://www.ikigaier.com/",
+      "name": "ikigaier",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "description": "Proyecto editorial de Manel Rueda sobre el ikigai consciente: libros, test de ikigai gratuito, talleres y blog.",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://www.ikigaier.com/es/blog/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ikigaier.com/#organization",
+      "name": "ikigaier",
+      "url": "https://www.ikigaier.com/",
+      "logo": "https://www.ikigaier.com/assets/images/logo-ikigaier-bicolor.png?v=11",
+      "founder": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "description": "ikigaier es el enfoque sobre el ikigai creado por Manel Rueda. Une el ikigai activo (lo que haces y aportas) con el ikigai consciente (cómo lo vives). Libros, test de ikigai gratuito, talleres y newsletter.",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://substack.com/@manelrueda",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.tiktok.com/@manelbcn68",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "email": "hola@ikigaier.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com",
+        "availableLanguage": [
+          "es",
+          "ca",
+          "en"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ikigaier.com/#person",
+      "name": "Manel Rueda",
+      "url": "https://www.ikigaier.com/es/manel-rueda/",
+      "image": "https://www.ikigaier.com/assets/images/manel-rueda.jpg?v=3",
+      "jobTitle": "Autor",
+      "sameAs": [
+        "https://manelrueda.com",
+        "https://ikigaier.substack.com",
+        "https://substack.com/@manelrueda",
+        "https://www.instagram.com/manel_rueda/",
+        "https://www.amazon.es/stores/Manel-Rueda/author/B0GX5X8QX7"
+      ],
+      "description": "Autor y creador de ikigaier. Escribe sobre el ikigai consciente y la unión del hacer y el ser.",
+      "worksFor": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "información",
+        "email": "hola@ikigaier.com"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.ikigaier.com/es/blog/mascara-jueza/#article",
+      "isPartOf": {
+        "@id": "https://www.ikigaier.com/#website"
+      },
+      "mainEntityOfPage": "https://www.ikigaier.com/es/blog/mascara-jueza/",
+      "headline": "La máscara Jueza: el miedo a que te juzguen",
+      "description": "La Jueza critica para no ser criticada. De qué miedo nace, cómo reconocerla en el trabajo y en casa, y qué pregunta ayuda a que el juicio no sea lo último.",
+      "inLanguage": "es",
+      "image": "https://www.ikigaier.com/assets/images/og-image.png?v=2",
+      "datePublished": "2026-11-28",
+      "dateModified": "2026-11-28",
+      "articleSection": "Máscaras",
+      "author": {
+        "@id": "https://www.ikigaier.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.ikigaier.com/#organization"
+      },
+      "about": [{"@type": "Thing", "name": "Máscaras del ego"}, {"@type": "Thing", "name": "Miedo a ser juzgado"}]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.ikigaier.com/es/blog/mascara-jueza/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.ikigaier.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.ikigaier.com/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "La máscara Jueza",
+          "item": "https://www.ikigaier.com/es/blog/mascara-jueza/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.ikigaier.com/es/blog/mascara-jueza/#faq",
+  "mainEntity": [
+      {
+          "@type": "Question",
+          "name": "¿Qué es la máscara Jueza?",
+          "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Es la máscara de quien critica para no ser criticado. Corrige, señala y compara antes de que nadie pueda hacerlo con él. Casi nunca se vive como juicio: parece criterio o tener las cosas claras."
+          }
+      },
+      {
+          "@type": "Question",
+          "name": "¿De qué miedo nace?",
+          "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "De la vergüenza y del miedo a que te vean los puntos débiles antes de que puedas esconderlos. Si juzgas tú primero, el foco queda fuera y nadie lo pone en ti."
+          }
+      },
+      {
+          "@type": "Question",
+          "name": "¿Cómo se afloja?",
+          "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Con una pregunta: «¿Qué está intentando proteger esta persona, o yo?». Y con un gesto pequeño, dar el beneficio de la duda una vez al día durante una semana y apuntar qué cambia."
+          }
+      }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/es/" class="site-header-logo" aria-label="ikigaier · Inicio">
+        <img src="/assets/images/logo-ikigaier-bicolor-600.webp" srcset="/assets/images/logo-ikigaier-bicolor-400.webp 400w, /assets/images/logo-ikigaier-bicolor-600.webp 600w" sizes="(max-width: 760px) 193px, 293px" alt="ikigaier" width="293" height="92" fetchpriority="high">
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-header-nav" id="nav-links" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/libros/">Libros</a>
+        <a href="/es/talleres/">Talleres</a>
+        <a href="/es/ikigai/">Ikigai</a>
+        <a href="/es/que-es-ikigaier/">Qué es ikigaier</a>
+        <a href="/es/blog/" aria-current="page">Blog</a>
+        <a href="/es/manel-rueda/">Sobre mí</a>
+        <a href="https://app.ikigaier.com/es/login">Entrar</a>
+        <a href="/es/test-de-ikigai/" class="nav-destacado">Test ikigai gratis</a>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/blog/">Blog</a><span aria-hidden="true">›</span><span>La máscara Jueza</span>
+  </nav>
+
+  <main id="contenido">
+    <article class="article-wrap">
+
+      <header class="article-head">
+        <h1>La máscara Jueza: el miedo a que te juzguen</h1>
+        <p class="article-standfirst">Qué es, cómo se reconoce y por qué se confunde tan fácilmente con tener criterio.</p>
+        <div class="article-byline">
+          <span class="author"><a href="/es/manel-rueda/">Manel Rueda</a></span>
+          <span class="role">Autor y creador de ikigaier</span>
+          <time datetime="2026-11-28">28 de noviembre de 2026</time>
+        </div>
+      </header>
+
+
+      <div class="prose">
+
+        <p>La Jueza es la máscara de quien critica para no ser criticado. Corrige, señala, compara y pone nota casi sin darse cuenta, a los demás y a sí mismo. Es la cuarta de las <a href="/es/blog/mascaras-del-ego/">siete máscaras del ego</a>, y una de las más antiguas que llevamos puestas. Cuesta verla porque se parece mucho a algo que solemos valorar: el criterio.</p>
+
+        <h2 id="como-se-reconoce">Cómo se reconoce</h2>
+
+        <p>Desde fuera parece claridad mental, capacidad de análisis, alguien que no se deja engañar. Es la persona que ve el fallo del informe a la primera, la que sabe qué hizo mal el otro y por qué. En algunos trabajos se premia, y con razón.</p>
+
+        <p>Algunas señales bastante habituales:</p>
+
+        <ul>
+          <li>Ves los errores antes que las posibilidades.</li>
+          <li>Juzgas rápido, y a ti te juzgas todavía más rápido.</li>
+          <li>Te irrita que algo no esté como debería, aunque no sea asunto tuyo.</li>
+          <li>Cuando alguien te dice que no, ya sabes por qué lo hace antes de que te lo explique.</li>
+          <li>Te cuesta disfrutar de algo sin analizarlo.</li>
+        </ul>
+
+        <p>No hace falta ser una persona dura para llevarla puesta. Basta con que el juicio llegue antes que la pregunta. Decides qué le pasa al otro, o qué vale lo que ha hecho, y con eso te quedas.</p>
+
+        <h2 id="el-miedo">El miedo que hay debajo</h2>
+
+        <p>Debajo de la Jueza hay vergüenza, y el miedo a que te vean los puntos débiles antes de que puedas esconderlos. Por eso ataca primero. Si juzgas tú, nadie te juzga. Si pones el foco fuera, nadie lo pone en ti.</p>
+
+        <p>Como el resto de máscaras, suele aprenderse pronto, a menudo en entornos donde equivocarse se señalaba más que acertar. Funcionó como defensa. El problema es que la Jueza nunca se conforma: cuando termina con los demás, se da la vuelta y empieza contigo.</p>
+
+        <h2 id="donde-aparece">Dónde suele aparecer</h2>
+
+        <p>En el trabajo, sobre todo en puestos donde se evalúa: dirigir un equipo, revisar el trabajo de otros, decidir qué se aprueba y qué no. Ahí juzgar forma parte del oficio, y es fácil que el prejuicio se cuele vestido de experiencia. Una petición que no encaja con tu forma de hacer las cosas se descarta sin escucharla, y parece una decisión razonable.</p>
+
+        <p>En casa aparece en forma de comentario, de corrección pequeña, de ese «ya te lo dije» que no hacía falta. Y hacia dentro aparece casi siempre: en cómo te hablas cuando algo te sale mal, o cuando relees algo tuyo y solo ves lo que falla.</p>
+
+        <h2 id="lo-que-cuesta">Lo que cuesta</h2>
+
+        <p>El primer precio es la conexión. Cuando cada conversación es una evaluación, la gente se acerca con cuidado, o deja de contarte cosas. El segundo es la compasión, que se apaga, y sin ella cuesta mucho encontrar sentido a lo que haces. Y el tercero lo pagas tú: la misma vara que usas con los demás acaba midiendo cada cosa que haces, y ninguna llega.</p>
+
+        <h2 id="aflojarla">Cómo aflojarla</h2>
+
+        <p>Dejar de juzgar es imposible, así que tampoco vale la pena intentarlo a la fuerza. Lo que ayuda es una pregunta, para hacerla justo cuando notas que ya tienes el veredicto: «¿Qué está intentando proteger esta persona, o yo?». Cuando te la haces, algo se afloja. El juicio pierde un poco de fuerza y aparece lo que la Jueza más teme, que es la empatía.</p>
+
+        <p>Un ejercicio sencillo consiste en elegir cada día durante una semana una persona, una situación o un error reciente, tuyo o ajeno, y darle el beneficio de la duda a propósito. Sin que nadie lo sepa. Después apunta qué ha cambiado. A veces descubres que el otro tenía razones que no habías querido oír. Y a veces descubres que tú también las tenías.</p>
+
+        <h2 id="cuando-hace-falta">Cuando juzgar sí hace falta</h2>
+
+        <p>Tener criterio es necesario. Decir que un trabajo tiene errores, que una decisión es mala o que algo no puede seguir así forma parte de cuidar las cosas y a las personas. La diferencia está en el orden. El criterio mira lo que ha pasado y deja sitio a la pregunta antes de decidir. La máscara decide primero y ya no pregunta.</p>
+
+        <h2 id="para-seguir">Para seguir</h2>
+
+        <p>La anterior de la serie es <a href="/es/blog/mascara-manipuladora/">la Manipuladora</a>, que nace del miedo a mostrarte como eres. La siguiente será la Complaciente. En la newsletter voy escribiendo una carta por máscara, en primera persona, dentro de <a href="https://ikigaier.substack.com/p/siete-mascaras-para-volver" target="_blank" rel="noopener">Siete máscaras para volver</a>.</p>
+
+        <h2 id="preguntas">Preguntas frecuentes</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>¿Qué es la máscara Jueza?</h3>
+            <p>Es la máscara de quien critica para no ser criticado. Corrige, señala y compara antes de que nadie pueda hacerlo con él. Casi nunca se vive como juicio: parece criterio o tener las cosas claras.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿De qué miedo nace?</h3>
+            <p>De la vergüenza y del miedo a que te vean los puntos débiles antes de que puedas esconderlos. Si juzgas tú primero, el foco queda fuera y nadie lo pone en ti.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Cómo se afloja?</h3>
+            <p>Con una pregunta: «¿Qué está intentando proteger esta persona, o yo?». Y con un gesto pequeño, dar el beneficio de la duda una vez al día durante una semana y apuntar qué cambia.</p>
+          </div>
+        </div>
+
+        <aside class="sigue-leyendo" aria-label="Sigue leyendo">
+          <p class="sigue-etiqueta">Sigue leyendo</p>
+          <ul>
+            <li><a href="/es/blog/mascaras-del-ego/">Las máscaras del ego: las siete y el miedo que esconden</a></li>
+            <li><a href="/es/blog/mascara-exigente/">Máscara exigente: el miedo a no estar a la altura</a></li>
+            <li><a href="/es/blog/mascara-manipuladora/">Máscara manipuladora: el miedo a mostrarte como eres</a></li>
+          </ul>
+        </aside>
+
+        <div class="programa-bloque">
+          <p class="programa-etiqueta">Test de ikigai · gratis</p>
+          <h3>¿Lo que te falta está en lo que haces o en cómo lo vives?</h3>
+          <p>El test ikigaier te lo dice en 16 preguntas: qué te sostiene, qué pide tu atención y un ejercicio para tu semana. Al terminar, si quieres, puedes seguir con un mes de ejercicios: dos correos por semana durante cuatro semanas, más bienvenida y cierre, gratis.</p>
+          <a href="/es/test-de-ikigai/" class="btn btn-primary">Hacer el test de ikigai →</a>
+          <p class="programa-nota">Gratis · sin registro · unos diez minutos</p>
+        </div>
+
+        <h2 id="fuentes">Fuentes</h2>
+
+        <div class="fuentes">
+          <ol>
+            <li>Rueda, Manel. <em>El ikigai que no te contaron</em>, capítulo 3, «El ego y las máscaras».</li>
+            <li>Rueda, Manel. <em>Camina sin separarte de ti</em>, sección «Máscaras y miedo».</li>
+          </ol>
+          <p class="nota-editorial">Las siete máscaras son una elaboración propia de la práctica ikigaier, desarrollada en <em>El ikigai que no te contaron</em> (capítulo 3) y <em>Camina sin separarte de ti</em>. No es un diagnóstico ni sustituye la ayuda de un profesional. Última actualización: 28 de noviembre de 2026.</p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <picture>
+      <source srcset="/assets/images/ikionda-separador-300.webp" type="image/webp">
+      <img class="footer-ikionda" src="/assets/images/ikionda-separador-300.png" alt="Onda de ikigaier" width="150" height="113" aria-hidden="true" decoding="async">
+    </picture>
+    <p>ikigaier · Manel Rueda · 2026</p>
+    <p class="footer-legal"><a href="/es/privacidad/">Política de privacidad</a> · <a href="/es/cookies/">Política de cookies</a> · <button type="button" class="iki-cookies-config" data-cookies-config>Configurar cookies</button></p>
+    <a class="footer-link-back" href="https://manelrueda.com" target="_blank" rel="me noopener">← volver a manelrueda.com</a>
+  </footer>
+
+  <script src="/assets/js/main.js?v=2" defer></script>
+<script src="/assets/js/guia.js?v=9" defer></script>
+  <script src="/assets/js/cookies.js?v=2" defer></script>
+</body>
+</html>
